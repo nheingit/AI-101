@@ -76,7 +76,7 @@ def answer_question(df,
         "role":
         "user",
         "content":
-        f"I want you to Answer the question based on the context below, if you can, site your sources at the beginning of your answer, and if the question can't be answered based on the context,say 'i don't know'.\".\n\nContext: {context}\n\n---\n\nQuestion: {question}\nSource:\nAnswer:",
+        f"I want you to Answer the question based on the context below, if you can, and if the question can't be answered based on the context,say 'i don't know'.\".\n\nContext: {context}\n\n---\n\nQuestion: {question}\nSource:\nAnswer:",
       }],
       temperature=0.5,
       max_tokens=max_tokens,
