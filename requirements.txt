@@ -1,1 +1,17 @@
 python-dotenv==0.19.0
+numpy==1.23.2
+Flask==2.2.0
+urllib3==1.26.12
+python-telegram-bot==20.3
+telegram==0.0.1
+openai==0.27.6
+pandas==2.0.2
+tiktoken==0.4.0
+matplotlib==3.7.1
+plotly==5.15.0
+scipy==1.10.1
+scikit-learn==1.2.2
+typing-extensions==4.6.3
+langchain==0.0.199
+CairoSVG==2.7.0
+
