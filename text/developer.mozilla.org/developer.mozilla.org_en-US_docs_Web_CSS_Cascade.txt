@@ -1,0 +1,1048 @@
+Introducing the CSS Cascade - CSS: Cascading Style Sheets | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesCSSIntroducing the CSS CascadeArticle ActionsEnglish (US)In this articleOrigin typesCascading orderBasic exampleAuthor styles: inline styles, layers, and precedenceComplete cascade orderWhich CSS entities participate in the cascadeCSS animations and the cascadeResetting stylesSpecificationsSee also
+
+CSS
+Tutorials
+CSS basics
+
+
+CSS first steps
+
+CSS first steps overview
+What is CSS?
+Getting started with CSS
+How CSS is structured
+How CSS works
+Assessment: Styling a biography page
+
+
+
+
+
+CSS building blocks
+
+CSS building blocks overview
+CSS selectors
+Type, class, and ID selectors
+Attribute selectors
+Pseudo-classes and pseudo-elements
+Combinators
+Cascade, specificity, and inheritance
+Cascade layers
+The box model
+Backgrounds and borders
+Handling different text directions
+Overflowing content
+CSS values and units
+Sizing items in CSS
+Images, media, and form elements
+Styling tables
+Debugging CSS
+Organizing your CSS
+Assessment: Fundamental CSS comprehension
+Assessment: Creating fancy letterheaded paper
+Assessment: A cool-looking box
+
+
+
+
+
+Styling text
+
+Styling text overview
+Fundamental text and font styling
+Styling lists
+Styling links
+Web fonts
+Assessment: Typesetting a community school homepage
+
+
+
+
+
+CSS layout
+
+CSS layout overview
+Introduction to CSS layout
+Normal Flow
+Flexbox
+Grids
+Floats
+Positioning
+Multiple-column layout
+Responsive design
+Beginner's guide to media queries
+Legacy layout methods
+Supporting older browsers
+Assessment: Fundamental layout comprehension
+
+
+
+Reference
+ModulesCSS animationsCSS backgrounds and bordersCSS basic user interfaceCSS box alignmentCSS box modelCSS cascading variablesCSS charsetsCSS color adjustmentCSS colorsCSS compositing and blendingCSS conditional rulesCSS containmentCSS counter stylesCSS displayCSS filter effectsCSS flexible box layoutCSS fontsCSS fragmentationCSS generated contentCSS Grid LayoutCSS imagesCSS ListsCSS logical properties and valuesCSS maskingMedia queriesCSS miscellaneousCSS motion pathCSS multi-column layoutCSS namespacesCSS overflowCSS Paged MediaCSS positioned layoutCSS Ruby LayoutCSS scroll snapCSS scrollbars stylingCSS shapesCSS tableCSS textCSS text decorationCSS transformsCSS transitionsCSS writing modesCSSOM viewPaged media
+Properties-moz-*-moz-float-edge
+Non-standard
+
+Deprecated
+-moz-force-broken-image-icon
+Non-standard
+
+Deprecated
+-moz-image-region
+Non-standard
+-moz-orient
+Non-standard
+-moz-user-focus
+Non-standard
+-moz-user-input
+Non-standard
+
+Deprecated
+-webkit-*-webkit-border-before
+Non-standard
+-webkit-box-reflect
+Non-standard
+-webkit-line-clamp-webkit-mask-attachment
+Non-standard
+-webkit-mask-box-image
+Non-standard
+-webkit-mask-composite
+Non-standard
+-webkit-mask-position-x
+Non-standard
+-webkit-mask-position-y
+Non-standard
+-webkit-mask-repeat-x
+Non-standard
+-webkit-mask-repeat-y
+Non-standard
+-webkit-overflow-scrolling
+Non-standard
+-webkit-tap-highlight-color
+Non-standard
+-webkit-text-fill-color-webkit-text-security
+Non-standard
+-webkit-text-stroke-webkit-text-stroke-color-webkit-text-stroke-width-webkit-touch-callout
+Non-standard
+accent-coloralign-*align-contentalign-itemsalign-selfalign-tracks
+Experimental
+allanimation-*animationanimation-compositionanimation-delayanimation-directionanimation-durationanimation-fill-modeanimation-iteration-countanimation-nameanimation-play-stateanimation-timeline
+Experimental
+animation-timing-functionappearanceaspect-ratiobackdrop-filterbackface-visibilitybackground-*backgroundbackground-attachmentbackground-blend-modebackground-clipbackground-colorbackground-imagebackground-originbackground-positionbackground-position-xbackground-position-ybackground-repeatbackground-sizeblock-sizeborder-*borderborder-blockborder-block-colorborder-block-endborder-block-end-colorborder-block-end-styleborder-block-end-widthborder-block-startborder-block-start-colorborder-block-start-styleborder-block-start-widthborder-block-styleborder-block-widthborder-bottomborder-bottom-colorborder-bottom-left-radiusborder-bottom-right-radiusborder-bottom-styleborder-bottom-widthborder-collapseborder-colorborder-end-end-radiusborder-end-start-radiusborder-imageborder-image-outsetborder-image-repeatborder-image-sliceborder-image-sourceborder-image-widthborder-inlineborder-inline-colorborder-inline-endborder-inline-end-colorborder-inline-end-styleborder-inline-end-widthborder-inline-startborder-inline-start-colorborder-inline-start-styleborder-inline-start-widthborder-inline-styleborder-inline-widthborder-leftborder-left-colorborder-left-styleborder-left-widthborder-radiusborder-rightborder-right-colorborder-right-styleborder-right-widthborder-spacingborder-start-end-radiusborder-start-start-radiusborder-styleborder-topborder-top-colorborder-top-left-radiusborder-top-right-radiusborder-top-styleborder-top-widthborder-widthbottombox-*box-align
+Non-standard
+
+Deprecated
+box-decoration-breakbox-direction
+Non-standard
+
+Deprecated
+box-flex
+Non-standard
+
+Deprecated
+box-flex-group
+Non-standard
+
+Deprecated
+box-lines
+Non-standard
+
+Deprecated
+box-ordinal-group
+Non-standard
+
+Deprecated
+box-orient
+Non-standard
+
+Deprecated
+box-pack
+Non-standard
+
+Deprecated
+box-shadowbox-sizingbreak-*break-afterbreak-beforebreak-insidecaption-sidecaret-colorclearclip
+Deprecated
+clip-pathcolorcolor-schemecolumn-*column-countcolumn-fillcolumn-gapcolumn-rulecolumn-rule-colorcolumn-rule-stylecolumn-rule-widthcolumn-spancolumn-widthcolumnscontain-*containcontain-intrinsic-block-sizecontain-intrinsic-heightcontain-intrinsic-inline-sizecontain-intrinsic-sizecontain-intrinsic-widthcontainer-*containercontainer-namecontainer-typecontentcontent-visibility
+Experimental
+counter-*counter-incrementcounter-resetcounter-setcursordirectiondisplayempty-cellsfilterflex-*flexflex-basisflex-directionflex-flowflex-growflex-shrinkflex-wrapfloatfont-*fontfont-familyfont-feature-settingsfont-kerningfont-language-overridefont-optical-sizingfont-palettefont-sizefont-size-adjustfont-smooth
+Non-standard
+font-stretchfont-stylefont-synthesisfont-variantfont-variant-alternatesfont-variant-capsfont-variant-east-asianfont-variant-emojifont-variant-ligaturesfont-variant-numericfont-variant-positionfont-variation-settingsfont-weightforced-color-adjustgapgrid-*gridgrid-areagrid-auto-columnsgrid-auto-flowgrid-auto-rowsgrid-columngrid-column-endgrid-column-startgrid-rowgrid-row-endgrid-row-startgrid-templategrid-template-areasgrid-template-columnsgrid-template-rowshanging-punctuationheighthyphenate-characterhyphenate-limit-charshyphensimage-*image-orientationimage-renderingimage-resolution
+Experimental
+initial-letter
+Experimental
+initial-letter-align
+Experimental
+inline-sizeinset-*insetinset-blockinset-block-endinset-block-startinset-inlineinset-inline-endinset-inline-startisolationjustify-*justify-contentjustify-itemsjustify-selfjustify-tracks
+Experimental
+leftletter-spacingline-*line-breakline-heightline-height-step
+Experimental
+list-*list-stylelist-style-imagelist-style-positionlist-style-typemargin-*marginmargin-blockmargin-block-endmargin-block-startmargin-bottommargin-inlinemargin-inline-endmargin-inline-startmargin-leftmargin-rightmargin-topmargin-trim
+Experimental
+mask-*maskmask-bordermask-border-modemask-border-outsetmask-border-repeatmask-border-slicemask-border-sourcemask-border-widthmask-clipmask-compositemask-imagemask-modemask-originmask-positionmask-repeatmask-sizemask-typemasonry-auto-flow
+Experimental
+math-*math-depth
+Experimental
+math-shift
+Experimental
+math-stylemax-*max-block-sizemax-heightmax-inline-sizemax-widthmin-*min-block-sizemin-heightmin-inline-sizemin-widthmix-blend-modeobject-fitobject-positionoffset-*offsetoffset-anchoroffset-distanceoffset-pathoffset-position
+Experimental
+offset-rotateopacityorderorphansoutline-*outlineoutline-coloroutline-offsetoutline-styleoutline-widthoverflow-*overflowoverflow-anchoroverflow-blockoverflow-clip-marginoverflow-inlineoverflow-wrapoverflow-xoverflow-yoverscroll-*overscroll-behavioroverscroll-behavior-blockoverscroll-behavior-inlineoverscroll-behavior-xoverscroll-behavior-ypadding-*paddingpadding-blockpadding-block-endpadding-block-startpadding-bottompadding-inlinepadding-inline-endpadding-inline-startpadding-leftpadding-rightpadding-toppage-*pagepage-break-afterpage-break-beforepage-break-insidepaint-orderperspectiveperspective-originplace-*place-contentplace-itemsplace-selfpointer-eventspositionprint-color-adjustquotesresizerightrotaterow-gapruby-align
+Experimental
+ruby-positionscalescroll-*scroll-behaviorscroll-marginscroll-margin-blockscroll-margin-block-endscroll-margin-block-startscroll-margin-bottomscroll-margin-inlinescroll-margin-inline-endscroll-margin-inline-startscroll-margin-leftscroll-margin-rightscroll-margin-topscroll-paddingscroll-padding-blockscroll-padding-block-endscroll-padding-block-startscroll-padding-bottomscroll-padding-inlinescroll-padding-inline-endscroll-padding-inline-startscroll-padding-leftscroll-padding-rightscroll-padding-topscroll-snap-alignscroll-snap-coordinate
+Non-standard
+
+Deprecated
+scroll-snap-destination
+Non-standard
+
+Deprecated
+scroll-snap-points-x
+Non-standard
+
+Deprecated
+scroll-snap-points-y
+Non-standard
+
+Deprecated
+scroll-snap-stopscroll-snap-typescroll-snap-type-x
+Non-standard
+
+Deprecated
+scroll-snap-type-y
+Non-standard
+
+Deprecated
+scroll-timeline
+Experimental
+scroll-timeline-axis
+Experimental
+scroll-timeline-name
+Experimental
+scrollbar-*scrollbar-colorscrollbar-gutterscrollbar-widthshape-*shape-image-thresholdshape-marginshape-outsidetab-sizetable-layouttext-*text-aligntext-align-lasttext-combine-uprighttext-decorationtext-decoration-colortext-decoration-linetext-decoration-skip
+Experimental
+text-decoration-skip-inktext-decoration-styletext-decoration-thicknesstext-emphasistext-emphasis-colortext-emphasis-positiontext-emphasis-styletext-indenttext-justifytext-orientationtext-overflowtext-renderingtext-shadowtext-size-adjust
+Experimental
+text-transformtext-underline-offsettext-underline-positiontoptouch-actiontransform-*transformtransform-boxtransform-origintransform-styletransition-*transitiontransition-delaytransition-durationtransition-propertytransition-timing-functiontranslateunicode-bidiuser-modify
+Non-standard
+
+Deprecated
+user-selectvertical-alignview-transition-name
+Experimental
+visibilitywhite-spacewidowswidthwill-changeword-breakword-spacingwriting-modez-indexzoom
+Non-standard
+
+SelectorsAttribute selectorsClass selectorsID selectorsType selectorsUniversal selectors
+CombinatorsAdjacent sibling combinatorChild combinatorColumn combinator
+Experimental
+Descendant combinatorGeneral sibling combinatorSelector list
+Pseudo-classes:-moz-broken
+Non-standard
+:-moz-drag-over
+Non-standard
+:-moz-first-node
+Non-standard
+:-moz-focusring
+Non-standard
+:-moz-handler-blocked
+Non-standard
+:-moz-handler-crashed
+Non-standard
+:-moz-handler-disabled
+Non-standard
+:-moz-last-node
+Non-standard
+:-moz-loading
+Non-standard
+:-moz-locale-dir(ltr)
+Non-standard
+:-moz-locale-dir(rtl)
+Non-standard
+:-moz-only-whitespace
+Non-standard
+:-moz-submit-invalid
+Non-standard
+:-moz-suppressed
+Non-standard
+:-moz-user-disabled
+Non-standard
+:-moz-window-inactive
+Non-standard
+:active:any-link:autofill:blank
+Experimental
+:checked:current:default:defined:dir():disabled:empty:enabled:first:first-child:first-of-type:focus:focus-visible:focus-within:fullscreen:future
+Experimental
+:has():host:host-context():host():hover:in-range:indeterminate:invalid:is():lang():last-child:last-of-type:left:link:local-link:modal:not():nth-child():nth-col():nth-last-child():nth-last-col():nth-last-of-type():nth-of-type():only-child:only-of-type:optional:out-of-range:past
+Experimental
+:paused:picture-in-picture:placeholder-shown:playing:popover-open
+Experimental
+:read-only:read-write:required:right:root:scope:target:target-within
+Experimental
+:user-invalid (:-moz-ui-invalid):user-valid (:-moz-ui-valid):valid:visited:where()
+Pseudo-elements::-moz-color-swatch
+Non-standard
+::-moz-focus-inner
+Non-standard
+::-moz-list-bullet
+Non-standard
+::-moz-list-number
+Non-standard
+::-moz-page
+Non-standard
+::-moz-page-sequence
+Non-standard
+::-moz-progress-bar
+Non-standard
+::-moz-range-progress
+Non-standard
+::-moz-range-thumb
+Non-standard
+::-moz-range-track
+Non-standard
+::-moz-scrolled-page-sequence
+Non-standard
+::-webkit-inner-spin-button
+Non-standard
+::-webkit-meter-bar
+Non-standard
+::-webkit-meter-even-less-good-value
+Non-standard
+::-webkit-meter-inner-element
+Non-standard
+::-webkit-meter-optimum-value
+Non-standard
+::-webkit-meter-suboptimum-value
+Non-standard
+::-webkit-outer-spin-button
+Non-standard
+::-webkit-progress-bar
+Non-standard
+::-webkit-progress-inner-element
+Non-standard
+::-webkit-progress-value
+Non-standard
+::-webkit-scrollbar
+Non-standard
+::-webkit-search-cancel-button
+Non-standard
+::-webkit-search-results-button
+Non-standard
+::-webkit-slider-runnable-track
+Non-standard
+::-webkit-slider-thumb
+Non-standard
+::after::backdrop::before::cue::cue-region::file-selector-button::first-letter::first-line::grammar-error
+Experimental
+::highlight()
+Experimental
+::marker::part()::placeholder::selection::slotted()::spelling-error
+Experimental
+::target-text
+Experimental
+::view-transition
+Experimental
+::view-transition-group
+Experimental
+::view-transition-image-pair
+Experimental
+::view-transition-new
+Experimental
+::view-transition-old
+Experimental
+
+At-rules@charset@color-profile@container@counter-style@document
+Non-standard
+
+Deprecated
+@font-face@font-feature-values@font-palette-values@import@keyframes@layer@media@namespace@page@property@supports
+Functions-moz-image-rect
+Experimental
+
+Non-standard
+abs()
+Experimental
+acos()asin()atan()atan2()attr()calc()clamp()cos()counter()counters()cross-fade()element()
+Experimental
+env()exp()fit-content()hypot()log()max()min()minmax()mod()
+Experimental
+path()pow()ray()
+Experimental
+rem()
+Experimental
+repeat()round()
+Experimental
+sign()
+Experimental
+sin()sqrt()symbols()tan()url()var()
+Types<alpha-value><angle><angle-percentage><basic-shape><blend-mode><calc-constant><calc-sum><color><custom-ident><dashed-ident><dimension><display-box><display-inside><display-internal><display-legacy><display-listitem><display-outside><easing-function><filter-function><flex><frequency><frequency-percentage><gradient><hex-color><hue><ident><image><integer><length><length-percentage><line-style><named-color><number><overflow><percentage><position><ratio><resolution><shape>
+Deprecated
+<string><system-color><time><time-percentage><transform-function>
+Guides
+
+
+Animations
+
+Using CSS animations
+
+
+
+
+
+Backgrounds and Borders
+
+Using multiple backgrounds
+Resizing background images
+
+
+
+
+
+Box alignment
+
+Box alignment in block layout
+Box alignment in flexbox
+Box alignment in grid layout
+Box alignment in multi-column layout
+
+
+
+
+
+Box model
+
+Introduction to the CSS basic box model
+Mastering margin collapsing
+
+
+
+
+
+Columns
+
+Basic concepts of Multicol
+Styling columns
+Spanning and balancing
+Handling overflow in Multicol
+Content breaks in Multicol
+
+
+
+
+
+Conditional rules
+
+Using feature queries
+
+
+
+
+
+CSSOM view
+
+Coordinate systems
+
+
+
+
+
+Flexbox
+
+Basic concepts of Flexbox
+Comparison with other layout methods
+Aligning items in a flex container
+Ordering flex items
+Controlling flex item ratios
+Mastering wrapping of flex items
+Typical use cases of Flexbox
+Backwards compatibility of Flexbox
+
+
+
+
+
+Flow layout
+
+Block and Inline layout in normal flow
+In flow and Out of flow
+Formatting contexts explained
+Flow layout and writing modes
+Flow layout and overflow
+
+
+
+
+
+Fonts
+
+OpenType font features guide
+Variable fonts guide
+
+
+
+
+
+Grid
+
+Basics concepts of grid layout
+Relationship to other layout methods
+Line-based placement
+Grid template areas
+Layout using named grid lines
+Auto-placement in grid layout
+Box alignment in grid layout
+Grids, logical values and writing modes
+Grid layout and accessibility
+Grid Layout and progressive enhancement
+Realizing common layouts using grids
+Subgrid
+Masonry layout
+
+
+
+
+
+Images
+
+Using CSS gradients
+
+
+
+
+
+Lists and counters
+
+Using CSS counters
+Consistent list indentation
+
+
+
+
+
+Logical properties
+
+Basic concepts
+Floating and positioning
+Margins, borders and padding
+Sizing
+
+
+
+
+
+Media queries
+
+Using media queries
+Using media queries for accessibility
+Testing media queries programmatically
+
+
+
+
+
+Positioning
+
+Understanding CSS z-index
+
+
+
+
+
+Scroll snap
+
+Basic concepts of scroll snap
+
+
+
+
+
+Shapes
+
+Overview of shapes
+Shapes from box values
+Basic shapes
+Shapes from images
+
+
+
+
+
+Text
+
+Wrapping and breaking text
+
+
+
+
+
+Transforms
+
+Using transforms
+
+
+
+
+
+Transitions
+
+Using transitions
+
+
+
+Layout cookbook
+
+
+Media objects
+Columns
+Center an element
+Sticky footers
+Split navigation
+Breadcrumb navigation
+List group with badges
+Pagination
+Card
+Grid wrapper
+
+
+Tools
+
+
+Color picker
+Box shadow generator
+Border image generator
+
+
+
+In this articleOrigin typesCascading orderBasic exampleAuthor styles: inline styles, layers, and precedenceComplete cascade orderWhich CSS entities participate in the cascadeCSS animations and the cascadeResetting stylesSpecificationsSee alsoIntroducing the CSS CascadeThe cascade is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one origin or cascade layer set a value for a property on an element.
+The cascade lies at the core of CSS, as emphasized by the name: Cascading Style Sheets. When a selector matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater specificity.
+This article explains what the cascade is and the order in which CSS declarations cascade, covering cascade layers and origin type. Understanding origin precedence is key to understanding the cascade.Origin typesThe CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations come from different origin types: User-agent stylesheets, Author stylesheets, and User stylesheets.
+Though style sheets come from these different origins and can be within different layers in each of these origins, they overlap in scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, let's define some terms:User-agent stylesheetsUser-agent, or browsers, have basic style sheets that give default styles to any document. These style sheets are named user-agent stylesheets. Most browsers use actual stylesheets for this purpose, while others simulate them in code. The end result is the same.
+Some browsers let users modify the user-agent stylesheet, but this is rare and not something that can be controlled.
+Although some constraints on user-agent stylesheets are set by the HTML specification, browsers have a lot of latitude: that means some differences exist between browsers. To simplify the development process, Web developers may use a CSS reset stylesheet, such as normalize.css, which sets common properties values to a known state for all browsers before beginning to make alterations to suit their specific needs.
+Unless the user-agent stylesheet includes an !important next to a property, making it "important", styles declared by author styles, including a reset style sheet, take precedence over the user-agent styles, regardless of the specificity of the associated selector.Author stylesheetsAuthor stylesheets are the most common type of style sheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, <style> blocks, and inline styles defined with the style attribute. These author styles define the look and feel of the website â its theme.User stylesheetsIn most browsers, the user (or reader) of the website can choose to override styles using a custom user stylesheet designed to tailor the experience to the user's wishes. Depending on the user agent, user styles can be configured directly or added via browser extensions.Cascade layersThe cascade order is based on origin type. The cascade within each origin type is based on the declaration order of cascade layers within that type. For all origins - user-agent, author, or user - styles can be declared within or outside of named or anonymous layers. When declared using layer, layer() or @layer, styles are placed into the specified named layer, or into an anonymous layer if no name is provided. Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
+Let's take a look at cascading origin type before diving into cascade layers within each origin type.Cascading orderThe cascading algorithm determines how to find the value to apply for each property for each document element. The following steps apply to the cascading algorithm:
+
+Relevance: It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate media at-rule.
+Origin and importance: Then it sorts these rules according to their importance, that is, whether or not they are followed by !important, and by their origin. Ignoring layers for the moment, the cascade order is as follows:
+    
+
+
+Order (low to high)
+Origin
+Importance
+
+
+
+
+1
+user-agent (browser)
+normal
+
+
+2
+user
+normal
+
+
+3
+author (developer)
+normal
+
+
+4
+CSS @keyframe animations
+
+
+
+5
+author (developer)
+!important
+
+
+6
+user
+!important
+
+
+7
+user-agent (browser)
+!important
+
+
+8
+CSS transitions
+
+
+
+
+
+Specificity: In case of equality with an origin, the specificity of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
+Order of appearance: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity, the last declaration in the style order is applied.
+
+The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precedence over animations, and transitions have precedence over important values.
+
+Note: Transitions and animations
+Property values set by animation @keyframes are more important than all normal styles (those with no !important set).
+Property values being set in a transition take precedence over all other values set, even those marked with !important.
+
+The cascade algorithm is applied before the specificity algorithm, meaning if :root p { color: red;} is declared in the user stylesheet (line 2) and a less specific p {color: blue;} is in the author stylesheet (line 3), the paragraphs will be blue.Basic exampleBefore taking a deeper look at how cascade layers impact the cascade, let's look at an example involving multiple sources of CSS across the various origins, and work through the steps of the cascade algorithm:
+Here we have a user agent style sheet, two author style sheets, and a user stylesheet, with no inline styles within the HTML:
+User-agent CSS:
+li {
+  margin-left: 10px;
+}
+
+Author CSS 1:
+li {
+  margin-left: 0;
+} /* This is a reset */
+
+Author CSS 2:
+@media screen {
+  li {
+    margin-left: 3px;
+  }
+}
+
+@media print {
+  li {
+    margin-left: 1px;
+  }
+}
+
+@layer namedLayer {
+  li {
+    margin-left: 5px;
+  }
+}
+
+User CSS:
+.specific {
+  margin-left: 1em;
+}
+
+HTML:
+<ul>
+  <li class="specific">1<sup>st</sup></li>
+  <li>2<sup>nd</sup></li>
+</ul>
+
+In this case, declarations inside li and .specific rules should apply.
+Once again, there are four steps in the cascade algorithm, in order:
+
+Relevance
+Origin and importance
+Specificity
+Order of appearance
+
+The 1px is for print media. Due to lack of relevance based on its media type, it is removed from consideration.
+No declaration is marked as !important, so the precedence order is author style sheets over user style sheets over user-agent stylesheet. Based on origin and importance, the 1em from the user stylesheet and the 10px from the user-agent stylesheet are removed from consideration.
+Note that even though the user style on .specific of 1em has a higher specificity, it's a normal declaration in a user style sheet. As such, it has a lower precedence than any author styles, and gets removed by the origin and importance step of the algorithm before specificity even comes into play.
+There are three declarations in author stylesheets:
+li {
+  margin-left: 0;
+} /* from author css 1 */
+
+@media screen {
+  li {
+    margin-left: 3px;
+  }
+}
+
+@layer namedLayer {
+  li {
+    margin-left: 5px;
+  }
+}
+
+The last one, the 5px is part of a cascade layer. Normal declarations in layers have lower precedence than normal styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, origin and importance.
+This leaves the 0 and the 3px, which both have the same selector, hence the same specificity.
+We then look at order of appearance. The second one, the last of the two unlayered author styles, wins.
+margin-left: 3px;
+
+
+Note: The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's origin and importance is applied before the specificity algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as normal styles in cascade layers have less precedence than normal unlayered styles. Order of appearance only matters when both origin, importance, and specificity are equal.
+Author styles: inline styles, layers, and precedenceThe table in Cascading order provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precedence within each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles land in the cascade order.
+The order in which layers are declared is important in determining precedence. Normal styles in a layer take precedence over styles declared in prior layers; with normal styles declared outside of any layer taking precedence over normal layered styles regardless of specificity.
+In this example, the author used CSS's @import rule to import five external style sheets within a <style> information element.
+<style>
+  @import unlayeredStyles.css;
+  @import AStyles.css layer(A);
+  @import moreUnlayeredStyles.css;
+  @import BStyles.css layer(B);
+  @import CStyles.css layer(C);
+  p {
+    color: red;
+    padding: 1em !important;
+  }
+</style>
+
+and then in the body of the document we have inline styles:
+<p style="line-height: 1.6em; text-decoration: overline !important;">Hello</p>
+
+
+  In the CSS code block above, three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer.
+  The "All unlayered styles" in the list below (normal author style precedence - order 4) includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal line-height declaration and an important text-decoration declaration:
+
+
+
+
+Order (low to high)
+Author style
+Importance
+
+
+
+
+1
+A - first layer
+normal
+
+
+2
+B - second layer
+normal
+
+
+3
+C - last layer
+normal
+
+
+4
+All unlayered styles
+normal
+
+
+5
+inline style
+normal
+
+
+6
+animations
+
+
+
+7
+All unlayered styles
+!important
+
+
+8
+C - last layer
+!important
+
+
+9
+B - second layer
+!important
+
+
+10
+A - first layer
+!important
+
+
+11
+inline style
+!important
+
+
+12
+transitions
+
+
+
+
+In all origin types, the non important styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from unlayeredStyles.css, moreUnlayeredStyles.css, and the color of p in the <style> itself.
+If any of the layered styles in A, B, or C, have selectors with higher specificity matching an element, similar to :root body p { color: black;}, it doesn't matter. Those declarations are removed from consideration because of origin; normal layered styles have less precedence than normal unlayered styles. If, however, the more specific selector :root body p { color: black;} was found in unlayeredStyles.css, as both origin and importance have the same precedence, specificity would mean the more specific, black declaration would win.
+The layer order of precedence is inverted for styles declared as !important. Important styles declared in a layer take precedence over important styles declared outside of a layer. Important styles in the first declared layer (A) take precedence over important declarations found in layer B, which takes precedence over C, which have precedence over important declarations in the unlayered styles.Inline stylesOnly relevant to author styles are inline styles, declared with the style attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector. If line-height: 2; were declared in a :root body p selector block in any of the five imported stylesheets, the line height would still be 1.6.
+Normal inline styles take precedence over any other normal author styles unless the property is being altered by a CSS animation.
+All important inline styles take precedence over all author styles, important and not, inline and not, layered and not. Important styles also take precedence over animated properties, but not transitioning properties. Three things can override an important inline style: 1) an important user style, 2) an important user agent style, or 3) a property value being transitioned.Importance and layersThe origin type precedence order is inverted for important styles. Important styles declared outside of any cascade layer have lower precedence than those declared as part of a layer. Important values that come in early layers have precedence over important styles declared in subsequent cascade layers.
+Take for example the following CSS:
+p {
+  color: red;
+}
+@layer B {
+  :root p {
+    color: blue;
+  }
+}
+
+Even though the red is declared first and has a less specific selector, because unlayered CSS takes precedence over layered CSS, the paragraph will be red. Had we included an inline style on the paragraph setting it to a different color, such as <p style="color: black">, the paragraph would be black.
+When we add !important to this bit of CSS, the precedence order is reversed with the stylesheet:
+p {
+  color: red !important;
+}
+@layer B {
+  :root p {
+    color: blue !important;
+  }
+}
+
+Now the paragraph will be blue. The !important in the earliest declared layer takes precedence of subsequent layers and unlayered important declarations. If the inline style contained !important, such as <p style="color: black !important">, again the paragraph would be black. Inline importance does take precedence over all other author declared !important declarations, no matter the specificity.
+
+Note: !important reverses the precedence of cascade layers. For this reason, rather than using !important to override external styles, import frameworks, third party styles, widget stylesheets, etc., into layers, demoting their precedence. !important should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
+
+Styles that are transitioning take precedence over all important styles, no matter who or how they are declared.Complete cascade orderNow that we have a better understanding of origin type and cascade layer precedence, we realize the table in Cascading order could have more accurately been represented by the following table:
+
+
+
+Precedence Order(low to high)
+Style Origin
+Importance
+
+
+
+
+1
+user-agent - first declared layer
+normal
+
+
+user-agent - last declared layer
+
+
+user-agent - unlayered styles
+
+
+2
+user - first declared layer
+normal
+
+
+user - last declared layer
+
+
+user - unlayered styles
+
+
+3
+author - first declared layer
+normal
+
+
+author - last declared layer
+
+
+author - unlayered styles
+
+
+inline style
+
+
+4
+animations
+
+
+
+5
+author - unlayered styles
+!important
+
+
+author - last declared layer
+
+
+author - first declared layer
+
+
+inline style
+
+
+6
+user - unlayered styles
+!important
+
+
+user - last declared layer
+
+
+user - first declared layer
+
+
+7
+user-agent - unlayered styles
+!important
+
+
+user-agent - last declared layer
+
+
+user-agent - first declared layer
+
+
+8
+transitions
+
+
+
+Which CSS entities participate in the cascadeOnly CSS property/value pair declarations participate in the cascade. This means that at-rules containing entities other than declarations, such as a @font-face rule containing descriptors, don't participate in the cascade.
+For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a @font-face rule, font names are identified by font-family descriptors. If several @font-face rules with the same descriptor are defined, only the most appropriate @font-face, as a whole, is considered. If more than one are identically appropriate, the entire @font-face declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
+While the declarations contained in most at-rules â such as those in @media, @document, or @supports â participate in the cascade, the at-rule may make an entire selector not relevant, as we saw with the print style in the basic example.
+Declarations in @keyframes don't participate in the cascade. As with @font-face, only the @keyframes as a whole is selected via the cascade algorithm. The precedence order of animation is described below.
+When it comes to @import, the @import doesn't participate itself in the cascade, but all of the imported styles do participate. If the @import defines a named or anonymous layer, the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with @import is treated as the last declared layer. This was discussed above.
+Finally, @charset obeys specific algorithms and isn't affected by the cascade algorithm.CSS animations and the cascadeCSS animations, using @keyframes at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single @keyframes, and never mixes multiple ones together.
+If the several keyframe animations are defined with the same animation name, the last defined @keyframes in the origin and layer with the greatest precedence. Only one @keyframes definition is used, even if the @keyframes animate different property. @keyframes with the same name are never combined.
+p {
+  animation: infinite 5s alternate repeatedName;
+}
+@keyframes repeatedName {
+  from {
+    font-size: 1rem;
+  }
+  to {
+    font-size: 3rem;
+  }
+}
+
+@layer A {
+  @keyframes repeatedName {
+    from {
+      background-color: yellow;
+    }
+    to {
+      background-color: orange;
+    }
+  }
+}
+@layer B {
+  @keyframes repeatedName {
+    from {
+      color: white;
+    }
+    to {
+      color: black;
+    }
+  }
+}
+
+In this example, there are three separate animation declaration named repeatedName. When animation: infinite 5s alternate repeatedName is applied to the paragraph, only one animation is applied: the keyframe animation defined in the unlayered CSS takes precedence over the layered keyframe animation declarations based on origin and cascade layer precedence order. In this example, only the element's font size will be animated.
+
+Note: There are no important animations, as property declarations in a @keyframes block that contain !important as part of the value are ignored.
+Resetting stylesAfter your content has finished altering styles, it may find itself in a situation where it needs to restore them to a known state. This may happen in cases of animations, theme changes, and so forth. The CSS property all lets you quickly set (almost) everything in CSS back to a known state.
+all lets you opt to immediately restore all properties to any of their initial (default) state, the state inherited from the previous level of the cascade, a specific origin (the user-agent stylesheet, the author stylesheet, or the user stylesheet), or even to clear the values of the properties entirely.SpecificationsSpecificationCSS Cascading and Inheritance Level 4 See also
+A very simple introduction to the CSS cascade
+CSS key concepts:
+    
+CSS syntax
+At-rules
+Comments
+Specificity
+Inheritance
+Box model
+Layout modes
+Visual formatting models
+Margin collapsing
+Values
+        
+Initial values
+Computed values
+Used values
+Actual values
+
+
+Value definition syntax
+Shorthand properties
+Replaced elements
+
+
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 16, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

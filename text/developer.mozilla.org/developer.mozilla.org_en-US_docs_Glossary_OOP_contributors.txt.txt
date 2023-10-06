@@ -1,0 +1,12 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/oop/index.md
+
+# Original Wiki contributors
+hbloomer
+klez
+Andrew_Pfeiffer
+joyvolatile
+xfq
+Jeremie
+kscarfone
+panaggio

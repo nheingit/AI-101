@@ -1,0 +1,21 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/uievent/view/index.md
+
+# Original Wiki contributors
+mfluehr
+fscholz
+nhunzaker
+erikadoyle
+teoli
+MHasan
+kscarfone
+Kartik_Chadha
+Sheppy
+Matej Lednar
+Nickolay
+Jabez
+Ptak82
+Dria
+Shaver
+JesseW
+cbiesinger

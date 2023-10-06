@@ -1,0 +1,609 @@
+SVG Attribute reference - SVG: Scalable Vector Graphics | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesSVG: Scalable Vector GraphicsSVG Attribute referenceArticle ActionsEnglish (US)In this articleSVG attributes A to ZSVG attributes by categorySee also
+
+SVG
+Tutorials
+
+
+Introducing SVG from scratch
+
+Introduction
+Getting started
+Positions
+Basic shapes
+Paths
+Fills and Strokes
+Gradients in SVG
+Patterns
+Texts
+Basic transformations
+Clipping and masking
+Other content in SVG
+Filter effects
+SVG fonts
+SVG image element
+Tools for SVG
+SVG and CSS
+
+
+
+Reference
+
+
+Elements
+<a><animate><animateMotion><animateTransform><circle><clipPath><cursor>
+Deprecated
+<defs><desc><ellipse><feBlend><feColorMatrix><feComponentTransfer><feComposite><feConvolveMatrix><feDiffuseLighting><feDisplacementMap><feDistantLight><feDropShadow><feFlood><feFuncA><feFuncB><feFuncG><feFuncR><feGaussianBlur><feImage><feMerge><feMergeNode><feMorphology><feOffset><fePointLight><feSpecularLighting><feSpotLight><feTile><feTurbulence><filter><font-face-format>
+Deprecated
+<font-face-name>
+Deprecated
+<font-face-src>
+Deprecated
+<font-face-uri>
+Deprecated
+<font-face>
+Deprecated
+<font>
+Deprecated
+<foreignObject><g><glyph>
+Deprecated
+<glyphRef>
+Deprecated
+<hkern>
+Deprecated
+<image><line><linearGradient><marker><mask><metadata><missing-glyph>
+Deprecated
+<mpath><path><pattern><polygon><polyline><radialGradient><rect><script><set><stop><style><svg><switch><symbol><text><textPath><title> â the SVG accessible name element<tref>
+Deprecated
+<tspan><use><view><vkern>
+Deprecated
+
+
+
+
+
+Attributes
+accent-height
+Deprecated
+accumulateadditivealignment-baselinealphabetic
+Deprecated
+amplitudearabic-form
+Deprecated
+ascent
+Deprecated
+attributeNameattributeType
+Deprecated
+azimuthbaseFrequencybaseline-shiftbaseProfile
+Deprecated
+bbox
+Deprecated
+beginbiasbycalcModecap-height
+Deprecated
+classclip
+Deprecated
+clip-pathclip-ruleclipPathUnitscolorcolor-interpolationcolor-interpolation-filterscolor-profile
+Deprecated
+contentScriptType
+Deprecated
+contentStyleType
+Deprecated
+cursorcxcyddata-*descent
+Deprecated
+diffuseConstantdirectiondisplaydivisordominant-baselinedurdxdyedgeModeelevationenable-background
+Deprecated
+endexponentfillfill-opacityfill-rulefilterfilterRes
+Deprecated
+filterUnitsflood-colorflood-opacityfont-familyfont-sizefont-size-adjustfont-stretchfont-stylefont-variantfont-weightfrfromfxfyg1
+Deprecated
+g2
+Deprecated
+glyph-name
+Deprecated
+glyph-orientation-horizontal
+Deprecated
+glyph-orientation-vertical
+Deprecated
+gradientTransformgradientUnitshanging
+Deprecated
+heighthoriz-adv-x
+Deprecated
+horiz-origin-x
+Deprecated
+horiz-origin-y
+Deprecated
+hrefidideographic
+Deprecated
+image-renderinginin2interceptk
+Deprecated
+k1k2k3k4kernelMatrixkernelUnitLengthkerning
+Deprecated
+keyPointskeySplineskeyTimeslanglengthAdjustletter-spacinglighting-colorlimitingConeAnglemarker-endmarker-midmarker-startmarkerHeightmarkerUnitsmarkerWidthmaskmaskContentUnitsmaskUnitsmathematical
+Deprecated
+maxmediamethod
+Experimental
+minmodename
+Deprecated
+numOctavesonclickopacityoperatororderorientorientation
+Deprecated
+originoverflowoverline-positionoverline-thicknesspaint-orderpanose-1
+Deprecated
+pathpathLengthpatternContentUnitspatternTransformpatternUnitspointer-eventspointspointsAtXpointsAtYpointsAtZpreserveAlphapreserveAspectRatioprimitiveUnitsrradiusrefXrefYrepeatCountrepeatDurrequiredFeatures
+Deprecated
+restartresultrotate
+Experimental
+rxryscaleseedshape-renderingside
+Experimental
+slope
+Deprecated
+spacingspecularConstantspecularExponentspreadMethodstartOffsetstdDeviationstemh
+Deprecated
+stemv
+Deprecated
+stitchTilesstop-colorstop-opacitystrikethrough-positionstrikethrough-thicknessstring
+Deprecated
+strokestroke-dasharraystroke-dashoffsetstroke-linecapstroke-linejoinstroke-miterlimitstroke-opacitystroke-widthstylesurfaceScaleSVG attribute: crossoriginSVG Conditional Processing AttributesSVG Core AttributesSVG Event AttributesSVG Presentation AttributesSVG Styling AttributessystemLanguagetabindextableValuestargettargetXtargetYtext-anchortext-decorationtext-renderingtextLengthtotransformtransform-origintypeu1
+Deprecated
+u2
+Deprecated
+underline-positionunderline-thicknessunicode
+Deprecated
+unicode-bidiunicode-range
+Deprecated
+units-per-em
+Deprecated
+v-alphabetic
+Deprecated
+v-hanging
+Deprecated
+v-ideographic
+Deprecated
+v-mathematical
+Deprecated
+valuesvector-effectversion
+Deprecated
+vert-adv-y
+Deprecated
+vert-origin-x
+Deprecated
+vert-origin-y
+Deprecated
+viewBoxviewTarget
+Deprecated
+visibilitywidthwidths
+Deprecated
+word-spacingwriting-modexx-height
+Deprecated
+x1x2xChannelSelectorxlink:arcrole
+Deprecated
+xlink:href
+Deprecated
+xlink:show
+Deprecated
+xlink:title
+Deprecated
+xlink:type
+Deprecated
+xml:base
+Deprecated
+xml:lang
+Deprecated
+xml:space
+Deprecated
+yy1y2yChannelSelectorzzoomAndPan
+Deprecated
+
+
+
+Guides
+
+
+Applying SVG effects to HTML content
+Content type
+Namespaces crash course
+SVG animation with SMIL
+SVG as an Image
+
+
+
+In this articleSVG attributes A to ZSVG attributes by categorySee alsoSVG Attribute referenceSVG elements can be modified using attributes that specify details about exactly how the element should be handled or rendered.
+Below is a list of all of the attributes available in SVG along with links to reference documentation to help you learn which elements support them and how they work.SVG attributes A to ZA
+accent-height
+accumulate
+additive
+alignment-baseline
+alphabetic
+amplitude
+arabic-form
+ascent
+attributeName
+attributeType
+azimuth
+B
+baseFrequency
+baseline-shift
+baseProfile
+bbox
+begin
+bias
+by
+C
+calcMode
+cap-height
+class
+clip
+clipPathUnits
+clip-path
+clip-rule
+color
+color-interpolation
+color-interpolation-filters
+color-profile
+color-rendering
+contentScriptType
+contentStyleType
+crossorigin
+cursor
+cx
+cy
+D
+d
+decelerate
+descent
+diffuseConstant
+direction
+display
+divisor
+dominant-baseline
+dur
+dx
+dy
+E
+edgeMode
+elevation
+enable-background
+end
+exponent
+F
+fill
+fill-opacity
+fill-rule
+filter
+filterRes
+filterUnits
+flood-color
+flood-opacity
+font-family
+font-size
+font-size-adjust
+font-stretch
+font-style
+font-variant
+font-weight
+format
+from
+fr
+fx
+fy
+G
+g1
+g2
+glyph-name
+glyph-orientation-horizontal
+glyph-orientation-vertical
+glyphRef
+gradientTransform
+gradientUnits
+H
+hanging
+height
+href
+hreflang
+horiz-adv-x
+horiz-origin-x
+I
+id
+ideographic
+image-rendering
+in
+in2
+intercept
+K
+k
+k1
+k2
+k3
+k4
+kernelMatrix
+kernelUnitLength
+kerning
+keyPoints
+keySplines
+keyTimes
+L
+lang
+lengthAdjust
+letter-spacing
+lighting-color
+limitingConeAngle
+local
+M
+marker-end
+marker-mid
+marker-start
+markerHeight
+markerUnits
+markerWidth
+mask
+maskContentUnits
+maskUnits
+mathematical
+max
+media
+method
+min
+mode
+N
+name
+numOctaves
+O
+offset
+opacity
+operator
+order
+orient
+orientation
+origin
+overflow
+overline-position
+overline-thickness
+P
+panose-1
+paint-order
+path
+pathLength
+patternContentUnits
+patternTransform
+patternUnits
+ping
+pointer-events
+points
+pointsAtX
+pointsAtY
+pointsAtZ
+preserveAlpha
+preserveAspectRatio
+primitiveUnits
+R
+r
+radius
+referrerPolicy
+refX
+refY
+rel
+rendering-intent
+repeatCount
+repeatDur
+requiredExtensions
+requiredFeatures
+restart
+result
+rotate
+rx
+ry
+S
+scale
+seed
+shape-rendering
+slope
+spacing
+specularConstant
+specularExponent
+speed
+spreadMethod
+startOffset
+stdDeviation
+stemh
+stemv
+stitchTiles
+stop-color
+stop-opacity
+strikethrough-position
+strikethrough-thickness
+string
+stroke
+stroke-dasharray
+stroke-dashoffset
+stroke-linecap
+stroke-linejoin
+stroke-miterlimit
+stroke-opacity
+stroke-width
+style
+surfaceScale
+systemLanguage
+T
+tabindex
+tableValues
+target
+targetX
+targetY
+text-anchor
+text-decoration
+text-rendering
+textLength
+to
+transform
+transform-origin
+type
+U
+u1
+u2
+underline-position
+underline-thickness
+unicode
+unicode-bidi
+unicode-range
+units-per-em
+V
+v-alphabetic
+v-hanging
+v-ideographic
+v-mathematical
+values
+vector-effect
+version
+vert-adv-y
+vert-origin-x
+vert-origin-y
+viewBox
+viewTarget
+visibility
+W
+width
+widths
+word-spacing
+writing-mode
+X
+x
+x-height
+x1
+x2
+xChannelSelector
+xlink:actuate
+xlink:arcrole
+xlink:href
+xlink:role
+xlink:show
+xlink:title
+xlink:type
+xml:base
+xml:lang
+xml:space
+Y
+y
+y1
+y2
+yChannelSelector
+Z
+z
+zoomAndPan
+SVG attributes by categoryGeneric attributes
+Core attributes
+
+Core attributesid, lang, tabindex, xml:base, xml:lang, xml:space
+
+Style attributes
+
+Style attributesclass, style
+
+Conditional processing attributes
+
+requiredExtensions, requiredFeatures, systemLanguage.
+
+XLink attributesxlink:href, xlink:type, xlink:role, xlink:arcrole, xlink:title, xlink:show, xlink:actuatePresentation attributes
+Note: All SVG presentation attributes can be used as CSS properties.
+
+
+alignment-baseline
+baseline-shift
+clip
+clip-path
+clip-rule
+color
+color-interpolation
+color-interpolation-filters
+color-profile
+color-rendering
+cursor
+direction
+display
+dominant-baseline
+enable-background
+fill
+fill-opacity
+fill-rule
+filter
+flood-color
+flood-opacity
+font-family
+font-size
+font-size-adjust
+font-stretch
+font-style
+font-variant
+font-weight
+glyph-orientation-horizontal
+glyph-orientation-vertical
+image-rendering
+kerning
+letter-spacing
+lighting-color
+marker-end
+marker-mid
+marker-start
+mask
+opacity
+overflow
+pointer-events
+shape-rendering
+stop-color
+stop-opacity
+stroke
+stroke-dasharray
+stroke-dashoffset
+stroke-linecap
+stroke-linejoin
+stroke-miterlimit
+stroke-opacity
+stroke-width
+text-anchor
+text-decoration
+text-rendering
+transform
+transform-origin
+unicode-bidi
+vector-effect
+visibility
+word-spacing
+writing-mode
+Filters attributes
+Filter primitive attributes
+height, result, width, x, y
+Transfer function attributes
+type, tableValues, slope, intercept, amplitude, exponent, offset
+Animation attributes
+Animation target element attributes
+href
+Animation attribute target attributes
+attributeType, attributeName
+Animation timing attributes
+begin, dur, end, min, max, restart, repeatCount, repeatDur, fill
+Animation value attributes
+calcMode, values, keyTimes, keySplines, from, to, by, autoReverse, accelerate, decelerate
+Animation addition attributes
+additive, accumulate
+Event attributes
+Animation event attributes
+
+Animation event attributes
+onbegin, onend, onrepeat
+
+Document event attributes
+
+Document event attributes
+onabort, onerror, onresize, onscroll, onunload
+
+Global event attributes
+
+Global event attributes
+oncancel, oncanplay, oncanplaythrough, onchange, onclick, onclose, oncuechange, ondblclick, ondrag, ondragend, ondragenter, ondragleave, ondragover, ondragstart, ondrop, ondurationchange, onemptied, onended, onerror, onfocus, oninput, oninvalid, onkeydown, onkeypress, onkeyup, onload, onloadeddata, onloadedmetadata, onloadstart, onmousedown, onmouseenter, onmouseleave, onmousemove, onmouseout, onmouseover, onmouseup, onmousewheel, onpause, onplay, onplaying, onprogress, onratechange, onreset, onresize, onscroll, onseeked, onseeking, onselect, onshow, onstalled, onsubmit, onsuspend, ontimeupdate, ontoggle, onvolumechange, onwaiting
+
+Graphical event attributes
+
+Graphical event attributes
+onactivate, onfocusin, onfocusout
+
+See also
+SVG element reference
+SVG Tutorial
+SVG interface reference
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Mar 6, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

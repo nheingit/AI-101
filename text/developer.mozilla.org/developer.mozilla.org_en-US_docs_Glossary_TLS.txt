@@ -1,0 +1,17 @@
+Transport Layer Security (TLS) - MDN Web Docs Glossary: Definitions of Web-related terms | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusMDN Web Docs Glossary: Definitions of Web-related termsTransport Layer Security (TLS)Article ActionsEnglish (US)In this articleSee alsoIn this articleSee alsoTransport Layer Security (TLS)Transport Layer Security (TLS), formerly known as Secure Sockets Layer (SSL), is a protocol used by applications to communicate securely across a network, preventing tampering with and eavesdropping on email, web browsing, messaging, and other protocols. Both SSL and TLS are client / server protocols that ensure communication privacy by using cryptographic protocols to provide security over a network. When a server and client communicate using TLS, it ensures that no third party can eavesdrop or tamper with any message.
+All modern browsers support the TLS protocol, requiring the server to provide a valid digital certificate confirming its identity in order to establish a secure connection. It is possible for both the client and server to mutually authenticate each other, if both parties provide their own individual digital certificates.
+
+Note: All major browsers began removing support for TLS 1.0 and 1.1 in early 2020; you'll need to make sure your web server supports TLS 1.2 or 1.3 going forward. From version 74 onwards, Firefox will return a Secure Connection Failed error when connecting to servers using the older TLS versions (Firefox bug 1606734).
+See also
+Transport Layer Security (Wikipedia)
+RFC 8446 (The Transport Layer Security Protocol, Version 1.3)
+RFC 5246 (The Transport Layer Security Protocol, Version 1.2)
+Transport Layer Security
+OWASP: Transport Layer Protection Cheat Sheet
+Glossary
+
+HTTPS
+SSL
+
+
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 26, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

@@ -1,0 +1,8 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/guide/performance/index.md
+
+# Original Wiki contributors
+estelle
+chrisdavidmills
+shahzad11
+Sheppy

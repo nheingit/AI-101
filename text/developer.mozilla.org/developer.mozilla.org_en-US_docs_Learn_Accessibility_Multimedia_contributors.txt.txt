@@ -1,0 +1,16 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/learn/accessibility/multimedia/index.md
+
+# Original Wiki contributors
+chrisdavidmills
+dega
+sourabhramsingh
+sonn64877
+transcribear
+kruschk
+serenitus
+Mimi-Davies
+brycepj
+stephaniehobson
+newyork-anthonyng
+qdirks

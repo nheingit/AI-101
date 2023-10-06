@@ -1,0 +1,17 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/node/isdefaultnamespace/index.md
+
+# Original Wiki contributors
+sideshowbarker
+mfluehr
+fscholz
+chrisdavidmills
+yangshun
+teoli
+kscarfone
+namolmes
+Sheppy
+mattbasta
+ethertank
+ziyunfei
+Brettz9

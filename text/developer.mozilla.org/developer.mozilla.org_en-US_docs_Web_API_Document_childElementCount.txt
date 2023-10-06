@@ -1,0 +1,99 @@
+Document: childElementCount property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsDocumentchildElementCountArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoDocument Object ModelDocumentConstructorDocument()Instance propertiesactiveElementadoptedStyleSheetsalinkColor
+Deprecated
+all
+Deprecated
+anchors
+Deprecated
+applets
+Deprecated
+bgColor
+Deprecated
+bodycharacterSetchildElementCount childrencompatModecontentTypecookiecurrentScriptdefaultViewdesignModedirdoctypedocumentElementdocumentURIdomain
+Deprecated
+embedsfeaturePolicy
+Experimental
+fgColor
+Deprecated
+firstElementChildfontsformsfragmentDirective
+Experimental
+fullscreen
+Deprecated
+fullscreenElementfullscreenEnabledheadhiddenimagesimplementationlastElementChildlastModifiedlastStyleSheetSet
+Non-standard
+
+Deprecated
+linkColor
+Deprecated
+linkslocationpictureInPictureElementpictureInPictureEnabledpluginspointerLockElementpreferredStyleSheetSet
+Non-standard
+
+Deprecated
+readyStatereferrerrootElement
+Deprecated
+scriptsscrollingElementselectedStyleSheetSet
+Non-standard
+
+Deprecated
+styleSheetsstyleSheetSets
+Non-standard
+
+Deprecated
+timelinetitleURLvisibilityStatevlinkColor
+Deprecated
+xmlEncoding
+Deprecated
+xmlVersion
+Deprecated
+Instance methodsadoptNode()append()caretPositionFromPoint()caretRangeFromPoint()
+Non-standard
+clear()
+Deprecated
+close()createAttribute()createAttributeNS()createCDATASection()createComment()createDocumentFragment()createElement()createElementNS()createEvent()createExpression()createNodeIterator()createNSResolver()createProcessingInstruction()createRange()createTextNode()createTouch()
+Non-standard
+
+Deprecated
+createTouchList()
+Non-standard
+
+Deprecated
+createTreeWalker()elementFromPoint()elementsFromPoint()enableStyleSheetsForSet()
+Non-standard
+
+Deprecated
+evaluate()execCommand()
+Deprecated
+exitFullscreen()exitPictureInPicture()exitPointerLock()getAnimations()getElementById()getElementsByClassName()getElementsByName()getElementsByTagName()getElementsByTagNameNS()getSelection()hasFocus()hasStorageAccess()importNode()mozSetImageElement()
+Non-standard
+open()prepend()queryCommandEnabled()
+Non-standard
+
+Deprecated
+queryCommandState()
+Non-standard
+
+Deprecated
+queryCommandSupported()
+Non-standard
+
+Deprecated
+querySelector()querySelectorAll()releaseCapture()
+Non-standard
+replaceChildren()requestStorageAccess()startViewTransition()
+Experimental
+write()writeln()Eventsafterscriptexecute
+Non-standard
+beforescriptexecute
+Non-standard
+copycutDOMContentLoadedfullscreenchangefullscreenerrorlostpointercapturepastepointerlockchangepointerlockerrorreadystatechangescrollscrollendselectionchangevisibilitychangeInheritance:NodeEventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleValueExamplesSpecificationsBrowser compatibilitySee alsoDocument: childElementCount property
+  The Document.childElementCount read-only property
+  returns the number of child elements of the document.
+
+To get the number of children of a specific element, see Element.childElementCount.ValueA number.Examplesdocument.children;
+// HTMLCollection, usually containing an <html> element, the document's only child
+
+document.childElementCount;
+// 1
+SpecificationsSpecificationDOM Standard # dom-parentnode-childelementcountBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Element.childElementCount
+DocumentFragment.childElementCount
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

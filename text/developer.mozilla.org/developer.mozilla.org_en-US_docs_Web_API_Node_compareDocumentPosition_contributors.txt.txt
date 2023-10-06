@@ -1,0 +1,31 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/node/comparedocumentposition/index.md
+
+# Original Wiki contributors
+Tigt
+ahamid
+mfluehr
+fscholz
+Sheppy
+jabcreations
+abbycar
+vmsynkov
+Sebastianz
+cvrebert
+JacksonGL
+cuixiping
+teoli
+kscarfone
+namolmes
+mattbasta
+FredB
+evilpie
+ziyunfei
+ender7
+nodd
+Sephr
+Dao
+Rudolf.noe
+MatthewMastracci
+Mgjbot
+Jresig

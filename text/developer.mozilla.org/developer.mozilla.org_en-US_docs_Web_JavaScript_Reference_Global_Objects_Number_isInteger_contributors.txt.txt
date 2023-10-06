@@ -1,0 +1,28 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/javascript/reference/global_objects/number/isinteger/index.md
+
+# Original Wiki contributors
+mfuji09
+wbamberg
+fscholz
+tushararora
+wortwart
+alattalatta
+Shnatsel
+jameshkramer
+nikc.org
+nmve
+allevo
+b2m9
+eduardoboucas
+.
+SphinxKnight
+Jeremie
+ziyunfei
+Mingun
+realityking
+rvighne
+kscarfone
+fusionchess
+Sheppy
+ethertank

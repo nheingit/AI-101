@@ -1,0 +1,20 @@
+Preflight request - MDN Web Docs Glossary: Definitions of Web-related terms | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusMDN Web Docs Glossary: Definitions of Web-related termsPreflight requestArticle ActionsEnglish (US)In this articleSee alsoIn this articleSee alsoPreflight requestA CORS preflight request is a CORS request that checks to see if the CORS protocol is understood and a server is aware using specific methods and headers.
+It is an OPTIONS request, using three HTTP request headers: Access-Control-Request-Method, Access-Control-Request-Headers, and the Origin header.
+A preflight request is automatically issued by a browser and in normal cases, front-end developers don't need to craft such requests themselves. It appears when request is qualified as "to be preflighted" and omitted for simple requests.
+For example, a client might be asking a server if it would allow a DELETE request, before sending a DELETE request, by using a preflight request:
+OPTIONS /resource/foo
+Access-Control-Request-Method: DELETE
+Access-Control-Request-Headers: origin, x-requested-with
+Origin: https://foo.bar.org
+
+If the server allows it, then it will respond to the preflight request with an Access-Control-Allow-Methods response header, which lists DELETE:
+HTTP/1.1 204 No Content
+Connection: keep-alive
+Access-Control-Allow-Origin: https://foo.bar.org
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Max-Age: 86400
+
+The preflight response can be optionally cached for the requests created in the same URL using Access-Control-Max-Age header like in the above example. To cache preflight responses, the browser uses a specific cache that is separate from the general HTTP cache that the browser manages. Preflight responses are never cached in the browser's general HTTP cache.See also
+CORS
+OPTIONS
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

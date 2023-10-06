@@ -1,0 +1,31 @@
+CSSFontFaceRule - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCSSFontFaceRuleArticle ActionsEnglish (US)In this articleInstance propertiesInstance methodsExamplesSpecificationsBrowser compatibilityCSS Object ModelCSSFontFaceRuleInstance propertiesstyleInheritance:CSSRuleRelated pages for CSSOMCSSCSSConditionRuleCSSFontFeatureValuesRuleCSSFontPaletteValuesRuleCSSGroupingRuleCSSImportRuleCSSKeyframeRuleCSSKeyframesRuleCSSLayerBlockRuleCSSLayerStatementRuleCSSMediaRuleCSSNamespaceRuleCSSPageRuleCSSPropertyRuleCSSRuleCSSRuleListCSSStyleDeclarationCSSStyleRuleCSSStyleSheetCSSSupportsRuleCaretPositionMediaListMediaQueryListScreenStyleSheetStyleSheetListIn this articleInstance propertiesInstance methodsExamplesSpecificationsBrowser compatibilityCSSFontFaceRuleThe CSSFontFaceRule interface represents an @font-face at-rule.
+
+
+
+      CSSRule
+    
+
+
+
+
+
+
+      CSSFontFaceRule
+    
+Instance propertiesInherits properties from its ancestor CSSRule.
+
+CSSFontFaceRule.style Read only 
+
+Returns a CSSStyleDeclaration.
+
+Instance methodsInherits methods from its ancestor CSSRule.ExamplesThis example uses the CSS found as an example on the @font-face page. The first CSSRule returned will be a CSSFontFaceRule.
+@font-face {
+  font-family: MyHelvetica;
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
+  font-weight: bold;
+}
+
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); //a CSSFontFaceRule
+SpecificationsSpecificationCSS Fonts Module Level 4 # om-fontfaceBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 19, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

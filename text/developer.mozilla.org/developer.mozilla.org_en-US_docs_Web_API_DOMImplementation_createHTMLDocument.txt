@@ -1,0 +1,74 @@
+DOMImplementation: createHTMLDocument() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsDOMImplementationcreateHTMLDocument()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocument Object ModelDOMImplementationInstance methodscreateDocument()createDocumentType()createHTMLDocument() hasFeature()
+Deprecated
+Related pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDOMImplementation: createHTMLDocument() method
+  The
+  DOMImplementation.createHTMLDocument() method creates a
+  new HTML Document.
+SyntaxcreateHTMLDocument()
+createHTMLDocument(title)
+Parameters
+title Optional
+
+A string containing the title to give the new HTML document.
+
+Return valueA new HTML Document object.ExamplesThis example creates a new HTML document and inserts it into an <iframe> in the current document.
+Here's the HTML for this example:
+<body>
+  <p>
+    Click <a href="javascript:makeDocument()">here</a> to create a new document
+    and insert it below.
+  </p>
+  <iframe id="theFrame" src="about:blank" />
+</body>
+
+The JavaScript implementation of makeDocument() follows:
+function makeDocument() {
+  let frame = document.getElementById("theFrame");
+
+  let doc = document.implementation.createHTMLDocument("New Document");
+  let p = doc.createElement("p");
+  p.textContent = "This is a new paragraph.";
+
+  try {
+    doc.body.appendChild(p);
+  } catch (e) {
+    console.log(e);
+  }
+
+  // Copy the new HTML document into the frame
+
+  let destDocument = frame.contentDocument;
+  let srcNode = doc.documentElement;
+  let newNode = destDocument.importNode(srcNode, true);
+
+  destDocument.replaceChild(newNode, destDocument.documentElement);
+}
+
+
+  The code in lines 4â12 handle creating the new HTML document and inserting some content
+  into it. Line 4 uses createHTMLDocument() to construct a new HTML document
+  whose <title> is "New Document". Lines 5 and 6 create a
+  new paragraph element with some simple content, and then lines 8â12 handle inserting the
+  new paragraph into the new document.
+
+
+  Line 16 pulls the contentDocument of the frame; this is the document into
+  which we'll be injecting the new content. The next two lines handle importing the
+  contents of our new document into the new document's context. Finally, line 20 actually
+  replaces the contents of the frame with the new document's contents.
+
+View Live Examples
+The returned document is pre-constructed with the following HTML:
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+  </head>
+  <body>
+    â¦
+  </body>
+</html>
+SpecificationsSpecificationDOM Standard # ref-for-dom-domimplementation-createhtmldocumentâ Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The DOMImplementation interface it belongs to.
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 19, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

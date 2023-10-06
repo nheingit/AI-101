@@ -1,0 +1,112 @@
+MouseEvent: relatedTarget property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsMouseEventrelatedTargetArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoUI EventsMouseEventConstructorMouseEvent()Static propertiesWEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
+Non-standard
+WEBKIT_FORCE_AT_MOUSE_DOWN
+Non-standard
+Instance propertiesaltKeybuttonbuttonsclientXclientYctrlKeylayerX
+Non-standard
+layerY
+Non-standard
+metaKeymovementXmovementYmozInputSource
+Non-standard
+offsetXoffsetYpageXpageYrelatedTarget screenXscreenYshiftKeywebkitForce
+Non-standard
+xyInstance methodsgetModifierState()initMouseEvent()
+Deprecated
+Inheritance:UIEventEventRelated pages for UI EventsCompositionEventFocusEventInputEventKeyboardEventMouseScrollEventMutationEventUIEventWheelEventIn this articleValueExamplesSpecificationsBrowser compatibilitySee alsoMouseEvent: relatedTarget propertyThe MouseEvent.relatedTarget read-only property is the secondary target for the mouse event, if there is one.
+That is:
+
+
+
+Event name
+target
+relatedTarget
+
+
+
+
+mouseenter
+The EventTarget the pointing device entered to
+The EventTarget the pointing device exited from
+
+
+mouseleave
+The EventTarget the pointing device exited from
+The EventTarget the pointing device entered to
+
+
+mouseout
+The EventTarget the pointing device exited from
+The EventTarget the pointing device entered to
+
+
+mouseover
+The EventTarget the pointing device entered to
+The EventTarget the pointing device exited from
+
+
+dragenter
+The EventTarget the pointing device entered to
+The EventTarget the pointing device exited from
+
+
+dragleave
+The EventTarget the pointing device exited from
+The EventTarget the pointing device entered to
+
+
+
+
+  For events with no secondary target, relatedTarget returns
+  null.
+
+FocusEvent.relatedTarget is a similar property for focus events.ValueAn EventTarget object or null.ExamplesTry moving your mouse cursor into and out of the red and blue boxes.HTML<body id="body">
+  <div id="outer">
+    <div id="red"></div>
+    <div id="blue"></div>
+  </div>
+  <p id="log"></p>
+</body>
+CSS#outer {
+  width: 250px;
+  height: 125px;
+  display: flex;
+}
+
+#red {
+  flex-grow: 1;
+  background: red;
+}
+
+#blue {
+  flex-grow: 1;
+  background: blue;
+}
+
+#log {
+  max-height: 120px;
+  overflow-y: scroll;
+}
+JavaScriptconst mouseoutLog = document.getElementById("log"),
+  red = document.getElementById("red"),
+  blue = document.getElementById("blue");
+
+red.addEventListener("mouseover", overListener);
+red.addEventListener("mouseout", outListener);
+blue.addEventListener("mouseover", overListener);
+blue.addEventListener("mouseout", outListener);
+
+function outListener(event) {
+  let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
+
+  mouseoutLog.innerText = `\nfrom ${event.target.id} into ${related} ${mouseoutLog.innerText}`;
+}
+
+function overListener(event) {
+  let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
+
+  mouseoutLog.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+}
+ResultSpecificationsSpecificationUI Events # dom-mouseevent-relatedtargetBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+MouseEvent
+Comparison of Event Targets
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

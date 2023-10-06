@@ -1,0 +1,65 @@
+Selector (CSS) - MDN Web Docs Glossary: Definitions of Web-related terms | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusMDN Web Docs Glossary: Definitions of Web-related termsSelector (CSS)Article ActionsEnglish (US)In this articleExampleSee alsoIn this articleExampleSee alsoSelector (CSS)A CSS selector is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.ExampleConsider this CSS:
+p {
+  color: green;
+}
+
+div.warning {
+  width: 100%;
+  border: 2px solid yellow;
+  color: white;
+  background-color: darkred;
+  padding: 0.8em 0.8em 0.6em;
+}
+
+#customized {
+  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+}
+
+The selectors here are "p" (which applies the color green to the text inside any <p> element), "div.warning" (which makes any <div> element with the class "warning" look like a warning box), and "#customized", which sets the base font of the element with the ID "customized" to 16-pixel tall Lucida Grande or one of a few fallback fonts.
+We can then apply this CSS to some HTML, such as:
+<p>This is happy text.</p>
+
+<div class="warning">
+  Be careful! There are wizards present, and they are quick to anger!
+</div>
+
+<div id="customized">
+  <p>This is happy text.</p>
+
+  <div class="warning">
+    Be careful! There are wizards present, and they are quick to anger!
+  </div>
+</div>
+
+The resulting page content is styled like this:See also
+Learn more about CSS selectors in our introduction to CSS.
+Basic selectors
+    
+Type selectors elementname
+Class selectors .classname
+ID selectors #idname
+Universal selectors * ns|* *|*
+Attribute selectors [attr=value]
+State selectors a:active, a:visited
+
+
+Grouping selectors
+    
+Selector list A, B
+
+
+Combinators
+    
+Adjacent sibling selectors A + B
+General sibling selectors A ~ B
+Child selectors A > B
+Descendant selectors A B
+
+
+Pseudo
+    
+Pseudo classes :
+Pseudo elements ::
+
+
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

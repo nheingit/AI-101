@@ -1,0 +1,34 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/event/type/index.md
+
+# Original Wiki contributors
+mfuji09
+Zearin_Galaurum
+kevincrans
+mfluehr
+fscholz
+Tigt
+DomenicDenicola
+Ende93
+Tomche
+cvrebert
+teoli
+javier1nc
+groovecoder
+AgusPutraDana
+anwarabq
+kscarfone
+Kartik_Chadha
+rschoen
+wuest
+Sheppy
+ethertank
+elg2001
+ziyunfei
+dbruant
+Matej Lednar
+bigbossSNK
+Jabez
+Ptak82
+Dria
+JesseW

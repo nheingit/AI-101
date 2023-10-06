@@ -1,0 +1,33 @@
+HTMLTableElement: align property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsHTMLTableElementalignArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilityHTML DOM APIHTMLTableElementInstance propertiesalign 
+Deprecated
+bgColor
+Deprecated
+border
+Deprecated
+captioncellPadding
+Deprecated
+cellSpacing
+Deprecated
+frame
+Deprecated
+rowsrules
+Deprecated
+summary
+Deprecated
+tBodiestFoottHeadwidth
+Deprecated
+Instance methodscreateCaption()createTBody()createTFoot()createTHead()deleteCaption()deleteRow()deleteTFoot()deleteTHead()insertRow()Inheritance:HTMLElementElementNodeEventTargetRelated pages for HTML DOMBeforeUnloadEventDOMStringMapErrorEventHTMLAnchorElementHTMLAreaElementHTMLAudioElementHTMLBRElementHTMLBaseElementHTMLBodyElementHTMLButtonElementHTMLCanvasElementHTMLDListElementHTMLDataElementHTMLDataListElementHTMLDialogElementHTMLDivElementHTMLDocumentHTMLElementHTMLEmbedElementHTMLFieldSetElementHTMLFormControlsCollectionHTMLFormElementHTMLFrameSetElementHTMLHRElementHTMLHeadElementHTMLHeadingElementHTMLHtmlElementHTMLIFrameElementHTMLImageElementHTMLInputElementHTMLLIElementHTMLLabelElementHTMLLegendElementHTMLLinkElementHTMLMapElementHTMLMediaElementHTMLMetaElementHTMLMeterElementHTMLModElementHTMLOListElementHTMLObjectElementHTMLOptGroupElementHTMLOptionElementHTMLOptionsCollectionHTMLOutputElementHTMLParagraphElementHTMLPictureElementHTMLPreElementHTMLProgressElementHTMLQuoteElementHTMLScriptElementHTMLSelectElementHTMLSourceElementHTMLSpanElementHTMLStyleElementHTMLTableCaptionElementHTMLTableCellElementHTMLTableColElementHTMLTableRowElementHTMLTableSectionElementHTMLTemplateElementHTMLTextAreaElementHTMLTimeElementHTMLTitleElementHTMLTrackElementHTMLUListElementHTMLUnknownElementHTMLVideoElementHashChangeEventHistoryImageDataLocationMessageChannelMessageEventMessagePortNavigatorPageTransitionEventPluginPluginArrayPromiseRejectionEventRadioNodeListUserActivationValidityStateWindowWorkletGlobalScopeIn this articleValueExamplesSpecificationsBrowser compatibilityHTMLTableElement: align propertyDeprecated: This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the compatibility table at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+
+  The HTMLTableElement.align property represents the
+  alignment of the table.
+ValueOne of the following string values:
+
+left
+center
+right
+Examples// Set the alignment of a table
+const t = document.getElementById("TableA");
+t.align = "center";
+Specifications
+W3C DOM 2 HTML Specification HTMLTableElement.align.
+Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

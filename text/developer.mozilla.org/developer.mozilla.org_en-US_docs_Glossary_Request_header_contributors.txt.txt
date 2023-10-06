@@ -1,0 +1,9 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/request_header/index.md
+
+# Original Wiki contributors
+hamishwillee
+mfuji09
+j9t
+fscholz
+teoli

@@ -1,0 +1,17 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/html_drag_and_drop_api/recommended_drag_types/index.md
+
+# Original Wiki contributors
+Tigt
+SphinxKnight
+chrisdavidmills
+w3l
+AFBarstow
+idmean
+Neil
+teoli
+Sheppy
+Mgalli
+DaveG
+Piro
+Enn

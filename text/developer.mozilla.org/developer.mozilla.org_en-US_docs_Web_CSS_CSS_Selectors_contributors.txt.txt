@@ -1,0 +1,26 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/css/css_selectors/index.md
+
+# Original Wiki contributors
+wbamberg
+ramiy
+ExE-Boss
+chrisdavidmills
+RomanBush
+SphinxKnight
+alnzialiksav
+nmaxcom
+estelle
+fscholz
+mfuji09
+ViKomprenas
+Jonathan002
+mfluehr
+Majr
+wh1msy
+rpozarickij
+nicolo-ribaudo
+Sebastianz
+rafacv
+cxw
+teoli

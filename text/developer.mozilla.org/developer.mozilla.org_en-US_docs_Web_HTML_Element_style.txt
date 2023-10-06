@@ -1,0 +1,307 @@
+<style>: The Style Information element - HTML: HyperText Markup Language | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesHTMLElements<style>Article ActionsEnglish (US)In this articleTry itAttributesExamplesTechnical summarySpecificationsBrowser compatibilitySee also
+
+HTML
+Tutorials
+HTML basics
+
+
+Introduction to HTML
+
+Introduction to HTML overview
+Getting started with HTML
+What's in the head? Metadata in HTML
+HTML text fundamentals
+Creating hyperlinks
+Advanced text formatting
+Document and website structure
+Debugging HTML
+Assessment: Marking up a letter
+Assessment: Structuring a page of content
+
+
+
+
+
+Multimedia and embedding
+
+Multimedia and embedding overview
+Images in HTML
+Video and audio content
+From object to iframe â other embedding technologies
+Adding vector graphics to the web
+Responsive images
+Assessment: Mozilla splash page
+
+
+
+
+
+HTML tables
+
+HTML tables overview
+HTML table basics
+HTML table advanced features and accessibility
+Assessment: Structuring planet data
+
+
+
+References
+
+
+HTML elements
+<a><abbr><acronym>
+Deprecated
+<address><area><article><aside><audio><b><base><bdi><bdo><big>
+Deprecated
+<blockquote><body><br><button><canvas><caption><center>
+Deprecated
+<cite><code><col><colgroup><data><datalist><dd><del><details><dfn><dialog><dir>
+Deprecated
+<div><dl><dt><em><embed><fieldset><figcaption><figure><font>
+Deprecated
+<footer><form><frame>
+Deprecated
+<frameset>
+Deprecated
+<h1><head><header><hgroup><hr><html><i><iframe><image>
+Non-standard
+
+Deprecated
+<img><input><ins><kbd><label><legend><li><link><main><map><mark><marquee>
+Deprecated
+<menu><menuitem>
+Non-standard
+
+Deprecated
+<meta><meter><nav><nobr>
+Deprecated
+<noembed>
+Deprecated
+<noframes>
+Deprecated
+<noscript><object><ol><optgroup><option><output><p><param>
+Deprecated
+<picture><plaintext>
+Deprecated
+<portal>
+Experimental
+<pre><progress><q><rb>
+Deprecated
+<rp><rt><rtc>
+Deprecated
+<ruby><s><samp><script><section><select><slot><small><source><span><strike>
+Deprecated
+<strong><style><sub><summary><sup><table><tbody><td><template><textarea><tfoot><th><thead><time><title><tr><track><tt>
+Deprecated
+<u><ul><var><video><wbr><xmp>
+Deprecated
+
+
+
+
+
+Global attributes
+accesskeyautocapitalizeautofocusclasscontenteditablecontextmenu
+Non-standard
+
+Deprecated
+data-*dirdraggableenterkeyhintexportpartshiddenidinertinputmodeisitemiditempropitemrefitemscopeitemtypelangnoncepartpopover
+Experimental
+slotspellcheckstyletabindextitletranslatevirtualkeyboardpolicy
+Experimental
+
+
+
+
+
+Attributes
+
+accept
+autocomplete
+capture
+crossorigin
+disabled
+elementtiming
+for
+max
+maxlength
+min
+minlength
+multiple
+pattern
+readonly
+rel
+required
+size
+step
+
+
+
+
+
+<input> types
+<input type="button"><input type="checkbox"><input type="color"><input type="date"><input type="datetime-local"><input type="email"><input type="file"><input type="hidden"><input type="image"><input type="month"><input type="number"><input type="password"><input type="radio"><input type="range"><input type="reset"><input type="search"><input type="submit"><input type="tel"><input type="text"><input type="time"><input type="url"><input type="week">
+
+
+Guides
+
+
+Content categories
+Block-level elements
+Inline elements
+Quirks Mode and Standards Mode
+Date and time formats used in HTML
+Constraint validation
+Microdata
+Microformats
+Viewport meta tag
+Allowing cross-origin use of images and canvas
+
+
+
+In this articleTry itAttributesExamplesTechnical summarySpecificationsBrowser compatibilitySee also<style>: The Style Information elementThe <style> HTML element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the <style> element.Try it
+The <style> element must be included inside the <head> of the document. In general, it is better to put your styles in external stylesheets and apply them using <link> elements.
+If you include multiple <style> and <link> elements in your document, they will be applied to the DOM in the order they are included in the document â make sure you include them in the correct order, to avoid unexpected cascade issues.
+In the same manner as <link> elements, <style> elements can include media attributes that contain media queries, allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.AttributesThis element includes the global attributes.
+
+media
+
+This attribute defines which media the style should be applied to. Its value is a media query, which defaults to all if the attribute is missing.
+
+nonce
+
+A cryptographic nonce (number used once) used to allow inline styles in a style-src Content-Security-Policy. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+
+title
+
+This attribute specifies alternative style sheet sets.
+
+blocking 
+Experimental
+
+
+This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. @import-ed stylesheets are generally considered as critical subresources, whereas background-image and fonts are not.
+
+render: The rendering of content on the screen is blocked.
+
+
+Deprecated attributes
+type 
+Deprecated
+
+
+This attribute should not be provided: if it is, the only permitted values are the empty string or a case-insensitive match for text/css.
+
+ExamplesA simple stylesheetIn the following example, we apply a very simple stylesheet to a document:
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
+</html>
+
+ResultMultiple style elementsIn this example we've included two <style> elements â notice how the conflicting declarations in the later <style> element override those in the earlier one, if they have equal specificity.
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style>
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
+</html>
+
+ResultIncluding a media queryIn this example we build on the previous one, including a media attribute on the second <style> element so it is only applied when the viewport is less than 500px in width.
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test page</title>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style media="all and (max-width: 500px)">
+      p {
+        color: blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my paragraph.</p>
+  </body>
+</html>
+
+ResultTechnical summary
+
+
+Content categories
+
+Metadata content, and if the scoped attribute is present:
+        flow content.
+      
+
+
+Permitted content
+
+        Text content matching the type attribute, that is
+        text/css.
+      
+
+
+Tag omission
+Neither tag is omissible.
+
+
+Permitted parents
+
+        Any element that accepts
+        metadata content.
+      
+
+
+Implicit ARIA role
+No corresponding role
+
+
+Permitted ARIA roles
+No role permitted
+
+
+DOM interface
+HTMLStyleElement
+
+
+SpecificationsSpecificationHTML Standard # the-style-elementBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The <link> element, which allows us to apply external stylesheets to a document.
+Alternative Style Sheets
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 22, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

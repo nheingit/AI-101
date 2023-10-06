@@ -1,0 +1,15 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/domimplementation/hasfeature/index.md
+
+# Original Wiki contributors
+Zearin_Galaurum
+connorshea
+arronei
+erikadoyle
+teoli
+jpmedley
+Jeremie
+matteodelabre
+LouisLazaris
+jsx
+kscarfone

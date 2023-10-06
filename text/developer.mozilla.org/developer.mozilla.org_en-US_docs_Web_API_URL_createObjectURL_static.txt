@@ -1,0 +1,58 @@
+URL: createObjectURL() static method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsURLcreateObjectURL()Article ActionsEnglish (US)In this articleSyntaxExamplesUsage notesSpecificationsBrowser compatibilitySee alsoURL APIURLConstructorURL()Instance propertieshashhosthostnamehreforiginpasswordpathnameportprotocolsearchsearchParamsusernameStatic methodscreateObjectURL() revokeObjectURL()Instance methodstoJSON()toString()Related pages for URL APIURLSearchParamsIn this articleSyntaxExamplesUsage notesSpecificationsBrowser compatibilitySee alsoURL: createObjectURL() static method
+  The URL.createObjectURL() static
+  method creates a string containing a URL representing the object
+  given in the parameter.
+
+
+  The URL lifetime is tied to the document
+  in the window on which it was created. The new object URL represents the specified
+  File object or Blob object.
+
+To release an object URL, call revokeObjectURL().
+Note: This feature is available in Web Workers
+
+
+
+Note: This feature is not available in Service Workers due to its
+    potential to create memory leaks.
+  
+SyntaxURL.createObjectURL(object)
+Parameters
+object
+
+
+      A File, Blob, or MediaSource object to
+      create an object URL for.
+    
+
+Return value
+  A string containing an object URL that can be used to reference the
+  contents of the specified source object.
+ExamplesSee Using object URLs to display images.Usage notesMemory management
+  Each time you call createObjectURL(), a new object URL is created, even if
+  you've already created one for the same object. Each of these must be released by
+  calling URL.revokeObjectURL() when you no longer need them.
+
+
+  Browsers will release object URLs automatically when the document is unloaded; however,
+  for optimal performance and memory usage, if there are safe times when you can
+  explicitly unload them, you should do so.
+Using object URLs for media streams
+  In older versions of the Media Source specification, attaching a stream to a
+  <video> element required creating an object URL for the
+  MediaStream. This is no longer necessary, and browsers are removing
+  support for doing this.
+
+
+
+Warning: If you still have code that relies on
+    createObjectURL() to attach streams to media
+    elements, you need to update your code to set srcObject to the MediaStream directly.
+  
+SpecificationsSpecificationFile API # dfn-createObjectURLBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Using files from web applications
+Using object URLs to display images
+URL.revokeObjectURL()
+HTMLMediaElement.srcObject
+FileReader.readAsDataURL()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 28, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

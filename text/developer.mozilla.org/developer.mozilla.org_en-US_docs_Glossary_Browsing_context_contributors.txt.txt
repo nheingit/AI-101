@@ -1,0 +1,13 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/browsing_context/index.md
+
+# Original Wiki contributors
+kdon2166
+jonathan-wiens
+minchen085
+mfuji09
+momdo
+hbloomer
+Andrew_Pfeiffer
+klez
+teoli

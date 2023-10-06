@@ -1,0 +1,27 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/node/previoussibling/index.md
+
+# Original Wiki contributors
+sideshowbarker
+krosylight
+wbamberg
+apsolut
+zhuangyin
+fscholz
+xfq
+Sheppy
+teoli
+Delapouite
+kscarfone
+Khodaidad_Basharmand
+ethertank
+ziyunfei
+Mgjbot
+Romankr
+Pitoutompoilu
+Nickolay
+Jabez
+Ptak82
+DBaron
+Dria
+JesseW

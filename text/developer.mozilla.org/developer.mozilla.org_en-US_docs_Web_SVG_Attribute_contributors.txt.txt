@@ -1,0 +1,25 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/svg/attribute/index.md
+
+# Original Wiki contributors
+mfuji09
+neoncitylights
+jswisher
+Sebastianz
+ExE-Boss
+Jeremie
+cuixiping
+Vasiliy.Poddubny
+Sheppy
+chrisdavidmills
+Ninjapolian
+averdion
+fscholz
+stevenvachon
+SaiCharanReddy.P
+kscarfone
+ethertank
+Heycam
+Longsonr
+Manuel_Strehl
+sebmozilla

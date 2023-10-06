@@ -1,0 +1,22 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/node/lastchild/index.md
+
+# Original Wiki contributors
+fscholz
+DomenicDenicola
+Sebastianz
+teoli
+kscarfone
+gurdev_singh
+Sheppy
+ziyunfei
+evilpie
+Matej Lednar
+Mgjbot
+Pmash
+Ptak82
+DBaron
+BenoitL
+Dria
+Callek
+JesseW

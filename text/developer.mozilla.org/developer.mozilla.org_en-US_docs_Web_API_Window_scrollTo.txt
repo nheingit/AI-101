@@ -1,0 +1,165 @@
+Window: scrollTo() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsWindowscrollTo()Article ActionsEnglish (US)In this articleSyntaxExamplesNotesSpecificationsBrowser compatibilityWindowInstance propertiesapplicationCache
+Non-standard
+
+Deprecated
+closedconsolecredentialless
+Experimental
+
+Non-standard
+customElementsdefaultStatus
+Deprecated
+devicePixelRatiodocumentevent
+Deprecated
+external
+Deprecated
+frameElementframesfullScreen
+Non-standard
+historyinnerHeightinnerWidthlaunchQueue
+Experimental
+lengthlocalStoragelocationlocationbarmenubarmozInnerScreenX
+Non-standard
+mozInnerScreenY
+Non-standard
+namenavigation
+Experimental
+navigatorondragdrop
+Deprecated
+openerorientation
+Deprecated
+outerHeightouterWidthpageXOffsetpageYOffsetparentpersonalbarschedulerscreenscreenLeftscreenTopscreenXscreenYscrollbarsscrollMaxX
+Non-standard
+scrollMaxY
+Non-standard
+scrollXscrollYselfsessionStoragesidebar
+Non-standard
+
+Deprecated
+speechSynthesisstatus
+Deprecated
+statusbartoolbartopvisualViewportwindowInstance methodsalert()back()
+Non-standard
+
+Deprecated
+blur()cancelAnimationFrame()cancelIdleCallback()captureEvents()
+Deprecated
+clearImmediate()close()confirm()convertPointFromNodeToPage()
+Non-standard
+dump()
+Non-standard
+find()
+Non-standard
+focus()forward()
+Non-standard
+
+Deprecated
+getComputedStyle()getDefaultComputedStyle()
+Non-standard
+getSelection()matchMedia()moveBy()moveTo()open()postMessage()print()prompt()queryLocalFonts()
+Experimental
+releaseEvents()
+Deprecated
+requestAnimationFrame()requestFileSystem()
+Non-standard
+
+Deprecated
+requestIdleCallback()resizeBy()resizeTo()scroll()scrollBy()scrollByLines()
+Non-standard
+scrollByPages()
+Non-standard
+scrollTo() setImmediate()showDirectoryPicker()
+Experimental
+showModalDialog()
+Non-standard
+
+Deprecated
+showOpenFilePicker()
+Experimental
+showSaveFilePicker()
+Experimental
+sizeToContent()
+Non-standard
+stop()updateCommands()
+Non-standard
+webkitConvertPointFromPageToNode()
+Non-standard
+
+Deprecated
+EventsafterprintappinstalledbeforeinstallpromptbeforeprintbeforeunloadblurcopycutdevicemotiondeviceorientationdeviceorientationabsoluteDOMContentLoadederrorfocusgamepadconnectedgamepaddisconnectedhashchangelanguagechangeloadmessagemessageerrorofflineonlineorientationchange
+Deprecated
+pagehidepageshowpastepopstaterejectionhandledresizestorageunhandledrejectionunloadvrdisplayactivate
+Non-standard
+
+Deprecated
+vrdisplayconnect
+Non-standard
+
+Deprecated
+vrdisplaydeactivate
+Non-standard
+
+Deprecated
+vrdisplaydisconnect
+Non-standard
+
+Deprecated
+vrdisplaypresentchange
+Non-standard
+
+Deprecated
+Inheritance:EventTargetIn this articleSyntaxExamplesNotesSpecificationsBrowser compatibilityWindow: scrollTo() method
+Window.scrollTo() scrolls to a particular set of
+  coordinates in the document.
+SyntaxscrollTo(x-coord, y-coord)
+scrollTo(options)
+Parameters
+
+x-coord is the pixel along the horizontal axis of the
+    document that you want displayed in the upper left.
+  
+
+y-coord is the pixel along the vertical axis of the document
+    that you want displayed in the upper left.
+  
+
+- or -
+
+options
+
+A dictionary containing the following parameters:
+
+top
+
+Specifies the number of pixels along the Y axis to scroll the window or element.
+
+left
+
+Specifies the number of pixels along the X axis to scroll the window or element.
+
+behavior
+
+Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
+
+smooth: scrolling should animate smoothly
+instant: scrolling should happen instantly in a single jump
+auto: scroll behavior is determined by the computed value of scroll-behavior
+
+
+
+
+Return valueNone (undefined).Exampleswindow.scrollTo(0, 1000);
+
+Using options:
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: "smooth",
+});
+Notes
+Window.scroll() is effectively the same as this method. For relative
+  scrolling, see Window.scrollBy(), Window.scrollByLines(),
+  and Window.scrollByPages().
+
+
+  For scrolling elements, see Element.scrollTop and
+  Element.scrollLeft.
+SpecificationsSpecificationCSSOM View Module # dom-window-scrolltoBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 8, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

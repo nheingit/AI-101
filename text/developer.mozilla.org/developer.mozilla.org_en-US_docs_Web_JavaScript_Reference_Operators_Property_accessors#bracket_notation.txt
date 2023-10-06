@@ -1,0 +1,202 @@
+Property accessors - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceExpressions and operatorsProperty accessorsArticle ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee also
+
+JavaScript
+Tutorials
+
+
+Complete beginners
+
+JavaScript basics
+JavaScript first steps
+JavaScript building blocks
+Introducing JavaScript objects
+
+
+
+
+
+JavaScript Guide
+
+Introduction
+Grammar and types
+Control flow and error handling
+Loops and iteration
+Functions
+Expressions and operators
+Numbers and dates
+Text formatting
+Regular expressions
+Indexed collections
+Keyed collections
+Working with objects
+Using classes
+Using promises
+JavaScript typed arrays
+Iterators and generators
+Meta programming
+JavaScript modules
+
+
+
+
+
+Intermediate
+
+Client-side JavaScript frameworks
+Client-side web APIs
+Language overview
+JavaScript data structures
+Equality comparisons and sameness
+Enumerability and ownership of properties
+Closures
+
+
+
+
+
+Advanced
+
+Inheritance and the prototype chain
+Memory Management
+Concurrency model and Event Loop
+
+
+
+References
+
+
+Built-in objects
+OverviewAggregateErrorArrayArrayBufferAsyncFunctionAsyncGeneratorAsyncGeneratorFunctionAsyncIteratorAtomicsBigIntBigInt64ArrayBigUint64ArrayBooleanDataViewDatedecodeURI()decodeURIComponent()encodeURI()encodeURIComponent()Errorescape()
+Deprecated
+eval()EvalErrorFinalizationRegistryFloat32ArrayFloat64ArrayFunctionGeneratorGeneratorFunctionglobalThisInfinityInt16ArrayInt32ArrayInt8ArrayInternalError
+Non-standard
+IntlisFinite()isNaN()IteratorJSONMapMathNaNNumberObjectparseFloat()parseInt()PromiseProxyRangeErrorReferenceErrorReflectRegExpSetSharedArrayBufferStringSymbolSyntaxErrorTypedArrayTypeErrorUint16ArrayUint32ArrayUint8ArrayUint8ClampedArrayundefinedunescape()
+Deprecated
+URIErrorWeakMapWeakRefWeakSet
+
+
+
+
+Expressions & operators
+OverviewAddition (+)Addition assignment (+=)Assignment (=)async function expressionasync function* expressionawaitBitwise AND (&)Bitwise AND assignment (&=)Bitwise NOT (~)Bitwise OR (|)Bitwise OR assignment (|=)Bitwise XOR (^)Bitwise XOR assignment (^=)class expressionComma operator (,)Conditional (ternary) operatorDecrement (--)delete operatorDestructuring assignmentDivision (/)Division assignment (/=)Equality (==)Exponentiation (**)Exponentiation assignment (**=)Function expressionfunction* expressionGreater than (>)Greater than or equal (>=)Grouping operator ( )import.metaimport()in operatorIncrement (++)Inequality (!=)instanceofLeft shift (<<)Left shift assignment (<<=)Less than (<)Less than or equal (<=)Logical AND (&&)Logical AND assignment (&&=)Logical NOT (!)Logical OR (||)Logical OR assignment (||=)Multiplication (*)Multiplication assignment (*=)new operatornew.targetnullNullish coalescing assignment (??=)Nullish coalescing operator (??)Object initializerOperator precedenceOptional chaining (?.)Property accessorsRemainder (%)Remainder assignment (%=)Right shift (>>)Right shift assignment (>>=)Spread syntax (...)Strict equality (===)Strict inequality (!==)Subtraction (-)Subtraction assignment (-=)superthistypeofUnary negation (-)Unary plus (+)Unsigned right shift (>>>)Unsigned right shift assignment (>>>=)void operatoryieldyield*
+
+
+
+
+Statements & declarations
+Overviewasync functionasync function*blockbreakclassconstcontinuedebuggerdo...whileemptyexportExpression statementforfor await...offor...infor...offunction declarationfunction*if...elseimportlabelletreturnswitchthrowtry...catchvarwhilewith
+Deprecated
+
+
+
+
+
+Functions
+OverviewArrow function expressionsDefault parametersgetMethod definitionsRest parameterssetThe arguments object
+
+
+
+
+Classes
+OverviewconstructorextendsPrivate class featuresPublic class fieldsstaticStatic initialization blocks
+
+
+
+
+Regular expressions
+OverviewBackreference: \1, \2Capturing group: (...)Character class escape: \d, \D, \w, \W, \s, \SCharacter class: [...], [^...]Character escape: \n, \u{...}Disjunction: |Input boundary assertion: ^, $Literal character: a, bLookahead assertion: (?=...), (?!...)Lookbehind assertion: (?<=...), (?<!...)Named backreference: \k<name>Named capturing group: (?<name>...)Non-capturing group: (?:...)Quantifier: *, +, ?, {n}, {n,}, {n,m}Unicode character class escape: \p{...}, \P{...}Wildcard: .Word boundary assertion: \b, \B
+
+
+
+
+Errors
+OverviewError: Permission denied to access property "x"InternalError: too much recursionRangeError: argument is not a valid code pointRangeError: BigInt division by zeroRangeError: BigInt negative exponentRangeError: invalid array lengthRangeError: invalid dateRangeError: precision is out of rangeRangeError: radix must be an integerRangeError: repeat count must be less than infinityRangeError: repeat count must be non-negativeRangeError: x can't be converted to BigInt because it isn't an integerReferenceError: "x" is not definedReferenceError: assignment to undeclared variable "x"ReferenceError: can't access lexical declaration 'X' before initializationReferenceError: deprecated caller or arguments usageReferenceError: reference to undefined property "x"SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecatedSyntaxError: "use strict" not allowed in function with non-simple parametersSyntaxError: "x" is a reserved identifierSyntaxError: a declaration in the head of a for-of loop can't have an initializerSyntaxError: applying the 'delete' operator to an unqualified name is deprecatedSyntaxError: await is only valid in async functions, async generators and modulesSyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressionsSyntaxError: continue must be inside loopSyntaxError: for-in loop head declarations may not have initializersSyntaxError: function statement requires a nameSyntaxError: identifier starts immediately after numeric literalSyntaxError: illegal characterSyntaxError: invalid assignment left-hand sideSyntaxError: invalid BigInt syntaxSyntaxError: invalid regular expression flag "x"SyntaxError: JSON.parse: bad parsingSyntaxError: label not foundSyntaxError: missing ; before statementSyntaxError: missing : after property idSyntaxError: missing ) after argument listSyntaxError: missing ) after conditionSyntaxError: missing ] after element listSyntaxError: missing } after function bodySyntaxError: missing } after property listSyntaxError: missing = in const declarationSyntaxError: missing formal parameterSyntaxError: missing name after . operatorSyntaxError: missing variable nameSyntaxError: redeclaration of formal parameter "x"SyntaxError: return not in functionSyntaxError: test for equality (==) mistyped as assignment (=)?SyntaxError: Unexpected '#' used outside of class bodySyntaxError: Unexpected tokenSyntaxError: unlabeled break must be inside loop or switchSyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'SyntaxError: unterminated string literalSyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# insteadTypeError: 'x' is not iterableTypeError: "x" has no propertiesTypeError: "x" is (not) "y"TypeError: "x" is not a constructorTypeError: "x" is not a functionTypeError: "x" is not a non-null objectTypeError: "x" is read-onlyTypeError: can't assign to property "x" on "y": not an objectTypeError: can't convert BigInt to numberTypeError: can't convert x to BigIntTypeError: can't define property "x": "obj" is not extensibleTypeError: can't delete non-configurable array elementTypeError: can't redefine non-configurable property "x"TypeError: cannot use 'in' operator to search for 'x' in 'y'TypeError: cyclic object valueTypeError: invalid 'instanceof' operand 'x'TypeError: invalid Array.prototype.sort argumentTypeError: invalid assignment to const "x"TypeError: More arguments neededTypeError: property "x" is non-configurable and can't be deletedTypeError: Reduce of empty array with no initial valueTypeError: setting getter-only property "x"TypeError: X.prototype.y called on incompatible typeURIError: malformed URI sequenceWarning: -file- is being assigned a //# sourceMappingURL, but already has oneWarning: unreachable code after return statement
+
+
+
+
+Misc
+
+JavaScript technologies overview
+Lexical grammar
+Iteration protocols
+Strict mode
+Template literals
+Trailing commas
+Deprecated features
+
+
+
+
+In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoProperty accessorsProperty accessors provide access to an object's properties by using the dot notation or the bracket notation.Try itSyntaxobject.propertyName
+object[expression]
+DescriptionOne can think of an object as an associative array (a.k.a. map, dictionary, hash, lookup table). The keys in this array are the names of the object's properties.
+There are two ways to access properties: dot notation and bracket notation.Dot notationIn the object.propertyName syntax, the propertyName must be a valid JavaScript identifier which can also be a reserved word. For example, object.$1 is valid, while object.1 is not.
+const variable = object.propertyName;
+object.propertyName = value;
+
+const object = {};
+object.$1 = "foo";
+console.log(object.$1); // 'foo'
+
+const object = {};
+object.1 = 'bar'; // SyntaxError
+console.log(object.1); // SyntaxError
+
+Here, the method named createElement is retrieved from document and is called.
+document.createElement("pre");
+
+If you use a method for a numeric literal, and the numeric literal has no exponent and no decimal point, you should leave white-space(s) before the dot preceding the method call, so that the dot is not interpreted as a decimal point.
+77 .toExponential();
+// or
+77
+.toExponential();
+// or
+(77).toExponential();
+// or
+77..toExponential();
+// or
+77.0.toExponential();
+// because 77. === 77.0, no ambiguity
+Bracket notationIn the object[expression] syntax, the expression should evaluate to a string or Symbol that represents the property's name. So, it can be any string literal, for example, including '1foo', '!bar!', or even ' ' (a space).
+const variable = object[propertyName];
+object[propertyName] = value;
+
+This does the exact same thing as the previous example.
+document["createElement"]("pre");
+
+A space before bracket notation is allowed.
+document ["createElement"]("pre");
+
+Passing expressions that evaluate to property name will do the same thing as directly passing the property name.
+const key = "name";
+const getKey = () => "name";
+const Obj = { name: "Michel" };
+
+Obj["name"]; // returns "Michel"
+Obj[key]; // evaluates to Obj["name"], and returns "Michel"
+Obj[getKey()]; // evaluates to Obj["name"], and returns "Michel"
+
+However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to object injection attacks.Property namesEach property name is a string or a Symbol. Any other value, including a number, is coerced to a string. This outputs 'value', since 1 is coerced into '1'.
+const object = {};
+object["1"] = "value";
+console.log(object[1]);
+
+This also outputs 'value', since both foo and bar are converted to the same string ("[object Object]").
+const foo = { uniqueProp: 1 };
+const bar = { uniqueProp: 2 };
+const object = {};
+object[foo] = "value";
+console.log(object[bar]);
+Method bindingIt's typical when speaking of an object's properties to make a distinction between properties and methods. However, the property/method distinction is little more than a convention. A method is a property that can be called (for example, if it has a reference to a Function instance as its value).
+A method is not bound to the object that it is a property of. Specifically, this is not fixed in a method and does not necessarily refer to the object containing the method. Instead, this is "passed" by the function call. See the reference for this.ExamplesBracket notation vs. eval()JavaScript novices often make the mistake of using eval() where the bracket notation can be used instead.
+For example, the following syntax is often seen in many scripts.
+const x = eval(`document.forms.form_name.elements.${strFormControl}.value`);
+
+eval() is slow and should be avoided whenever possible. Also, strFormControl would have to hold an identifier, which is not required for names and ids of form controls. It is better to use bracket notation instead:
+const x = document.forms.form_name.elements[strFormControl].value;
+SpecificationsSpecificationECMAScript Language Specification # sec-property-accessorsBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Object
+Object.defineProperty()
+Optional chaining
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 30, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

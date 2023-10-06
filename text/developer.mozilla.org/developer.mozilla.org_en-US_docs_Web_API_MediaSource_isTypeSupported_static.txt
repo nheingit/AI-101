@@ -1,0 +1,57 @@
+MediaSource: isTypeSupported() static method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsMediaSourceisTypeSupported()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoMedia Source Extensions APIMediaSourceConstructorMediaSource()Static propertiescanConstructInDedicatedWorker
+Experimental
+Instance propertiesactiveSourceBuffersdurationhandle
+Experimental
+readyStatesourceBuffersStatic methodsisTypeSupported() Instance methodsaddSourceBuffer()clearLiveSeekableRange()endOfStream()removeSourceBuffer()setLiveSeekableRange()Inheritance:EventTargetRelated pages for Media Source ExtensionsHTMLVideoElement.getVideoPlaybackQuality()MediaSourceHandleSourceBufferSourceBufferListTextTrack.sourceBufferURL.createObjectURL()VideoPlaybackQualityVideoTrack.sourceBufferIn this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoMediaSource: isTypeSupported() static methodThe MediaSource.isTypeSupported() static method returns a boolean value which is true if the given MIME type and (optional) codec are likely to be supported by the current user agent.
+
+  That is, if it can successfully create SourceBuffer objects for that media type.
+  If the returned value is false, then the user agent is certain that it cannot access media of the specified format.
+SyntaxMediaSource.isTypeSupported(type)
+Parameters
+type
+
+A string specifying the MIME type of the media and (optionally) a codecs parameter containing a comma-separated list of the supported codecs.
+
+Return valueA value of false if the media of the given type will not play.
+
+  A value of true is returned if the browser can probably play media of the specified type.
+  This is not a guarantee, and your code must be prepared for the possibility that the media will not play correctly if at all.
+
+
+  All web APIs that work with media files use a "no/maybe/probably" approach (or, in this case, "no or probably") when determining if a media type can be used.
+  This is because media files are complex, intricate constructs with far too many subtle variations to be absolutely certain of anything until you actually use the contents of the media.
+ExamplesThe following snippet is from an example written by Nick Desaulniers (view the full demo live, or download the source for further investigation). The function getMediaSource(), which is not defined here, returns a MediaSource.
+const assetURL = "frag_bunny.mp4";
+// Need to be specific for Blink regarding codecs
+// ./mp4info frag_bunny.mp4 | grep Codec
+const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+let mediaSource;
+
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
+  mediaSource = getMediaSource();
+  console.log(mediaSource.readyState); // closed
+  video.src = URL.createObjectURL(mediaSource);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
+} else {
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
+}
+
+function sourceOpen() {
+  console.log(this.readyState); // open
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener("updateend", () => {
+      mediaSource.endOfStream();
+      video.play();
+      console.log(mediaSource.readyState); // ended
+    });
+    sourceBuffer.appendBuffer(buf);
+  });
+}
+SpecificationsSpecificationMedia Source Extensionsâ¢ # dom-mediasource-istypesupportedBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Media Source Extensions API
+Guide to media types and formats on the web
+Codecs in common media types
+SourceBuffer
+SourceBufferList
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 28, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

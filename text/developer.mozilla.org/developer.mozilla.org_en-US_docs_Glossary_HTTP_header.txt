@@ -1,0 +1,54 @@
+HTTP header - MDN Web Docs Glossary: Definitions of Web-related terms | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusMDN Web Docs Glossary: Definitions of Web-related termsHTTP headerArticle ActionsEnglish (US)In this articleSee alsoIn this articleSee alsoHTTP headerAn HTTP header is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a ':' and a header-dependent value. The value finishes at the next CRLF or at the end of the message.
+The HTTP and Fetch specifications refer to a number of header categories, including:
+
+Request header: Headers containing more information about the resource to be fetched or about the client itself.
+Response header: Headers with additional information about the response, like its location or about the server itself (name, version, â¦).
+Representation header: metadata about the resource in the message body (e.g. encoding, media type, etc.).
+Fetch metadata request header: Headers with metadata about the resource in the message body (e.g. encoding, media type, etc.).
+
+A basic request with one header:
+GET /example.html HTTP/1.1
+Host: example.com
+
+Redirects have mandatory headers (Location):
+302 Found
+Location: /NewPage.html
+
+A typical set of headers:
+304 Not Modified
+Access-Control-Allow-Origin: *
+Age: 2318192
+Cache-Control: public, max-age=315360000
+Connection: keep-alive
+Date: Mon, 18 Jul 2016 16:06:00 GMT
+Server: Apache
+Vary: Accept-Encoding
+Via: 1.1 3dc30c7222755f86e824b93feb8b5b8c.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: TOl0FEm6uI4fgLdrKJx0Vao5hpkKGZULYN2TWD2gAWLtr7vlNjTvZw==
+X-Backend-Server: developer6.webapp.scl3.mozilla.com
+X-Cache: Hit from cloudfront
+X-Cache-Info: cached
+
+
+Note: Older versions of the specification referred to:
+
+General header: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.
+Entity header: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)
+
+See also
+List of all HTTP headers
+Syntax of headers in the HTTP specification
+Glossary
+
+HTTP header
+Request header
+Response header
+Representation header
+Fetch metadata request header
+Forbidden header name
+Forbidden response header name
+CORS-safelisted request header
+CORS-safelisted response header
+
+
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

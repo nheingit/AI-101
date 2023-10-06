@@ -1,0 +1,289 @@
+GET - HTTP | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesHTTPHTTP request methodsGETArticle ActionsEnglish (US)In this articleSyntaxSpecificationsBrowser compatibilitySee also
+
+HTTP
+Guides
+
+
+Resources and URIs
+
+Identifying resources on the Web
+Data URLs
+Introduction to MIME types
+Common MIME types
+Choosing between www and non-www URLs
+
+
+
+
+
+HTTP guide
+
+Basics of HTTP
+Overview of HTTP
+Evolution of HTTP
+HTTP Messages
+A typical HTTP session
+Connection management in HTTP/1.x
+Protocol upgrade mechanism
+
+
+
+
+
+HTTP security
+
+Content Security Policy (CSP)
+HTTP Strict Transport Security (HSTS)
+Cookie security
+X-Content-Type-Options
+X-Frame-Options
+X-XSS-Protection
+Mozilla web security guidelines
+Mozilla Observatory
+
+
+
+HTTP access control (CORS)
+HTTP authentication
+HTTP caching
+HTTP compression
+HTTP conditional requests
+HTTP content negotiation
+HTTP cookies
+HTTP range requests
+HTTP redirects
+HTTP specifications
+Permissions Policy
+References
+
+
+HTTP headers
+AcceptAccept-CHAccept-CH-Lifetime
+Non-standard
+
+Deprecated
+Accept-CharsetAccept-EncodingAccept-LanguageAccept-PatchAccept-PostAccept-RangesAccess-Control-Allow-CredentialsAccess-Control-Allow-HeadersAccess-Control-Allow-MethodsAccess-Control-Allow-OriginAccess-Control-Expose-HeadersAccess-Control-Max-AgeAccess-Control-Request-HeadersAccess-Control-Request-MethodAgeAllowAlt-SvcAuthorizationCache-ControlClear-Site-DataConnectionContent-DispositionContent-DPR
+Non-standard
+
+Deprecated
+Content-EncodingContent-LanguageContent-LengthContent-LocationContent-RangeContent-Security-PolicyContent-Security-Policy-Report-OnlyContent-TypeCookieCritical-CH
+Experimental
+Cross-Origin-Embedder-PolicyCross-Origin-Opener-PolicyCross-Origin-Resource-PolicyDateDevice-Memory
+Experimental
+Digest
+Deprecated
+DNT
+Deprecated
+Downlink
+Experimental
+DPR
+Non-standard
+
+Deprecated
+Early-Data
+Experimental
+ECT
+Experimental
+ETagExpectExpect-CTExpiresForwardedFromHostIf-MatchIf-Modified-SinceIf-None-MatchIf-RangeIf-Unmodified-SinceKeep-AliveLarge-Allocation
+Non-standard
+
+Deprecated
+Last-ModifiedLinkLocationMax-ForwardsNEL
+Experimental
+OriginPermissions-PolicyPragma
+Deprecated
+Proxy-AuthenticateProxy-AuthorizationRangeRefererReferrer-PolicyRetry-AfterRTT
+Experimental
+Save-Data
+Experimental
+Sec-CH-Prefers-Reduced-Motion
+Experimental
+Sec-CH-UA
+Experimental
+Sec-CH-UA-Arch
+Experimental
+Sec-CH-UA-Bitness
+Experimental
+Sec-CH-UA-Full-Version
+Deprecated
+Sec-CH-UA-Full-Version-List
+Experimental
+Sec-CH-UA-Mobile
+Experimental
+Sec-CH-UA-Model
+Experimental
+Sec-CH-UA-Platform
+Experimental
+Sec-CH-UA-Platform-Version
+Experimental
+Sec-Fetch-DestSec-Fetch-ModeSec-Fetch-SiteSec-Fetch-UserSec-GPC
+Experimental
+Sec-WebSocket-AcceptServerServer-TimingService-Worker-Navigation-PreloadSet-CookieSourceMapStrict-Transport-SecurityTETiming-Allow-OriginTk
+Deprecated
+TrailerTransfer-EncodingUpgradeUpgrade-Insecure-RequestsUser-AgentVaryViaViewport-Width
+Non-standard
+
+Deprecated
+Want-Digest
+Deprecated
+Warning
+Deprecated
+Width
+Non-standard
+
+Deprecated
+WWW-AuthenticateX-Content-Type-OptionsX-DNS-Prefetch-Control
+Non-standard
+X-Forwarded-For
+Non-standard
+X-Forwarded-Host
+Non-standard
+X-Forwarded-Proto
+Non-standard
+X-Frame-OptionsX-XSS-Protection
+Non-standard
+
+
+
+
+
+HTTP request methods
+CONNECTDELETEGETHEADOPTIONSPATCHPOSTPUTTRACE
+
+
+
+
+HTTP response status codes
+100 Continue101 Switching Protocols102 Processing103 Early Hints
+Experimental
+200 OK201 Created202 Accepted203 Non-Authoritative Information204 No Content205 Reset Content206 Partial Content207 Multi-Status208 Already Reported226 IM Used300 Multiple Choices301 Moved Permanently302 Found303 See Other304 Not Modified307 Temporary Redirect308 Permanent Redirect400 Bad Request401 Unauthorized402 Payment Required403 Forbidden404 Not Found405 Method Not Allowed406 Not Acceptable407 Proxy Authentication Required408 Request Timeout409 Conflict410 Gone411 Length Required412 Precondition Failed413 Content Too Large414 URI Too Long415 Unsupported Media Type416 Range Not Satisfiable417 Expectation Failed418 I'm a teapot421 Misdirected Request422 Unprocessable Content423 Locked424 Failed Dependency425 Too Early426 Upgrade Required428 Precondition Required429 Too Many Requests431 Request Header Fields Too Large451 Unavailable For Legal Reasons500 Internal Server Error501 Not Implemented502 Bad Gateway503 Service Unavailable504 Gateway Timeout505 HTTP Version Not Supported506 Variant Also Negotiates507 Insufficient Storage508 Loop Detected510 Not Extended511 Network Authentication Required
+
+
+
+
+CSP directives
+CSP source valuesCSP: base-uriCSP: block-all-mixed-content
+Deprecated
+CSP: child-srcCSP: connect-srcCSP: default-srcCSP: font-srcCSP: form-actionCSP: frame-ancestorsCSP: frame-srcCSP: img-srcCSP: manifest-srcCSP: media-srcCSP: object-srcCSP: plugin-types
+Non-standard
+
+Deprecated
+CSP: prefetch-src
+Non-standard
+
+Deprecated
+CSP: referrer
+Non-standard
+
+Deprecated
+CSP: report-toCSP: report-uri
+Deprecated
+CSP: require-trusted-types-for
+Experimental
+CSP: sandboxCSP: script-srcCSP: script-src-attrCSP: script-src-elemCSP: style-srcCSP: style-src-attrCSP: style-src-elemCSP: trusted-types
+Experimental
+CSP: upgrade-insecure-requestsCSP: worker-src
+
+
+
+
+CORS errors
+Reason: CORS disabledReason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'Reason: CORS header 'Access-Control-Allow-Origin' missingReason: CORS header 'Origin' cannot be addedReason: CORS preflight channel did not succeedReason: CORS request did not succeedReason: CORS request external redirect not allowedReason: CORS request not HTTPReason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from CORS preflight channelReason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
+
+
+
+
+Permissions-Policy directives
+Permissions-Policy: accelerometer
+Experimental
+Permissions-Policy: ambient-light-sensor
+Experimental
+Permissions-Policy: autoplay
+Experimental
+Permissions-Policy: battery
+Experimental
+Permissions-Policy: cameraPermissions-Policy: display-capturePermissions-Policy: document-domain
+Experimental
+Permissions-Policy: encrypted-media
+Experimental
+Permissions-Policy: execution-while-not-rendered
+Experimental
+Permissions-Policy: execution-while-out-of-viewport
+Experimental
+Permissions-Policy: fullscreenPermissions-Policy: gamepad
+Experimental
+Permissions-Policy: geolocationPermissions-Policy: gyroscope
+Experimental
+Permissions-Policy: hid
+Experimental
+Permissions-Policy: identity-credentials-get
+Experimental
+Permissions-Policy: idle-detection
+Experimental
+Permissions-Policy: local-fonts
+Experimental
+Permissions-Policy: magnetometer
+Experimental
+Permissions-Policy: microphonePermissions-Policy: midi
+Experimental
+Permissions-Policy: payment
+Experimental
+Permissions-Policy: picture-in-picture
+Experimental
+Permissions-Policy: publickey-credentials-create
+Experimental
+Permissions-Policy: publickey-credentials-get
+Experimental
+Permissions-Policy: screen-wake-lock
+Experimental
+Permissions-Policy: serial
+Experimental
+Permissions-Policy: speaker-selection
+Experimental
+Permissions-Policy: storage-access
+Experimental
+Permissions-Policy: usb
+Experimental
+Permissions-Policy: web-sharePermissions-Policy: xr-spatial-tracking
+Experimental
+
+
+
+
+In this articleSyntaxSpecificationsBrowser compatibilitySee alsoGETThe HTTP GET method requests a representation of the specified resource. Requests using GET should only be used to request data (they shouldn't include data).
+
+Note: Sending body/payload in a GET request may cause some existing implementations to reject the request â while not prohibited by the specification, the semantics are undefined. It is better to just avoid sending payloads in GET requests.
+
+
+
+
+Request has body
+No
+
+
+Successful response has body
+Yes
+
+
+Safe
+Yes
+
+
+Idempotent
+Yes
+
+
+Cacheable
+Yes
+
+
+Allowed in HTML forms
+Yes
+
+
+SyntaxGET /index.html
+SpecificationsSpecificationHTTP Semantics # GETBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+HTTP Headers
+Range
+POST
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 10, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

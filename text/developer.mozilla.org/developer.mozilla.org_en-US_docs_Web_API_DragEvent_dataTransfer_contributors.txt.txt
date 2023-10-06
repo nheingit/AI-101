@@ -1,0 +1,12 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/dragevent/datatransfer/index.md
+
+# Original Wiki contributors
+Zearin_Galaurum
+futpib
+smalllong
+connorshea
+erikadoyle
+rolfedh
+Sebastianz
+AFBarstow

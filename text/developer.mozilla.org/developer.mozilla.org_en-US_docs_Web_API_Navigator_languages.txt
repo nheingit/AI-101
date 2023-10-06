@@ -1,0 +1,94 @@
+Navigator: languages property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsNavigatorlanguagesArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoHTML DOM APINavigatorInstance propertiesactiveVRDisplays
+Non-standard
+
+Deprecated
+appCodeName
+Deprecated
+appName
+Deprecated
+appVersion
+Deprecated
+buildID
+Non-standard
+clipboardconnection
+Experimental
+contacts
+Experimental
+cookieEnabledcredentialsdeviceMemory
+Experimental
+doNotTrack
+Deprecated
+geolocationglobalPrivacyControl
+Experimental
+
+Non-standard
+gpu
+Experimental
+hardwareConcurrencyhid
+Experimental
+ink
+Experimental
+keyboard
+Experimental
+languagelanguages locksmaxTouchPointsmediaCapabilitiesmediaDevicesmediaSessionmimeTypes
+Deprecated
+onLineoscpu
+Deprecated
+pdfViewerEnabledpermissionsplatform
+Deprecated
+plugins
+Deprecated
+presentationproduct
+Deprecated
+productSub
+Deprecated
+serial
+Experimental
+serviceWorkerstorageuserActivationuserAgentuserAgentData
+Experimental
+vendor
+Deprecated
+vendorSub
+Deprecated
+virtualKeyboard
+Experimental
+wakeLockwebdriverwindowControlsOverlayxr
+Experimental
+Instance methodscanShare()clearAppBadge()getAutoplayPolicy()
+Experimental
+getBattery()getGamepads()getUserMedia()
+Deprecated
+getVRDisplays()
+Non-standard
+
+Deprecated
+javaEnabled()
+Deprecated
+registerProtocolHandler()requestMediaKeySystemAccess()requestMIDIAccess()sendBeacon()setAppBadge()share()taintEnabled()
+Deprecated
+unregisterProtocolHandler()vibrate()Related pages for HTML DOMBeforeUnloadEventDOMStringMapErrorEventHTMLAnchorElementHTMLAreaElementHTMLAudioElementHTMLBRElementHTMLBaseElementHTMLBodyElementHTMLButtonElementHTMLCanvasElementHTMLDListElementHTMLDataElementHTMLDataListElementHTMLDialogElementHTMLDivElementHTMLDocumentHTMLElementHTMLEmbedElementHTMLFieldSetElementHTMLFormControlsCollectionHTMLFormElementHTMLFrameSetElementHTMLHRElementHTMLHeadElementHTMLHeadingElementHTMLHtmlElementHTMLIFrameElementHTMLImageElementHTMLInputElementHTMLLIElementHTMLLabelElementHTMLLegendElementHTMLLinkElementHTMLMapElementHTMLMediaElementHTMLMetaElementHTMLMeterElementHTMLModElementHTMLOListElementHTMLObjectElementHTMLOptGroupElementHTMLOptionElementHTMLOptionsCollectionHTMLOutputElementHTMLParagraphElementHTMLPictureElementHTMLPreElementHTMLProgressElementHTMLQuoteElementHTMLScriptElementHTMLSelectElementHTMLSourceElementHTMLSpanElementHTMLStyleElementHTMLTableCaptionElementHTMLTableCellElementHTMLTableColElementHTMLTableElementHTMLTableRowElementHTMLTableSectionElementHTMLTemplateElementHTMLTextAreaElementHTMLTimeElementHTMLTitleElementHTMLTrackElementHTMLUListElementHTMLUnknownElementHTMLVideoElementHashChangeEventHistoryImageDataLocationMessageChannelMessageEventMessagePortPageTransitionEventPluginPluginArrayPromiseRejectionEventRadioNodeListUserActivationValidityStateWindowWorkletGlobalScopeIn this articleValueExamplesSpecificationsBrowser compatibilitySee alsoNavigator: languages property
+  The Navigator.languages read-only property
+  returns an array of strings representing the user's preferred
+  languages. The language is described using language tags according to
+  RFC 5646: Tags for Identifying Languages (also known as BCP 47). In the returned
+  array they are ordered by preference with the most preferred language first.
+
+
+  The value of navigator.language is the
+  first element of the returned array.
+
+
+  When its value changes, as the user's preferred languages are changed a
+  languagechange event is fired on the Window object.
+
+
+  The Accept-Language HTTP header in every HTTP request from the user's
+  browser uses the same value for the navigator.languages property except for
+  the extra qvalues (quality values) field (e.g. en-US;q=0.8).
+ValueA string.Examplesnavigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
+SpecificationsSpecificationHTML Standard # dom-navigator-languages-devBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+navigator.language
+navigator
+languagechange event
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

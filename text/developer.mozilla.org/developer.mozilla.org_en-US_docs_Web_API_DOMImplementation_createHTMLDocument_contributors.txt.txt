@@ -1,0 +1,22 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/domimplementation/createhtmldocument/index.md
+
+# Original Wiki contributors
+bershanskiy
+Zearin_Galaurum
+wbamberg
+FranklinYu
+connorshea
+SphinxKnight
+uvsq21709071
+chriszrc
+JorisW
+erikadoyle
+teoli
+bradleyayers
+Prome
+kscarfone
+Sheppy
+fscholz
+ziyunfei
+Jscher2000

@@ -1,0 +1,7 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/rail/index.md
+
+# Original Wiki contributors
+RafeyIqbalRahman
+Havi Hoffman
+estelle

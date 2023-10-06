@@ -1,0 +1,63 @@
+UIEvent: which property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsUIEventwhichArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoUI EventsUIEventConstructorUIEvent()Instance propertiesdetailsourceCapabilities
+Experimental
+viewwhich 
+Deprecated
+Instance methodsinitUIEvent()
+Deprecated
+Inheritance:EventRelated pages for UI EventsCompositionEventFocusEventInputEventKeyboardEventMouseEventMouseScrollEventMutationEventWheelEventIn this articleValueExamplesSpecificationsBrowser compatibilitySee alsoUIEvent: which propertyDeprecated: This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the compatibility table at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+The UIEvent.which read-only property of the UIEvent interface returns a number that indicates which button was pressed on the mouse, or the numeric keyCode or the character code (charCode) of the key pressed on the keyboard.ValueValue for KeyboardEvent 
+Non-standard
+
+  For KeyboardEvent, event.which contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.
+  Please see deprecated KeyboardEvent.charCode and KeyboardEvent.keyCode for more details.
+
+
+Note: Consider KeyboardEvent.key or KeyboardEvent.code for new code.
+Value for MouseEvent 
+Non-standard
+For MouseEvent, event.which is a number representing a given button:
+
+0: No button
+1: Left button
+2: Middle button (if present)
+3: Right button
+
+
+  For a mouse configured for left-handed use, the button actions are reversed.
+  In this case, the values are read from right to left.
+
+
+Note: Consider MouseEvent.button for new code.
+Examples<html lang="en">
+  <head>
+    <title>charCode/keyCode/which example</title>
+
+    <script>
+      function showKeyPress(evt) {
+        alert(
+          `onkeypress handler:\n` +
+            `keyCode property: ${evt.keyCode}\n` +
+            `which property: ${evt.which}\n` +
+            `charCode property: ${evt.charCode}\n` +
+            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`
+        );
+      }
+
+      function keyDown(evt) {
+        alert(
+          `onkeydown handler:\n` +
+            `keyCode property: ${evt.keyCode}\n` +
+            `which property: ${evt.which}\n`
+        );
+      }
+    </script>
+  </head>
+
+  <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
+    <p>Please press any key.</p>
+  </body>
+</html>
+SpecificationsSpecificationUI Events # dom-uievent-whichBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+KeyboardEvent
+MouseEvent
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 8, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

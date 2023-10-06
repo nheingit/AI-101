@@ -1,0 +1,55 @@
+Object.prototype.toLocaleString() - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStandard built-in objectsObjectObject.prototype.toLocaleString()Article ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoStandard built-in objectsObjectConstructorObject() constructorPropertiesObject.prototype.constructorObject.prototype.__proto__
+Deprecated
+MethodsObject.prototype.__defineGetter__()
+Deprecated
+Object.prototype.__defineSetter__()
+Deprecated
+Object.prototype.__lookupGetter__()
+Deprecated
+Object.prototype.__lookupSetter__()
+Deprecated
+Object.assign()Object.create()Object.defineProperties()Object.defineProperty()Object.entries()Object.freeze()Object.fromEntries()Object.getOwnPropertyDescriptor()Object.getOwnPropertyDescriptors()Object.getOwnPropertyNames()Object.getOwnPropertySymbols()Object.getPrototypeOf()Object.hasOwn()Object.prototype.hasOwnProperty()Object.is()Object.isExtensible()Object.isFrozen()Object.prototype.isPrototypeOf()Object.isSealed()Object.keys()Object.preventExtensions()Object.prototype.propertyIsEnumerable()Object.seal()Object.setPrototypeOf()Object.prototype.toLocaleString()Object.prototype.toString()Object.prototype.valueOf()Object.values()In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoObject.prototype.toLocaleString()The toLocaleString() method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes.Try itSyntaxtoLocaleString()
+ParametersNone. However, all objects that override this method are expected to accept at most two parameters, corresponding to locales and options, such as Date.prototype.toLocaleString. The parameter positions should not be used for any other purpose.Return valueThe return value of calling this.toString().DescriptionAll objects that inherit from Object.prototype (that is, all except null-prototype objects) inherit the toLocaleString() method. Object's toLocaleString returns the result of calling this.toString().
+This function is provided to give objects a generic toLocaleString method, even though not all may use it. In the core language, these built-in objects override toLocaleString to provide locale-specific formatting:
+
+Array: Array.prototype.toLocaleString()
+Number: Number.prototype.toLocaleString()
+Date: Date.prototype.toLocaleString()
+TypedArray: TypedArray.prototype.toLocaleString()
+BigInt: BigInt.prototype.toLocaleString()
+ExamplesUsing the base toLocaleString() methodThe base toLocaleString() method simply calls toString().
+const obj = {
+  toString() {
+    return "My Object";
+  },
+};
+console.log(obj.toLocaleString()); // "My Object"
+Array toLocaleString() overrideArray.prototype.toLocaleString() is used to print array values as a string by invoking each element's toLocaleString() method and joining the results with a locale-specific separator. For example:
+const testArray = [4, 7, 10];
+
+const euroPrices = testArray.toLocaleString("fr", {
+  style: "currency",
+  currency: "EUR",
+});
+// "4,00 â¬,7,00 â¬,10,00 â¬"
+Date toLocaleString() overrideDate.prototype.toLocaleString() is used to print out date displays more suitable for specific locales. For example:
+const testDate = new Date();
+// "Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
+
+const deDate = testDate.toLocaleString("de");
+// "29.5.2020, 18:04:24"
+
+const frDate = testDate.toLocaleString("fr");
+// "29/05/2020, 18:04:24"
+Number toLocaleString() overrideNumber.prototype.toLocaleString() is used to print out number displays more suitable for specific locales, e.g. with the correct separators. For example:
+const testNumber = 2901234564;
+// "2901234564"
+
+const deNumber = testNumber.toLocaleString("de");
+// "2.901.234.564"
+
+const frNumber = testNumber.toLocaleString("fr");
+// "2 901 234 564"
+SpecificationsSpecificationECMAScript Language Specification # sec-object.prototype.tolocalestringBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Object.prototype.toString()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

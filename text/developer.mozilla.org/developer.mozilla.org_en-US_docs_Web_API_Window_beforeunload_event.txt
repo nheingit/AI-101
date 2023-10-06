@@ -1,0 +1,194 @@
+Window: beforeunload event - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsWindowbeforeunloadArticle ActionsEnglish (US)In this articleSyntaxEvent typeEvent handler aliasesSecurityUsage notesExamplesSpecificationsBrowser compatibilityCompatibility notesSee alsoWindowInstance propertiesapplicationCache
+Non-standard
+
+Deprecated
+closedconsolecredentialless
+Experimental
+
+Non-standard
+customElementsdefaultStatus
+Deprecated
+devicePixelRatiodocumentevent
+Deprecated
+external
+Deprecated
+frameElementframesfullScreen
+Non-standard
+historyinnerHeightinnerWidthlaunchQueue
+Experimental
+lengthlocalStoragelocationlocationbarmenubarmozInnerScreenX
+Non-standard
+mozInnerScreenY
+Non-standard
+namenavigation
+Experimental
+navigatorondragdrop
+Deprecated
+openerorientation
+Deprecated
+outerHeightouterWidthpageXOffsetpageYOffsetparentpersonalbarschedulerscreenscreenLeftscreenTopscreenXscreenYscrollbarsscrollMaxX
+Non-standard
+scrollMaxY
+Non-standard
+scrollXscrollYselfsessionStoragesidebar
+Non-standard
+
+Deprecated
+speechSynthesisstatus
+Deprecated
+statusbartoolbartopvisualViewportwindowInstance methodsalert()back()
+Non-standard
+
+Deprecated
+blur()cancelAnimationFrame()cancelIdleCallback()captureEvents()
+Deprecated
+clearImmediate()close()confirm()convertPointFromNodeToPage()
+Non-standard
+dump()
+Non-standard
+find()
+Non-standard
+focus()forward()
+Non-standard
+
+Deprecated
+getComputedStyle()getDefaultComputedStyle()
+Non-standard
+getSelection()matchMedia()moveBy()moveTo()open()postMessage()print()prompt()queryLocalFonts()
+Experimental
+releaseEvents()
+Deprecated
+requestAnimationFrame()requestFileSystem()
+Non-standard
+
+Deprecated
+requestIdleCallback()resizeBy()resizeTo()scroll()scrollBy()scrollByLines()
+Non-standard
+scrollByPages()
+Non-standard
+scrollTo()setImmediate()showDirectoryPicker()
+Experimental
+showModalDialog()
+Non-standard
+
+Deprecated
+showOpenFilePicker()
+Experimental
+showSaveFilePicker()
+Experimental
+sizeToContent()
+Non-standard
+stop()updateCommands()
+Non-standard
+webkitConvertPointFromPageToNode()
+Non-standard
+
+Deprecated
+Eventsafterprintappinstalledbeforeinstallpromptbeforeprintbeforeunload blurcopycutdevicemotiondeviceorientationdeviceorientationabsoluteDOMContentLoadederrorfocusgamepadconnectedgamepaddisconnectedhashchangelanguagechangeloadmessagemessageerrorofflineonlineorientationchange
+Deprecated
+pagehidepageshowpastepopstaterejectionhandledresizestorageunhandledrejectionunloadvrdisplayactivate
+Non-standard
+
+Deprecated
+vrdisplayconnect
+Non-standard
+
+Deprecated
+vrdisplaydeactivate
+Non-standard
+
+Deprecated
+vrdisplaydisconnect
+Non-standard
+
+Deprecated
+vrdisplaypresentchange
+Non-standard
+
+Deprecated
+Inheritance:EventTargetIn this articleSyntaxEvent typeEvent handler aliasesSecurityUsage notesExamplesSpecificationsBrowser compatibilityCompatibility notesSee alsoWindow: beforeunload eventThe beforeunload event is fired when the window, the document and its resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.
+This event enables a web page to trigger a confirmation dialog asking the user if they really want to leave the page. If the user confirms, the browser navigates to the new page, otherwise it cancels the navigation.
+According to the specification, to show the confirmation dialog an event handler should call preventDefault() on the event.
+The HTML specification states that calls to window.alert(), window.confirm(), and window.prompt() methods may be ignored during this event. See the HTML specification for more details.SyntaxUse the event name in methods like addEventListener(), or set an event handler property.
+addEventListener("beforeunload", (event) => {});
+onbeforeunload = (event) => {};
+Event typeA BeforeUnloadEvent. Inherits from Event.Event handler aliasesIn addition to the Window interface, the event handler property onbeforeunload is also available on the following targets:
+
+HTMLBodyElement
+HTMLFrameSetElement
+SVGSVGElement
+Security
+Sticky activation is required.
+  The user has to have interacted with the page in order for this feature to work.
+Usage notesThe beforeunload event suffers from the same problems as the unload event.
+Especially on mobile, the beforeunload event is not reliably fired. For example, the beforeunload event is not fired at all in the following scenario:
+
+A mobile user visits your page.
+The user then switches to a different app.
+Later, the user closes the browser from the app manager.
+
+Additionally, on Firefox, the beforeunload event is not compatible with the back/forward cache (bfcache): that is, Firefox will not place pages in the bfcache if they have beforeunload listeners, and this is bad for performance.
+However, unlike the unload event, there is a legitimate use case for the beforeunload event: the scenario where the user has entered unsaved data that will be lost if the page is unloaded.
+It is recommended that developers listen for beforeunload only in this scenario, and only when they actually have unsaved changes, so as to minimize the effect on performance. See the Examples section below for an example of this.
+See the bfcache guide on web.dev for more information about the problems associated with the beforeunload event.ExamplesIn this example a page listens for changes to a text input. If the element contains a value, it adds a listener for beforeunload. If the element is empty, it removes the listener:
+const beforeUnloadListener = (event) => {
+  event.preventDefault();
+  return (event.returnValue = "");
+};
+
+const nameInput = document.querySelector("#name");
+
+nameInput.addEventListener("input", (event) => {
+  if (event.target.value !== "") {
+    addEventListener("beforeunload", beforeUnloadListener, { capture: true });
+  } else {
+    removeEventListener("beforeunload", beforeUnloadListener, {
+      capture: true,
+    });
+  }
+});
+SpecificationsSpecificationHTML Standard # event-beforeunloadHTML Standard # handler-window-onbeforeunloadBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Compatibility notes
+  The HTML specification states that authors should use the
+  Event.preventDefault() method instead of using
+  Event.returnValue to prompt the user. However, this is not yet supported
+  by all browsers.
+
+
+  When this event returns (or sets the returnValue property to) a value
+  other than null or undefined, the user will be prompted to
+  confirm the page unload. In older browsers, the return value of the event is displayed
+  in this dialog. Since Firefox 44, Chrome 51, Opera 38, and Safari 9.1, a generic
+  string not under the control of the webpage is shown instead of the returned
+  string. For example:
+
+
+
+    Firefox displays the string, "This page is asking you to confirm that you want to
+    leave - data you have entered may not be saved." (see Firefox bug 588292).
+  
+Chrome displays the string, "Do you want to leave the site? Changes you made may not be saved." (see Chrome Platform Status).
+
+
+  In some browsers, calls to window.alert(),
+  window.confirm(), and window.prompt() may be ignored
+  during this event. See the HTML specification
+  for more details.
+
+
+  Note also, that various browsers ignore the result of the event and do not ask the user
+  for confirmation at all. In such cases, the document will always be unloaded
+  automatically. Firefox has a switch named dom.disable_beforeunload in
+  about:config to enable this behavior. As of Chrome 60, the confirmation will be skipped if
+  the user has not performed a gesture in the frame or page since it was loaded. Pressing
+  F5 in the page seems to count as user interaction, whereas mouse-clicking the refresh
+  arrow or pressing F5 with Chrome DevTools focused does not count as user interaction (as
+  of Chrome 81).
+See also
+Related events: DOMContentLoaded, readystatechange, load, unload
+Unloading Documents â Prompt to unload a document
+Remove Custom Messages in onbeforeload Dialogs after Chrome 51
+Don't lose user and app state, use Page Visibility explains in detail why you should use visibilitychange, not beforeunload/unload.
+Page Lifecycle API gives best-practices guidance on handling page lifecycle behavior in your web applications.
+PageLifecycle.js: a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
+Back/forward cache explains what the back/forward cache is, and its implications for various page lifecycle events.
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 19, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

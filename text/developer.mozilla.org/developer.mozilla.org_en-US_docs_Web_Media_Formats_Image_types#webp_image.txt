@@ -1,0 +1,1459 @@
+Image file type and format guide - Web media technologies | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb media technologiesMedia type and format guide: image, audio, and video contentImage file type and format guideArticle ActionsEnglish (US)In this articleCommon image file typesImage file type detailsChoosing an image formatProviding image fallbacksSee also
+Autoplay guide for media and Web Audio APIsDASH Adaptive Streaming for HTML 5 VideoGuide to streaming audio and videoMedia type and format guide: image, audio, and video contentMedia type and format guide: image, audio, and video contentWeb audio codec guideDigital audio conceptsCodecs in common media typesMedia container formats (file types)Image file type and format guideHandling media support issues in web contentWeb video codec guideDigital video conceptsCodecs used by WebRTCUsing audio and video in HTMLUsing images in HTML
+In this articleCommon image file typesImage file type detailsChoosing an image formatProviding image fallbacksSee alsoImage file type and format guideIn this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.Common image file typesThe image file formats that are most commonly used on the web are listed below.
+
+
+
+Abbreviation
+File format
+MIME type
+File extension(s)
+Summary
+
+
+
+
+APNG
+Animated Portable Network Graphics
+image/apng
+.apng
+
+        Good choice for lossless animation sequences (GIF is less performant).
+        AVIF and WebP have better performance but less broad browser support.Supported: Chrome, Edge, Firefox, Opera, Safari.
+      
+
+
+AVIF
+AV1 Image File Format
+image/avif
+.avif
+
+
+          Good choice for both images and animated images due to high performance and royalty free image format.
+          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
+          Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
+          <picture> element).Supported: Chrome, Firefox (still images only: animated images not implemented), Opera, Safari.
+        
+
+
+
+GIF
+Graphics Interchange Format
+image/gif
+.gif
+
+        Good choice for simple images and animations. Prefer PNG for
+        lossless and indexed still images, and consider WebP, AVIF or APNG for animation sequences.Supported: Chrome, Edge, Firefox, IE, Opera, Safari.
+      
+
+
+JPEG
+Joint Photographic Expert Group image
+image/jpeg
+
+.jpg, .jpeg, .jfif,
+        .pjpeg, .pjp
+
+
+
+          Good choice for lossy compression of still images (currently the most
+          popular). Prefer PNG when more precise reproduction of the image is
+          required, or WebP/AVIF if both better reproduction and higher compression are required.Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+        
+
+
+
+PNG
+Portable Network Graphics
+image/png
+.png
+
+
+          PNG is preferred over JPEG for more precise reproduction of source
+          images, or when transparency is needed. WebP/AVIF provide even better compression and reproduction, but browser support is more limited.Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+        
+
+
+
+SVG
+Scalable Vector Graphics
+image/svg+xml
+.svg
+Vector image format; ideal for user interface elements, icons, diagrams, etc., that must be drawn accurately at different sizes.Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+
+
+WebP
+Web Picture format
+image/webp
+.webp
+
+        Excellent choice for both images and animated images.
+        WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
+        AVIF offers slightly better compression, but is not quite as well-supported in browsers and does not support progressive rendering.Support: Chrome, Edge, Firefox, Opera, Safari
+      
+
+
+
+
+Note: The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
+
+The following list includes image formats that appear on the web, but which should be avoided for web content (generally this is because either they do not have wide browser support, or because there are better alternatives).
+
+
+
+Abbreviation
+File format
+MIME type
+File extension(s)
+Supported browsers
+
+
+
+
+BMP
+Bitmap file
+image/bmp
+.bmp
+Chrome, Edge, Firefox, IE, Opera, Safari
+
+
+ICO
+Microsoft Icon
+image/x-icon
+.ico, .cur
+Chrome, Edge, Firefox, IE, Opera, Safari
+
+
+TIFF
+Tagged Image File Format
+image/tiff
+.tif, .tiff
+Safari
+
+
+
+
+Note: The abbreviation for each image format links to a longer description of the format, its capabilities, and detailed browser compatibility information (including which versions introduced support and specific special features that may have been introduced later).
+
+
+
+Note: Safari 11.1 added the ability to use a video format, as an animated gif replacement.
+    No other browser supports this.
+    See the Chromium bug, and Firefox bug for more information.
+  
+Image file type detailsThe following sections provide a brief overview of each of the image file types supported by web browsers.
+
+  In the tables below, the term bits per component refers to the number of bits used to represent each color component.
+  For example, an RGB color depth of 8 indicates that each of the red, green, and blue components are represented by an 8-bit value.
+  Bit depth, on the other hand, is the total number of bits used to represent each pixel in memory.
+APNG (Animated Portable Network Graphics)
+  APNG is a file format first introduced by Mozilla which extends the PNG standard to add support for animated images.
+  Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of color depths, whereas animated GIF supports only 8-bit indexed color.
+
+
+  APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity throbbers, and other animated sequences.
+  For example, APNG is one of the formats supported when creating animated stickers for Apple's iMessage application (and the Messages application on iOS).
+  They're also commonly used for the animated portions of web browsers' user interfaces.
+
+
+
+
+MIME type
+image/apng
+
+
+File extension(s)
+.apng
+
+
+Specification
+wiki.mozilla.org/APNG_Specification
+
+
+Browser compatibility
+Chrome 59, Edge 12, Firefox 3, Opera 46, Safari 8
+
+
+Maximum dimensions
+2,147,483,647Ã2,147,483,647 pixels
+
+
+Supported color modes
+
+
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+
+
+Greyscale
+1, 2, 4, 8, and 16
+Each pixel consists of a single D-bit value indicating the brightness of the greyscale pixel.
+
+
+True color
+8 and 16
+Each pixel is represented by three D-bit values indicating the level of the red, green, and blue color components.
+
+
+Indexed color
+1, 2, 4, and 8
+
+                Each pixel is a D-bit value indicating an index into a
+                color palette which is contained within a PLTE chunk in the APNG file;
+                the colors in the palette all use an 8-bit depth.
+              
+
+
+Greyscale with alpha
+8 and 16
+Each pixel is represented by two D-bit values: the intensity of the greyscale pixel and an alpha sample, indicating how opaque the pixel is.
+
+
+True color with alpha
+8 and 16
+Each pixel is comprised of four D-pixel color components: red, green, blue, and the alpha sample indicating how opaque the pixel is.
+
+
+
+
+
+
+Compression
+Lossless
+
+
+Licensing
+
+        Free and open under the
+        Creative Commons Attribution-ShareAlike license
+        (CC-BY-SA) version 3.0 or later.
+      
+
+
+AVIF imageAV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.
+
+
+Note: AVIF has potential to become the "next big thing" for sharing images in web content.
+    It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
+  
+
+
+  AV1 is a coding format that was originally designed for video transmission over the Internet.
+  The format benefits from the significant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering.
+  However it also has disadvantages for some cases, as video and image encoding have some different requirements.
+
+The format offers:
+
+Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
+Generally, AVIF has better compression than WebP â median 50% vs. 30% compression for the same JPG set (source: AVIF WebP Comparison (CTRL Blog)).
+Lossless compression.
+Animation/multi-image storage (similar to animated GIFs, but with much better compression)
+Alpha channel support (i.e. for transparency).
+High Dynamic Range (HDR): support for storing images that can represent bigger contrasts between the lightest and darkest parts of the image.
+Wide Color Gamut: Support for images that can contain a larger range of colors.
+
+
+  AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed.
+  This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
+  For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
+
+
+  AVIF is supported in Chrome, Opera, Safari and Firefox (Firefox supports still images but not animations), but not on Edge or IE.
+  As support is not yet comprehensive (and has little historical depth) you should provide a fallback in WebP, JPEG or PNG format using the <picture> element (or some other approach).
+
+
+
+
+MIME type
+image/avif
+
+
+File extension(s)
+.avif
+
+
+Specification
+
+AV1 Image File Format (AVIF)
+
+
+
+Browser compatibility
+Chrome 85, Opera 71, Firefox 93, and Safari 16.1.
+        
+
+            Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation.
+            The preference image.avif.compliance_strictness
+            can be used to adjust the compliance strictness with the specification.
+            Animated images are not supported.
+          
+
+            Firefox 77 to 92 require the preference
+            image.avif.enable set true. Earlier versions provide only basic support.
+          
+
+
+
+
+Maximum dimensions
+2,147,483,647Ã2,147,483,647 pixels
+
+
+Supported color modes
+
+
+          Color mode support information is provided in the
+          AV1 Bitstream & Decoding Process Specification, section 6.4.2 : Color config semantics.
+        
+A non-exhaustive summary is:
+
+Color modes: YUV444, YUV422, YUV420
+Greyscale support: YUV400
+Bits: 8/10/12-bit
+Alpha support
+ICC profile support
+NCLX support: sRGB, linear sRGB, linear Rec2020, PQ Rec2020, HLG Rec2020, PQ P3, HLG P3, etc.
+Tiling support
+
+
+
+
+Compression
+Lossy and lossless.
+
+
+Licensing
+Royalty free. Licensing information is available at http://aomedia.org/license/ .
+
+
+BMP (Bitmap file)The BMP (Bitmap image) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
+
+
+Warning: You should typically avoid using BMP files for website content.
+    The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
+    More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
+  
+
+
+  BMP theoretically supports a variety of internal data representations.
+  The simplest, and most commonly used, form of BMP file is an uncompressed raster image, with each pixel occupying 3 bytes representing its red, green, and blue components, and each row padded with 0x00 bytes to a multiple of 4 bytes wide.
+
+
+  While other data representations are defined in the specification, they are not widely used and often completely unimplemented.
+  These features include: support for different bit depths, indexed color, alpha channels, and different pixel orders (by default, BMP is written from bottom-left corner toward the right and top, rather than from the top-left corner toward the right and bottom).
+
+Theoretically, several compression algorithms are supported, and the image data can also be stored in JPEG or PNG format within the BMP file.
+
+
+
+MIME type
+image/bmp
+
+
+File extension(s)
+.bmp
+
+
+Specification
+
+        No specification; however, Microsoft provides general documentation of the format at
+        docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage
+
+
+
+Browser compatibility
+All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+
+
+Maximum dimensions
+Either 32,767Ã32,767 or 2,147,483,647Ã2,147,483,647 pixels, depending on the format version
+
+
+Supported color modes
+
+
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+
+
+Greyscale
+1
+Each bit represents a single pixel, which can be either black or white.
+
+
+True color
+8 and 16
+Each pixel is represented by three values representing the red, green, and blue color components; each is D bits.
+
+
+Indexed color
+2, 4, and 8
+Each pixel is represented by a value which is one 2, 4, or 8 bits, serving as an index into the color table.
+
+
+Greyscale with alpha
+n/a
+BMP has no distinct grayscale format.
+
+
+True color with alpha
+8 and 16
+
+                Each pixel is represented by four values representing the red,
+                green, blue, and alpha color components; each is D bits.
+              
+
+
+
+
+
+
+Compression
+Several compression methods are supported, including lossy or lossless algorithms
+
+
+Licensing
+
+        Covered by the Microsoft Open Specification Promise;
+        while Microsoft holds patents against BMP, they have published a promise not to assert its patent rights as long as specific conditions are met.
+        This is not the same as a license, however. BMP is included under the Windows Metafile Format (.wmf).
+      
+
+
+GIF (Graphics Interchange Format)
+  In 1987, the CompuServe online service provider introduced the GIF (Graphics Interchange Format) image file format to provide a compressed graphics format that all members of their service would be able to use.
+  GIF uses the Lempel-Ziv-Welch (LZW) algorithm to losslessly compress 8-bit indexed color graphics.
+  GIF was one of the first two graphics formats supported by HTML, along with XBM.
+
+
+  Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries).
+  To simulate more than 255 or 256 colors, dithering is generally used.
+  It is technically possible to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.
+
+Pixels are opaque, unless a specific color index is designated as transparent, in which case pixels colored that value are entirely transparent.
+GIF supports simple animation, in which following an initial full-size frame, a series of images reflecting the parts of the image that change with each frame are provided.
+
+  GIF has been extremely popular for decades, due to its simplicity and compatibility.
+  Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
+
+
+  Another popular feature of GIF is support for interlacing, where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
+  This is particularly useful when network connections are slow.
+
+
+  GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.
+  Typically, modern content should use PNG for lossless and indexed still images, and should consider using APNG for lossless animation sequences.
+
+
+
+
+MIME type
+image/gif
+
+
+File extension(s)
+.gif
+
+
+Specification
+GIF87a specificationGIF89a specification
+
+
+Browser compatibility
+All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+
+
+Maximum dimensions
+65,536Ã65,536 pixels
+
+
+Supported color modes
+
+
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+
+
+Greyscale
+n/a
+GIF does not include a dedicated greyscale format.
+
+
+True color
+n/a
+GIF does not support true color pixels.
+
+
+Indexed color
+8
+Each color in a GIF palette is defined as 8 bits each of red, green, and blue (24 total bits per pixel).
+
+
+Greyscale with alpha
+n/a
+GIF does not provide a dedicated greyscale format.
+
+
+True color with alpha
+n/a
+GIF does not support true color pixels.
+
+
+
+
+
+
+Compression
+Lossless (LZW)
+
+
+Licensing
+
+        While the GIF format itself is open, the LZW compression algorithm was covered by patents until the early 2000s.
+        As of July 7, 2004, all relevant patents have expired and the GIF format may be used freely
+      
+
+
+ICO (Microsoft Windows icon)
+  The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems.
+  However, early versions of Internet Explorer introduced the ability for a website to provide an ICO file named favicon.ico in a website's root directory to specify a favicon â an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+
+
+  An ICO file can contain multiple icons, and begins with a directory listing details about each.
+  Following the directory comes the data for the icons.
+  Each icon's data can be either a BMP image without the file header, or a complete PNG image (including the file header).
+  If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
+
+
+
+Warning: ICO files should not be used in web content.
+    Additionally, their use for favicons has subsided in favor of using a PNG file and the <link> element, as described in Providing icons for different usage contexts.
+  
+
+
+
+
+MIME type
+
+image/vnd.microsoft.icon (official),
+        image/x-icon (used by Microsoft)
+      
+
+
+File extension(s)
+.ico
+
+
+Specification
+
+
+
+Browser compatibility
+All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+
+
+Maximum dimensions
+256Ã256 pixels
+
+
+Supported color modes
+
+
+Icons in BMP format
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+Greyscale
+1
+Each bit represents a single pixel, which can be either black or white.
+
+
+True color
+8 and 16
+Each pixel is represented by three values representing the red, green, and blue color components; each is D bits.
+
+
+Indexed color
+2, 4, and 8
+Each pixel is represented by a value which is one 2, 4, or 8 bits, serving as an index into the color table.
+
+
+Greyscale with alpha
+n/a
+BMP has no distinct grayscale format.
+
+
+True color with alpha
+8 and 16
+Each pixel is represented by four values representing the red, green, blue, and alpha color components; each is D bits.
+
+
+
+
+Icons in PNG format
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+Greyscale
+1, 2, 4, 8, and 16
+Each pixel consists of a single D-bit value indicating the brightness of the greyscale pixel.
+
+
+True color
+8 and 16
+Each pixel is represented by three D-bit values indicating the level of the red, green, and blue color components.
+
+
+Indexed color
+1, 2, 4, and 8
+
+                Each pixel is a D-bit value indicating an index into a color palette which is contained within a
+                PLTE
+                chunk in the APNG file; the colors in the palette all use an 8-bit depth.
+              
+
+
+Greyscale with alpha
+8 and 16
+
+                Each pixel is represented by two D-bit values: the
+                intensity of the greyscale pixel and an alpha sample, indicating how opaque the pixel is.
+              
+
+
+True color with alpha
+8 and 16
+
+                Each pixel is comprised of four D-pixel color
+                components: red, green, blue, and the alpha sample indicating how opaque the pixel is.
+              
+
+
+
+
+
+
+Compression
+
+        BMP-format icons nearly always use lossless compression, but lossy methods are available.
+        PNG icons are always compressed losslessly.
+      
+
+
+Licensing
+â
+
+
+JPEG (Joint Photographic Experts Group image)
+  The JPEG (typically pronounced "jay-peg") image format is currently the most widely used lossy compression format for still images.
+  It's particularly useful for photographs; applying lossy compression to content requiring sharpness, like diagrams or charts, can produce unsatisfactory results.
+
+
+  JPEG is actually a data format for compressed photos, rather than a file type.
+  The JFIF (JPEG File Interchange Format) specification describes the format of the files we think of as "JPEG" images.
+
+
+
+
+MIME type
+image/jpeg
+
+
+File extension(s)
+
+.jpg, .jpeg, .jpe,
+        .jif, .jfif
+
+
+
+Specification
+jpeg.org/jpeg/
+
+
+Browser compatibility
+All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+
+
+Maximum dimensions
+65,535Ã65,535 pixels
+
+
+Supported color modes
+
+
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+
+
+Greyscale
+n/a
+True greyscale can be supported using the single luma channel (Y).
+
+
+True color
+8
+Each pixel is described by the red, blue, and green color components, each of which is 8 bits.
+
+
+Indexed color
+n/a
+JPEG does not offer an indexed color mode.
+
+
+Greyscale with alpha
+n/a
+JPEG does not support an alpha channel.
+
+
+True color with alpha
+n/a
+JPEG does not support an alpha channel.
+
+
+
+
+
+
+Compression
+Lossy; based on the discrete cosine transform
+
+
+Licensing
+As of October 27, 2006, all United States patents have expired.
+
+
+PNG (Portable Network Graphics)The PNG (pronounced "ping") image format uses lossless compression, while supporting higher color depths than GIF and being more efficient, as well as featuring full alpha transparency support.
+
+  PNG is widely supported, with all major browsers offering full support for its features.
+  Internet Explorer, which introduced PNG support in versions 4â5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6.
+  This slowed PNG adoption, but it is now commonly used, especially when precise reproduction of the source image is needed.
+
+
+
+
+MIME type
+image/png
+
+
+File extension(s)
+.png
+
+
+Specification
+w3.org/TR/PNG
+
+
+Browser compatibility
+
+
+
+
+Feature
+Chrome
+Edge
+Firefox
+Internet Explorer
+Opera
+Safari
+
+
+
+
+Basic support
+1
+12
+1
+5
+3.5.1 (Presto)15 (Blink)
+1
+
+
+Alpha channel
+1
+12
+1
+5
+6 (Presto)All (Blink)
+1
+
+
+Gamma correction
+no
+yes
+1
+8
+1
+broken
+
+
+Color correction
+no
+yes
+3
+9
+no
+no
+
+
+Interlacing
+no
+?
+1
+broken
+3.5.1
+no
+
+
+
+
+
+
+Maximum dimensions
+2,147,483,647Ã2,147,483,647 pixels
+
+
+Supported color modes
+
+
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+
+
+Greyscale
+1, 2, 4, 8, and 16
+Each pixel consists of a single D-bit value indicating the brightness of the greyscale pixel.
+
+
+True color
+8 and 16
+
+                Each pixel is represented by three D-bit values
+                indicating the level of the red, green, and blue color components.
+              
+
+
+Indexed color
+1, 2, 4, and 8
+
+                Each pixel is a D-bit value indicating an index into a color palette which is contained within a
+                PLTE
+                chunk in the APNG file; the colors in the palette all use an 8-bit depth.
+              
+
+
+Greyscale with alpha
+8 and 16
+
+                Each pixel is represented by two D-bit values: the
+                intensity of the greyscale pixel and an alpha sample, indicating how opaque the pixel is.
+              
+
+
+True color with alpha
+8 and 16
+Each pixel is comprised of four D-pixel color components: red, green, blue, and the alpha sample indicating how opaque the pixel is.
+
+
+
+
+
+
+Compression
+Lossless, optionally indexed color like GIF
+
+
+Licensing
+
+        Â©2003 W3C (MIT, ERCIM,
+        Keio), All Rights Reserved. W3C
+        liability,
+        trademark, document use
+        and
+        software licensing rules apply. No known royalty-bearing patents.
+      
+
+
+SVG (Scalable Vector Graphics)
+  SVG is an XML-based vector graphics format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
+  SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size.
+  As such, SVG is popular for user interface elements in modern Web design.
+
+
+  SVG files are text files containing source code that, when interpreted, draws the desired image.
+  For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
+
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
+</svg>
+
+SVG can be used in web content in two ways:
+
+You can directly write the <svg> element within the HTML, containing SVG elements to draw the image.
+You can display an SVG image anywhere you can use any of the other image types, including with the <img> and <picture> elements, the background-image CSS property, and so forth.
+
+
+  SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.
+  It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.
+
+
+
+
+MIME type
+image/svg+xml
+
+
+File extension(s)
+.svg
+
+
+Specification
+w3.org/TR/SVG2
+
+
+Browser compatibility
+
+
+
+
+Feature
+Chrome
+Edge
+Firefox
+Internet Explorer
+Opera
+Safari
+
+
+
+
+SVG support
+4
+12
+3
+9
+10 (Presto)15 (Blink)
+3.2
+
+
+SVG as image (<img>, etc.)
+28
+12
+4
+9
+10 (Presto)15 (Blink)
+9
+
+
+
+
+
+
+Maximum dimensions
+Unlimited
+
+
+Supported color modes
+
+        Colors in SVG are specified using
+        CSS color syntax.
+      
+
+
+Compression
+
+        SVG source may be compressed during transit using
+        HTTP compression
+        techniques, or on disk as an .svgz file.
+      
+
+
+Licensing
+
+        Â©2018 W3C (MIT, ERCIM,
+        Keio,
+        Beihang), All Rights Reserved. W3C
+        liability,
+        trademark,
+        document use
+        and
+        software licensing
+        rules apply. No known royalty-bearing patents.
+      
+
+
+TIFF (Tagged Image File Format)
+TIFF is a raster graphics file format which was created to store scanned photos, although it can be any kind of image.
+  It is a somewhat "heavy" format, in that TIFF files have a tendency to be larger than images in other formats.
+  This is because of the metadata often included, as well as the fact that most TIFF images are either uncompressed or use compression algorithms that still leave fairly large files after compression.
+
+TIFF supports a variety of compression methods, but the most commonly used are the CCITT Group 4 (and, for older fax systems, Group 3) compression systems used for by fax software, as well as LZW and lossy JPEG compression.
+
+  Every value in a TIFF file is specified using its tag (indicating what kind of information it is, such as the width of the image) and its type (indicating the format the data is stored in), followed by the length of the array of values to assign to that tag (all properties are stored in arrays, even for single values).
+  This allows different data types to be used for the same properties.
+  For example, the width of an image, ImageWidth, is stored using tag 0x0100, and is a one-entry array.
+  By specifying type 3 (SHORT), the value of ImageWidth is stored as a 16-bit value:
+
+
+
+
+Tag
+Type
+Size
+Value
+
+
+
+
+0x0100 (ImageWidth)
+0x0003 (SHORT)
+0x00000001 (1 entry)
+0x0280 (640 pixels)
+
+
+
+Specifying type 4 (LONG) stores the width as a 32-bit value:
+
+
+
+Tag
+Type
+Size
+Value
+
+
+
+
+0x0100 (ImageWidth)
+0x0004 (LONG)
+0x00000001 (1 entry)
+0x00000280 (640 pixels)
+
+
+
+
+  A single TIFF file can contain multiple images; this may be used to represent multi-page documents, for example (such as a multi-page scanned document, or a received fax).
+  However, software reading TIFF files is only required to support the first image.
+
+
+  TIFF supports a variety of color spaces, not just RGB.
+  These include CMYK, YCbCr, and others, making TIFF a good choice for storing images intended for print, film, or television media.
+
+
+  Long ago, some browsers supported TIFF images in web content; today, however, you need to use special libraries or browser add-ons to do so.
+  As such, TIFF files are not useful within the context of web content, but it's common to provide downloadable TIFF files when distributing photos and other artwork intended for precision editing or printing.
+
+
+
+
+MIME type
+image/tiff
+
+
+File extension(s)
+.tif, .tiff
+
+
+Specification
+https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272
+
+
+Browser compatibility
+No browsers integrate support for TIFF; its value is as a download format
+
+
+Maximum dimensions
+4,294,967,295Ã4,294,967,295 pixels (theoretical)
+
+
+Supported color modes
+
+
+
+
+Color mode
+Bits per component (D)
+Description
+
+
+Bilevel
+1
+
+                A bilevel TIFF stores 8 bits in each byte, one bit per pixel.
+                The PhotometricInterpretation field specifies which of 0 and 1 are black and which is white.
+              
+
+
+Greyscale
+4 and 8
+Each pixel consists of a single D-bit value indicating the brightness of the greyscale pixel.
+
+
+True color
+8
+All true color RGB images are stored using 8-bits each of red, green, and blue.
+
+
+Indexed color
+4 and 8
+
+                Each pixel is an index into a ColorMap record,
+                which defines the colors used in the image. The color map lists
+                all of the red values, then all of the green values, then all of
+                the blue values (rather than rgb, rgb, rgbâ¦).
+              
+
+
+Greyscale with alpha
+4 and 8
+
+                Alpha information is added by specifying that there are more
+                than 3 samples per pixel in the SamplesPerPixel field, and indicating the type of
+                alpha (1 for an associated, pre-multiplied alpha component, and
+                2 for unassociated alpha (a separate matte); however, alpha channels are rarely used in TIFF files and may be unsupported by the user's software.
+              
+
+
+True color with alpha
+8
+
+                Alpha information is added by specifying that there are more
+                than 3 samples per pixel in the SamplesPerPixel field, and indicating the type of
+                alpha (1 for an associated, pre-multiplied alpha component, and
+                2 for unassociated alpha (a separate matte); however, alpha channels are rarely used in TIFF files and may be unsupported by the user's software.
+              
+
+
+
+
+
+
+Compression
+Most TIFF files are uncompressed, but lossless PackBits and LZW compression are supported, as is lossy JPEG compression.
+
+
+Licensing
+No license required (aside from any associated with libraries you might use); all known patents have expired.
+
+
+WebP image
+  WebP supports lossy compression via predictive coding based on the VP8 video codec, and lossless compression that uses substitutions for repeating data.
+  Lossy WebP images are on average 25â35% smaller than JPEG images of visually similar compression levels.
+  Lossless WebP images are typically 26% smaller than the same images in PNG format.
+
+
+  WebP also supports animation: in a lossy WebP file, the image data is represented by a VP8 bitstream, which may contain multiple frames.
+  Lossless WebP holds the ANIM chunk, which describes the animation, and the ANMF chunk, which represents a frame of an animation sequence.
+  Looping is supported.
+
+
+  WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support.
+  Provide a fallback in either JPEG or PNG format, such as with the <picture> element.
+
+
+
+
+MIME type
+image/webp
+
+
+File extension(s)
+.webp
+
+
+Specification
+
+
+RIFF Container SpecificationRFC 6386: VP8 Data Format and Decoding Guide
+          (lossy encoding)WebP Lossless Bitstream Specification
+
+
+
+
+Browser compatibility
+
+
+
+
+Feature
+Chrome
+Edge
+Firefox
+Internet Explorer
+Opera
+Safari
+
+
+Lossy WebP support
+17
+18
+65
+no
+11.10 (Presto)15 (Blink)
+14
+
+
+Lossless WebP
+2325 on Android
+18
+65
+no
+12.10 (Presto)15 (Blink)
+14
+
+
+Animation
+32
+18
+65
+no
+19 (Blink)
+14
+
+
+
+WebP can also be used for exporting images from a Canvas from Firefox 96 and Chrome 50 (see HTMLCanvasElement.toBlob() for more detailed support version information).
+
+
+
+Maximum dimensions
+16,383Ã16,383 pixels
+
+
+Supported color modes
+
+        Lossy WebP stores the image in 8-bit Y'CbCr 4:2:0 (YUV420) format.
+        Lossless WebP uses 8-bit ARGB color, with each component taking 8 bits for a total of 32 bits per pixel.
+      
+
+
+Compression
+Lossless (Huffman, LZ77, or color cache codes) or lossy (VP8).
+
+
+Licensing
+No license required; source code is openly available.
+
+
+
+
+Note: Despite having announced support for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
+XBM (X Window System Bitmap file)
+  XBM (X Bitmap) files were the first to be supported on the Web, but are no longer used and should be avoided, as their format has potential security concerns.
+  Modern browsers have not supported XBM files in many years, but when dealing with older content, you may find some still around.
+
+
+  XBM uses a snippet of C code to represent the contents of the image as an array of bytes.
+  Each image consists of 2 to 4 #define directives, providing the width and height of the bitmap (and optionally the hotspot, if the image is designed as a cursor), followed by an array of unsigned char, where each value contains 8 1-bit monochrome pixels.
+
+
+  The image must be a multiple of 8 pixels wide.
+  For example, the following code represents an XBM image which is 8 pixels by 8 pixels, with those pixels in a black-and-white checkerboard pattern:
+
+#define square8_width 8
+#define square8_height 8
+static unsigned char square8_bits[] = {
+  0xAA, 0x55, 0xAA, 0x55, 0xAA, 0x55, 0xAA, 0x55
+};
+
+
+
+
+MIME type
+image/xbm, image-xbitmap
+
+
+File extension(s)
+.xbm
+
+
+Specification
+None
+
+
+Browser compatibility
+Firefox 1â3.5, Internet Explorer 1â5
+
+
+Maximum dimensions
+Unlimited
+
+
+Supported color modes
+
+
+
+
+Color mode
+Bits per component
+Description
+
+
+
+
+Greyscale
+1
+Each byte contains eight 1-bit pixels.
+
+
+True color
+n/a
+n/a
+
+
+Indexed color
+n/a
+n/a
+
+
+Greyscale with alpha
+n/a
+n/a
+
+
+True color with alpha
+n/a
+n/a
+
+
+
+
+
+
+Compression
+Lossless
+
+
+Licensing
+Open source
+
+
+Choosing an image formatPicking the best image format for your needs is likely easier than video formats, as there are fewer options with broad support, and each tends to have a specific set of use-cases.Photographs
+  Photographs typically fare well with lossy compression (depending on the encoder's configuration).
+  This makes JPEG and WebP good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression.
+  To maximize quality and minimize download time, consider providing both using a fallback with WebP as the first choice and JPEG as the second.
+  Otherwise, JPEG is the safe choice for compatibility.
+
+
+
+
+Best choice
+Fallback
+
+
+
+
+WebP or JPEG
+JPEG
+
+
+Icons
+  For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image.
+  While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a fallback.
+  If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).
+
+
+  If the icon can be represented using vector graphics, consider SVG, since it scales across various resolutions and sizes, so it's perfect for responsive design.
+  Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
+
+
+
+
+Best choice
+Fallback
+
+
+SVG, Lossless WebP, or PNG
+PNG
+
+
+Screenshots
+  Unless you're willing to compromise on quality, you should use a lossless format for screenshots.
+  This is particularly important if there's any text in your screenshot, as text easily becomes fuzzy and unclear under lossy compression.
+
+PNG is probably your best bet, but lossless WebP is arguably going to be better compressed.
+
+
+
+Best choice
+Fallback
+
+
+
+        Lossless WebP or PNG;JPEG if compression artifacts aren't a
+        concern
+      
+PNG or JPEG;GIF for screenshots with low color counts
+
+
+Diagrams, drawings, and charts
+  For any image that can be represented using vector graphics, SVG is the best choice.
+  Otherwise, you should use a lossless format like PNG.
+  If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the compression level to avoid causing text or other shapes to become fuzzy or unclear.
+
+
+
+
+Best choice
+Fallback
+
+
+SVG
+PNG
+
+
+Providing image fallbacks
+  While the standard HTML <img> element doesn't support compatibility fallbacks for images, the <picture> element does.
+  <picture> is used as a wrapper for a number of <source> elements, each specifying a version of the image in a different format or under different media conditions, as well as an <img> element which defines where to display the image and the fallback to the default or "most compatible" version.
+
+For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
+<picture>
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagram showing the data channels" />
+</picture>
+
+You can specify as many <source>s as you wish, though typically 2 or 3 is all you need.See also
+Guide to media types and formats
+Web media technologies
+Guide to video codecs used on the web
+The HTML <img> and <picture> elements
+The CSS background-image property
+The Image() constructor and the HTMLImageElement interface
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 31, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

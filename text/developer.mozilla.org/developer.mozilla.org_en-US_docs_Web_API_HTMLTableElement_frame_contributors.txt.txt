@@ -1,0 +1,14 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/htmltableelement/frame/index.md
+
+# Original Wiki contributors
+mfluehr
+fscholz
+Sheppy
+teoli
+kscarfone
+riginoommen
+ethertank
+RobG
+Dria
+JesseW

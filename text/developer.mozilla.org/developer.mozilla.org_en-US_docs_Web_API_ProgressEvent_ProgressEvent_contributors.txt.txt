@@ -1,0 +1,12 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/progressevent/progressevent/index.md
+
+# Original Wiki contributors
+sideshowbarker
+ddbeck
+DomenicDenicola
+NiklasGollenstede
+fscholz
+kscarfone
+Reachmeatshivam
+teoli

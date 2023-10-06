@@ -1,0 +1,9 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/http_header/index.md
+
+# Original Wiki contributors
+hamishwillee
+sivackovan
+mfuji09
+fscholz
+teoli

@@ -1,0 +1,35 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/css/pseudo-elements/index.md
+
+# Original Wiki contributors
+ramiy
+wbamberg
+ExE-Boss
+mfuji09
+46826287N
+chrisdavidmills
+mfluehr
+Sheppy
+SphinxKnight
+Bodo1445
+Jimmy-Gan
+stutrek
+zhaozhao
+cvrebert
+jsx
+ErwinWessels
+jswisher
+wyrewolwerowany
+MusikAnimal
+Delapouite
+caurea
+abulte
+frankyan
+ethertank
+FredB
+JoaoPedro
+aeschylus
+Marsf
+jjoemb
+tregagnon
+McGurk

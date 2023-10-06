@@ -1,0 +1,16 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/mouseevent/relatedtarget/index.md
+
+# Original Wiki contributors
+Nickolay
+TrevorKarjanis
+mfluehr
+wbamberg
+fscholz
+pauln
+libbymc
+lanzkron
+jrefano
+teoli
+kscarfone
+Jeremie

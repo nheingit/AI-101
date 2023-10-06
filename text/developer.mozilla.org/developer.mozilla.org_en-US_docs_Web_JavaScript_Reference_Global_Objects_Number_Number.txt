@@ -1,0 +1,54 @@
+Number() constructor - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStandard built-in objectsNumberNumber() constructorArticle ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoStandard built-in objectsNumberConstructorNumber() constructorPropertiesNumber.EPSILONNumber.MAX_SAFE_INTEGERNumber.MAX_VALUENumber.MIN_SAFE_INTEGERNumber.MIN_VALUENumber.NaNNumber.NEGATIVE_INFINITYNumber.POSITIVE_INFINITYMethodsNumber.isFinite()Number.isInteger()Number.isNaN()Number.isSafeInteger()Number.parseFloat()Number.parseInt()Number.prototype.toExponential()Number.prototype.toFixed()Number.prototype.toLocaleString()Number.prototype.toPrecision()Number.prototype.toString()Number.prototype.valueOf()Inheritance:FunctionConstructorFunction() constructorPropertiesFunction.prototype.arguments
+Non-standard
+
+Deprecated
+Function.prototype.caller
+Non-standard
+
+Deprecated
+Function: displayName
+Non-standard
+Function: lengthFunction: nameFunction: prototypeMethodsFunction.prototype[@@hasInstance]()Function.prototype.apply()Function.prototype.bind()Function.prototype.call()Function.prototype.toString()ObjectPropertiesObject.prototype.constructorObject.prototype.__proto__
+Deprecated
+MethodsObject.prototype.__defineGetter__()
+Deprecated
+Object.prototype.__defineSetter__()
+Deprecated
+Object.prototype.__lookupGetter__()
+Deprecated
+Object.prototype.__lookupSetter__()
+Deprecated
+Object.prototype.hasOwnProperty()Object.prototype.isPrototypeOf()Object.prototype.propertyIsEnumerable()Object.prototype.toLocaleString()Object.prototype.toString()Object.prototype.valueOf()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoNumber() constructorThe Number() constructor creates Number objects. When called as a function, it returns primitive values of type Number.Syntaxnew Number(value)
+Number(value)
+
+
+Note: Number() can be called with or without new, but with different effects. See Return value.
+Parameters
+value
+
+The numeric value of the object being created.
+
+Return valueWhen Number is called as a constructor (with new), it creates a Number object, which is not a primitive.
+When Number is called as a function, it coerces the parameter to a number primitive. BigInts are converted to numbers. If the value can't be converted, it returns NaN.
+
+Warning: You should rarely find yourself using Number as a constructor.
+ExamplesCreating Number objectsconst a = new Number("123"); // a === 123 is false
+const b = Number("123"); // b === 123 is true
+a instanceof Number; // is true
+b instanceof Number; // is false
+typeof a; // "object"
+typeof b; // "number"
+Using Number() to convert a BigInt to a numberNumber() is the only case where a BigInt can be converted to a number without throwing, because it's very explicit.
++1n; // TypeError: Cannot convert a BigInt value to a number
+0 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+
+Number(1n); // 1
+
+Note that this may result in loss of precision, if the BigInt is too large to be safely represented.
+BigInt(Number(2n ** 54n + 1n)) === 2n ** 54n + 1n; // false
+SpecificationsSpecificationECMAScript Language Specification # sec-number-constructorBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Polyfill of modern Number behavior (with support binary and octal literals) in core-js
+NaN
+The Math global object
+Integers with arbitrary precision: BigInt
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 12, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

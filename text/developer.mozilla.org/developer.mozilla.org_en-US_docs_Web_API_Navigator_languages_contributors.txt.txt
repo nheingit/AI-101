@@ -1,0 +1,15 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/navigator/languages/index.md
+
+# Original Wiki contributors
+nitsakh
+sideshowbarker
+fscholz
+jakub-g
+mayank23
+denghuiquan
+teoli
+chrisdavidmills
+jt3rd
+yisi
+ziyunfei

@@ -1,0 +1,55 @@
+XMLHttpRequest: timeout event - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsXMLHttpRequesttimeoutArticle ActionsEnglish (US)In this articleSyntaxEvent typeEvent propertiesExamplesSpecificationsBrowser compatibilitySee alsoXMLHttpRequestConstructorXMLHttpRequest()Instance propertieschannel
+Non-standard
+mozAnon
+Non-standard
+mozBackgroundRequest
+Non-standard
+mozSystem
+Non-standard
+readyStateresponseresponseTextresponseTyperesponseURLresponseXMLstatusstatusTexttimeoutuploadwithCredentialsInstance methodsabort()getAllResponseHeaders()getResponseHeader()open()overrideMimeType()send()setRequestHeader()Eventsaborterrorloadloadendloadstartprogressreadystatechangetimeout Inheritance:XMLHttpRequestEventTargetEventTargetIn this articleSyntaxEvent typeEvent propertiesExamplesSpecificationsBrowser compatibilitySee alsoXMLHttpRequest: timeout eventThe timeout event is fired when progression is terminated due to preset time expiring.SyntaxUse the event name in methods like addEventListener(), or set an event handler property.
+addEventListener("timeout", (event) => {});
+
+ontimeout = (event) => {};
+Event typeA ProgressEvent. Inherits from Event.
+
+
+
+      Event
+    
+
+
+
+
+
+
+      ProgressEvent
+    
+Event propertiesIn addition to the properties listed below, properties from the parent interface, Event, are available.
+
+lengthComputable Read only 
+
+A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+
+loaded Read only 
+
+A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing total by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+
+total Read only 
+
+A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the Content-Length (the size of the body of the message), and doesn't include the headers and other overhead.
+
+Examplesconst client = new XMLHttpRequest();
+client.open("GET", "http://www.example.org/example.txt");
+client.ontimeout = () => {
+  console.error("Timeout!!");
+};
+
+client.send();
+
+You could also set up the event handler using the addEventListener() method:
+client.addEventListener("timeout", () => {
+  console.error("Timeout!!");
+});
+SpecificationsSpecificationXMLHttpRequest Standard # event-xhr-timeoutXMLHttpRequest Standard # handler-xhr-ontimeoutBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+XMLHttpRequest
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 10, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

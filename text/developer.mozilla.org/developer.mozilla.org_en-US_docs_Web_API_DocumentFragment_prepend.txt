@@ -1,0 +1,30 @@
+DocumentFragment: prepend() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsDocumentFragmentprepend()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocument Object ModelDocumentFragmentConstructorDocumentFragment()Instance propertieschildElementCountchildrenfirstElementChildlastElementChildInstance methodsappend()getElementById()prepend() querySelector()querySelectorAll()replaceChildren()Inheritance:NodeEventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocumentFragment: prepend() method
+  The DocumentFragment.prepend() method
+  inserts a set of Node objects or string objects before
+  the first child of the document fragment. String objects
+  are inserted as equivalent Text nodes.
+
+This method prepends a child to a DocumentFragment. To prepend to an arbitrary element in the tree, see Element.prepend().Syntaxprepend(param1)
+prepend(param1, param2)
+prepend(param1, param2, /* â¦ ,*/ paramN)
+Parameters
+param1, â¦, paramN
+
+A set of Node or string objects to insert.
+
+Return valueNone (undefined).Exceptions
+HierarchyRequestError DOMException
+
+Thrown when the node cannot be inserted at the specified point in the hierarchy.
+
+ExamplesPrepending an element to a document fragmentlet fragment = new DocumentFragment();
+let div = document.createElement("div");
+let p = document.createElement("p");
+fragment.append(p);
+fragment.prepend(div);
+
+fragment.children; // HTMLCollection [<div>, <p>]
+SpecificationsSpecificationDOM Standard # ref-for-dom-parentnode-prependâ Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+DocumentFragment.append()
+Element.prepend()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

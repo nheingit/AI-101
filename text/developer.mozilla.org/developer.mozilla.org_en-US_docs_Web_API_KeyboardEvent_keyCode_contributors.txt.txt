@@ -1,0 +1,16 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/keyboardevent/keycode/index.md
+
+# Original Wiki contributors
+maja_zf
+TehShrike
+Sheppy
+fscholz
+chrisdavidmills
+Masayuki
+libbymc
+mrjj
+cvrebert
+Robg1
+teoli
+kscarfone

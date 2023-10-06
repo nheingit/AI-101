@@ -1,0 +1,23 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/svg/tutorial/index.md
+
+# Original Wiki contributors
+chrisdavidmills
+abuilham
+Tigt
+Manojkr
+trevorh
+Jeremie
+tdatu
+pranavkpr
+jswisher
+ziyunfei
+kperch
+Manuel_Strehl
+fscholz
+Sheppy
+A rabbit man 334454
+George3
+Bedi
+Mgjbot
+Jonathan_Watt

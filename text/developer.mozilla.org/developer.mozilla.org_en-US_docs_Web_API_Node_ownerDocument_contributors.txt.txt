@@ -1,0 +1,25 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/node/ownerdocument/index.md
+
+# Original Wiki contributors
+mfluehr
+sideshowbarker
+fscholz
+abbycar
+jonathanKingston
+Sebastianz
+teoli
+bakhshi
+kscarfone
+Reachmeatshivam
+Sheppy
+ethertank
+ziyunfei
+Nickolay
+Kohei
+Mgjbot
+Ptak82
+Fguisset
+Dria
+Callek
+JesseW

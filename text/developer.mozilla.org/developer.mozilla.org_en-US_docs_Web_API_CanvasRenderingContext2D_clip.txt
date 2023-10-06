@@ -1,0 +1,145 @@
+CanvasRenderingContext2D: clip() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCanvasRenderingContext2Dclip()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2DInstance propertiescanvasdirectionfillStylefilterfontfontKerningfontStretch
+Experimental
+fontVariantCaps
+Experimental
+globalAlphaglobalCompositeOperationimageSmoothingEnabledimageSmoothingQualityletterSpacing
+Experimental
+lineCaplineDashOffsetlineJoinlineWidthmiterLimitshadowBlurshadowColorshadowOffsetXshadowOffsetYstrokeStyletextAligntextBaselinetextRendering
+Experimental
+wordSpacing
+Experimental
+Instance methodsarc()arcTo()beginPath()bezierCurveTo()clearRect()clip() closePath()createConicGradient()createImageData()createLinearGradient()createPattern()createRadialGradient()drawFocusIfNeeded()drawImage()ellipse()fill()fillRect()fillText()getContextAttributes()getImageData()getLineDash()getTransform()isContextLost()
+Experimental
+isPointInPath()isPointInStroke()lineTo()measureText()moveTo()putImageData()quadraticCurveTo()rect()reset()resetTransform()restore()rotate()roundRect()save()scale()scrollPathIntoView()
+Experimental
+setLineDash()setTransform()stroke()strokeRect()strokeText()transform()translate()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2D: clip() method
+  The
+  CanvasRenderingContext2D.clip()
+  method of the Canvas 2D API turns the current or given path into the current clipping
+  region. The previous clipping region, if any, is intersected with the current or given
+  path to create the new clipping region.
+
+
+  In the image below, the red outline represents a clipping region shaped like a star.
+  Only those parts of the checkerboard pattern that are within the clipping region get
+  drawn.
+
+
+
+
+
+
+Note: Be aware that the clipping region is only constructed from
+    shapes added to the path. It doesn't work with shape primitives drawn directly to the
+    canvas, such as fillRect().
+    Instead, you'd have to use rect() to
+    add a rectangular shape to the path before calling clip().
+  
+Syntaxclip()
+clip(path)
+clip(fillRule)
+clip(path, fillRule)
+Parameters
+fillRule
+
+
+      The algorithm by which to determine if a point is inside or outside the clipping
+      region. Possible values:
+    
+
+nonzero
+
+
+          The non-zero winding rule.
+          Default rule.
+        
+
+evenodd
+
+The even-odd winding rule.
+
+
+
+path
+
+A Path2D path to use as the clipping region.
+
+Return valueNone (undefined).ExamplesA simple clipping region
+  This example uses the clip() method to create a clipping region according
+  to the shape of a circular arc. Two rectangles are then drawn; only those parts within
+  the clipping region are rendered.
+
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+The clipping region is a full circle, with its center at (100, 75), and a radius of 50.
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Create circular clipping region
+ctx.beginPath();
+ctx.arc(100, 75, 50, 0, Math.PI * 2);
+ctx.clip();
+
+// Draw stuff that gets clipped
+ctx.fillStyle = "blue";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle = "orange";
+ctx.fillRect(0, 0, 100, 100);
+
+ResultSpecifying a path and a fillRule
+  This example saves two rectangles to a Path2D object, which is then made the current
+  clipping region using the clip() method. The "evenodd" rule
+  creates a hole where the clipping rectangles intersect; by default (with the
+  "nonzero" rule), there would be no hole.
+
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Create clipping path
+let region = new Path2D();
+region.rect(80, 10, 20, 130);
+region.rect(40, 50, 100, 50);
+ctx.clip(region, "evenodd");
+
+// Draw stuff that gets clipped
+ctx.fillStyle = "blue";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ResultCreating a complex clipping region
+  This example uses two paths, a rectangle and a square to create a complex clipping
+  region. The clip() method is called twice, first to set the current
+  clipping region to the circle using a Path2D object, then again to
+  intersect the circle clipping region with a square. The final clipping region is a shape
+  representing the intersection of the circle and the square.
+
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Create two clipping paths
+let circlePath = new Path2D();
+circlePath.arc(150, 75, 75, 0, 2 * Math.PI);
+let squarePath = new Path2D();
+squarePath.rect(85, 10, 130, 130);
+
+// Set the clip to the circle
+ctx.clip(circlePath);
+// Set the clip to be the intersection of the circle and the square
+ctx.clip(squarePath);
+
+// Draw stuff that gets clipped
+ctx.fillStyle = "blue";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ResultSpecificationsSpecificationHTML Standard # dom-context-2d-clip-devBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The interface defining this method: CanvasRenderingContext2D
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

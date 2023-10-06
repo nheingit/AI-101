@@ -1,0 +1,12 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/htmlmediaelement/networkstate/index.md
+
+# Original Wiki contributors
+sideshowbarker
+fscholz
+MaxSchmeling
+mhdSid
+david_ross
+erikadoyle
+misson20000
+markg

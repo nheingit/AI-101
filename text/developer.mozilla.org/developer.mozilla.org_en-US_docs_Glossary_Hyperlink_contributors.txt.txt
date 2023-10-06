@@ -1,0 +1,13 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/hyperlink/index.md
+
+# Original Wiki contributors
+ferlopezcarr
+chrisdavidmills
+JinSeungHo
+lpiot
+Andrew_Pfeiffer
+hbloomer
+klez
+Jeremie
+teoli

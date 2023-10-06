@@ -1,0 +1,29 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/css/pseudo-classes/index.md
+
+# Original Wiki contributors
+chrisdavidmills
+rachelandrew
+ramiy
+wbamberg
+ExE-Boss
+mfuji09
+mfluehr
+sideshowbarker
+RainSlide
+Malvoz
+teoli
+Delapouite
+SphinxKnight
+wwahammy
+Sheppy
+trevorh
+nidaullahbookslibrary
+FredB
+fusionchess
+ethertank
+Marsf
+tw2113
+tregagnon
+McGurk
+prasanthsekhar

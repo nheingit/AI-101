@@ -1,0 +1,6 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/javascript/reference/global_objects/array/array/index.md
+
+# Original Wiki contributors
+alattalatta
+fscholz

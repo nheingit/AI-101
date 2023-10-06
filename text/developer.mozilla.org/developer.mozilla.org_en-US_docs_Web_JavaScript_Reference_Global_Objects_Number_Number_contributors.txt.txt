@@ -1,0 +1,7 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/javascript/reference/global_objects/number/number/index.md
+
+# Original Wiki contributors
+fscholz
+mfuji09
+fires3as0n

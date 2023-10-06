@@ -1,0 +1,48 @@
+DocumentFragment: querySelector() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsDocumentFragmentquerySelector()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocument Object ModelDocumentFragmentConstructorDocumentFragment()Instance propertieschildElementCountchildrenfirstElementChildlastElementChildInstance methodsappend()getElementById()prepend()querySelector() querySelectorAll()replaceChildren()Inheritance:NodeEventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocumentFragment: querySelector() method
+  The DocumentFragment.querySelector() method returns the
+  first element, or null if no matches are found, within the
+  DocumentFragment (using depth-first pre-order traversal of the
+  document's nodes) that matches the specified group of selectors.
+
+
+  If the selector matches an ID and this ID is erroneously used several times in the
+  document, it returns the first matching element.
+
+
+  If the selectors specified in parameter are invalid a DOMException with
+  a SYNTAX_ERR value is raised.
+SyntaxquerySelector(selectors)
+Parameters
+selectors
+
+
+      A string containing one or more CSS selectors separated by
+      commas.
+    
+
+Return value
+  An Element object representing the first element in the document
+  that matches the specified set of CSS selectors, or null is returned if there are no matches.
+ExamplesBasic example
+  In this basic example, the first element in the DocumentFragment with
+  the class "myclass" is returned:
+
+const el = documentfragment.querySelector(".myclass");
+CSS syntax and the method's argument
+  The string argument pass to querySelector must follow the CSS syntax. To
+  match ID or selectors that do not follow the CSS syntax (by using semicolon or space
+  inappropriately for example), it's mandatory to escape the wrong character with a
+  double back slash:
+
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
+
+<script>
+  document.querySelector("#foo\bar"); // Does not match anything
+  document.querySelector("#foo\\\\bar"); // Match the first div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
+</script>
+SpecificationsSpecificationDOM Standard # ref-for-dom-parentnode-queryselectorâ Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The DocumentFragment interface it belongs to.
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

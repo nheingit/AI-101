@@ -1,0 +1,29 @@
+UIEvent: sourceCapabilities property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsUIEventsourceCapabilitiesArticle ActionsEnglish (US)In this articleValueSpecificationsBrowser compatibilityUI EventsUIEventConstructorUIEvent()Instance propertiesdetailsourceCapabilities 
+Experimental
+viewwhich
+Deprecated
+Instance methodsinitUIEvent()
+Deprecated
+Inheritance:EventRelated pages for UI EventsCompositionEventFocusEventInputEventKeyboardEventMouseEventMouseScrollEventMutationEventWheelEventIn this articleValueSpecificationsBrowser compatibilityUIEvent: sourceCapabilities propertyExperimental: This is an experimental technologyCheck the Browser compatibility table carefully before using this in production.
+
+  The UIEvent.sourceCapabilities read-only property returns
+  an instance of the InputDeviceCapabilities interface which provides
+  information about the physical device responsible for generating a touch event. If no
+  input device was responsible for the event, it returns null.
+
+
+  When a single user interaction with an input device generates a series of different
+  input events, the sourceCapabilities property for all of them will point to
+  the same instance of InputDeviceCapabilities. For example, when a user
+  lifts their finger off of a touchscreen, several UIEvents may be generated including
+  touchend, mousedown, click, and
+  focus. All of these events must have the same
+  sourceCapabilities representing the touchscreen.
+
+
+  A device is considered "responsible" for an event only when that interaction is part of
+  the abstraction provided by the web platform. For example, many user agents allow a
+  window to be resized with a mouse or a keyboard, but this detail is not exposed to the
+  web platform in any way, and so the sourceCapabilities of a resize event will typically
+  be null.
+ValueAn instance of InputDeviceCapabilities.SpecificationsSpecificationInput Device Capabilities # dom-uievent-sourcecapabilitiesBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 8, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

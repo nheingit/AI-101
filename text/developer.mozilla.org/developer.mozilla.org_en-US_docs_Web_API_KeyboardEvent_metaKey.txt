@@ -1,0 +1,41 @@
+KeyboardEvent: metaKey property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsKeyboardEventmetaKeyArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoUI EventsKeyboardEventConstructorKeyboardEvent()Instance propertiesaltKeycharCode
+Deprecated
+codectrlKeyisComposingkeykeyCode
+Deprecated
+keyIdentifier
+Non-standard
+
+Deprecated
+locationmetaKey repeatshiftKeyInstance methodsgetModifierState()initKeyboardEvent()
+Deprecated
+initKeyEvent()
+Non-standard
+
+Deprecated
+Inheritance:UIEventEventRelated pages for UI EventsCompositionEventFocusEventInputEventMouseEventMouseScrollEventMutationEventUIEventWheelEventIn this articleValueExamplesSpecificationsBrowser compatibilitySee alsoKeyboardEvent: metaKey property
+  The KeyboardEvent.metaKey read-only property returning a
+  boolean value that indicates if the Meta key was pressed
+  (true) or not (false) when the event occurred. Some operating
+  systems may intercept the key so it is never detected.
+
+
+Note: On Macintosh keyboards, this is the â Command key.
+
+
+
+Warning: At least as of Firefox 48, the â Windows key is no longer considered the
+    "Meta" key. KeyboardEvent.metaKey is false when the â
+Windows key is pressed.
+  
+ValueA boolean value.Examples<button onclick="ismetaKey(event)">Click me with the meta key</button>
+
+<p id="output"></p>
+
+function ismetaKey(e) {
+  document.querySelector(
+    "#output"
+  ).textContent = `metaKey pressed? ${e.metaKey}`;
+}
+ResultSpecificationsSpecificationUI Events # dom-keyboardevent-metakeyBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+KeyboardEvent
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

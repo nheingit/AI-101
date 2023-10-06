@@ -1,0 +1,11 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/htmlmediaelement/suspend_event/index.md
+
+# Original Wiki contributors
+mfuji09
+estelle
+fscholz
+teoli
+Sheppy
+ethertank
+louisremi

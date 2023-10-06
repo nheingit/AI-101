@@ -1,0 +1,103 @@
+Falsy - MDN Web Docs Glossary: Definitions of Web-related terms | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusMDN Web Docs Glossary: Definitions of Web-related termsFalsyArticle ActionsEnglish (US)In this articleExamplesSee alsoIn this articleExamplesSee alsoFalsyA falsy (sometimes written falsey) value is a value that is considered false when encountered in a Boolean context.
+JavaScript uses type conversion to coerce any value to a Boolean in contexts that require it, such as conditionals and loops.
+The following table provides a complete list of JavaScript falsy values:
+
+
+
+Value
+Type
+Description
+
+
+
+
+null
+Null
+The keyword null â the absence of any value.
+
+
+undefined
+Undefined
+undefined â the primitive value.
+
+
+false
+Boolean
+The keyword false.
+
+
+NaN
+Number
+NaN â not a number.
+
+
+0
+Number
+The Number zero, also including 0.0, 0x0, etc.
+
+
+-0
+Number
+The Number negative zero, also including -0.0, -0x0, etc.
+
+
+0n
+BigInt
+The BigInt zero, also including 0x0n, etc. Note that there is no BigInt negative zero â the negation of 0n is 0n.
+
+
+""
+String
+Empty string value, also including '' and ``.
+
+
+document.all
+Object
+The only falsy object in JavaScript is the built-in document.all.
+
+
+
+The values null and undefined are also nullish.ExamplesExamples of falsy values in JavaScript (which are coerced to false in Boolean contexts, and thus bypass the if block):
+if (false) {
+  // Not reachable
+}
+
+if (null) {
+  // Not reachable
+}
+
+if (undefined) {
+  // Not reachable
+}
+
+if (0) {
+  // Not reachable
+}
+
+if (-0) {
+  // Not reachable
+}
+
+if (0n) {
+  // Not reachable
+}
+
+if (NaN) {
+  // Not reachable
+}
+
+if ("") {
+  // Not reachable
+}
+The logical AND operator, &&If the first object is falsy, it returns that object:
+console.log(false && "dog");
+// âª false
+
+console.log(0 && "dog");
+// âª 0
+See also
+Truthy
+Coercion
+Boolean
+Boolean coercion
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Mar 11, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

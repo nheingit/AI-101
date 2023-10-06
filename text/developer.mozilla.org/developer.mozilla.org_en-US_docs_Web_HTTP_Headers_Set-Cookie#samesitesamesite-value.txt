@@ -1,0 +1,452 @@
+Set-Cookie - HTTP | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesHTTPHTTP headersSet-CookieArticle ActionsEnglish (US)In this articleSyntaxAttributesExamplesSpecificationsBrowser compatibilitySee also
+
+HTTP
+Guides
+
+
+Resources and URIs
+
+Identifying resources on the Web
+Data URLs
+Introduction to MIME types
+Common MIME types
+Choosing between www and non-www URLs
+
+
+
+
+
+HTTP guide
+
+Basics of HTTP
+Overview of HTTP
+Evolution of HTTP
+HTTP Messages
+A typical HTTP session
+Connection management in HTTP/1.x
+Protocol upgrade mechanism
+
+
+
+
+
+HTTP security
+
+Content Security Policy (CSP)
+HTTP Strict Transport Security (HSTS)
+Cookie security
+X-Content-Type-Options
+X-Frame-Options
+X-XSS-Protection
+Mozilla web security guidelines
+Mozilla Observatory
+
+
+
+HTTP access control (CORS)
+HTTP authentication
+HTTP caching
+HTTP compression
+HTTP conditional requests
+HTTP content negotiation
+HTTP cookies
+HTTP range requests
+HTTP redirects
+HTTP specifications
+Permissions Policy
+References
+
+
+HTTP headers
+AcceptAccept-CHAccept-CH-Lifetime
+Non-standard
+
+Deprecated
+Accept-CharsetAccept-EncodingAccept-LanguageAccept-PatchAccept-PostAccept-RangesAccess-Control-Allow-CredentialsAccess-Control-Allow-HeadersAccess-Control-Allow-MethodsAccess-Control-Allow-OriginAccess-Control-Expose-HeadersAccess-Control-Max-AgeAccess-Control-Request-HeadersAccess-Control-Request-MethodAgeAllowAlt-SvcAuthorizationCache-ControlClear-Site-DataConnectionContent-DispositionContent-DPR
+Non-standard
+
+Deprecated
+Content-EncodingContent-LanguageContent-LengthContent-LocationContent-RangeContent-Security-PolicyContent-Security-Policy-Report-OnlyContent-TypeCookieCritical-CH
+Experimental
+Cross-Origin-Embedder-PolicyCross-Origin-Opener-PolicyCross-Origin-Resource-PolicyDateDevice-Memory
+Experimental
+Digest
+Deprecated
+DNT
+Deprecated
+Downlink
+Experimental
+DPR
+Non-standard
+
+Deprecated
+Early-Data
+Experimental
+ECT
+Experimental
+ETagExpectExpect-CTExpiresForwardedFromHostIf-MatchIf-Modified-SinceIf-None-MatchIf-RangeIf-Unmodified-SinceKeep-AliveLarge-Allocation
+Non-standard
+
+Deprecated
+Last-ModifiedLinkLocationMax-ForwardsNEL
+Experimental
+OriginPermissions-PolicyPragma
+Deprecated
+Proxy-AuthenticateProxy-AuthorizationRangeRefererReferrer-PolicyRetry-AfterRTT
+Experimental
+Save-Data
+Experimental
+Sec-CH-Prefers-Reduced-Motion
+Experimental
+Sec-CH-UA
+Experimental
+Sec-CH-UA-Arch
+Experimental
+Sec-CH-UA-Bitness
+Experimental
+Sec-CH-UA-Full-Version
+Deprecated
+Sec-CH-UA-Full-Version-List
+Experimental
+Sec-CH-UA-Mobile
+Experimental
+Sec-CH-UA-Model
+Experimental
+Sec-CH-UA-Platform
+Experimental
+Sec-CH-UA-Platform-Version
+Experimental
+Sec-Fetch-DestSec-Fetch-ModeSec-Fetch-SiteSec-Fetch-UserSec-GPC
+Experimental
+Sec-WebSocket-AcceptServerServer-TimingService-Worker-Navigation-PreloadSet-CookieSourceMapStrict-Transport-SecurityTETiming-Allow-OriginTk
+Deprecated
+TrailerTransfer-EncodingUpgradeUpgrade-Insecure-RequestsUser-AgentVaryViaViewport-Width
+Non-standard
+
+Deprecated
+Want-Digest
+Deprecated
+Warning
+Deprecated
+Width
+Non-standard
+
+Deprecated
+WWW-AuthenticateX-Content-Type-OptionsX-DNS-Prefetch-Control
+Non-standard
+X-Forwarded-For
+Non-standard
+X-Forwarded-Host
+Non-standard
+X-Forwarded-Proto
+Non-standard
+X-Frame-OptionsX-XSS-Protection
+Non-standard
+
+
+
+
+
+HTTP request methods
+CONNECTDELETEGETHEADOPTIONSPATCHPOSTPUTTRACE
+
+
+
+
+HTTP response status codes
+100 Continue101 Switching Protocols102 Processing103 Early Hints
+Experimental
+200 OK201 Created202 Accepted203 Non-Authoritative Information204 No Content205 Reset Content206 Partial Content207 Multi-Status208 Already Reported226 IM Used300 Multiple Choices301 Moved Permanently302 Found303 See Other304 Not Modified307 Temporary Redirect308 Permanent Redirect400 Bad Request401 Unauthorized402 Payment Required403 Forbidden404 Not Found405 Method Not Allowed406 Not Acceptable407 Proxy Authentication Required408 Request Timeout409 Conflict410 Gone411 Length Required412 Precondition Failed413 Content Too Large414 URI Too Long415 Unsupported Media Type416 Range Not Satisfiable417 Expectation Failed418 I'm a teapot421 Misdirected Request422 Unprocessable Content423 Locked424 Failed Dependency425 Too Early426 Upgrade Required428 Precondition Required429 Too Many Requests431 Request Header Fields Too Large451 Unavailable For Legal Reasons500 Internal Server Error501 Not Implemented502 Bad Gateway503 Service Unavailable504 Gateway Timeout505 HTTP Version Not Supported506 Variant Also Negotiates507 Insufficient Storage508 Loop Detected510 Not Extended511 Network Authentication Required
+
+
+
+
+CSP directives
+CSP source valuesCSP: base-uriCSP: block-all-mixed-content
+Deprecated
+CSP: child-srcCSP: connect-srcCSP: default-srcCSP: font-srcCSP: form-actionCSP: frame-ancestorsCSP: frame-srcCSP: img-srcCSP: manifest-srcCSP: media-srcCSP: object-srcCSP: plugin-types
+Non-standard
+
+Deprecated
+CSP: prefetch-src
+Non-standard
+
+Deprecated
+CSP: referrer
+Non-standard
+
+Deprecated
+CSP: report-toCSP: report-uri
+Deprecated
+CSP: require-trusted-types-for
+Experimental
+CSP: sandboxCSP: script-srcCSP: script-src-attrCSP: script-src-elemCSP: style-srcCSP: style-src-attrCSP: style-src-elemCSP: trusted-types
+Experimental
+CSP: upgrade-insecure-requestsCSP: worker-src
+
+
+
+
+CORS errors
+Reason: CORS disabledReason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'Reason: CORS header 'Access-Control-Allow-Origin' missingReason: CORS header 'Origin' cannot be addedReason: CORS preflight channel did not succeedReason: CORS request did not succeedReason: CORS request external redirect not allowedReason: CORS request not HTTPReason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from CORS preflight channelReason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
+
+
+
+
+Permissions-Policy directives
+Permissions-Policy: accelerometer
+Experimental
+Permissions-Policy: ambient-light-sensor
+Experimental
+Permissions-Policy: autoplay
+Experimental
+Permissions-Policy: battery
+Experimental
+Permissions-Policy: cameraPermissions-Policy: display-capturePermissions-Policy: document-domain
+Experimental
+Permissions-Policy: encrypted-media
+Experimental
+Permissions-Policy: execution-while-not-rendered
+Experimental
+Permissions-Policy: execution-while-out-of-viewport
+Experimental
+Permissions-Policy: fullscreenPermissions-Policy: gamepad
+Experimental
+Permissions-Policy: geolocationPermissions-Policy: gyroscope
+Experimental
+Permissions-Policy: hid
+Experimental
+Permissions-Policy: identity-credentials-get
+Experimental
+Permissions-Policy: idle-detection
+Experimental
+Permissions-Policy: local-fonts
+Experimental
+Permissions-Policy: magnetometer
+Experimental
+Permissions-Policy: microphonePermissions-Policy: midi
+Experimental
+Permissions-Policy: payment
+Experimental
+Permissions-Policy: picture-in-picture
+Experimental
+Permissions-Policy: publickey-credentials-create
+Experimental
+Permissions-Policy: publickey-credentials-get
+Experimental
+Permissions-Policy: screen-wake-lock
+Experimental
+Permissions-Policy: serial
+Experimental
+Permissions-Policy: speaker-selection
+Experimental
+Permissions-Policy: storage-access
+Experimental
+Permissions-Policy: usb
+Experimental
+Permissions-Policy: web-sharePermissions-Policy: xr-spatial-tracking
+Experimental
+
+
+
+
+In this articleSyntaxAttributesExamplesSpecificationsBrowser compatibilitySee alsoSet-Cookie
+  The Set-Cookie HTTP response header is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.
+  To send multiple cookies, multiple Set-Cookie headers should be sent in the same response.
+
+
+Warning: Browsers block frontend JavaScript code from accessing the Set-Cookie header, as required by the Fetch spec, which defines Set-Cookie as a forbidden response-header name that must be filtered out from any response exposed to frontend code.
+
+For more information, see the guide on Using HTTP cookies.
+
+
+
+Header type
+Response header
+
+
+Forbidden header name
+no
+
+
+Forbidden response header name
+yes
+
+
+SyntaxSet-Cookie: <cookie-name>=<cookie-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
+Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
+Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<number>
+Set-Cookie: <cookie-name>=<cookie-value>; Partitioned
+Set-Cookie: <cookie-name>=<cookie-value>; Path=<path-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Secure
+
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Lax
+Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None; Secure
+
+// Multiple attributes are also possible, for example:
+Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnly
+Attributes
+<cookie-name>=<cookie-value>
+
+
+      Defines the cookie name and its value.
+      A cookie definition begins with a name-value pair.
+    
+A <cookie-name> can contain any US-ASCII characters except for: control characters (ASCII characters 0 up to 31 and ASCII character 127) or separator characters (space, tab and the characters: ( ) < > @ , ; : \ " / [ ] ? = { })
+A <cookie-value> can optionally be wrapped in double quotes and include any US-ASCII character excluding control characters (ASCII characters 0 up to 31 and ASCII character 127), Whitespace, double quotes, commas, semicolons, and backslashes.
+
+Encoding: Many implementations perform URL encoding on cookie values.
+      However, this is not required by the RFC specification.
+      The URL encoding does help to satisfy the requirements of the characters allowed for <cookie-value>.
+    
+
+Note: Some <cookie-name> have a specific semantic:
+
+__Secure- prefix: Cookies with names starting with __Secure- (dash is part of the prefix)
+        must be set with the secure flag from a secure page (HTTPS).
+      
+__Host- prefix: Cookies with names starting with __Host- must be set with the secure flag, must be from a secure page (HTTPS), must not have a domain specified (and therefore, are not sent to subdomains), and the path must be /.
+
+
+Domain=<domain-value> Optional
+
+Defines the host to which the cookie will be sent.
+Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
+If omitted, this attribute defaults to the host of the current document URL, not including subdomains.
+Contrary to earlier specifications, leading dots in domain names (.example.com) are ignored.
+Multiple host/domain values are not allowed, but if a domain is specified, then subdomains are always included.
+
+Expires=<date> Optional
+
+
+      Indicates the maximum lifetime of the cookie as an HTTP-date timestamp.
+      See Date for the required formatting.
+    
+
+      If unspecified, the cookie becomes a session cookie.
+      A session finishes when the client shuts down, after which
+      the session cookie is removed.
+    
+
+Warning: Many web browsers have a session restore feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.
+
+When an Expires date is set, the deadline is relative to the client the cookie is being set on, not the server.
+
+HttpOnly Optional
+
+
+      Forbids JavaScript from accessing the cookie, for example, through the Document.cookie property.
+      Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, for example, when calling XMLHttpRequest.send() or fetch().
+      This mitigates attacks against cross-site scripting (XSS).
+    
+
+Max-Age=<number> Optional
+
+Indicates the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both Expires and Max-Age are set, Max-Age has precedence.
+
+Partitioned Optional
+Experimental
+
+
+Indicates that the cookie should be stored using partitioned storage. See Cookies Having Independent Partitioned State (CHIPS) for more details.
+
+Path=<path-value> Optional
+
+Indicates the path that must exist in the requested URL for the browser to send the Cookie header.
+The forward slash (/) character is interpreted as a directory separator, and subdirectories are matched as well. For example, for Path=/docs,
+
+the request paths /docs, /docs/, /docs/Web/, and /docs/Web/HTTP will all match.
+the request paths /, /docsets, /fr/docs will not match.
+
+
+SameSite=<samesite-value> Optional
+
+
+      Controls whether or not a cookie is sent with cross-site requests,
+      providing some protection against cross-site request forgery attacks (CSRF).
+    
+The possible attribute values are:
+
+Strict
+
+
+          Means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
+          If a request originates from a different domain or scheme (even with the same domain), no cookies with the SameSite=Strict attribute are sent.
+        
+
+Lax
+
+
+          Means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
+          This is the default behavior if the SameSite attribute is not specified.
+        
+
+None
+
+
+          means that the browser sends the cookie with both cross-site and same-site requests.
+          The Secure attribute must also be set when setting this value, like so SameSite=None; Secure. If Secure is missing an error will be logged:
+        
+Cookie "myCookie" rejected because it has the "SameSite=None" attribute but is missing the "secure" attribute.
+
+This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
+
+
+Note: A Secure cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (http:) can't set cookies with the Secure directive, and therefore can't use SameSite=None.
+
+
+
+
+Secure Optional
+
+Indicates that the cookie is sent to the server only when a request is made with the https: scheme (except on localhost), and therefore, is more resistant to man-in-the-middle attacks.
+
+Note: Do not assume that Secure prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the HttpOnly cookie attribute is not set.
+Insecure sites (http:) cannot set cookies with the Secure attribute (since Chrome 52 and Firefox 52). For Firefox, the https: requirements are ignored when the Secure attribute is set by localhost (since Firefox 75).
+
+
+ExamplesSession cookieSession cookies are removed when the client shuts down. Cookies are session cookies if they do not specify the Expires or Max-Age attribute.
+Set-Cookie: sessionId=38afes7a8
+Permanent cookiePermanent cookies are removed at a specific date (Expires) or after a specific length of time (Max-Age) and not when the client is closed.
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
+
+Set-Cookie: id=a3fWa; Max-Age=2592000
+Invalid domainsA cookie for a domain that does not include the server that set it should be rejected by the user agent.
+The following cookie will be rejected if set by a server hosted on originalcompany.com:
+Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
+
+A cookie for a subdomain of the serving domain will be rejected.
+The following cookie will be rejected if set by a server hosted on example.com:
+Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
+Cookie prefixesCookie names prefixed with __Secure- or __Host- can be used only if they are set with the secure attribute from a secure (HTTPS) origin.
+In addition, cookies with the __Host- prefix must have a path of / (meaning any path at the host) and must not have a Domain attribute.
+
+Warning: For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.
+
+// Both accepted when from a secure origin (HTTPS)
+Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
+Set-Cookie: __Host-ID=123; Secure; Path=/
+
+// Rejected due to missing Secure attribute
+Set-Cookie: __Secure-id=1
+
+// Rejected due to the missing Path=/ attribute
+Set-Cookie: __Host-id=1; Secure
+
+// Rejected due to setting a Domain
+Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
+Partitioned cookieSet-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
+
+
+Note: Partitioned cookies must be set with Secure and Path=/. In addition, it is recommended to use the __Host prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
+SpecificationsSpecificationHTTP State Management Mechanism # sane-set-cookieBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Compatibility notes
+Starting with Chrome 52 and Firefox 52, insecure sites (http:) can't set cookies with the Secure attribute anymore.
+See also
+HTTP cookies
+Cookie
+Document.cookie
+Samesite cookies explained (web.dev blog)
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 12, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

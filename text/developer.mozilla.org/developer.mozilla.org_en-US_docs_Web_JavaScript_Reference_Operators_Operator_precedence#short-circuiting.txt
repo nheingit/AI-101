@@ -1,0 +1,577 @@
+Operator precedence - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceExpressions and operatorsOperator precedenceArticle ActionsEnglish (US)In this articleTry itPrecedence And AssociativityShort-circuitingTable
+
+JavaScript
+Tutorials
+
+
+Complete beginners
+
+JavaScript basics
+JavaScript first steps
+JavaScript building blocks
+Introducing JavaScript objects
+
+
+
+
+
+JavaScript Guide
+
+Introduction
+Grammar and types
+Control flow and error handling
+Loops and iteration
+Functions
+Expressions and operators
+Numbers and dates
+Text formatting
+Regular expressions
+Indexed collections
+Keyed collections
+Working with objects
+Using classes
+Using promises
+JavaScript typed arrays
+Iterators and generators
+Meta programming
+JavaScript modules
+
+
+
+
+
+Intermediate
+
+Client-side JavaScript frameworks
+Client-side web APIs
+Language overview
+JavaScript data structures
+Equality comparisons and sameness
+Enumerability and ownership of properties
+Closures
+
+
+
+
+
+Advanced
+
+Inheritance and the prototype chain
+Memory Management
+Concurrency model and Event Loop
+
+
+
+References
+
+
+Built-in objects
+OverviewAggregateErrorArrayArrayBufferAsyncFunctionAsyncGeneratorAsyncGeneratorFunctionAsyncIteratorAtomicsBigIntBigInt64ArrayBigUint64ArrayBooleanDataViewDatedecodeURI()decodeURIComponent()encodeURI()encodeURIComponent()Errorescape()
+Deprecated
+eval()EvalErrorFinalizationRegistryFloat32ArrayFloat64ArrayFunctionGeneratorGeneratorFunctionglobalThisInfinityInt16ArrayInt32ArrayInt8ArrayInternalError
+Non-standard
+IntlisFinite()isNaN()IteratorJSONMapMathNaNNumberObjectparseFloat()parseInt()PromiseProxyRangeErrorReferenceErrorReflectRegExpSetSharedArrayBufferStringSymbolSyntaxErrorTypedArrayTypeErrorUint16ArrayUint32ArrayUint8ArrayUint8ClampedArrayundefinedunescape()
+Deprecated
+URIErrorWeakMapWeakRefWeakSet
+
+
+
+
+Expressions & operators
+OverviewAddition (+)Addition assignment (+=)Assignment (=)async function expressionasync function* expressionawaitBitwise AND (&)Bitwise AND assignment (&=)Bitwise NOT (~)Bitwise OR (|)Bitwise OR assignment (|=)Bitwise XOR (^)Bitwise XOR assignment (^=)class expressionComma operator (,)Conditional (ternary) operatorDecrement (--)delete operatorDestructuring assignmentDivision (/)Division assignment (/=)Equality (==)Exponentiation (**)Exponentiation assignment (**=)Function expressionfunction* expressionGreater than (>)Greater than or equal (>=)Grouping operator ( )import.metaimport()in operatorIncrement (++)Inequality (!=)instanceofLeft shift (<<)Left shift assignment (<<=)Less than (<)Less than or equal (<=)Logical AND (&&)Logical AND assignment (&&=)Logical NOT (!)Logical OR (||)Logical OR assignment (||=)Multiplication (*)Multiplication assignment (*=)new operatornew.targetnullNullish coalescing assignment (??=)Nullish coalescing operator (??)Object initializerOperator precedenceOptional chaining (?.)Property accessorsRemainder (%)Remainder assignment (%=)Right shift (>>)Right shift assignment (>>=)Spread syntax (...)Strict equality (===)Strict inequality (!==)Subtraction (-)Subtraction assignment (-=)superthistypeofUnary negation (-)Unary plus (+)Unsigned right shift (>>>)Unsigned right shift assignment (>>>=)void operatoryieldyield*
+
+
+
+
+Statements & declarations
+Overviewasync functionasync function*blockbreakclassconstcontinuedebuggerdo...whileemptyexportExpression statementforfor await...offor...infor...offunction declarationfunction*if...elseimportlabelletreturnswitchthrowtry...catchvarwhilewith
+Deprecated
+
+
+
+
+
+Functions
+OverviewArrow function expressionsDefault parametersgetMethod definitionsRest parameterssetThe arguments object
+
+
+
+
+Classes
+OverviewconstructorextendsPrivate class featuresPublic class fieldsstaticStatic initialization blocks
+
+
+
+
+Regular expressions
+OverviewBackreference: \1, \2Capturing group: (...)Character class escape: \d, \D, \w, \W, \s, \SCharacter class: [...], [^...]Character escape: \n, \u{...}Disjunction: |Input boundary assertion: ^, $Literal character: a, bLookahead assertion: (?=...), (?!...)Lookbehind assertion: (?<=...), (?<!...)Named backreference: \k<name>Named capturing group: (?<name>...)Non-capturing group: (?:...)Quantifier: *, +, ?, {n}, {n,}, {n,m}Unicode character class escape: \p{...}, \P{...}Wildcard: .Word boundary assertion: \b, \B
+
+
+
+
+Errors
+OverviewError: Permission denied to access property "x"InternalError: too much recursionRangeError: argument is not a valid code pointRangeError: BigInt division by zeroRangeError: BigInt negative exponentRangeError: invalid array lengthRangeError: invalid dateRangeError: precision is out of rangeRangeError: radix must be an integerRangeError: repeat count must be less than infinityRangeError: repeat count must be non-negativeRangeError: x can't be converted to BigInt because it isn't an integerReferenceError: "x" is not definedReferenceError: assignment to undeclared variable "x"ReferenceError: can't access lexical declaration 'X' before initializationReferenceError: deprecated caller or arguments usageReferenceError: reference to undefined property "x"SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecatedSyntaxError: "use strict" not allowed in function with non-simple parametersSyntaxError: "x" is a reserved identifierSyntaxError: a declaration in the head of a for-of loop can't have an initializerSyntaxError: applying the 'delete' operator to an unqualified name is deprecatedSyntaxError: await is only valid in async functions, async generators and modulesSyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressionsSyntaxError: continue must be inside loopSyntaxError: for-in loop head declarations may not have initializersSyntaxError: function statement requires a nameSyntaxError: identifier starts immediately after numeric literalSyntaxError: illegal characterSyntaxError: invalid assignment left-hand sideSyntaxError: invalid BigInt syntaxSyntaxError: invalid regular expression flag "x"SyntaxError: JSON.parse: bad parsingSyntaxError: label not foundSyntaxError: missing ; before statementSyntaxError: missing : after property idSyntaxError: missing ) after argument listSyntaxError: missing ) after conditionSyntaxError: missing ] after element listSyntaxError: missing } after function bodySyntaxError: missing } after property listSyntaxError: missing = in const declarationSyntaxError: missing formal parameterSyntaxError: missing name after . operatorSyntaxError: missing variable nameSyntaxError: redeclaration of formal parameter "x"SyntaxError: return not in functionSyntaxError: test for equality (==) mistyped as assignment (=)?SyntaxError: Unexpected '#' used outside of class bodySyntaxError: Unexpected tokenSyntaxError: unlabeled break must be inside loop or switchSyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'SyntaxError: unterminated string literalSyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# insteadTypeError: 'x' is not iterableTypeError: "x" has no propertiesTypeError: "x" is (not) "y"TypeError: "x" is not a constructorTypeError: "x" is not a functionTypeError: "x" is not a non-null objectTypeError: "x" is read-onlyTypeError: can't assign to property "x" on "y": not an objectTypeError: can't convert BigInt to numberTypeError: can't convert x to BigIntTypeError: can't define property "x": "obj" is not extensibleTypeError: can't delete non-configurable array elementTypeError: can't redefine non-configurable property "x"TypeError: cannot use 'in' operator to search for 'x' in 'y'TypeError: cyclic object valueTypeError: invalid 'instanceof' operand 'x'TypeError: invalid Array.prototype.sort argumentTypeError: invalid assignment to const "x"TypeError: More arguments neededTypeError: property "x" is non-configurable and can't be deletedTypeError: Reduce of empty array with no initial valueTypeError: setting getter-only property "x"TypeError: X.prototype.y called on incompatible typeURIError: malformed URI sequenceWarning: -file- is being assigned a //# sourceMappingURL, but already has oneWarning: unreachable code after return statement
+
+
+
+
+Misc
+
+JavaScript technologies overview
+Lexical grammar
+Iteration protocols
+Strict mode
+Template literals
+Trailing commas
+Deprecated features
+
+
+
+
+In this articleTry itPrecedence And AssociativityShort-circuitingTableOperator precedenceOperator precedence determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence.Try itPrecedence And AssociativityConsider an expression describable by the representation below, where both OP1 and OP2 are fill-in-the-blanks for OPerators.
+a OP1 b OP2 c
+
+The combination above has two possible interpretations:
+(a OP1 b) OP2 c
+a OP1 (b OP2 c)
+
+Which one the language decides to adopt depends on the identity of OP1 and OP2.
+If OP1 and OP2 have different precedence levels (see the table below), the operator with the higher precedence goes first and associativity does not matter. Observe how multiplication has higher precedence than addition and executed first, even though addition is written first in the code.
+console.log(3 + 10 * 2); // 23
+console.log(3 + (10 * 2)); // 23, because parentheses here are superfluous
+console.log((3 + 10) * 2); // 26, because the parentheses change the order
+
+Within operators of the same precedence, the language groups them by associativity. Left-associativity (left-to-right) means that it is interpreted as (a OP1 b) OP2 c, while right-associativity (right-to-left) means it is interpreted as a OP1 (b OP2 c). Assignment operators are right-associative, so you can write:
+a = b = 5; // same as writing a = (b = 5);
+
+with the expected result that a and b get the value 5. This is because the assignment operator returns the value that is assigned. First, b is set to 5. Then the a is also set to 5 â the return value of b = 5, a.k.a. right operand of the assignment.
+As another example, the unique exponentiation operator has right-associativity, whereas other arithmetic operators have left-associativity.
+const a = 4 ** 3 ** 2; // Same as 4 ** (3 ** 2); evaluates to 262144
+const b = 4 / 3 / 2; // Same as (4 / 3) / 2; evaluates to 0.6666...
+
+Operators are first grouped by precedence, and then, for adjacent operators that have the same precedence, by associativity. So, when mixing division and exponentiation, the exponentiation always comes before the division. For example, 2 ** 3 / 3 ** 2 results in 0.8888888888888888 because it is the same as (2 ** 3) / (3 ** 2).
+For prefix unary operators, suppose we have the following pattern:
+OP1 a OP2 b
+
+where OP1 is a prefix unary operator and OP2 is a binary operator. If OP1 has higher precedence than OP2, then it would be grouped as (OP1 a) OP2 b; otherwise, it would be OP1 (a OP2 b).
+const a = 1;
+const b = 2;
+typeof a + b; // Equivalent to (typeof a) + b; result is "number2"
+
+If the unary operator is on the second operand:
+a OP2 OP1 b
+
+Then the binary operator OP2 must have lower precedence than the unary operator OP1 for it to be grouped as a OP2 (OP1 b). For example, the following is invalid:
+function* foo() {
+  a + yield 1;
+}
+
+Because + has higher precedence than yield, this would become (a + yield) 1 â but because yield is a reserved word in generator functions, this would be a syntax error. Luckily, most unary operators have higher precedence than binary operators and do not suffer from this pitfall.
+If we have two prefix unary operators:
+OP1 OP2 a
+
+Then the unary operator closer to the operand, OP2, must have higher precedence than OP1 for it to be grouped as OP1 (OP2 a). It's possible to get it the other way and end up with (OP1 OP2) a:
+async function* foo() {
+  await yield 1;
+}
+
+Because await has higher precedence than yield, this would become (await yield) 1, which is awaiting an identifier called yield, and a syntax error. Similarly, if you have new !A;, because ! has lower precedence than new, this would become (new !) A, which is obviously invalid. (This code looks nonsensical to write anyway, since !A always produces a boolean, not a constructor function.)
+For postfix unary operators (namely, ++ and --), the same rules apply. Luckily, both operators have higher precedence than any binary operator, so the grouping is always what you would expect. Moreover, because ++ evaluates to a value, not a reference, you can't chain multiple increments together either, as you may do in C.
+let a = 1;
+a++++; // SyntaxError: Invalid left-hand side in postfix operation.
+
+Operator precedence will be handled recursively. For example, consider this expression:
+1 + 2 ** 3 * 4 / 5 >> 6
+
+First, we group operators with different precedence by decreasing levels of precedence.
+
+The ** operator has the highest precedence, so it's grouped first.
+Looking around the ** expression, it has * on the right and + on the left. * has higher precedence, so it's grouped first. * and / have the same precedence, so we group them together for now.
+Looking around the *// expression grouped in 2, because + has higher precedence than >>, the former is grouped.
+
+   (1 + ( (2 ** 3) * 4 / 5) ) >> 6
+// â    â ââ 1. ââ        â â
+// â    âââââââ 2. ââââââââ â
+// âââââââââââ 3. âââââââââââ
+
+Within the *// group, because they are both left-associative, the left operand would be grouped.
+   (1 + ( ( (2 ** 3) * 4 ) / 5) ) >> 6
+// â    â â ââ 1. ââ     â    â â
+// â    ââââââââââ 2. âââââââââ â
+// âââââââââââââ 3. âââââââââââââ
+//        ââââââ 4. ââââââ
+
+Note that operator precedence and associativity only affect the order of evaluation of operators (the implicit grouping), but not the order of evaluation of operands. The operands are always evaluated from left-to-right. The higher-precedence expressions are always evaluated first, and their results are then composed according to the order of operator precedence.
+function echo(name, num) {
+  console.log(`Evaluating the ${name} side`);
+  return num;
+}
+// Exponentiation operator (**) is right-associative,
+// but all call expressions (echo()), which have higher precedence,
+// will be evaluated before ** does
+console.log(echo("left", 4) ** echo("middle", 3) ** echo("right", 2));
+// Evaluating the left side
+// Evaluating the middle side
+// Evaluating the right side
+// 262144
+
+// Exponentiation operator (**) has higher precedence than division (/),
+// but evaluation always starts with the left operand
+console.log(echo("left", 4) / echo("middle", 3) ** echo("right", 2));
+// Evaluating the left side
+// Evaluating the middle side
+// Evaluating the right side
+// 0.4444444444444444
+
+If you are familiar with binary trees, think about it as a post-order traversal.
+                /
+       ââââââââââ´âââââââââ
+echo("left", 4)         **
+                ââââââââââ´âââââââââ
+        echo("middle", 3)  echo("right", 2)
+
+After all operators have been properly grouped, the binary operators would form a binary tree. Evaluation starts from the outermost group â which is the operator with the lowest precedence (/ in this case). The left operand of this operator is first evaluated, which may be composed of higher-precedence operators (such as a call expression echo("left", 4)). After the left operand has been evaluated, the right operand is evaluated in the same fashion. Therefore, all leaf nodes â the echo() calls â would be visited left-to-right, regardless of the precedence of operators joining them.Short-circuitingIn the previous section, we said "the higher-precedence expressions are always evaluated first" â this is generally true, but it has to be amended with the acknowledgement of short-circuiting, in which case an operand may not be evaluated at all.
+Short-circuiting is jargon for conditional evaluation. For example, in the expression a && (b + c), if a is falsy, then the sub-expression (b + c) will not even get evaluated, even if it is grouped and therefore has higher precedence than &&. We could say that the logical AND operator (&&) is "short-circuited". Along with logical AND, other short-circuited operators include logical OR (||), nullish coalescing (??), and optional chaining (?.).
+a || (b * c); // evaluate `a` first, then produce `a` if `a` is "truthy"
+a && (b < c); // evaluate `a` first, then produce `a` if `a` is "falsy"
+a ?? (b || c); // evaluate `a` first, then produce `a` if `a` is not `null` and not `undefined`
+a?.b.c; // evaluate `a` first, then produce `undefined` if `a` is `null` or `undefined`
+
+When evaluating a short-circuited operator, the left operand is always evaluated. The right operand will only be evaluated if the left operand cannot determine the result of the operation.
+
+Note: The behavior of short-circuiting is baked in these operators. Other operators would always evaluate both operands, regardless if that's actually useful â for example, NaN * foo() will always call foo, even when the result would never be something other than NaN.
+
+The previous model of a post-order traversal still stands. However, after the left subtree of a short-circuiting operator has been visited, the language will decide if the right operand needs to be evaluated. If not (for example, because the left operand of || is already truthy), the result is directly returned without visiting the right subtree.
+Consider this case:
+function A() { console.log('called A'); return false; }
+function B() { console.log('called B'); return false; }
+function C() { console.log('called C'); return true; }
+
+console.log(C() || B() && A());
+
+// Logs:
+// called C
+// true
+
+Only C() is evaluated, despite && having higher precedence. This does not mean that || has higher precedence in this case â it's exactly because (B() && A()) has higher precedence that causes it to be neglected as a whole. If it's re-arranged as:
+console.log(A() && C() || B());
+// Logs:
+// called A
+// called B
+// false
+
+Then the short-circuiting effect of && would only prevent C() from being evaluated, but because A() && C() as a whole is false, B() would still be evaluated.
+However, note that short-circuiting does not change the final evaluation outcome. It only affects the evaluation of operands, not how operators are grouped â if evaluation of operands doesn't have side effects (for example, logging to the console, assigning to variables, throwing an error), short-circuiting would not be observable at all.
+The assignment counterparts of these operators (&&=, ||=, ??=) are short-circuited as well. They are short-circuited in a way that the assignment does not happen at all.TableThe following table lists operators in order from highest precedence (18) to lowest precedence (1).
+Several notes about the table:
+
+Not all syntax included here are "operators" in the strict sense. For example, spread ... and arrow => are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
+The left operand of an exponentiation ** (precedence 13) cannot be one of the unary operators with precedence 14 without grouping, or there will be a SyntaxError. That means, although -1 ** 2 is technically unambiguous, the language requires you to use (-1) ** 2 instead.
+The operands of nullish coalescing ?? (precedence 3) cannot be a logical OR || (precedence 3) or logical AND && (precedence 4). That means you have to write (a ?? b) || c or a ?? (b || c), instead of a ?? b || c.
+Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access . (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow => (precedence 2) must be an arguments list or a single identifier instead of some random expression.
+Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation [ â¦ ] (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
+
+
+
+
+Precedence
+Operator type
+Associativity
+Individual operators
+
+
+18
+Grouping
+n/a
+( â¦ )
+
+
+17
+Member Access
+left-to-right
+â¦ . â¦
+
+
+Optional chaining
+â¦ ?. â¦
+
+
+Computed Member
+                Access
+n/a
+â¦ [ â¦ ]
+
+
+new (with argument list)
+new â¦ ( â¦ )
+
+
+Function Call
+â¦ ( â¦ )
+
+
+16
+new (without argument list)
+n/a
+new â¦
+
+
+15
+Postfix
+                Increment
+n/a
+â¦ ++
+
+
+Postfix
+                Decrement
+â¦ --
+
+
+14
+Logical NOT (!)
+n/a
+! â¦
+
+
+Bitwise NOT (~)
+~ â¦
+
+
+Unary plus (+)
++ â¦
+
+
+Unary negation (-)
+- â¦
+
+
+Prefix
+                Increment
+++ â¦
+
+
+Prefix
+                Decrement
+-- â¦
+
+
+typeof
+typeof â¦
+
+
+void
+void â¦
+
+
+delete
+delete â¦
+
+
+await
+await â¦
+
+
+13
+Exponentiation (**)
+right-to-left
+â¦ ** â¦
+
+
+12
+Multiplication (*)
+left-to-right
+â¦ * â¦
+
+
+Division (/)
+â¦ / â¦
+
+
+Remainder (%)
+â¦ % â¦
+
+
+11
+Addition (+)
+left-to-right
+â¦ + â¦
+
+
+Subtraction (-)
+â¦ - â¦
+
+
+10
+Bitwise Left Shift (<<)
+left-to-right
+â¦ << â¦
+
+
+Bitwise Right Shift (>>)
+â¦ >> â¦
+
+
+Bitwise Unsigned Right Shift (>>>)
+â¦ >>> â¦
+
+
+9
+Less Than (<)
+left-to-right
+â¦ < â¦
+
+
+Less Than Or Equal (<=)
+â¦ <= â¦
+
+
+Greater Than (>)
+â¦ > â¦
+
+
+Greater Than Or Equal (>=)
+â¦ >= â¦
+
+
+in
+â¦ in â¦
+
+
+instanceof
+â¦ instanceof â¦
+
+
+8
+Equality (==)
+left-to-right
+â¦ == â¦
+
+
+Inequality (!=)
+â¦ != â¦
+
+
+Strict Equality (===)
+â¦ === â¦
+
+
+Strict Inequality (!==)
+â¦ !== â¦
+
+
+7
+Bitwise AND (&)
+left-to-right
+â¦ & â¦
+
+
+6
+Bitwise XOR (^)
+left-to-right
+â¦ ^ â¦
+
+
+5
+Bitwise OR (|)
+left-to-right
+â¦ | â¦
+
+
+4
+Logical AND (&&)
+left-to-right
+â¦ && â¦
+
+
+3
+Logical OR (||)
+left-to-right
+â¦ || â¦
+
+
+Nullish coalescing operator (??)
+â¦ ?? â¦
+
+
+2
+Assignment
+right-to-left
+â¦ = â¦
+
+
+â¦ += â¦
+
+
+â¦ -= â¦
+
+
+â¦ **= â¦
+
+
+â¦ *= â¦
+
+
+â¦ /= â¦
+
+
+â¦ %= â¦
+
+
+â¦ <<= â¦
+
+
+â¦ >>= â¦
+
+
+â¦ >>>= â¦
+
+
+â¦ &= â¦
+
+
+â¦ ^= â¦
+
+
+â¦ |= â¦
+
+
+â¦ &&= â¦
+
+
+â¦ ||= â¦
+
+
+â¦ ??= â¦
+
+
+Conditional (ternary) operator
+right-to-left(Groups on expressions after ?)
+â¦ ? â¦ : â¦
+
+
+Arrow (=>)
+right-to-left
+â¦ => â¦
+
+
+yield
+n/a
+yield â¦
+
+
+yield*
+yield* â¦
+
+
+Spread (...)
+... â¦
+
+
+1
+Comma / Sequence
+left-to-right
+â¦ , â¦
+
+
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 5, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

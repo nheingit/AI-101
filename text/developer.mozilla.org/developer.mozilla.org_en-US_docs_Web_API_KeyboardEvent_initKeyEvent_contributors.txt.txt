@@ -1,0 +1,20 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/keyboardevent/initkeyevent/index.md
+
+# Original Wiki contributors
+mfluehr
+fscholz
+Noitidart
+teoli
+MHasan
+willlma
+kscarfone
+Sheppy
+mcomella
+Jorend
+Nickolay
+Ynvich
+Ptak82
+Mgjbot
+DBaron
+Gary.johnson.53

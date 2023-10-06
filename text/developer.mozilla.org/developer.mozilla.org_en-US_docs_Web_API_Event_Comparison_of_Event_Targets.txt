@@ -1,0 +1,205 @@
+Comparison of Event Targets - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsEventComparison of Event TargetsArticle ActionsEnglish (US)EventConstructorEvent()Instance propertiesbubblescancelablecancelBubble
+Deprecated
+composedcurrentTargetdefaultPreventedeventPhaseexplicitOriginalTarget
+Non-standard
+isTrustedoriginalTarget
+Non-standard
+returnValue
+Deprecated
+srcElement
+Deprecated
+targettimeStamptypeInstance methodscomposedPath()initEvent()
+Deprecated
+preventDefault()stopImmediatePropagation()stopPropagation()Comparison of Event TargetsIt's easy to get confused about which event target to examine when writing an event handler. This article should clarify the use of the target properties.
+There are five targets to consider:
+
+
+
+Property
+Defined in
+Purpose
+
+
+
+
+event.target
+DOM Event Interface
+
+        The DOM element on the left-hand side of the call that triggered this
+        event.
+      
+
+
+event.currentTarget
+DOM Event Interface
+
+        The
+        EventTarget
+        whose
+        EventListeners
+        are currently being processed. As the event capturing and bubbling
+        occurs, this value changes.
+      
+
+
+event.relatedTarget
+DOM MouseEvent Interface
+Identifies a secondary target for the event.
+
+
+event.explicitOriginalTarget
+Event.webidl
+
+
+Non-standard
+ If the event was retargeted for
+        some reason other than an anonymous boundary crossing, this will be set
+        to the target before the retargeting occurs. For example, mouse events
+        are retargeted to their parent node when they happen over text nodes
+        ([Webkit bug 185889](https://bugzil.la/185889)), and in that case .target will
+        show the parent and .explicitOriginalTarget will show the
+        text node.Unlike .originalTarget,
+        .explicitOriginalTarget will never contain anonymous
+        content.
+      
+
+
+event.originalTarget
+Event.webidl
+
+
+Non-standard
+ The original target of the event,
+        before any retargetings. See
+        Anonymous Content#Event_Flow_and_Targeting
+        for details.
+      
+
+
+event.composedTarget
+Event.webidl
+
+
+Non-standard
+ The original non-native target of
+        the event before composition from Shadow DOM.
+      
+
+
+Use of explicitOriginalTarget and originalTarget
+Note: These properties are only available in Mozilla-based browsers.
+Examples<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Comparison of Event Targets</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        height: 150px;
+        width: 100%;
+      }
+      td {
+        border: 1px solid #ccc;
+        font-weight: bold;
+        padding: 5px;
+        min-height: 30px;
+      }
+      .standard {
+        background-color: #99ff99;
+      }
+      .non-standard {
+        background-color: #902d37;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td class="standard">
+            Original target dispatching the event <small>event.target</small>
+          </td>
+          <td class="standard">
+            Target who's event listener is being processed
+            <small>event.currentTarget</small>
+          </td>
+          <td class="standard">
+            Identify other element (if any) involved in the event
+            <small>event.relatedTarget</small>
+          </td>
+          <td class="non-standard">
+            If there was a retargeting of the event for some reason
+            <small> event.explicitOriginalTarget</small> contains the target
+            before retargeting (never contains anonymous targets)
+          </td>
+          <td class="non-standard">
+            If there was a retargeting of the event for some reason
+            <small> event.originalTarget</small> contains the target before
+            retargeting (may contain anonymous targets)
+          </td>
+        </tr>
+      </thead>
+      <tr>
+        <td id="target"></td>
+        <td id="currentTarget"></td>
+        <td id="relatedTarget"></td>
+        <td id="explicitOriginalTarget"></td>
+        <td id="originalTarget"></td>
+      </tr>
+    </table>
+    <p>
+      Clicking on the text will show the difference between
+      explicitOriginalTarget, originalTarget, and target
+    </p>
+    <script>
+      function handleClicks(e) {
+        document.getElementById("target").innerHTML = e.target;
+        document.getElementById("currentTarget").innerHTML = e.currentTarget;
+        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+        document.getElementById("explicitOriginalTarget").innerHTML =
+          e.explicitOriginalTarget;
+        document.getElementById("originalTarget").innerHTML = e.originalTarget;
+      }
+
+      function handleMouseover(e) {
+        document.getElementById("target").innerHTML = e.target;
+        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+      }
+
+      document.addEventListener("click", handleClicks, false);
+      document.addEventListener("mouseover", handleMouseover, false);
+    </script>
+  </body>
+</html>
+Use of target and relatedTargetThe relatedTarget property for the mouseover event holds the node that the mouse was previously over. For the mouseout event, it holds the node that the mouse moved to.
+
+
+
+Event type
+event.target
+event.relatedTarget
+
+
+
+
+mouseover
+the EventTarget which the pointing device entered
+the EventTarget which the pointing device exited
+
+
+mouseout
+the EventTarget which the pointing device exited
+the EventTarget which the pointing device entered
+
+
+
+Example
+<hbox id="outer">
+  <hbox id="inner"
+        onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
+        onmouseout="dump('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
+        style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
+</hbox>
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 26, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

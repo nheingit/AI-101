@@ -1,0 +1,14 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/domimplementation/createdocumenttype/index.md
+
+# Original Wiki contributors
+mfluehr
+sideshowbarker
+connorshea
+erikadoyle
+teoli
+Prome
+afreen
+kscarfone
+Sheppy
+Brettz9

@@ -1,0 +1,52 @@
+Number.isInteger() - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStandard built-in objectsNumberNumber.isInteger()Article ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoStandard built-in objectsNumberConstructorNumber() constructorPropertiesNumber.EPSILONNumber.MAX_SAFE_INTEGERNumber.MAX_VALUENumber.MIN_SAFE_INTEGERNumber.MIN_VALUENumber.NaNNumber.NEGATIVE_INFINITYNumber.POSITIVE_INFINITYMethodsNumber.isFinite()Number.isInteger()Number.isNaN()Number.isSafeInteger()Number.parseFloat()Number.parseInt()Number.prototype.toExponential()Number.prototype.toFixed()Number.prototype.toLocaleString()Number.prototype.toPrecision()Number.prototype.toString()Number.prototype.valueOf()Inheritance:FunctionConstructorFunction() constructorPropertiesFunction.prototype.arguments
+Non-standard
+
+Deprecated
+Function.prototype.caller
+Non-standard
+
+Deprecated
+Function: displayName
+Non-standard
+Function: lengthFunction: nameFunction: prototypeMethodsFunction.prototype[@@hasInstance]()Function.prototype.apply()Function.prototype.bind()Function.prototype.call()Function.prototype.toString()ObjectPropertiesObject.prototype.constructorObject.prototype.__proto__
+Deprecated
+MethodsObject.prototype.__defineGetter__()
+Deprecated
+Object.prototype.__defineSetter__()
+Deprecated
+Object.prototype.__lookupGetter__()
+Deprecated
+Object.prototype.__lookupSetter__()
+Deprecated
+Object.prototype.hasOwnProperty()Object.prototype.isPrototypeOf()Object.prototype.propertyIsEnumerable()Object.prototype.toLocaleString()Object.prototype.toString()Object.prototype.valueOf()In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoNumber.isInteger()The Number.isInteger() static method determines whether the passed value is an integer.Try itSyntaxNumber.isInteger(value)
+Parameters
+value
+
+The value to be tested for being an integer.
+
+Return valueThe boolean value true if the given value is an integer. Otherwise false.DescriptionIf the target value is an integer, return true, otherwise return false. If the value is NaN or Infinity, return false. The method will also return true for floating point numbers that can be represented as integer. It will always return false if the value is not a number.
+Note that some number literals, while looking like non-integers, actually represent integers â due to the precision limit of ECMAScript floating-point number encoding (IEEE-754). For example, 5.0000000000000001 only differs from 5 by 1e-16, which is too small to be represented. (For reference, Number.EPSILON stores the distance between 1 and the next representable floating-point number greater than 1, and that is about 2.22e-16.) Therefore, 5.0000000000000001 will be represented with the same encoding as 5, thus making Number.isInteger(5.0000000000000001) return true.
+In a similar sense, numbers around the magnitude of Number.MAX_SAFE_INTEGER will suffer from loss of precision and make Number.isInteger return true even when it's not an integer. (The actual threshold varies based on how many bits are needed to represent the decimal â for example, Number.isInteger(4500000000000000.1) is true, but Number.isInteger(4500000000000000.5) is false.)ExamplesUsing isIntegerNumber.isInteger(0); // true
+Number.isInteger(1); // true
+Number.isInteger(-100000); // true
+Number.isInteger(99999999999999999999999); // true
+
+Number.isInteger(0.1); // false
+Number.isInteger(Math.PI); // false
+
+Number.isInteger(NaN); // false
+Number.isInteger(Infinity); // false
+Number.isInteger(-Infinity); // false
+Number.isInteger("10"); // false
+Number.isInteger(true); // false
+Number.isInteger(false); // false
+Number.isInteger([1]); // false
+
+Number.isInteger(5.0); // true
+Number.isInteger(5.000000000000001); // false
+Number.isInteger(5.0000000000000001); // true, because of loss of precision
+Number.isInteger(4500000000000000.1); // true, because of loss of precision
+SpecificationsSpecificationECMAScript Language Specification # sec-number.isintegerBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Polyfill of Number.isInteger in core-js
+The Number object it belongs to.
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

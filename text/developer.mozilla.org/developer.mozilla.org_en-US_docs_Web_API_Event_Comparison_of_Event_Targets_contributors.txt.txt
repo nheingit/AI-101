@@ -1,0 +1,21 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/event/comparison_of_event_targets/index.md
+
+# Original Wiki contributors
+mnoorenberghe
+Zearin_Galaurum
+mfluehr
+ademaro
+MHasan
+ipapratilov
+Sheppy
+jswisher
+MattBrubeck
+Nickolay
+Johnjbarton
+Iamwriter
+Waldo
+SzjShu
+Enn
+Gomita
+Hamstersoup
