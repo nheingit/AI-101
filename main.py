@@ -2,6 +2,9 @@ import os
 import logging
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
+from dotenv import load_dotenv
+
+load_dotenv()
 
 tg_bot_token = os.environ['TG_BOT_TOKEN']
 
