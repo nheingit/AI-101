@@ -1,0 +1,49 @@
+Force Touch events - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsForce Touch eventsArticle ActionsEnglish (US)In this articleEventsEvent propertiesConstantsSpecificationsIn this articleEventsEvent propertiesConstantsSpecificationsForce Touch eventsNon-standard: This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.
+Force Touch events are a proprietary, Apple-specific feature which makes possible (where supported by the input hardware) new interactions based on how hard the user clicks or presses down on the touchscreen or trackpad.Events
+webkitmouseforcewillbegin 
+Non-standard
+
+
+This event is fired before the mousedown event. Its main use is that it can be Event.preventDefault()ed.
+
+webkitmouseforcedown 
+Non-standard
+
+
+This event is fired after the mousedown event as soon as sufficient pressure has been applied for it to qualify as a "force click".
+
+webkitmouseforceup 
+Non-standard
+
+
+This event is fired after the webkitmouseforcedown event as soon as the pressure has been reduced sufficiently to end the "force click".
+
+webkitmouseforcechanged 
+Non-standard
+
+
+This event is fired each time the amount of pressure changes. This event first fires after the mousedown event and stops firing before the mouseup event.
+
+Event propertiesThe following property is known to be available on the webkitmouseforcewillbegin, mousedown, webkitmouseforcechanged, webkitmouseforcedown, webkitmouseforceup, mousemove, and mouseup event objects:
+
+MouseEvent.webkitForce 
+Non-standard
+ Read only 
+
+The amount of pressure currently being applied to the trackpad/touchscreen.
+
+ConstantsThese constants are useful for determining the relative intensity of the pressure indicated by MouseEvent.webkitForce:
+
+MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN 
+Non-standard
+ Read only 
+
+Minimum force necessary for a normal click.
+
+MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN 
+Non-standard
+ Read only 
+
+Minimum force necessary for a force click.
+
+SpecificationsNot part of any specification. Apple has a description at the Mac Developer Library.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 6, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

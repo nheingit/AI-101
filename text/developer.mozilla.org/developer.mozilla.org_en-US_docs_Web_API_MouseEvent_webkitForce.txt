@@ -1,0 +1,20 @@
+MouseEvent: webkitForce property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsMouseEventwebkitForceArticle ActionsEnglish (US)In this articleSpecificationsSee alsoUI EventsMouseEventConstructorMouseEvent()Static propertiesWEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
+Non-standard
+WEBKIT_FORCE_AT_MOUSE_DOWN
+Non-standard
+Instance propertiesaltKeybuttonbuttonsclientXclientYctrlKeylayerX
+Non-standard
+layerY
+Non-standard
+metaKeymovementXmovementYmozInputSource
+Non-standard
+offsetXoffsetYpageXpageYrelatedTargetscreenXscreenYshiftKeywebkitForce 
+Non-standard
+xyInstance methodsgetModifierState()initMouseEvent()
+Deprecated
+Inheritance:UIEventEventRelated pages for UI EventsCompositionEventFocusEventInputEventKeyboardEventMouseScrollEventMutationEventUIEventWheelEventIn this articleSpecificationsSee alsoMouseEvent: webkitForce propertyNon-standard: This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.
+MouseEvent.webkitForce is a proprietary, WebKit-specific numeric property whose value represents the amount of pressure that is being applied on the touchpad or touchscreen.SpecificationsNot part of any specification. Apple has a description at the Mac Developer Library.See also
+MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN
+MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN
+Force Touch events
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 6, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

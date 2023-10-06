@@ -1,0 +1,113 @@
+KeyboardEvent: initKeyEvent() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsKeyboardEventinitKeyEvent()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsUI EventsKeyboardEventConstructorKeyboardEvent()Instance propertiesaltKeycharCode
+Deprecated
+codectrlKeyisComposingkeykeyCode
+Deprecated
+keyIdentifier
+Non-standard
+
+Deprecated
+locationmetaKeyrepeatshiftKeyInstance methodsgetModifierState()initKeyboardEvent()
+Deprecated
+initKeyEvent() 
+Non-standard
+
+Deprecated
+Inheritance:UIEventEventRelated pages for UI EventsCompositionEventFocusEventInputEventMouseEventMouseScrollEventMutationEventUIEventWheelEventIn this articleSyntaxExamplesSpecificationsKeyboardEvent: initKeyEvent() method
+Warning: Do NOT use this method; Use the KeyboardEvent() constructor instead!
+
+    The method has been removed from the DOM specification and is not supported by any current browser.
+    Firefox hides this method behind the preference (dom.keyboardevent.init_key_event.enabled) from version 93 and plans to remove it shortly afterwards.
+  
+Deprecated: This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the compatibility table at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+
+  The KeyboardEvent.initKeyEvent() method is used to
+  initialize the value of an event created using
+  document.createEvent ("KeyboardEvent"). Events initialized in
+  this way must have been created with the
+  document.createEvent ("KeyboardEvent") method.
+  initKeyEvent() must be called to set the event before it is dispatched.
+SyntaxinitKeyEvent (type, bubbles, cancelable, view,
+                    ctrlKey, altKey, shiftKey, metaKey,
+                    keyCode, charCode)
+Parameters
+type
+
+A string representing the type of event.
+
+bubbles
+
+
+      A boolean value indicating whether the event should bubble up through the
+      event chain or not (see bubbles).
+    
+
+cancelable
+
+A boolean value indicating whether the event can be canceled (see cancelable).
+
+view
+
+Specifies the UIEvent.view; this value may be null.
+
+ctrlKey
+
+
+      A boolean value that is true if the virtual key to be
+      generated is a combination of keys containing the Ctrl key.
+    
+
+altKey
+
+
+      A boolean value that is true if the virtual key to be
+      generated is a combination of keys containing the Alt key.
+    
+
+shiftKey
+
+
+      A boolean value that is true if the virtual key to be generated
+      is a combination of keys containing the Shiftkey.
+    
+
+metaKey
+
+
+      A boolean value that is true if the virtual key to be
+      generated is a combination of keys containing the Meta key.
+    
+
+keyCode
+
+
+      An unsigned long representing the virtual key code value of the key
+      which was pressed, otherwise 0. See KeyboardEvent.keyCode for the list of key codes.
+    
+
+charCode
+
+
+      An unsigned long representing the Unicode character associated with
+      the pressed key otherwise 0.
+    
+
+Return valueNone (undefined).Examplesconst event = document.createEvent("KeyboardEvent"); // create a key event
+// define the event
+event.initKeyEvent(
+  "keypress", // typeArg,
+  true, // canBubbleArg,
+  true, // cancelableArg,
+  null, // viewArg, Specifies UIEvent.view. This value may be null.
+  false, // ctrlKeyArg,
+  false, // altKeyArg,
+  false, // shiftKeyArg,
+  false, // metaKeyArg,
+  9, // keyCodeArg,
+  0
+); // charCodeArg);
+
+document.getElementById("blah").dispatchEvent(event);
+Specifications
+  This implementation of keyboard events is based on the key events spec in the early versions of DOM 2 Events, later removed from that spec in favor of
+  KeyboardEvent() that should be used instead.
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

@@ -1,0 +1,13 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/preflight_request/index.md
+
+# Original Wiki contributors
+mfuji09
+mamacdon
+AndrzejSala
+gshutler
+Sheppy
+david_ross
+GabrielDelepine
+teoli
+fscholz

@@ -1,0 +1,48 @@
+Number.isSafeInteger() - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStandard built-in objectsNumberNumber.isSafeInteger()Article ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoStandard built-in objectsNumberConstructorNumber() constructorPropertiesNumber.EPSILONNumber.MAX_SAFE_INTEGERNumber.MAX_VALUENumber.MIN_SAFE_INTEGERNumber.MIN_VALUENumber.NaNNumber.NEGATIVE_INFINITYNumber.POSITIVE_INFINITYMethodsNumber.isFinite()Number.isInteger()Number.isNaN()Number.isSafeInteger()Number.parseFloat()Number.parseInt()Number.prototype.toExponential()Number.prototype.toFixed()Number.prototype.toLocaleString()Number.prototype.toPrecision()Number.prototype.toString()Number.prototype.valueOf()Inheritance:FunctionConstructorFunction() constructorPropertiesFunction.prototype.arguments
+Non-standard
+
+Deprecated
+Function.prototype.caller
+Non-standard
+
+Deprecated
+Function: displayName
+Non-standard
+Function: lengthFunction: nameFunction: prototypeMethodsFunction.prototype[@@hasInstance]()Function.prototype.apply()Function.prototype.bind()Function.prototype.call()Function.prototype.toString()ObjectPropertiesObject.prototype.constructorObject.prototype.__proto__
+Deprecated
+MethodsObject.prototype.__defineGetter__()
+Deprecated
+Object.prototype.__defineSetter__()
+Deprecated
+Object.prototype.__lookupGetter__()
+Deprecated
+Object.prototype.__lookupSetter__()
+Deprecated
+Object.prototype.hasOwnProperty()Object.prototype.isPrototypeOf()Object.prototype.propertyIsEnumerable()Object.prototype.toLocaleString()Object.prototype.toString()Object.prototype.valueOf()In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoNumber.isSafeInteger()The Number.isSafeInteger() static method determines whether the provided value is a number that is a safe integer.Try itSyntaxNumber.isSafeInteger(testValue)
+Parameters
+testValue
+
+The value to be tested for being a safe integer.
+
+Return valueThe boolean value true if the given value is a number that is a safe integer. Otherwise false.DescriptionThe safe integers consist of all integers from -(253 - 1) to 253 - 1, inclusive (Â±9,007,199,254,740,991). A safe integer is an integer that:
+
+can be exactly represented as an IEEE-754 double precision number, and
+whose IEEE-754 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation.
+
+For example, 253 - 1 is a safe integer: it can be exactly represented, and no other integer rounds to it under any IEEE-754 rounding mode. In contrast, 253 is not a safe integer: it can be exactly represented in IEEE-754, but the integer 253 + 1 can't be directly represented in IEEE-754 but instead rounds to 253 under round-to-nearest and round-to-zero rounding.
+Handling values larger or smaller than ~9 quadrillion with full precision requires using an arbitrary precision arithmetic library. See What Every Programmer Needs to Know about Floating Point Arithmetic for more information on floating point representations of numbers.
+For larger integers, consider using the BigInt type.ExamplesUsing isSafeInteger()Number.isSafeInteger(3); // true
+Number.isSafeInteger(2 ** 53); // false
+Number.isSafeInteger(2 ** 53 - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
+SpecificationsSpecificationECMAScript Language Specification # sec-number.issafeintegerBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Polyfill of Number.isSafeInteger in core-js
+The Number object it belongs to.
+Number.MIN_SAFE_INTEGER
+Number.MAX_SAFE_INTEGER
+BigInt
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

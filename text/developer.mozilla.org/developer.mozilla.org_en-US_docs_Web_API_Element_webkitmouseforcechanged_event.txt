@@ -1,0 +1,207 @@
+Element: webkitmouseforcechanged event - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsElementwebkitmouseforcechangedIn this articleSyntaxEvent typeEvent propertiesSpecificationsBrowser compatibilitySee alsoElementInstance propertiesariaAtomicariaAutoCompleteariaBusyariaCheckedariaColCountariaColIndexariaColSpanariaCurrentariaDescriptionariaDisabledariaExpandedariaHasPopupariaHiddenariaKeyShortcutsariaLabelariaLevelariaLiveariaModalariaMultiLineariaMultiSelectableariaOrientationariaPlaceholderariaPosInSetariaPressedariaReadOnlyariaRelevant
+Non-standard
+ariaRequiredariaRoleDescriptionariaRowCountariaRowIndexariaRowSpanariaSelectedariaSetSizeariaSortariaValueMaxariaValueMinariaValueNowariaValueTextassignedSlotattributeschildElementCountchildrenclassListclassNameclientHeightclientLeftclientTopclientWidthelementTiming
+Experimental
+firstElementChildidinnerHTMLlastElementChildlocalNamenamespaceURInextElementSiblingouterHTMLpartprefixpreviousElementSiblingscrollHeightscrollLeftscrollLeftMax
+Non-standard
+scrollTopscrollTopMax
+Non-standard
+scrollWidthshadowRootslottagNameInstance methodsafter()animate()append()attachShadow()before()closest()computedStyleMap()getAnimations()getAttribute()getAttributeNames()getAttributeNode()getAttributeNodeNS()getAttributeNS()getBoundingClientRect()getClientRects()getElementsByClassName()getElementsByTagName()getElementsByTagNameNS()hasAttribute()hasAttributeNS()hasAttributes()hasPointerCapture()insertAdjacentElement()insertAdjacentHTML()insertAdjacentText()matches()prepend()querySelector()querySelectorAll()releasePointerCapture()remove()removeAttribute()removeAttributeNode()removeAttributeNS()replaceChildren()replaceWith()requestFullscreen()requestPointerLock()scroll()scrollBy()scrollIntoView()scrollIntoViewIfNeeded()
+Non-standard
+scrollTo()setAttribute()setAttributeNode()setAttributeNodeNS()setAttributeNS()setCapture()
+Non-standard
+
+Deprecated
+setHTML()
+Experimental
+setPointerCapture()toggleAttribute()Eventsafterscriptexecute
+Non-standard
+animationcancelanimationendanimationiterationanimationstartauxclickbeforematch
+Experimental
+beforescriptexecute
+Non-standard
+beforexrselect
+Experimental
+blurclickcompositionendcompositionstartcompositionupdatecontentvisibilityautostatechange
+Experimental
+contextmenucopycutdblclickDOMActivate
+Deprecated
+DOMMouseScroll
+Non-standard
+
+Deprecated
+focusfocusinfocusoutfullscreenchangefullscreenerrorgesturechange
+Non-standard
+gestureend
+Non-standard
+gesturestart
+Non-standard
+gotpointercapturekeydownkeypress
+Deprecated
+keyuplostpointercapturemousedownmouseentermouseleavemousemovemouseoutmouseovermouseupmousewheel
+Non-standard
+
+Deprecated
+MozMousePixelScroll
+Non-standard
+
+Deprecated
+pastepointercancelpointerdownpointerenterpointerleavepointermovepointeroutpointeroverpointerupscrollscrollendsecuritypolicyviolationtouchcanceltouchendtouchmovetouchstarttransitioncanceltransitionendtransitionruntransitionstartwebkitmouseforcechanged 
+Non-standard
+webkitmouseforcedown
+Non-standard
+webkitmouseforceup
+Non-standard
+webkitmouseforcewillbegin
+Non-standard
+wheelInheritance:NodeEventTargetIn this articleSyntaxEvent typeEvent propertiesSpecificationsBrowser compatibilitySee alsoElement: webkitmouseforcechanged eventNon-standard: This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.
+The non-standard webkitmouseforcechanged event is fired by Safari each time the amount of pressure changes on the trackpad/touchscreen.
+webkitmouseforcechanged is a proprietary, WebKit-specific event introduced by Apple to support their Force Touch events feature.
+This event first fires after the mousedown event and stops firing before the mouseup event.SyntaxUse the event name in methods like addEventListener(), or set an event handler property.
+addEventListener("webkitmouseforcechanged", (event) => {});
+
+onwebkitmouseforcechanged = (event) => {};
+Event typeA MouseEvent. Inherits from Event.
+
+
+
+      Event
+    
+
+
+
+
+
+
+      UIEvent
+    
+
+
+
+
+
+
+      MouseEvent
+    
+Event propertiesThis interface also inherits properties of its parents, UIEvent and Event.
+
+MouseEvent.altKey Read only 
+
+Returns true if the alt key was down when the mouse event was fired.
+
+MouseEvent.button Read only 
+
+The button number that was pressed (if applicable) when the mouse event was fired.
+
+MouseEvent.buttons Read only 
+
+The buttons being pressed (if any) when the mouse event was fired.
+
+MouseEvent.clientX Read only 
+
+The X coordinate of the mouse pointer in local (DOM content) coordinates.
+
+MouseEvent.clientY Read only 
+
+The Y coordinate of the mouse pointer in local (DOM content) coordinates.
+
+MouseEvent.ctrlKey Read only 
+
+Returns true if the control key was down when the mouse event was fired.
+
+MouseEvent.layerX 
+Non-standard
+ Read only 
+
+Returns the horizontal coordinate of the event relative to the current layer.
+
+MouseEvent.layerY 
+Non-standard
+ Read only 
+
+Returns the vertical coordinate of the event relative to the current layer.
+
+MouseEvent.metaKey Read only 
+
+Returns true if the meta key was down when the mouse event was fired.
+
+MouseEvent.movementX Read only 
+
+The X coordinate of the mouse pointer relative to the position of the last mousemove event.
+
+MouseEvent.movementY Read only 
+
+The Y coordinate of the mouse pointer relative to the position of the last mousemove event.
+
+MouseEvent.offsetX Read only 
+
+The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
+
+MouseEvent.offsetY Read only 
+
+The Y coordinate of the mouse pointer relative to the position of the padding edge of the target node.
+
+MouseEvent.pageX Read only 
+
+The X coordinate of the mouse pointer relative to the whole document.
+
+MouseEvent.pageY Read only 
+
+The Y coordinate of the mouse pointer relative to the whole document.
+
+MouseEvent.relatedTarget Read only 
+
+The secondary target for the event, if there is one.
+
+MouseEvent.screenX Read only 
+
+The X coordinate of the mouse pointer in global (screen) coordinates.
+
+MouseEvent.screenY Read only 
+
+The Y coordinate of the mouse pointer in global (screen) coordinates.
+
+MouseEvent.shiftKey Read only 
+
+Returns true if the shift key was down when the mouse event was fired.
+
+MouseEvent.mozPressure 
+Non-standard
+ 
+Deprecated
+ Read only 
+
+
+      The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).
+      Instead of using this deprecated (and non-standard) property, you should use PointerEvent and look at its pressure property.
+    
+
+MouseEvent.mozInputSource 
+Non-standard
+ Read only 
+
+
+      The type of device that generated the event (one of the MOZ_SOURCE_* constants).
+      This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).
+    
+
+MouseEvent.webkitForce 
+Non-standard
+ Read only 
+
+The amount of pressure applied when clicking.
+
+MouseEvent.x Read only 
+
+Alias for MouseEvent.clientX.
+
+MouseEvent.y Read only 
+
+Alias for MouseEvent.clientY.
+
+SpecificationsNot part of any specification. Apple has a description at the Mac Developer Library.Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Force Touch events
+webkitmouseforcewillbegin
+webkitmouseforcedown
+webkitmouseforceup
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 6, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

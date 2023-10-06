@@ -1,0 +1,33 @@
+Text: wholeText property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsTextwholeTextArticle ActionsEnglish (US)In this articleValueExampleSpecificationsBrowser compatibilitySee alsoDocument Object ModelTextConstructorText()Instance propertiesassignedSlotwholeText Instance methodssplitText()Inheritance:CharacterDataNodeEventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleValueExampleSpecificationsBrowser compatibilitySee alsoText: wholeText property
+  The read-only wholeText property of the Text interface
+  returns the full text of all Text nodes logically adjacent to the node.
+  The text is concatenated in document order.
+  This allows specifying any text node and obtaining all adjacent text as a single string.
+
+
+
+Note: This is similar to call Node.normalize() followed by reading the text value,
+    but without modifying the tree.
+  
+ValueA string with the concatenated text.ExampleSuppose you have the following simple paragraph within your webpage:
+<p>
+  Through-hiking is great!
+  <strong>No insipid election coverage!</strong> However,
+  <a href="https://en.wikipedia.org/wiki/Absentee_ballot">casting a ballot</a>
+  is tricky.
+</p>
+
+You decide you don't like the middle sentence, so you remove it:
+const paragraph = document.querySelector("p"); // Reads the paragraph
+paragraph.removeChild(para.childNodes[1]); // Delete the strong element
+
+Now you end up with "Through-hiking is great! However, casting a ballot is tricky.", with two nodes before the hyperlink:
+
+A Text containing the string "Through-hiking is great!"
+A second Text node containing the string " However, "
+
+To get those two nodes at once, you would call para.childNodes[0].wholeText:
+console.log(`'${paragraph.childNodes[0].wholeText}'`); // 'Through-hiking is great!   However, '
+SpecificationsSpecificationDOM Standard # ref-for-dom-text-wholetextâ Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The Text interface it belongs to.
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 8, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

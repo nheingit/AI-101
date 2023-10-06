@@ -1,0 +1,18 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/element/index.md
+
+# Original Wiki contributors
+sideshowbarker
+å°é»å®¢
+alattalatta
+bripmccann
+ajhsu
+championshuttler
+S-Dey
+karuthan
+mfluehr
+xgqfrms-GitHub
+Jeremie
+Andrew_Pfeiffer
+klez
+teoli

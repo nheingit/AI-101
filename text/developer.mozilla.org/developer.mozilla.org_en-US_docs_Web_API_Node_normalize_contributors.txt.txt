@@ -1,0 +1,24 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/node/normalize/index.md
+
+# Original Wiki contributors
+sideshowbarker
+nakhodkiin
+mfluehr
+connorshea
+fscholz
+Watilin
+teoli
+kscarfone
+Reachmeatshivam
+Santhosh
+Sheppy
+mattbasta
+ethertank
+ziyunfei
+Rob W
+Mgjbot
+Nickolay
+Ptak82
+Dria
+JesseW

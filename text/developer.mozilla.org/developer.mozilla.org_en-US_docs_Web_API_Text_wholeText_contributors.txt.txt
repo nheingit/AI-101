@@ -1,0 +1,14 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/text/wholetext/index.md
+
+# Original Wiki contributors
+cki
+nakhodkiin
+fscholz
+david_ross
+mattwojo
+LouisLazaris
+teoli
+kollishivagangadhar
+Reachmeatshivam
+Sheppy

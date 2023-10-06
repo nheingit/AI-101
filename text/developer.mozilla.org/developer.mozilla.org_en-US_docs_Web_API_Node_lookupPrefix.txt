@@ -1,0 +1,59 @@
+Node: lookupPrefix() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsNodelookupPrefix()Article ActionsEnglish (US)In this articleSyntaxExampleSpecificationsBrowser compatibilitySee alsoDocument Object ModelNodeInstance propertiesbaseURIchildNodesfirstChildisConnectedlastChildnextSiblingnodeNamenodeTypenodeValueownerDocumentparentElementparentNodepreviousSiblingtextContentInstance methodsappendChild()cloneNode()compareDocumentPosition()contains()getRootNode()hasChildNodes()insertBefore()isDefaultNamespace()isEqualNode()isSameNode()lookupNamespaceURI()lookupPrefix() normalize()removeChild()replaceChild()EventsselectstartInheritance:EventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExampleSpecificationsBrowser compatibilitySee alsoNode: lookupPrefix() method
+  The lookupPrefix() method of the Node interface
+  returns a string containing the prefix for a given namespace URI, if present,
+  and null if not.
+  When multiple prefixes are possible, the first prefix is returned.
+SyntaxlookupPrefix(namespace)
+Parameters
+namespace
+
+A string containing the namespace to look the prefix up.
+
+Note: This parameter is not optional but can be set to null.
+
+
+Return value
+  A string containing the corresponding prefix, or null if none has been found.
+  If namespace is null, or the empty string, lookupPrefix() returns null.
+
+
+  If the node is a DocumentType or a DocumentFragment,
+  lookupPrefix() always returns null.
+ExamplePrefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+<svg xmlns:t="http://www.w3.org/2000/svg" height="1"></svg>
+<button>Click to see the results</button>
+
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
+
+  const result = document.getElementsByTagName("output");
+  result[0].value = aHtmlElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
+  result[1].value = aHtmlElt.lookupPrefix(
+    "http://www.w3.org/XML/1998/namespace"
+  ); // false
+  result[2].value = aHtmlElt.lookupPrefix("http://www.w3.org/TR/html4/"); // true
+  result[3].value = aHtmlElt.lookupPrefix("https://www.w3.org/1999/xlink"); // false
+  result[4].value = aSvgElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
+  result[5].value = aSvgElt.lookupPrefix("https://www.w3.org/1999/xlink"); // true
+  result[6].value = aSvgElt.lookupPrefix(
+    "http://www.w3.org/XML/1998/namespace"
+  ); // false
+});
+SpecificationsSpecificationDOM Standard # dom-node-lookupprefixBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

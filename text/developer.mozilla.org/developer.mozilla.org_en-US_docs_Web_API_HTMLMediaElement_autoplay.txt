@@ -1,0 +1,60 @@
+HTMLMediaElement: autoplay property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsHTMLMediaElementautoplayArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoHTML DOM APIHTMLMediaElementInstance propertiesaudioTracksautoplay bufferedcontroller
+Non-standard
+
+Deprecated
+controlscontrolsListcrossOrigincurrentSrccurrentTimedefaultMuteddefaultPlaybackRatedisableRemotePlaybackdurationendederrorloopmediaGroup
+Non-standard
+
+Deprecated
+mediaKeysmutednetworkStatepausedplaybackRatepreservesPitchreadyStateseekablesinkId
+Experimental
+srcsrcObjecttextTracksvideoTracksvolumeInstance methodscanPlayType()captureStream()fastSeek()load()pause()play()seekToNextFrame()
+Deprecated
+setMediaKeys()setSinkId()EventsabortcanplaycanplaythroughdurationchangeemptiedencryptedendederrorloadeddataloadedmetadataloadstartpauseplayplayingprogressratechangeseekedseekingstalledsuspendtimeupdatevolumechangewaitingInheritance:HTMLElementElementNodeEventTargetRelated pages for HTML DOMBeforeUnloadEventDOMStringMapErrorEventHTMLAnchorElementHTMLAreaElementHTMLAudioElementHTMLBRElementHTMLBaseElementHTMLBodyElementHTMLButtonElementHTMLCanvasElementHTMLDListElementHTMLDataElementHTMLDataListElementHTMLDialogElementHTMLDivElementHTMLDocumentHTMLElementHTMLEmbedElementHTMLFieldSetElementHTMLFormControlsCollectionHTMLFormElementHTMLFrameSetElementHTMLHRElementHTMLHeadElementHTMLHeadingElementHTMLHtmlElementHTMLIFrameElementHTMLImageElementHTMLInputElementHTMLLIElementHTMLLabelElementHTMLLegendElementHTMLLinkElementHTMLMapElementHTMLMetaElementHTMLMeterElementHTMLModElementHTMLOListElementHTMLObjectElementHTMLOptGroupElementHTMLOptionElementHTMLOptionsCollectionHTMLOutputElementHTMLParagraphElementHTMLPictureElementHTMLPreElementHTMLProgressElementHTMLQuoteElementHTMLScriptElementHTMLSelectElementHTMLSourceElementHTMLSpanElementHTMLStyleElementHTMLTableCaptionElementHTMLTableCellElementHTMLTableColElementHTMLTableElementHTMLTableRowElementHTMLTableSectionElementHTMLTemplateElementHTMLTextAreaElementHTMLTimeElementHTMLTitleElementHTMLTrackElementHTMLUListElementHTMLUnknownElementHTMLVideoElementHashChangeEventHistoryImageDataLocationMessageChannelMessageEventMessagePortNavigatorPageTransitionEventPluginPluginArrayPromiseRejectionEventRadioNodeListUserActivationValidityStateWindowWorkletGlobalScopeIn this articleValueExamplesSpecificationsBrowser compatibilitySee alsoHTMLMediaElement: autoplay property
+  The HTMLMediaElement.autoplay
+  property reflects the autoplay HTML attribute, indicating
+  whether playback should automatically begin as soon as enough media is available to do
+  so without interruption.
+
+
+  A media element whose source is a MediaStream and whose
+  autoplay property is true will begin playback when it becomes
+  active (that is, when MediaStream.active becomes true).
+
+
+
+Note: Sites which automatically play audio (or videos with an audio
+    track) can be an unpleasant experience for users, so it should be avoided when
+    possible. If you must offer autoplay functionality, you should make it opt-in
+    (requiring a user to specifically enable it). However, autoplay can be useful when
+    creating media elements whose source will be set at a later time, under user control.
+  
+
+
+  For a much more in-depth look at autoplay, autoplay blocking, and how to respond when
+  autoplay is blocked by the user's browser, see our article Autoplay guide for media and Web Audio APIs.
+Value
+  A boolean value which is true if the media element will
+  begin playback as soon as enough content has loaded to allow it to do so without
+  interruption.
+
+
+
+Note: Some browsers offer users the ability to override
+    autoplay in order to prevent disruptive audio or video from playing
+    without permission or in the background. Do not rely on autoplay actually
+    starting playback and instead use play
+    event.
+  
+Examples<video id="video" controls>
+  <source
+    src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&profile_id=165" />
+</video>
+
+// Disable autoplay (recommended)
+// false is the default value
+document.querySelector("#video").autoplay = false;
+SpecificationsSpecificationHTML Standard # dom-media-autoplayBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+HTMLMediaElement: Interface used to define the HTMLMediaElement.autoplay property
+<audio>, <video>
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

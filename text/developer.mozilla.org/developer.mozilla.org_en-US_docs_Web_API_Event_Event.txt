@@ -1,0 +1,59 @@
+Event: Event() constructor - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsEventEvent()Article ActionsEnglish (US)In this articleSyntaxExampleSpecificationsBrowser compatibilitySee alsoDocument Object ModelEventConstructorEvent() Instance propertiesbubblescancelablecancelBubble
+Deprecated
+composedcurrentTargetdefaultPreventedeventPhaseexplicitOriginalTarget
+Non-standard
+isTrustedoriginalTarget
+Non-standard
+returnValue
+Deprecated
+srcElement
+Deprecated
+targettimeStamptypeInstance methodscomposedPath()initEvent()
+Deprecated
+preventDefault()stopImmediatePropagation()stopPropagation()Related pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExampleSpecificationsBrowser compatibilitySee alsoEvent: Event() constructorThe Event() constructor creates a new Event object. An event created in this way is called a synthetic event, as opposed to an event fired by the browser, and can be dispatched by a script.Syntaxnew Event(type)
+new Event(type, options)
+Values
+type
+
+A string with the name of the event.
+
+options Optional
+
+An object with the following properties:
+
+bubbles Optional
+
+
+          A boolean value indicating whether the event bubbles. The default is
+          false.
+        
+
+cancelable Optional
+
+
+          A boolean value indicating whether the event can be cancelled. The
+          default is false.
+        
+
+composed Optional
+
+
+          A boolean value indicating whether the event will trigger listeners
+          outside of a shadow root (see Event.composed for more details). The
+          default is false.
+        
+
+
+
+Return valueA new Event object.Example// create a look event that bubbles up and cannot be canceled
+
+const evt = new Event("look", { bubbles: true, cancelable: false });
+document.dispatchEvent(evt);
+
+// event can be dispatched from any element, not only the document
+myDiv.dispatchEvent(evt);
+SpecificationsSpecificationDOM Standard # ref-for-dom-event-eventBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Event
+EventTarget.dispatchEvent()
+Creating and triggering events
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

@@ -1,0 +1,333 @@
+<svg> - SVG: Scalable Vector Graphics | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesSVG: Scalable Vector GraphicsSVG element reference<svg>Article ActionsEnglish (US)In this articleExampleAttributesUsage notesSpecificationsBrowser compatibility
+
+SVG
+Tutorials
+
+
+Introducing SVG from scratch
+
+Introduction
+Getting started
+Positions
+Basic shapes
+Paths
+Fills and Strokes
+Gradients in SVG
+Patterns
+Texts
+Basic transformations
+Clipping and masking
+Other content in SVG
+Filter effects
+SVG fonts
+SVG image element
+Tools for SVG
+SVG and CSS
+
+
+
+Reference
+
+
+Elements
+<a><animate><animateMotion><animateTransform><circle><clipPath><cursor>
+Deprecated
+<defs><desc><ellipse><feBlend><feColorMatrix><feComponentTransfer><feComposite><feConvolveMatrix><feDiffuseLighting><feDisplacementMap><feDistantLight><feDropShadow><feFlood><feFuncA><feFuncB><feFuncG><feFuncR><feGaussianBlur><feImage><feMerge><feMergeNode><feMorphology><feOffset><fePointLight><feSpecularLighting><feSpotLight><feTile><feTurbulence><filter><font-face-format>
+Deprecated
+<font-face-name>
+Deprecated
+<font-face-src>
+Deprecated
+<font-face-uri>
+Deprecated
+<font-face>
+Deprecated
+<font>
+Deprecated
+<foreignObject><g><glyph>
+Deprecated
+<glyphRef>
+Deprecated
+<hkern>
+Deprecated
+<image><line><linearGradient><marker><mask><metadata><missing-glyph>
+Deprecated
+<mpath><path><pattern><polygon><polyline><radialGradient><rect><script><set><stop><style><svg><switch><symbol><text><textPath><title> â the SVG accessible name element<tref>
+Deprecated
+<tspan><use><view><vkern>
+Deprecated
+
+
+
+
+
+Attributes
+accent-height
+Deprecated
+accumulateadditivealignment-baselinealphabetic
+Deprecated
+amplitudearabic-form
+Deprecated
+ascent
+Deprecated
+attributeNameattributeType
+Deprecated
+azimuthbaseFrequencybaseline-shiftbaseProfile
+Deprecated
+bbox
+Deprecated
+beginbiasbycalcModecap-height
+Deprecated
+classclip
+Deprecated
+clip-pathclip-ruleclipPathUnitscolorcolor-interpolationcolor-interpolation-filterscolor-profile
+Deprecated
+contentScriptType
+Deprecated
+contentStyleType
+Deprecated
+cursorcxcyddata-*descent
+Deprecated
+diffuseConstantdirectiondisplaydivisordominant-baselinedurdxdyedgeModeelevationenable-background
+Deprecated
+endexponentfillfill-opacityfill-rulefilterfilterRes
+Deprecated
+filterUnitsflood-colorflood-opacityfont-familyfont-sizefont-size-adjustfont-stretchfont-stylefont-variantfont-weightfrfromfxfyg1
+Deprecated
+g2
+Deprecated
+glyph-name
+Deprecated
+glyph-orientation-horizontal
+Deprecated
+glyph-orientation-vertical
+Deprecated
+gradientTransformgradientUnitshanging
+Deprecated
+heighthoriz-adv-x
+Deprecated
+horiz-origin-x
+Deprecated
+horiz-origin-y
+Deprecated
+hrefidideographic
+Deprecated
+image-renderinginin2interceptk
+Deprecated
+k1k2k3k4kernelMatrixkernelUnitLengthkerning
+Deprecated
+keyPointskeySplineskeyTimeslanglengthAdjustletter-spacinglighting-colorlimitingConeAnglemarker-endmarker-midmarker-startmarkerHeightmarkerUnitsmarkerWidthmaskmaskContentUnitsmaskUnitsmathematical
+Deprecated
+maxmediamethod
+Experimental
+minmodename
+Deprecated
+numOctavesonclickopacityoperatororderorientorientation
+Deprecated
+originoverflowoverline-positionoverline-thicknesspaint-orderpanose-1
+Deprecated
+pathpathLengthpatternContentUnitspatternTransformpatternUnitspointer-eventspointspointsAtXpointsAtYpointsAtZpreserveAlphapreserveAspectRatioprimitiveUnitsrradiusrefXrefYrepeatCountrepeatDurrequiredFeatures
+Deprecated
+restartresultrotate
+Experimental
+rxryscaleseedshape-renderingside
+Experimental
+slope
+Deprecated
+spacingspecularConstantspecularExponentspreadMethodstartOffsetstdDeviationstemh
+Deprecated
+stemv
+Deprecated
+stitchTilesstop-colorstop-opacitystrikethrough-positionstrikethrough-thicknessstring
+Deprecated
+strokestroke-dasharraystroke-dashoffsetstroke-linecapstroke-linejoinstroke-miterlimitstroke-opacitystroke-widthstylesurfaceScaleSVG attribute: crossoriginSVG Conditional Processing AttributesSVG Core AttributesSVG Event AttributesSVG Presentation AttributesSVG Styling AttributessystemLanguagetabindextableValuestargettargetXtargetYtext-anchortext-decorationtext-renderingtextLengthtotransformtransform-origintypeu1
+Deprecated
+u2
+Deprecated
+underline-positionunderline-thicknessunicode
+Deprecated
+unicode-bidiunicode-range
+Deprecated
+units-per-em
+Deprecated
+v-alphabetic
+Deprecated
+v-hanging
+Deprecated
+v-ideographic
+Deprecated
+v-mathematical
+Deprecated
+valuesvector-effectversion
+Deprecated
+vert-adv-y
+Deprecated
+vert-origin-x
+Deprecated
+vert-origin-y
+Deprecated
+viewBoxviewTarget
+Deprecated
+visibilitywidthwidths
+Deprecated
+word-spacingwriting-modexx-height
+Deprecated
+x1x2xChannelSelectorxlink:arcrole
+Deprecated
+xlink:href
+Deprecated
+xlink:show
+Deprecated
+xlink:title
+Deprecated
+xlink:type
+Deprecated
+xml:base
+Deprecated
+xml:lang
+Deprecated
+xml:space
+Deprecated
+yy1y2yChannelSelectorzzoomAndPan
+Deprecated
+
+
+
+Guides
+
+
+Applying SVG effects to HTML content
+Content type
+Namespaces crash course
+SVG animation with SMIL
+SVG as an Image
+
+
+
+In this articleExampleAttributesUsage notesSpecificationsBrowser compatibility<svg>The svg element is a container that defines a new coordinate system and viewport. It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
+
+Note: The xmlns attribute is only required on the outermost svg element of SVG documents, or inside HTML documents with XML serialization. It is unnecessary for inner svg elements or inside HTML documents with HTML serialization.
+Examplehtml,
+body,
+svg {
+  height: 100%;
+}
+
+<svg
+  viewBox="0 0 300 100"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
+  <circle cx="50" cy="50" r="40" />
+  <circle cx="150" cy="50" r="4" />
+
+  <svg viewBox="0 0 10 10" x="200" width="100">
+    <circle cx="5" cy="5" r="4" />
+  </svg>
+</svg>
+Attributes
+baseProfile 
+Deprecated
+
+
+
+      The minimum SVG language profile that the document requires.
+      Value type: <string> ; Default value: none; Animatable: no
+
+
+contentScriptType 
+Deprecated
+
+
+
+      The default scripting language used by the SVG fragment.
+      Value type: <string> ; Default value: application/ecmascript; Animatable: no
+
+
+contentStyleType 
+Deprecated
+
+
+
+      The default style sheet language used by the SVG fragment.
+      Value type: <string> ; Default value: text/css; Animatable: no
+
+
+height
+
+
+      The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
+      Value type: <length>|<percentage> ; Default value: auto; Animatable: yes
+
+
+preserveAspectRatio
+
+
+      How the svg fragment must be deformed if it is displayed with a different aspect ratio.
+      Value type: (none| xMinYMin| xMidYMin| xMaxYMin| xMinYMid| xMidYMid| xMaxYMid| xMinYMax| xMidYMax| xMaxYMax) (meet|slice)? ; Default value: xMidYMid meet; Animatable: yes
+
+
+version 
+Deprecated
+
+
+
+      Which version of SVG is used for the inner content of the element.
+      Value type: <number> ; Default value: none; Animatable: no
+
+
+viewBox
+
+
+      The SVG viewport coordinates for the current SVG fragment.
+      Value type: <list-of-numbers> ; Default value: none; Animatable: yes
+
+
+width
+
+
+      The displayed width of the rectangular viewport. (Not the width of its coordinate system.)
+      Value type: <length>|<percentage> ; Default value: auto; Animatable: yes
+
+
+x
+
+
+      The displayed x coordinate of the svg container. No effect on outermost svg elements.
+      Value type: <length>|<percentage> ; Default value: 0; Animatable: yes
+
+
+y
+
+
+      The displayed y coordinate of the svg container. No effect on outermost svg elements.
+      Value type: <length>|<percentage> ; Default value: 0; Animatable: yes
+
+
+
+
+Note: Starting with SVG2, x, y, width, and height are Geometry Properties, meaning these attributes can also be used as CSS properties.
+Global attributes
+Core Attributes
+
+Most notably: id, tabindex
+
+Styling Attributes
+class, style
+Conditional Processing Attributes
+
+Most notably: requiredExtensions, systemLanguage
+
+Event Attributes
+
+Global event attributes, Graphical event attributes, Document event attributes, Document element event attributes
+
+Presentation Attributes
+
+Most notably: clip-path, clip-rule, color, color-interpolation, color-rendering, cursor, display, fill, fill-opacity, fill-rule, filter, mask, opacity, pointer-events, shape-rendering, stroke, stroke-dasharray, stroke-dashoffset, stroke-linecap, stroke-linejoin, stroke-miterlimit, stroke-opacity, stroke-width, transform, vector-effect, visibility
+
+Aria Attributes
+
+aria-activedescendant, aria-atomic, aria-autocomplete, aria-busy, aria-checked, aria-colcount, aria-colindex, aria-colspan, aria-controls, aria-current, aria-describedby, aria-details, aria-disabled, aria-dropeffect, aria-errormessage, aria-expanded, aria-flowto, aria-grabbed, aria-haspopup, aria-hidden, aria-invalid, aria-keyshortcuts, aria-label, aria-labelledby, aria-level, aria-live, aria-modal, aria-multiline, aria-multiselectable, aria-orientation, aria-owns, aria-placeholder, aria-posinset, aria-pressed, aria-readonly, aria-relevant, aria-required, aria-roledescription, aria-rowcount, aria-rowindex, aria-rowspan, aria-selected, aria-setsize, aria-sort, aria-valuemax, aria-valuemin, aria-valuenow, aria-valuetext, role
+
+Usage notesCategoriesContainer element, Structural elementPermitted contentAny number of the following elements, in any order:Animation elementsDescriptive elementsShape elementsStructural elementsGradient elements<a>, <clipPath>, <color-profile>, <cursor>, <filter>, <font>, <font-face>, <foreignObject>, <image>, <marker>, <mask>, <pattern>, <script>, <style>, <switch>, <text>, <view>SpecificationsSpecificationScalable Vector Graphics (SVG) 2 # NewDocumentBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 17, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

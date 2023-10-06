@@ -1,0 +1,6 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/svg/attribute/events/index.md
+
+# Original Wiki contributors
+MelchiorIm3Tal
+Jeremie

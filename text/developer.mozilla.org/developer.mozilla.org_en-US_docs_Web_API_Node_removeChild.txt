@@ -1,0 +1,78 @@
+Node: removeChild() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsNoderemoveChild()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocument Object ModelNodeInstance propertiesbaseURIchildNodesfirstChildisConnectedlastChildnextSiblingnodeNamenodeTypenodeValueownerDocumentparentElementparentNodepreviousSiblingtextContentInstance methodsappendChild()cloneNode()compareDocumentPosition()contains()getRootNode()hasChildNodes()insertBefore()isDefaultNamespace()isEqualNode()isSameNode()lookupNamespaceURI()lookupPrefix()normalize()removeChild() replaceChild()EventsselectstartInheritance:EventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoNode: removeChild() method
+  The removeChild() method of the Node interface
+  removes a child node from the DOM and returns the removed node.
+
+
+
+Note: As long as a reference is kept on the removed child,
+    it still exists in memory, but is no longer part of the DOM.
+    It can still be reused later in the code.
+  
+
+    If the return value of removeChild() is not stored, and no other reference is kept,
+    it will be automatically deleted from memory after a short time.
+  
+
+Unlike Node.cloneNode() the return value preserves the EventListener objects associated with it.SyntaxremoveChild(child)
+Parameters
+child
+
+A Node that is the child node to be removed from the DOM.
+
+Exception
+NotFoundError DOMException
+
+Thrown if the child is not a child of the node.
+
+TypeError
+
+Thrown if the child is null.
+
+ExamplesSimple examplesGiven this HTML:
+<div id="top">
+  <div id="nested"></div>
+</div>
+
+To remove a specified element when knowing its parent node:
+let d = document.getElementById("top");
+let d_nested = document.getElementById("nested");
+let throwawayNode = d.removeChild(d_nested);
+
+To remove a specified element without having to specify its parent node:
+let node = document.getElementById("nested");
+if (node.parentNode) {
+  node.parentNode.removeChild(node);
+}
+
+To remove all children from an element:
+let element = document.getElementById("idOfParent");
+while (element.firstChild) {
+  element.removeChild(element.firstChild);
+}
+Causing a TypeError<!--Sample HTML code-->
+<div id="top"></div>
+
+let top = document.getElementById("top");
+let nested = document.getElementById("nested");
+
+// Throws Uncaught TypeError
+let garbage = top.removeChild(nested);
+Causing a NotFoundError<!--Sample HTML code-->
+<div id="top">
+  <div id="nested"></div>
+</div>
+
+let top = document.getElementById("top");
+let nested = document.getElementById("nested");
+
+// This first call correctly removes the node
+let garbage = top.removeChild(nested);
+
+// Throws NotFoundError
+garbage = top.removeChild(nested);
+SpecificationsSpecificationDOM Standard # dom-node-removechildBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Node.replaceChild()
+Node.parentNode
+Element.remove()
+Node.cloneNode()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

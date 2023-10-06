@@ -1,0 +1,46 @@
+Effective connection type - MDN Web Docs Glossary: Definitions of Web-related terms | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusMDN Web Docs Glossary: Definitions of Web-related termsEffective connection typeArticle ActionsEnglish (US)In this articleSee alsoIn this articleSee alsoEffective connection typeEffective connection type (ECT) refers to the measured network performance, returning a cellular connection type, like 3G, even if the actual connection is tethered broadband or Wi-Fi, based on the time between the browser requesting a page and effective type of the connection.
+The values of 'slow-2g', '2g', '3g', and '4g' are determined using observed round-trip times and downlink values.
+
+
+
+ECT
+Minimum RTT
+Maximum downlink
+Explanation
+
+
+
+
+slow-2g
+2000ms
+50 Kbps
+The network is suited for small transfers only such as text-only pages.
+
+
+2g
+1400ms
+70 Kbps
+The network is suited for transfers of small images.
+
+
+3g
+270ms
+700 Kbps
+The network is suited for transfers of large assets such as high resolution images, audio, and SD video.
+
+
+4g
+0ms
+â
+The network is suited for HD video, real-time video, etc.
+
+
+
+effectiveType is a property of the Network Information API, exposed to JavaScript via the navigator.connection object. To see your effective connection type, open the console of the developer tools of a supporting browser and enter the following:
+navigator.connection.effectiveType;
+See also
+Network Information API
+NetworkInformation
+NetworkInformation.effectiveType
+ECT
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 6, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

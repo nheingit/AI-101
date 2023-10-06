@@ -1,0 +1,56 @@
+HTMLMediaElement: canplay event - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsHTMLMediaElementcanplayArticle ActionsEnglish (US)In this articleSyntaxEvent typeExamplesSpecificationsBrowser compatibilityRelated EventsSee alsoHTMLMediaElementInstance propertiesaudioTracksautoplaybufferedcontroller
+Non-standard
+
+Deprecated
+controlscontrolsListcrossOrigincurrentSrccurrentTimedefaultMuteddefaultPlaybackRatedisableRemotePlaybackdurationendederrorloopmediaGroup
+Non-standard
+
+Deprecated
+mediaKeysmutednetworkStatepausedplaybackRatepreservesPitchreadyStateseekablesinkId
+Experimental
+srcsrcObjecttextTracksvideoTracksvolumeInstance methodscanPlayType()captureStream()fastSeek()load()pause()play()seekToNextFrame()
+Deprecated
+setMediaKeys()setSinkId()Eventsabortcanplay canplaythroughdurationchangeemptiedencryptedendederrorloadeddataloadedmetadataloadstartpauseplayplayingprogressratechangeseekedseekingstalledsuspendtimeupdatevolumechangewaitingInheritance:HTMLElementElementNodeEventTargetIn this articleSyntaxEvent typeExamplesSpecificationsBrowser compatibilityRelated EventsSee alsoHTMLMediaElement: canplay eventThe canplay event is fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
+This event is not cancelable and does not bubble.SyntaxUse the event name in methods like addEventListener(), or set an event handler property.
+addEventListener("canplay", (event) => {});
+
+oncanplay = (event) => {};
+Event typeA generic Event.ExamplesThese examples add an event listener for the HTMLMediaElement's canplay event, then post a message when that event handler has reacted to the event firing.
+Using addEventListener():
+const video = document.querySelector("video");
+
+video.addEventListener("canplay", (event) => {
+  console.log("Video can start, but not sure it will play through.");
+});
+
+Using the oncanplay event handler property:
+const video = document.querySelector("video");
+
+video.oncanplay = (event) => {
+  console.log("Video can start, but not sure it will play through.");
+};
+SpecificationsSpecificationHTML Standard # event-media-canplayHTML Standard # handler-oncanplayBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Related Events
+The HTMLMediaElement playing event
+The HTMLMediaElement waiting event
+The HTMLMediaElement seeking event
+The HTMLMediaElement seeked event
+The HTMLMediaElement ended event
+The HTMLMediaElement loadedmetadata event
+The HTMLMediaElement loadeddata event
+The HTMLMediaElement canplay event
+The HTMLMediaElement canplaythrough event
+The HTMLMediaElement durationchange event
+The HTMLMediaElement timeupdate event
+The HTMLMediaElement play event
+The HTMLMediaElement pause event
+The HTMLMediaElement ratechange event
+The HTMLMediaElement volumechange event
+The HTMLMediaElement suspend event
+The HTMLMediaElement emptied event
+The HTMLMediaElement stalled event
+See also
+HTMLAudioElement
+HTMLVideoElement
+<audio>
+<video>
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

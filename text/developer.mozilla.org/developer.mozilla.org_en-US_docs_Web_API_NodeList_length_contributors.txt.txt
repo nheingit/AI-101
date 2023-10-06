@@ -1,0 +1,22 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/nodelist/length/index.md
+
+# Original Wiki contributors
+sideshowbarker
+mfluehr
+mfuji09
+jamesdhurd
+jadjoubran
+ExE-Boss
+fscholz
+MHasan
+kscarfone
+vishu_gawli
+Sheppy
+Mgjbot
+Nickolay
+Jabez
+Ptak82
+Dria
+JesseW
+Callek

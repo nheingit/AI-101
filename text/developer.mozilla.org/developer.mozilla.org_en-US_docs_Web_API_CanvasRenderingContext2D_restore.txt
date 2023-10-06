@@ -1,0 +1,49 @@
+CanvasRenderingContext2D: restore() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCanvasRenderingContext2Drestore()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2DInstance propertiescanvasdirectionfillStylefilterfontfontKerningfontStretch
+Experimental
+fontVariantCaps
+Experimental
+globalAlphaglobalCompositeOperationimageSmoothingEnabledimageSmoothingQualityletterSpacing
+Experimental
+lineCaplineDashOffsetlineJoinlineWidthmiterLimitshadowBlurshadowColorshadowOffsetXshadowOffsetYstrokeStyletextAligntextBaselinetextRendering
+Experimental
+wordSpacing
+Experimental
+Instance methodsarc()arcTo()beginPath()bezierCurveTo()clearRect()clip()closePath()createConicGradient()createImageData()createLinearGradient()createPattern()createRadialGradient()drawFocusIfNeeded()drawImage()ellipse()fill()fillRect()fillText()getContextAttributes()getImageData()getLineDash()getTransform()isContextLost()
+Experimental
+isPointInPath()isPointInStroke()lineTo()measureText()moveTo()putImageData()quadraticCurveTo()rect()reset()resetTransform()restore() rotate()roundRect()save()scale()scrollPathIntoView()
+Experimental
+setLineDash()setTransform()stroke()strokeRect()strokeText()transform()translate()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2D: restore() method
+  The
+  CanvasRenderingContext2D.restore()
+  method of the Canvas 2D API restores the most recently saved canvas state by popping the
+  top entry in the drawing state stack. If there is no saved state, this method does
+  nothing.
+
+For more information about the drawing state, see CanvasRenderingContext2D.save().Syntaxrestore()
+ParametersNone.Return valueNone (undefined).ExamplesRestoring a saved state
+  This example uses the save() method to save the current state and
+  restore() to restore it later, so that you are able to draw a rect with the
+  current state later.
+
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Save the current state
+ctx.save();
+
+ctx.fillStyle = "green";
+ctx.fillRect(10, 10, 100, 100);
+
+// Restore to the state saved by the most recent call to save()
+ctx.restore();
+
+ctx.fillRect(150, 40, 100, 100);
+
+ResultSpecificationsSpecificationHTML Standard # dom-context-2d-restore-devBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The interface defining this method: CanvasRenderingContext2D
+CanvasRenderingContext2D.save()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

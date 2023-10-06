@@ -1,0 +1,18 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/seo/index.md
+
+# Original Wiki contributors
+alattalatta
+SphinxKnight
+medikalradikal
+chrisdavidmills
+saveus
+jsx
+carlossuarez
+hbloomer
+klez
+Andrew_Pfeiffer
+Jeremie
+Afnank123
+Biraj
+tregagnon

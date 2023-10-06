@@ -1,0 +1,11 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/crawler/index.md
+
+# Original Wiki contributors
+mfuji09
+SebastienParis
+PetiPandaRou
+Andrew_Pfeiffer
+klez
+hbloomer
+jsx

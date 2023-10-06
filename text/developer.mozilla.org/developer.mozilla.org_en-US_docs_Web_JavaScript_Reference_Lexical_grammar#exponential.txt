@@ -1,0 +1,837 @@
+Lexical grammar - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceLexical grammarArticle ActionsEnglish (US)In this articleFormat-control charactersWhite spaceLine terminatorsCommentsIdentifiersKeywordsLiteralsAutomatic semicolon insertionSpecificationsBrowser compatibilitySee also
+
+JavaScript
+Tutorials
+
+
+Complete beginners
+
+JavaScript basics
+JavaScript first steps
+JavaScript building blocks
+Introducing JavaScript objects
+
+
+
+
+
+JavaScript Guide
+
+Introduction
+Grammar and types
+Control flow and error handling
+Loops and iteration
+Functions
+Expressions and operators
+Numbers and dates
+Text formatting
+Regular expressions
+Indexed collections
+Keyed collections
+Working with objects
+Using classes
+Using promises
+JavaScript typed arrays
+Iterators and generators
+Meta programming
+JavaScript modules
+
+
+
+
+
+Intermediate
+
+Client-side JavaScript frameworks
+Client-side web APIs
+Language overview
+JavaScript data structures
+Equality comparisons and sameness
+Enumerability and ownership of properties
+Closures
+
+
+
+
+
+Advanced
+
+Inheritance and the prototype chain
+Memory Management
+Concurrency model and Event Loop
+
+
+
+References
+
+
+Built-in objects
+OverviewAggregateErrorArrayArrayBufferAsyncFunctionAsyncGeneratorAsyncGeneratorFunctionAsyncIteratorAtomicsBigIntBigInt64ArrayBigUint64ArrayBooleanDataViewDatedecodeURI()decodeURIComponent()encodeURI()encodeURIComponent()Errorescape()
+Deprecated
+eval()EvalErrorFinalizationRegistryFloat32ArrayFloat64ArrayFunctionGeneratorGeneratorFunctionglobalThisInfinityInt16ArrayInt32ArrayInt8ArrayInternalError
+Non-standard
+IntlisFinite()isNaN()IteratorJSONMapMathNaNNumberObjectparseFloat()parseInt()PromiseProxyRangeErrorReferenceErrorReflectRegExpSetSharedArrayBufferStringSymbolSyntaxErrorTypedArrayTypeErrorUint16ArrayUint32ArrayUint8ArrayUint8ClampedArrayundefinedunescape()
+Deprecated
+URIErrorWeakMapWeakRefWeakSet
+
+
+
+
+Expressions & operators
+OverviewAddition (+)Addition assignment (+=)Assignment (=)async function expressionasync function* expressionawaitBitwise AND (&)Bitwise AND assignment (&=)Bitwise NOT (~)Bitwise OR (|)Bitwise OR assignment (|=)Bitwise XOR (^)Bitwise XOR assignment (^=)class expressionComma operator (,)Conditional (ternary) operatorDecrement (--)delete operatorDestructuring assignmentDivision (/)Division assignment (/=)Equality (==)Exponentiation (**)Exponentiation assignment (**=)Function expressionfunction* expressionGreater than (>)Greater than or equal (>=)Grouping operator ( )import.metaimport()in operatorIncrement (++)Inequality (!=)instanceofLeft shift (<<)Left shift assignment (<<=)Less than (<)Less than or equal (<=)Logical AND (&&)Logical AND assignment (&&=)Logical NOT (!)Logical OR (||)Logical OR assignment (||=)Multiplication (*)Multiplication assignment (*=)new operatornew.targetnullNullish coalescing assignment (??=)Nullish coalescing operator (??)Object initializerOperator precedenceOptional chaining (?.)Property accessorsRemainder (%)Remainder assignment (%=)Right shift (>>)Right shift assignment (>>=)Spread syntax (...)Strict equality (===)Strict inequality (!==)Subtraction (-)Subtraction assignment (-=)superthistypeofUnary negation (-)Unary plus (+)Unsigned right shift (>>>)Unsigned right shift assignment (>>>=)void operatoryieldyield*
+
+
+
+
+Statements & declarations
+Overviewasync functionasync function*blockbreakclassconstcontinuedebuggerdo...whileemptyexportExpression statementforfor await...offor...infor...offunction declarationfunction*if...elseimportlabelletreturnswitchthrowtry...catchvarwhilewith
+Deprecated
+
+
+
+
+
+Functions
+OverviewArrow function expressionsDefault parametersgetMethod definitionsRest parameterssetThe arguments object
+
+
+
+
+Classes
+OverviewconstructorextendsPrivate class featuresPublic class fieldsstaticStatic initialization blocks
+
+
+
+
+Regular expressions
+OverviewBackreference: \1, \2Capturing group: (...)Character class escape: \d, \D, \w, \W, \s, \SCharacter class: [...], [^...]Character escape: \n, \u{...}Disjunction: |Input boundary assertion: ^, $Literal character: a, bLookahead assertion: (?=...), (?!...)Lookbehind assertion: (?<=...), (?<!...)Named backreference: \k<name>Named capturing group: (?<name>...)Non-capturing group: (?:...)Quantifier: *, +, ?, {n}, {n,}, {n,m}Unicode character class escape: \p{...}, \P{...}Wildcard: .Word boundary assertion: \b, \B
+
+
+
+
+Errors
+OverviewError: Permission denied to access property "x"InternalError: too much recursionRangeError: argument is not a valid code pointRangeError: BigInt division by zeroRangeError: BigInt negative exponentRangeError: invalid array lengthRangeError: invalid dateRangeError: precision is out of rangeRangeError: radix must be an integerRangeError: repeat count must be less than infinityRangeError: repeat count must be non-negativeRangeError: x can't be converted to BigInt because it isn't an integerReferenceError: "x" is not definedReferenceError: assignment to undeclared variable "x"ReferenceError: can't access lexical declaration 'X' before initializationReferenceError: deprecated caller or arguments usageReferenceError: reference to undefined property "x"SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecatedSyntaxError: "use strict" not allowed in function with non-simple parametersSyntaxError: "x" is a reserved identifierSyntaxError: a declaration in the head of a for-of loop can't have an initializerSyntaxError: applying the 'delete' operator to an unqualified name is deprecatedSyntaxError: await is only valid in async functions, async generators and modulesSyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressionsSyntaxError: continue must be inside loopSyntaxError: for-in loop head declarations may not have initializersSyntaxError: function statement requires a nameSyntaxError: identifier starts immediately after numeric literalSyntaxError: illegal characterSyntaxError: invalid assignment left-hand sideSyntaxError: invalid BigInt syntaxSyntaxError: invalid regular expression flag "x"SyntaxError: JSON.parse: bad parsingSyntaxError: label not foundSyntaxError: missing ; before statementSyntaxError: missing : after property idSyntaxError: missing ) after argument listSyntaxError: missing ) after conditionSyntaxError: missing ] after element listSyntaxError: missing } after function bodySyntaxError: missing } after property listSyntaxError: missing = in const declarationSyntaxError: missing formal parameterSyntaxError: missing name after . operatorSyntaxError: missing variable nameSyntaxError: redeclaration of formal parameter "x"SyntaxError: return not in functionSyntaxError: test for equality (==) mistyped as assignment (=)?SyntaxError: Unexpected '#' used outside of class bodySyntaxError: Unexpected tokenSyntaxError: unlabeled break must be inside loop or switchSyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'SyntaxError: unterminated string literalSyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# insteadTypeError: 'x' is not iterableTypeError: "x" has no propertiesTypeError: "x" is (not) "y"TypeError: "x" is not a constructorTypeError: "x" is not a functionTypeError: "x" is not a non-null objectTypeError: "x" is read-onlyTypeError: can't assign to property "x" on "y": not an objectTypeError: can't convert BigInt to numberTypeError: can't convert x to BigIntTypeError: can't define property "x": "obj" is not extensibleTypeError: can't delete non-configurable array elementTypeError: can't redefine non-configurable property "x"TypeError: cannot use 'in' operator to search for 'x' in 'y'TypeError: cyclic object valueTypeError: invalid 'instanceof' operand 'x'TypeError: invalid Array.prototype.sort argumentTypeError: invalid assignment to const "x"TypeError: More arguments neededTypeError: property "x" is non-configurable and can't be deletedTypeError: Reduce of empty array with no initial valueTypeError: setting getter-only property "x"TypeError: X.prototype.y called on incompatible typeURIError: malformed URI sequenceWarning: -file- is being assigned a //# sourceMappingURL, but already has oneWarning: unreachable code after return statement
+
+
+
+
+Misc
+
+JavaScript technologies overview
+Lexical grammar
+Iteration protocols
+Strict mode
+Template literals
+Trailing commas
+Deprecated features
+
+
+
+
+In this articleFormat-control charactersWhite spaceLine terminatorsCommentsIdentifiersKeywordsLiteralsAutomatic semicolon insertionSpecificationsBrowser compatibilitySee alsoLexical grammarThis page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters â in order for the interpreter to understand it, the string has to be parsed to a more structured representation. The initial step of parsing is called lexical analysis, in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step â they include white space and comments. The others, including identifiers, keywords, literals, and punctuators (mostly operators), will be used for further syntax analysis. Line terminators and multiline comments are also syntactically insignificant, but they guide the process for automatic semicolons insertion to make certain invalid token sequences become valid.Format-control charactersFormat-control characters have no visual representation but are used to control the interpretation of the text.
+
+
+
+Code point
+Name
+Abbreviation
+Description
+
+
+
+
+U+200C
+Zero width non-joiner
+<ZWNJ>
+Placed between characters to prevent being connected into ligatures in certain languages (Wikipedia).
+
+
+U+200D
+Zero width joiner
+<ZWJ>
+Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages (Wikipedia).
+
+
+U+FEFF
+Byte order mark
+<BOM>
+Used at the start of the script to mark it as Unicode and the text's byte order (Wikipedia).
+
+
+
+In JavaScript source text, <ZWNJ> and <ZWJ> are treated as identifier parts, while <BOM> (also called a zero-width no-break space <ZWNBSP> when not at the start of text) is treated as white space.White spaceWhite space characters improve the readability of source text and separate tokens from each other. These characters are usually unnecessary for the functionality of the code. Minification tools are often used to remove whitespace in order to reduce the amount of data that needs to be transferred.
+
+
+
+Code point
+Name
+Abbreviation
+Description
+Escape sequence
+
+
+
+
+U+0009
+Character tabulation
+<TAB>
+Horizontal tabulation
+\t
+
+
+U+000B
+Line tabulation
+<VT>
+Vertical tabulation
+\v
+
+
+U+000C
+Form feed
+<FF>
+Page breaking control character (Wikipedia).
+\f
+
+
+U+0020
+Space
+<SP>
+Normal space
+
+
+
+U+00A0
+No-break space
+<NBSP>
+Normal space, but no point at which a line may break
+
+
+
+U+FEFF
+Zero-width no-break space
+<ZWNBSP>
+When not at the start of a script, the BOM marker is a normal whitespace character.
+
+
+
+Others
+Other Unicode space characters
+<USP>
+Characters in the "Space_Separator" general category
+
+
+
+
+
+Note: Of those characters with the "White_Space" property but are not in the "Space_Separator" general category, U+0009, U+000B, and U+000C are still treated as white space in JavaScript; U+0085 NEXT LINE has no special role; others become the set of line terminators.
+
+
+Note: Changes to the Unicode standard used by the JavaScript engine may affect programs' behavior. For example, ES2016 upgraded the reference Unicode standard from 5.1 to 8.0.0, which caused U+180E MONGOLIAN VOWEL SEPARATOR to be moved from the "Space_Separator" category to the "Format (Cf)" category, and made it a non-whitespace. Subsequently, the result of "\u180E".trim().length changed from 0 to 1.
+Line terminatorsIn addition to white space characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of automatic semicolon insertion.
+Outside the context of lexical grammar, white space and line terminators are often conflated. For example, String.prototype.trim() removes all white space and line terminators from the beginning and end of a string. The \s character class escape in regular expressions matches all white space and line terminators.
+Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).
+
+
+
+Code point
+Name
+Abbreviation
+Description
+Escape sequence
+
+
+
+
+U+000A
+Line Feed
+<LF>
+New line character in UNIX systems.
+\n
+
+
+U+000D
+Carriage Return
+<CR>
+New line character in Commodore and early Mac systems.
+\r
+
+
+U+2028
+Line Separator
+<LS>
+Wikipedia
+
+
+
+U+2029
+Paragraph Separator
+<PS>
+Wikipedia
+
+
+
+CommentsComments are used to add hints, notes, suggestions, or warnings to JavaScript code. This can make it easier to read and understand. They can also be used to disable code to prevent it from being executed; this can be a valuable debugging tool.
+JavaScript has two long-standing ways to add comments to code: line comments and block comments. In addition, there's a special hashbang comment syntax.Line commentsThe first way is the // comment; this makes all text following it on the same line into a comment. For example:
+function comment() {
+  // This is a one line JavaScript comment
+  console.log("Hello world!");
+}
+comment();
+Block commentsThe second way is the /* */ style, which is much more flexible.
+For example, you can use it on a single line:
+function comment() {
+  /* This is a one line JavaScript comment */
+  console.log("Hello world!");
+}
+comment();
+
+You can also make multiple-line comments, like this:
+function comment() {
+  /* This comment spans multiple lines. Notice
+     that we don't need to end the comment until we're done. */
+  console.log("Hello world!");
+}
+comment();
+
+You can also use it in the middle of a line, if you wish, although this can make your code harder to read so it should be used with caution:
+function comment(x) {
+  console.log("Hello " + x /* insert the value of x */ + " !");
+}
+comment("world");
+
+In addition, you can use it to disable code to prevent it from running, by wrapping code in a comment, like this:
+function comment() {
+  /* console.log("Hello world!"); */
+}
+comment();
+
+In this case, the console.log() call is never issued, since it's inside a comment. Any number of lines of code can be disabled this way.
+Block comments that contain at least one line terminator behave like line terminators in automatic semicolon insertion.Hashbang commentsThere's a special third comment syntax, the hashbang comment. A hashbang comment behaves exactly like a single line-only (//) comment, except that it begins with #! and is only valid at the absolute start of a script or module. Note also that no whitespace of any kind is permitted before the #!. The comment consists of all the characters after #! up to the end of the first line; only one such comment is permitted.
+Hashbang comments in JavaScript resemble shebangs in Unix which provide the path to a specific JavaScript interpreter that you want to use to execute the script. Before the hashbang comment became standardized, it had already been de-facto implemented in non-browser hosts like Node.js, where it was stripped from the source text before being passed to the engine. An example is as follows:
+#!/usr/bin/env node
+
+console.log("Hello world");
+
+The JavaScript interpreter will treat it as a normal comment â it only has semantic meaning to the shell if the script is directly run in a shell.
+
+Warning: If you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a BOM. Although a BOM will not cause any problems for code running in a browser â because it's stripped during UTF-8 decoding, before the source text is analyzed â a Unix/Linux shell will not recognize the hashbang if it's preceded by a BOM character.
+
+You must only use the #! comment style to specify a JavaScript interpreter. In all other cases just use a // comment (or multiline comment).IdentifiersAn identifier is used to link a value with a name. Identifiers can be used in various places:
+const decl = 1; // Variable declaration (may also be `let` or `var`)
+function fn() {} // Function declaration
+const obj = { key: "value" }; // Object keys
+// Class declaration
+class C {
+  #priv = "value"; // Private property
+}
+lbl: console.log(1); // Label
+
+In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (_), and dollar signs ($). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII â many Unicode code points are allowed as well. Namely, any character in the ID_Start category can start an identifier, while any character in the ID_Continue category can appear after the first character.
+
+Note: If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern /[A-Za-z_$][\w$]*/ (i.e. ASCII-only)! The range of identifiers can be described by the regex /[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u (excluding unicode escape sequences).
+
+In addition, JavaScript allows using Unicode escape sequences in the form of \u0000 or \u{000000} in identifiers, which encode the same string value as the actual Unicode characters. For example, ä½ å¥½ and \u4f60\u597d are the same identifiers:
+const ä½ å¥½ = "Hello";
+console.log(\u4f60\u597d); // Hello
+
+Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not reserved words.
+function import() {} // Illegal: import is a reserved word.
+
+Most notably, private properties and object properties allow reserved words.
+const obj = { import: "value" }; // Legal despite `import` being reserved
+class C {
+  #import = "value";
+}
+KeywordsKeywords are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword async before a function declaration indicates that the function is asynchronous.
+Some keywords are reserved, meaning that they cannot be used as an identifier for variable declarations, function declarations, etc. They are often called reserved words. A list of these reserved words is provided below. Not all keywords are reserved â for example, async can be used as an identifier anywhere. Some keywords are only contextually reserved â for example, await is only reserved within the body of an async function, and let is only reserved in strict mode code, or const and let declarations.
+Identifiers are always compared by string value, so escape sequences are interpreted. For example, this is still a syntax error:
+const els\u{65} = 1;
+// `els\u{65}` encodes the same identifier as `else`
+Reserved wordsThese keywords cannot be used as identifiers for variables, functions, classes, etc. anywhere in JavaScript source.
+
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+delete
+do
+else
+export
+extends
+false
+finally
+for
+function
+if
+import
+in
+instanceof
+new
+null
+return
+super
+switch
+this
+throw
+true
+try
+typeof
+var
+void
+while
+with
+
+The following are only reserved when they are found in strict mode code:
+
+let (also reserved in const, let, and class declarations)
+static
+yield (also reserved in generator function bodies)
+
+The following are only reserved when they are found in module code or async function bodies:
+
+await
+Future reserved wordsThe following are reserved as future keywords by the ECMAScript specification. They have no special functionality at present, but they might at some future time, so they cannot be used as identifiers.
+These are always reserved:
+
+enum
+
+The following are only reserved when they are found in strict mode code:
+
+implements
+interface
+package
+private
+protected
+public
+
+Future reserved words in older standards
+The following are reserved as future keywords by older ECMAScript specifications (ECMAScript 1 till 3).
+
+abstract
+boolean
+byte
+char
+double
+final
+float
+goto
+int
+long
+native
+short
+synchronized
+throws
+transient
+volatile
+Identifiers with special meaningsA few identifiers have a special meaning in some contexts without being reserved words of any kind. They include:
+
+arguments (not a keyword, but cannot be declared as identifier in strict mode)
+as (import * as ns from "mod")
+async
+eval (not a keyword, but cannot be declared as identifier in strict mode)
+from (import x from "mod")
+get
+of
+set
+Literals
+Note: This section discusses literals that are atomic tokens. Object literals and array literals are expressions that consist of a series of tokens.
+Null literalSee also null for more information.
+null
+Boolean literalSee also boolean type for more information.
+true
+false
+Numeric literalsThe Number and BigInt types use numeric literals.
+Decimal
+1234567890
+42
+
+Decimal literals can start with a zero (0) followed by another decimal digit, but if all digits after the leading 0 are smaller than 8, the number is interpreted as an octal number. This is considered a legacy syntax, and number literals prefixed with 0, whether interpreted as octal or decimal, cause a syntax error in strict mode â so, use the 0o prefix instead.
+0888 // 888 parsed as decimal
+0777 // parsed as octal, 511 in decimal
+
+Exponential
+The decimal exponential literal is specified by the following format: beN; where b is a base number (integer or floating), followed by an E or e character (which serves as separator or exponent indicator) and N, which is exponent or power number â a signed integer.
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
+
+Binary
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (0b or 0B). Any character after the 0b that is not 0 or 1 will terminate the literal sequence.
+0b10000000000000000000000000000000 // 2147483648
+0b01111111100000000000000000000000 // 2139095040
+0B00000000011111111111111111111111 // 8388607
+
+Octal
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (0o or 0O). Any character after the 0o that is outside the range (01234567) will terminate the literal sequence.
+0O755 // 493
+0o644 // 420
+
+Hexadecimal
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (0x or 0X). Any character after the 0x that is outside the range (0123456789ABCDEF) will terminate the literal sequence.
+0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+0x123456789ABCDEF   // 81985529216486900
+0XA                 // 10
+
+BigInt literal
+The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending n to the end of an integer.
+123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895
+0b11101001010101010101n // 955733
+
+BigInt literals cannot start with 0 to avoid confusion with legacy octal literals.
+0755n;
+// SyntaxError: invalid BigInt syntax
+
+For octal BigInt numbers, always use zero followed by the letter "o" (uppercase or lowercase):
+0o755n;
+
+For more information about BigInt, see also JavaScript data structures.
+Numeric separators
+To improve readability for numeric literals, underscores (_, U+005F) can be used as separators:
+1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
+
+Note these limitations:
+// More than one underscore in a row is not allowed
+100__000; // SyntaxError
+
+// Not allowed at the end of numeric literals
+100_; // SyntaxError
+
+// Can not be used after leading 0
+0_1; // SyntaxError
+String literalsA string literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
+
+U+005C \ (backslash)
+U+000D <CR>
+U+000A <LF>
+The same kind of quote that begins the string literal
+
+Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
+'foo'
+"bar"
+
+The following subsections describe various escape sequences (\ followed by one or more characters) available in string literals. Any escape sequence not listed below becomes an "identity escape" that becomes the code point itself. For example, \z is the same as z. There's a deprecated octal escape sequence syntax described in the Deprecated and obsolete features page. Many of these escape sequences are also valid in regular expressions â see Character escape.
+Escape sequences
+Special characters can be encoded using escape sequences:
+
+
+
+Escape sequence
+Unicode code point
+
+
+
+
+\0
+null character (U+0000 NULL)
+
+
+\'
+single quote (U+0027 APOSTROPHE)
+
+
+\"
+double quote (U+0022 QUOTATION MARK)
+
+
+\\
+backslash (U+005C REVERSE SOLIDUS)
+
+
+\n
+newline (U+000A LINE FEED; LF)
+
+
+\r
+carriage return (U+000D CARRIAGE RETURN; CR)
+
+
+\v
+vertical tab (U+000B LINE TABULATION)
+
+
+\t
+tab (U+0009 CHARACTER TABULATION)
+
+
+\b
+backspace (U+0008 BACKSPACE)
+
+
+\f
+form feed (U+000C FORM FEED)
+
+
+\ followed by a line terminator
+empty string
+
+
+
+The last escape sequence, \ followed by a line terminator, is useful for splitting a string literal across multiple lines without changing its meaning.
+const longString =
+  "This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.";
+
+Make sure there is no space or any other character after the backslash (except for a line break), otherwise it will not work. If the next line is indented, the extra spaces will also be present in the string's value.
+You can also use the + operator to append multiple strings together, like this:
+const longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
+
+Both of the above methods result in identical strings.
+Hexadecimal escape sequences
+Hexadecimal escape sequences consist of \x followed by exactly two hexadecimal digits representing a code unit or code point in the range 0x0000 to 0x00FF.
+"\xA9"; // "Â©"
+
+Unicode escape sequences
+A Unicode escape sequence consists of exactly four hexadecimal digits following \u. It represents a code unit in the UTF-16 encoding. For code points U+0000 to U+FFFF, the code unit is equal to the code point. Code points U+10000 to U+10FFFF require two escape sequences representing the two code units (a surrogate pair) used to encode the character; the surrogate pair is distinct from the code point.
+See also String.fromCharCode() and String.prototype.charCodeAt().
+"\u00A9"; // "Â©" (U+A9)
+
+Unicode code point escapes
+A Unicode code point escape consists of \u{, followed by a code point in hexadecimal base, followed by }. The value of the hexadecimal digits must be in the range 0 and 0x10FFFF inclusive. Code points in the range U+10000 to U+10FFFF do not need to be represented as a surrogate pair.
+See also String.fromCodePoint() and String.prototype.codePointAt().
+"\u{2F804}"; // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+
+// the same character represented as a surrogate pair
+"\uD87E\uDC04";
+Regular expression literalsRegular expression literals are enclosed by two forward slashes (/). The lexer consumes all characters up to the next unescaped forward slash or the end of the line, unless the forward slash appears within a character class ([]). Some characters (namely, those that are identifier parts) can appear after the closing slash, denoting flags.
+The lexical grammar is very lenient: not all regular expression literals that get identified as one token are valid regular expressions.
+See also RegExp for more information.
+/ab+c/g
+/[/]/
+
+A regular expression literal cannot start with two forward slashes (//), because that would be a line comment. To specify an empty regular expression, use /(?:)/.Template literalsOne template literal consists of several tokens: `xxx${ (template head), }xxx${ (template middle), and }xxx` (template tail) are individual tokens, while any expression may come between them.
+See also template literals for more information.
+`string text`
+
+`string text line 1
+ string text line 2`
+
+`string text ${expression} string text`
+
+tag`string text ${expression} string text`
+Automatic semicolon insertionSome JavaScript statements' syntax definitions require semicolons (;) at the end. They include:
+
+var, let, const
+Expression statements
+do...while
+continue, break, return, throw
+debugger
+Class field declarations (public or private)
+import, export
+
+However, to make the language more approachable and convenient, JavaScript is able to automatically insert semicolons when consuming the token stream, so that some invalid token sequences can be "fixed" to valid syntax. This step happens after the program text has been parsed to tokens according to the lexical grammar. There are three cases when semicolons are automatically inserted:
+1. When a token not allowed by the grammar is encountered, and it's separated from the previous token by at least one line terminator (including a block comment that includes at least one line terminator), or the token is "}", then a semicolon is inserted before the token.
+{ 1
+2 } 3
+
+// is transformed by ASI into:
+
+{ 1
+;2 ;} 3;
+
+// Which is valid grammar encoding three statements,
+// each consisting of a number literal
+
+The ending ")" of do...while is taken care of as a special case by this rule as well.
+do {
+  // ...
+} while (condition) /* ; */ // ASI here
+const a = 1
+
+However, semicolons are not inserted if the semicolon would then become the separator in the for statement's head.
+for (
+  let a = 1 // No ASI here
+  a < 10 // No ASI here
+  a++
+) {}
+
+Semicolons are also never inserted as empty statements. For example, in the code below, if a semicolon is inserted after ")", then the code would be valid, with an empty statement as the if body and the const declaration being a separate statement. However, because automatically inserted semicolons cannot become empty statements, this causes a declaration to become the body of the if statement, which is not valid.
+if (Math.random() > 0.5)
+const x = 1 // SyntaxError: Unexpected token 'const'
+
+2. When the end of the input stream of tokens is reached, and the parser is unable to parse the single input stream as a complete program, a semicolon is inserted at the end.
+const a = 1 /* ; */ // ASI here
+
+This rule is a complement to the previous rule, specifically for the case where there's no "offending token" but the end of input stream.
+3. When the grammar forbids line terminators in some place but a line terminator is found, a semicolon is inserted. These places include:
+
+expr <here> ++, expr <here> --
+continue <here> lbl
+break <here> lbl
+return <here> expr
+throw <here> expr
+yield <here> expr
+yield <here> * expr
+(param) <here> => {}
+async <here> function, async <here> prop(), async <here> function*, async <here> *prop(), async <here> (param) <here> => {}
+
+Here ++ is not treated as a postfix operator applying to variable b, because a line terminator occurs between b and ++.
+a = b
+++c
+
+// is transformed by ASI into
+
+a = b;
+++c;
+
+Here, the return statement returns undefined, and the a + b becomes an unreachable statement.
+return
+a + b
+
+// is transformed by ASI into
+
+return;
+a + b;
+
+Note that ASI would only be triggered if a line break separates tokens that would otherwise produce invalid syntax. If the next token can be parsed as part of a valid structure, semicolons would not be inserted. For example:
+const a = 1
+(1).toString()
+
+const b = 1
+[1, 2, 3].forEach(console.log)
+
+Because () can be seen as a function call, it would usually not trigger ASI. Similarly, [] may be a member access. The code above is equivalent to:
+const a = 1(1).toString();
+
+const b = 1[1, 2, 3].forEach(console.log);
+
+This happens to be valid syntax. 1[1, 2, 3] is a property accessor with a comma-joined expression. Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
+Within classes, class fields and generator methods can be a pitfall as well.
+class A {
+  a = 1
+  *gen() {}
+}
+
+It is seen as:
+class A {
+  a = 1 * gen() {}
+}
+
+And therefore will be a syntax error around {.
+There are the following rules-of-thumb for dealing with ASI, if you want to enforce semicolon-less style:
+
+Write postfix ++ and -- on the same line as their operands.
+    const a = b
+++
+console.log(a) // ReferenceError: Invalid left-hand side expression in prefix operation
+
+const a = b++
+console.log(a)
+
+
+The expressions after return, throw, or yield should be on the same line as the keyword.
+    function foo() {
+  return
+    1 + 1 // Returns undefined; 1 + 1 is ignored
+}
+
+function foo() {
+  return 1 + 1
+}
+
+function foo() {
+  return (
+    1 + 1
+  )
+}
+
+
+Similarly, the label identifier after break or continue should be on the same line as the keyword.
+    outerBlock: {
+  innerBlock: {
+    break
+      outerBlock // SyntaxError: Illegal break statement
+  }
+}
+
+outerBlock: {
+  innerBlock: {
+    break outerBlock
+  }
+}
+
+
+The => of an arrow function should be on the same line as the end of its parameters.
+    const foo = (a, b)
+  => a + b
+
+const foo = (a, b) =>
+  a + b
+
+
+The async of async functions, methods, etc. cannot be directly followed by a line terminator.
+    async
+function foo() {}
+
+async function
+foo() {}
+
+
+If a line starts with one of (, [, `, +, -, / (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.
+    // The () may be merged with the previous line as a function call
+(() => {
+  // ...
+})()
+
+// The [ may be merged with the previous line as a property access
+[1, 2, 3].forEach(console.log)
+
+// The ` may be merged with the previous line as a tagged template literal
+`string text ${data}`.match(pattern).forEach(console.log)
+
+// The + may be merged with the previous line as a binary + expression
++a.toString()
+
+// The - may be merged with the previous line as a binary - expression
+-a.toString()
+
+// The / may be merged with the previous line as a division expression
+/pattern/.exec(str).forEach(console.log)
+
+;(() => {
+  // ...
+})()
+;[1, 2, 3].forEach(console.log)
+;`string text ${data}`.match(pattern).forEach(console.log)
+;+a.toString()
+;-a.toString()
+;/pattern/.exec(str).forEach(console.log)
+
+
+Class fields should preferably always be ended with semicolons â in addition to the previous rule (which includes a field declaration followed by a computed property, since the latter starts with [), semicolons are also required between a field declaration and a generator method.
+    class A {
+  a = 1
+  [b] = 2
+  *gen() {} // Seen as a = 1[b] = 2 * gen() {}
+}
+
+class A {
+  a = 1;
+  [b] = 2;
+  *gen() {}
+}
+
+
+SpecificationsSpecificationECMAScript Language Specification Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Grammar and types
+Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers by Jeff Walden (August 12, 2013)
+JavaScript character escape sequences by Mathias Bynens (December 21, 2011)
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 16, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

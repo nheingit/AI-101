@@ -1,0 +1,68 @@
+Node: nodeName property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsNodenodeNameArticle ActionsEnglish (US)In this articleValueExampleSpecificationsBrowser compatibilitySee alsoDocument Object ModelNodeInstance propertiesbaseURIchildNodesfirstChildisConnectedlastChildnextSiblingnodeName nodeTypenodeValueownerDocumentparentElementparentNodepreviousSiblingtextContentInstance methodsappendChild()cloneNode()compareDocumentPosition()contains()getRootNode()hasChildNodes()insertBefore()isDefaultNamespace()isEqualNode()isSameNode()lookupNamespaceURI()lookupPrefix()normalize()removeChild()replaceChild()EventsselectstartInheritance:EventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleValueExampleSpecificationsBrowser compatibilitySee alsoNode: nodeName propertyThe read-only nodeName property of Node returns the name of the current node as a string.ValueA string. Values for the different types of nodes are:
+
+Attr
+
+The value of Attr.name, that is the qualified name of the attribute.
+
+CDATASection
+
+The string "#cdata-section".
+
+Comment
+
+The string "#comment".
+
+Document
+
+The string "#document".
+
+DocumentFragment
+
+The string "#document-fragment".
+
+DocumentType
+
+The value of DocumentType.name
+
+Element
+
+
+      The value of Element.tagName, that is the uppercase name of the element tag if an HTML element,
+      or the lowercase element tag if an XML element (like a SVG or MATHML element).
+    
+
+ProcessingInstruction
+
+The value of ProcessingInstruction.target
+
+Text
+
+The string "#text".
+
+ExampleThis example displays the node names of several nodes
+This is some HTML:
+<div id="d1">Hello world</div>
+<!-- Example of comment -->
+Text <span>Text</span> Text<br />
+<svg height="20" width="20">
+  <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
+</svg>
+<hr />
+<output id="result">Not calculated yet.</output>
+
+and the following script:
+let node = document.querySelector("body").firstChild;
+let result = "Node names are:<br/>";
+while (node) {
+  result += `${node.nodeName}<br/>`;
+  node = node.nextSibling;
+}
+
+const output = document.getElementById("result");
+output.innerHTML = result;
+SpecificationsSpecificationDOM Standard # ref-for-dom-node-nodenameâ Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Element.tagName
+Attr.name
+DocumentType.name
+ProcessingInstruction.target
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

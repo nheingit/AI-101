@@ -1,0 +1,9 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/canvasrenderingcontext2d/createlineargradient/index.md
+
+# Original Wiki contributors
+mfluehr
+fscholz
+bobtherobot
+nmve
+erikadoyle

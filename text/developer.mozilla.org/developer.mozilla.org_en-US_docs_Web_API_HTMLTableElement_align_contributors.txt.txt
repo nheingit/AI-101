@@ -1,0 +1,13 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/htmltableelement/align/index.md
+
+# Original Wiki contributors
+ExE-Boss
+fscholz
+teoli
+kscarfone
+Sheppy
+ethertank
+RobG
+Dria
+JesseW

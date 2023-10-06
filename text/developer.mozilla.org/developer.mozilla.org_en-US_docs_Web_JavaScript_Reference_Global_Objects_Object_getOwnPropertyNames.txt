@@ -1,0 +1,85 @@
+Object.getOwnPropertyNames() - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStandard built-in objectsObjectObject.getOwnPropertyNames()Article ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoStandard built-in objectsObjectConstructorObject() constructorPropertiesObject.prototype.constructorObject.prototype.__proto__
+Deprecated
+MethodsObject.prototype.__defineGetter__()
+Deprecated
+Object.prototype.__defineSetter__()
+Deprecated
+Object.prototype.__lookupGetter__()
+Deprecated
+Object.prototype.__lookupSetter__()
+Deprecated
+Object.assign()Object.create()Object.defineProperties()Object.defineProperty()Object.entries()Object.freeze()Object.fromEntries()Object.getOwnPropertyDescriptor()Object.getOwnPropertyDescriptors()Object.getOwnPropertyNames()Object.getOwnPropertySymbols()Object.getPrototypeOf()Object.hasOwn()Object.prototype.hasOwnProperty()Object.is()Object.isExtensible()Object.isFrozen()Object.prototype.isPrototypeOf()Object.isSealed()Object.keys()Object.preventExtensions()Object.prototype.propertyIsEnumerable()Object.seal()Object.setPrototypeOf()Object.prototype.toLocaleString()Object.prototype.toString()Object.prototype.valueOf()Object.values()In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoObject.getOwnPropertyNames()The Object.getOwnPropertyNames() static method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.Try itSyntaxObject.getOwnPropertyNames(obj)
+Parameters
+obj
+
+The object whose enumerable and non-enumerable properties are to be returned.
+
+Return valueAn array of strings that corresponds to the properties found directly in the given object.DescriptionObject.getOwnPropertyNames() returns an array whose elements are strings corresponding to the enumerable and non-enumerable properties found directly in a given object obj. The ordering of the enumerable properties in the array is consistent with the ordering exposed by a for...in loop (or by Object.keys()) over the properties of the object. The non-negative integer keys of the object (both enumerable and non-enumerable) are added in ascending order to the array first, followed by the string keys in the order of insertion.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a TypeError. In ES2015, a non-object argument will be coerced to an object.
+Object.getOwnPropertyNames("foo");
+// TypeError: "foo" is not an object (ES5 code)
+
+Object.getOwnPropertyNames("foo");
+// ["0", "1", "2", "length"]  (ES2015 code)
+ExamplesUsing Object.getOwnPropertyNames()const arr = ["a", "b", "c"];
+console.log(Object.getOwnPropertyNames(arr).sort());
+// ["0", "1", "2", "length"]
+
+// Array-like object
+const obj = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.getOwnPropertyNames(obj).sort());
+// ["0", "1", "2"]
+
+Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
+  console.log(`${val} -> ${obj[val]}`);
+});
+// 0 -> a
+// 1 -> b
+// 2 -> c
+
+// non-enumerable property
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value() {
+        return this.foo;
+      },
+      enumerable: false,
+    },
+  },
+);
+myObj.foo = 1;
+
+console.log(Object.getOwnPropertyNames(myObj).sort()); // ["foo", "getFoo"]
+
+If you want only the enumerable properties, see Object.keys() or use a for...in loop (note that this will also return enumerable properties found along the prototype chain for the object unless the latter is filtered with hasOwn()).
+Items on the prototype chain are not listed:
+function ParentClass() {}
+ParentClass.prototype.inheritedMethod = function () {};
+
+function ChildClass() {
+  this.prop = 5;
+  this.method = function () {};
+}
+ChildClass.prototype = new ParentClass();
+ChildClass.prototype.prototypeMethod = function () {};
+
+console.log(Object.getOwnPropertyNames(new ChildClass()));
+// ["prop", "method"]
+Get non-enumerable properties onlyThis uses the Array.prototype.filter() function to remove the enumerable keys (obtained with Object.keys()) from a list of all keys (obtained with Object.getOwnPropertyNames()) thus giving only the non-enumerable keys as output.
+const target = myObject;
+const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumOnly = new Set(Object.keys(target));
+const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
+
+console.log(nonenumOnly);
+SpecificationsSpecificationECMAScript Language Specification # sec-object.getownpropertynamesBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Polyfill of Object.getOwnPropertyNames in core-js
+Enumerability and ownership of properties
+Object.hasOwn()
+Object.prototype.propertyIsEnumerable()
+Object.create()
+Object.keys()
+Array.prototype.forEach()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

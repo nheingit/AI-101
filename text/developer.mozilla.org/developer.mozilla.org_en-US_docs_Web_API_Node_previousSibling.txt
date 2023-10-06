@@ -1,0 +1,41 @@
+Node: previousSibling property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsNodepreviousSiblingArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoDocument Object ModelNodeInstance propertiesbaseURIchildNodesfirstChildisConnectedlastChildnextSiblingnodeNamenodeTypenodeValueownerDocumentparentElementparentNodepreviousSibling textContentInstance methodsappendChild()cloneNode()compareDocumentPosition()contains()getRootNode()hasChildNodes()insertBefore()isDefaultNamespace()isEqualNode()isSameNode()lookupNamespaceURI()lookupPrefix()normalize()removeChild()replaceChild()EventsselectstartInheritance:EventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleValueExamplesSpecificationsBrowser compatibilitySee alsoNode: previousSibling property
+  The read-only previousSibling property of the Node interface
+  returns the node immediately preceding the specified one in its parent's
+  childNodes list,
+  or null if the specified node is the first in that list.
+
+
+
+Note: Browsers insert text nodes into a document to represent whitespace in the source markup.
+    Therefore a node obtained, for example, using Node.firstChild
+    or Node.previousSibling
+    may refer to a whitespace text node rather than the actual element the author intended to get.
+  
+See Whitespace in the DOM for more information.
+
+    You can use previousElementSibling
+    to get the previous element node (skipping text nodes and any other non-element nodes).
+  
+To navigate the opposite way through the child nodes list use Node.nextSibling.
+Value
+  A Node representing the previous sibling of the current node,
+  or null if there are none.
+ExamplesThe following examples demonstrate how previousSibling works with and without text nodes mixed in with elements.First exampleIn this example, we have a series of img elements directly adjacent to each other, with no whitespace between them.
+<img id="b0" /><img id="b1" /><img id="b2" />
+
+document.getElementById("b1").previousSibling; // <img id="b0">
+document.getElementById("b2").previousSibling.id; // "b1"
+Second exampleIn this example, there are whitespace text nodes (line breaks) between the img elements.
+<img id="b0" />
+<img id="b1" />
+<img id="b2" />
+
+document.getElementById("b1").previousSibling; // #text
+document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
+document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
+document.getElementById("b2").previousSibling; // #text
+document.getElementById("b2").previousSibling.id; // undefined
+SpecificationsSpecificationDOM Standard # ref-for-dom-node-previoussiblingâ Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Node.nextSibling
+Element.previousElementSibling
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

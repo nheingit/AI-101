@@ -1,0 +1,57 @@
+CanvasRenderingContext2D: shadowOffsetY property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCanvasRenderingContext2DshadowOffsetYArticle ActionsEnglish (US)In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2DInstance propertiescanvasdirectionfillStylefilterfontfontKerningfontStretch
+Experimental
+fontVariantCaps
+Experimental
+globalAlphaglobalCompositeOperationimageSmoothingEnabledimageSmoothingQualityletterSpacing
+Experimental
+lineCaplineDashOffsetlineJoinlineWidthmiterLimitshadowBlurshadowColorshadowOffsetXshadowOffsetY strokeStyletextAligntextBaselinetextRendering
+Experimental
+wordSpacing
+Experimental
+Instance methodsarc()arcTo()beginPath()bezierCurveTo()clearRect()clip()closePath()createConicGradient()createImageData()createLinearGradient()createPattern()createRadialGradient()drawFocusIfNeeded()drawImage()ellipse()fill()fillRect()fillText()getContextAttributes()getImageData()getLineDash()getTransform()isContextLost()
+Experimental
+isPointInPath()isPointInStroke()lineTo()measureText()moveTo()putImageData()quadraticCurveTo()rect()reset()resetTransform()restore()rotate()roundRect()save()scale()scrollPathIntoView()
+Experimental
+setLineDash()setTransform()stroke()strokeRect()strokeText()transform()translate()In this articleValueExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2D: shadowOffsetY property
+  The
+  CanvasRenderingContext2D.shadowOffsetY
+  property of the Canvas 2D API specifies the distance that shadows will be offset
+  vertically.
+
+
+
+Note: Shadows are only drawn if the
+    shadowColor property is set to
+    a non-transparent value. One of the shadowBlur,
+    shadowOffsetX, or shadowOffsetY properties must be non-zero, as
+    well.
+  
+ValueA float specifying the distance that shadows will be offset vertically. Positive values are down, and negative are up. The default value is 0 (no vertical offset). Infinity and NaN values are ignored.ExamplesMoving a shadow vertically
+  This example adds a blurred shadow to a rectangle. The
+  shadowColor property sets its
+  color, shadowOffsetY sets its offset 25 units towards the bottom, and
+  shadowBlur gives it a blur level
+  of 10.
+
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Shadow
+ctx.shadowColor = "red";
+ctx.shadowOffsetY = 25;
+ctx.shadowBlur = 10;
+
+// Rectangle
+ctx.fillStyle = "blue";
+ctx.fillRect(20, 20, 150, 80);
+
+ResultSpecificationsSpecificationHTML Standard # dom-context-2d-shadowoffsety-devBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The interface defining this property: CanvasRenderingContext2D
+CanvasRenderingContext2D.shadowOffsetX
+CanvasRenderingContext2D.shadowColor
+CanvasRenderingContext2D.shadowBlur
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

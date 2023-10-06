@@ -1,0 +1,10 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/forbidden_response_header_name/index.md
+
+# Original Wiki contributors
+m.talbi
+ziyunfei
+xcatliu
+Andrew_Pfeiffer
+kscarfone
+chrisdavidmills

@@ -1,0 +1,213 @@
+const - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStatements and declarationsconstArticle ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee also
+
+JavaScript
+Tutorials
+
+
+Complete beginners
+
+JavaScript basics
+JavaScript first steps
+JavaScript building blocks
+Introducing JavaScript objects
+
+
+
+
+
+JavaScript Guide
+
+Introduction
+Grammar and types
+Control flow and error handling
+Loops and iteration
+Functions
+Expressions and operators
+Numbers and dates
+Text formatting
+Regular expressions
+Indexed collections
+Keyed collections
+Working with objects
+Using classes
+Using promises
+JavaScript typed arrays
+Iterators and generators
+Meta programming
+JavaScript modules
+
+
+
+
+
+Intermediate
+
+Client-side JavaScript frameworks
+Client-side web APIs
+Language overview
+JavaScript data structures
+Equality comparisons and sameness
+Enumerability and ownership of properties
+Closures
+
+
+
+
+
+Advanced
+
+Inheritance and the prototype chain
+Memory Management
+Concurrency model and Event Loop
+
+
+
+References
+
+
+Built-in objects
+OverviewAggregateErrorArrayArrayBufferAsyncFunctionAsyncGeneratorAsyncGeneratorFunctionAsyncIteratorAtomicsBigIntBigInt64ArrayBigUint64ArrayBooleanDataViewDatedecodeURI()decodeURIComponent()encodeURI()encodeURIComponent()Errorescape()
+Deprecated
+eval()EvalErrorFinalizationRegistryFloat32ArrayFloat64ArrayFunctionGeneratorGeneratorFunctionglobalThisInfinityInt16ArrayInt32ArrayInt8ArrayInternalError
+Non-standard
+IntlisFinite()isNaN()IteratorJSONMapMathNaNNumberObjectparseFloat()parseInt()PromiseProxyRangeErrorReferenceErrorReflectRegExpSetSharedArrayBufferStringSymbolSyntaxErrorTypedArrayTypeErrorUint16ArrayUint32ArrayUint8ArrayUint8ClampedArrayundefinedunescape()
+Deprecated
+URIErrorWeakMapWeakRefWeakSet
+
+
+
+
+Expressions & operators
+OverviewAddition (+)Addition assignment (+=)Assignment (=)async function expressionasync function* expressionawaitBitwise AND (&)Bitwise AND assignment (&=)Bitwise NOT (~)Bitwise OR (|)Bitwise OR assignment (|=)Bitwise XOR (^)Bitwise XOR assignment (^=)class expressionComma operator (,)Conditional (ternary) operatorDecrement (--)delete operatorDestructuring assignmentDivision (/)Division assignment (/=)Equality (==)Exponentiation (**)Exponentiation assignment (**=)Function expressionfunction* expressionGreater than (>)Greater than or equal (>=)Grouping operator ( )import.metaimport()in operatorIncrement (++)Inequality (!=)instanceofLeft shift (<<)Left shift assignment (<<=)Less than (<)Less than or equal (<=)Logical AND (&&)Logical AND assignment (&&=)Logical NOT (!)Logical OR (||)Logical OR assignment (||=)Multiplication (*)Multiplication assignment (*=)new operatornew.targetnullNullish coalescing assignment (??=)Nullish coalescing operator (??)Object initializerOperator precedenceOptional chaining (?.)Property accessorsRemainder (%)Remainder assignment (%=)Right shift (>>)Right shift assignment (>>=)Spread syntax (...)Strict equality (===)Strict inequality (!==)Subtraction (-)Subtraction assignment (-=)superthistypeofUnary negation (-)Unary plus (+)Unsigned right shift (>>>)Unsigned right shift assignment (>>>=)void operatoryieldyield*
+
+
+
+
+Statements & declarations
+Overviewasync functionasync function*blockbreakclassconstcontinuedebuggerdo...whileemptyexportExpression statementforfor await...offor...infor...offunction declarationfunction*if...elseimportlabelletreturnswitchthrowtry...catchvarwhilewith
+Deprecated
+
+
+
+
+
+Functions
+OverviewArrow function expressionsDefault parametersgetMethod definitionsRest parameterssetThe arguments object
+
+
+
+
+Classes
+OverviewconstructorextendsPrivate class featuresPublic class fieldsstaticStatic initialization blocks
+
+
+
+
+Regular expressions
+OverviewBackreference: \1, \2Capturing group: (...)Character class escape: \d, \D, \w, \W, \s, \SCharacter class: [...], [^...]Character escape: \n, \u{...}Disjunction: |Input boundary assertion: ^, $Literal character: a, bLookahead assertion: (?=...), (?!...)Lookbehind assertion: (?<=...), (?<!...)Named backreference: \k<name>Named capturing group: (?<name>...)Non-capturing group: (?:...)Quantifier: *, +, ?, {n}, {n,}, {n,m}Unicode character class escape: \p{...}, \P{...}Wildcard: .Word boundary assertion: \b, \B
+
+
+
+
+Errors
+OverviewError: Permission denied to access property "x"InternalError: too much recursionRangeError: argument is not a valid code pointRangeError: BigInt division by zeroRangeError: BigInt negative exponentRangeError: invalid array lengthRangeError: invalid dateRangeError: precision is out of rangeRangeError: radix must be an integerRangeError: repeat count must be less than infinityRangeError: repeat count must be non-negativeRangeError: x can't be converted to BigInt because it isn't an integerReferenceError: "x" is not definedReferenceError: assignment to undeclared variable "x"ReferenceError: can't access lexical declaration 'X' before initializationReferenceError: deprecated caller or arguments usageReferenceError: reference to undefined property "x"SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecatedSyntaxError: "use strict" not allowed in function with non-simple parametersSyntaxError: "x" is a reserved identifierSyntaxError: a declaration in the head of a for-of loop can't have an initializerSyntaxError: applying the 'delete' operator to an unqualified name is deprecatedSyntaxError: await is only valid in async functions, async generators and modulesSyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressionsSyntaxError: continue must be inside loopSyntaxError: for-in loop head declarations may not have initializersSyntaxError: function statement requires a nameSyntaxError: identifier starts immediately after numeric literalSyntaxError: illegal characterSyntaxError: invalid assignment left-hand sideSyntaxError: invalid BigInt syntaxSyntaxError: invalid regular expression flag "x"SyntaxError: JSON.parse: bad parsingSyntaxError: label not foundSyntaxError: missing ; before statementSyntaxError: missing : after property idSyntaxError: missing ) after argument listSyntaxError: missing ) after conditionSyntaxError: missing ] after element listSyntaxError: missing } after function bodySyntaxError: missing } after property listSyntaxError: missing = in const declarationSyntaxError: missing formal parameterSyntaxError: missing name after . operatorSyntaxError: missing variable nameSyntaxError: redeclaration of formal parameter "x"SyntaxError: return not in functionSyntaxError: test for equality (==) mistyped as assignment (=)?SyntaxError: Unexpected '#' used outside of class bodySyntaxError: Unexpected tokenSyntaxError: unlabeled break must be inside loop or switchSyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'SyntaxError: unterminated string literalSyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# insteadTypeError: 'x' is not iterableTypeError: "x" has no propertiesTypeError: "x" is (not) "y"TypeError: "x" is not a constructorTypeError: "x" is not a functionTypeError: "x" is not a non-null objectTypeError: "x" is read-onlyTypeError: can't assign to property "x" on "y": not an objectTypeError: can't convert BigInt to numberTypeError: can't convert x to BigIntTypeError: can't define property "x": "obj" is not extensibleTypeError: can't delete non-configurable array elementTypeError: can't redefine non-configurable property "x"TypeError: cannot use 'in' operator to search for 'x' in 'y'TypeError: cyclic object valueTypeError: invalid 'instanceof' operand 'x'TypeError: invalid Array.prototype.sort argumentTypeError: invalid assignment to const "x"TypeError: More arguments neededTypeError: property "x" is non-configurable and can't be deletedTypeError: Reduce of empty array with no initial valueTypeError: setting getter-only property "x"TypeError: X.prototype.y called on incompatible typeURIError: malformed URI sequenceWarning: -file- is being assigned a //# sourceMappingURL, but already has oneWarning: unreachable code after return statement
+
+
+
+
+Misc
+
+JavaScript technologies overview
+Lexical grammar
+Iteration protocols
+Strict mode
+Template literals
+Trailing commas
+Deprecated features
+
+
+
+
+In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoconstThe const declaration creates block-scoped constants, much like variables declared using the let keyword. The value of a constant can't be changed through reassignment (i.e. by using the assignment operator), and it can't be redeclared (i.e. through a variable declaration). However, if a constant is an object or array its properties or items can be updated or removed.Try itSyntaxconst name1 = value1;
+const name1 = value1, name2 = value2;
+const name1 = value1, name2 = value2, /* â¦, */ nameN = valueN;
+
+
+nameN
+
+The constant's name, which can be any legal identifier.
+
+valueN
+
+The constant's value. This can be any legal expression, including a function expression.
+
+
+The destructuring assignment syntax can also be used to declare variables.
+const { bar } = foo; // where foo = { bar: 10, baz: 12 };
+// This creates a constant with the name 'bar', which has a value of 10
+DescriptionThis declaration creates a constant whose scope can be either global or local to the block in which it is declared. Global constants do not become properties of the globalThis object, unlike var variables.
+An initializer for a constant is required. You must specify its value in the same declaration. (This makes sense, given that it can't be changed later.)
+The const declaration creates a read-only reference to a value. It does not mean the value it holds is immutableâjust that the variable identifier cannot be reassigned. For instance, in the case where the content is an object, this means the object's contents (e.g., its properties) can be altered.
+All the considerations about the temporal dead zone apply to both let and const. For this reason, const declarations are commonly regarded as non-hoisted.
+A constant cannot share its name with a function or a variable in the same scope.
+If you're experimenting in a REPL, such as the Firefox web console (Tools > Web Developer > Web Console), and you run two const declarations with the same name in two separate inputs, you may get a syntax error due to re-declaration. See further discussion of this issue in Firefox bug 1580891. The Chrome console allows const re-declarations between different REPL inputs.
+Unlike var, const begins declarations, not statements. That means you cannot use a lone const declaration as the body of a block (which makes sense, since there's no way to access the variable).
+if (true) const a = 1; // SyntaxError: Unexpected token 'const'
+ExamplesBasic const usageConstants can be declared with uppercase or lowercase, but a common convention is to use all-uppercase letters.
+// define MY_FAV as a constant and give it the value 7
+const MY_FAV = 7;
+
+// this throws an error
+// Uncaught TypeError: Assignment to constant variable
+MY_FAV = 20;
+
+// MY_FAV is 7
+console.log("my favorite number is: " + MY_FAV);
+
+// trying to redeclare a constant throws an error
+// Uncaught SyntaxError: Identifier 'MY_FAV' has already been declared
+const MY_FAV = 20;
+
+// this throws an error too
+var MY_FAV = 20;
+
+// this throws an error too
+let MY_FAV = 20;
+Block scopingIt's important to note the nature of block scoping.
+if (MY_FAV === 7) {
+  // this is fine and creates a block scoped MY_FAV variable
+  // (works equally well with let to declare a block scoped non const variable)
+  const MY_FAV = 20;
+
+  // MY_FAV is now 20
+  console.log("my favorite number is " + MY_FAV);
+
+  // this gets hoisted into the global context and throws an error
+  var MY_FAV = 20;
+}
+
+// MY_FAV is still 7
+console.log("my favorite number is " + MY_FAV);
+const needs to be initialized// throws an error
+// Uncaught SyntaxError: Missing initializer in const declaration
+
+const FOO;
+const in objects and arraysconst also works on objects and arrays. Attempting to overwrite the object throws an error "Assignment to constant variable".
+const MY_OBJECT = { key: "value" };
+MY_OBJECT = { OTHER_KEY: "value" };
+
+However, object keys are not protected, so the following statement is executed without problem.
+MY_OBJECT.key = "otherValue";
+
+You would need to use Object.freeze() to make an object immutable.
+The same applies to arrays. Assigning a new array to the variable throws an error "Assignment to constant variable".
+const MY_ARRAY = [];
+MY_ARRAY = ["B"];
+
+Still, it's possible to push items into the array and thus mutate it.
+MY_ARRAY.push("A"); // ["A"]
+SpecificationsSpecificationECMAScript Language Specification # sec-let-and-const-declarationsBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+var
+let
+Constants in the JavaScript Guide
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 4, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

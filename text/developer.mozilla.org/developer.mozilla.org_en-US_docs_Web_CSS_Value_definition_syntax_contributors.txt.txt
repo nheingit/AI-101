@@ -1,0 +1,27 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/css/value_definition_syntax/index.md
+
+# Original Wiki contributors
+cpmsmith
+mfuji09
+alattalatta
+wbamberg
+rajeshdh
+ExE-Boss
+TheWindrising
+grumBit
+Sheppy
+mfluehr
+rdvornov
+david_ross
+Sebastianz
+Nooknok
+Prinz_Rana
+danield
+Guillaume-Heras
+prayash
+georgialyle
+SphinxKnight
+FredB
+teoli
+jswisher

@@ -1,0 +1,83 @@
+Compositing and clipping - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCanvas APICanvas tutorialCompositing and clippingArticle ActionsEnglish (US)In this articleglobalCompositeOperationClipping pathsCanvas APIGuidesManipulating video using canvasTutorialCanvas tutorialBasic usage of canvasDrawing shapes with canvasApplying styles and colorsDrawing textUsing imagesTransformationsCompositing and clippingBasic animationsAdvanced animationsPixel manipulation with canvasOptimizing canvasFinaleInterfacesCanvasGradientCanvasPatternCanvasRenderingContext2DHTMLCanvasElementImageBitmapImageBitmapRenderingContextImageDataOffscreenCanvasPath2DTextMetricsMethodscreateImageBitmapIn this articleglobalCompositeOperationClipping pathsCompositing and clipping
+Â« Previous
+Next  Â»
+
+In all of our previous examples, shapes were always drawn one on top of the other. This is more than adequate for most situations, but it limits the order in which composite shapes are built. We can, however, change this behavior by setting the globalCompositeOperation property. In addition, the clip property allows us to hide unwanted parts of shapes.globalCompositeOperationWe can not only draw new shapes behind existing shapes but we can also use it to mask off certain areas, clear sections from the canvas (not limited to rectangles like the clearRect() method does) and more.
+
+globalCompositeOperation = type
+
+This sets the type of compositing operation to apply when drawing new shapes, where type is a string identifying which of the twelve compositing operations to use.
+
+
+See compositing examples for the code of the following examples.Clipping pathsA clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image below. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.
+
+
+
+If we compare clipping paths to the globalCompositeOperation property we've seen above, we see two compositing modes that achieve more or less the same effect in source-in and source-atop. The most important differences between the two are that clipping paths are never actually drawn to the canvas and the clipping path is never affected by adding new shapes. This makes clipping paths ideal for drawing multiple shapes in a restricted area.
+In the chapter about drawing shapes I only mentioned the stroke() and fill() methods, but there's a third method we can use with paths, called clip().
+
+clip()
+
+Turns the path currently being built into the current clipping path.
+
+
+You use clip() instead of closePath() to close a path and turn it into a clipping path instead of stroking or filling the path.
+By default the <canvas> element has a clipping path that's the exact same size as the canvas itself. In other words, no clipping occurs.A clip exampleIn this example, we'll use a circular clipping path to restrict the drawing of a set of random stars to a particular region.
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.fillRect(0, 0, 150, 150);
+  ctx.translate(75, 75);
+
+  // Create a circular clipping path
+  ctx.beginPath();
+  ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
+  ctx.clip();
+
+  // draw background
+  const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
+
+  ctx.fillStyle = lingrad;
+  ctx.fillRect(-75, -75, 150, 150);
+
+  // draw stars
+  for (let j = 1; j < 50; j++) {
+    ctx.save();
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150)
+    );
+    drawStar(ctx, Math.floor(Math.random() * 4) + 2);
+    ctx.restore();
+  }
+}
+
+function drawStar(ctx, r) {
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(r, 0);
+  for (let i = 0; i < 9; i++) {
+    ctx.rotate(Math.PI / 5);
+    if (i % 2 === 0) {
+      ctx.lineTo((r / 0.525731) * 0.200811, 0);
+    } else {
+      ctx.lineTo(r, 0);
+    }
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+<canvas id="canvas" width="150" height="150"></canvas>
+
+draw();
+
+In the first few lines of code, we draw a black rectangle the size of the canvas as a backdrop, then translate the origin to the center. Next, we create the circular clipping path by drawing an arc and calling clip(). Clipping paths are also part of the canvas save state. If we wanted to keep the original clipping path we could have saved the canvas state before creating the new one.
+Everything that's drawn after creating the clipping path will only appear inside that path. You can see this clearly in the linear gradient that's drawn next. After this a set of 50 randomly positioned and scaled stars is drawn, using the custom drawStar() function. Again the stars only appear inside the defined clipping path.ScreenshotLive sample
+
+Â« Previous
+Next  Â»
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 19, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

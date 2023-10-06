@@ -1,0 +1,102 @@
+Array() constructor - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStandard built-in objectsArrayArray() constructorArticle ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoStandard built-in objectsArrayConstructorArray() constructorPropertiesArray[@@species]Array.prototype[@@unscopables]Array: lengthMethodsArray.prototype[@@iterator]()Array.prototype.at()Array.prototype.concat()Array.prototype.copyWithin()Array.prototype.entries()Array.prototype.every()Array.prototype.fill()Array.prototype.filter()Array.prototype.find()Array.prototype.findIndex()Array.prototype.findLast()Array.prototype.findLastIndex()Array.prototype.flat()Array.prototype.flatMap()Array.prototype.forEach()Array.from()Array.fromAsync()
+Experimental
+Array.prototype.group()
+Experimental
+Array.prototype.groupToMap()
+Experimental
+Array.prototype.includes()Array.prototype.indexOf()Array.isArray()Array.prototype.join()Array.prototype.keys()Array.prototype.lastIndexOf()Array.prototype.map()Array.of()Array.prototype.pop()Array.prototype.push()Array.prototype.reduce()Array.prototype.reduceRight()Array.prototype.reverse()Array.prototype.shift()Array.prototype.slice()Array.prototype.some()Array.prototype.sort()Array.prototype.splice()Array.prototype.toLocaleString()Array.prototype.toReversed()Array.prototype.toSorted()Array.prototype.toSpliced()Array.prototype.toString()Array.prototype.unshift()Array.prototype.values()Array.prototype.with()Inheritance:FunctionConstructorFunction() constructorPropertiesFunction.prototype.arguments
+Non-standard
+
+Deprecated
+Function.prototype.caller
+Non-standard
+
+Deprecated
+Function: displayName
+Non-standard
+Function: lengthFunction: nameFunction: prototypeMethodsFunction.prototype[@@hasInstance]()Function.prototype.apply()Function.prototype.bind()Function.prototype.call()Function.prototype.toString()ObjectPropertiesObject.prototype.constructorObject.prototype.__proto__
+Deprecated
+MethodsObject.prototype.__defineGetter__()
+Deprecated
+Object.prototype.__defineSetter__()
+Deprecated
+Object.prototype.__lookupGetter__()
+Deprecated
+Object.prototype.__lookupSetter__()
+Deprecated
+Object.prototype.hasOwnProperty()Object.prototype.isPrototypeOf()Object.prototype.propertyIsEnumerable()Object.prototype.toLocaleString()Object.prototype.toString()Object.prototype.valueOf()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoArray() constructorThe Array() constructor creates Array objects.Syntaxnew Array()
+new Array(element0)
+new Array(element0, element1)
+new Array(element0, element1, /* â¦ ,*/ elementN)
+new Array(arrayLength)
+
+Array()
+Array(element0)
+Array(element0, element1)
+Array(element0, element1, /* â¦ ,*/ elementN)
+Array(arrayLength)
+
+
+Note: Array() can be called with or without new. Both create a new Array instance.
+Parameters
+elementN
+
+
+      A JavaScript array is initialized with the given elements, except in the case where
+      a single argument is passed to the Array constructor and that argument is
+      a number (see the arrayLength parameter below). Note that this special case only
+      applies to JavaScript arrays created with the Array constructor, not
+      array literals created with the bracket syntax.
+    
+
+arrayLength
+
+
+      If the only argument passed to the Array constructor is an integer
+      between 0 and 232 - 1 (inclusive), this returns a new JavaScript array with
+      its length property set to that number (Note: this
+      implies an array of arrayLength empty slots, not slots with actual
+      undefined values â see sparse arrays).
+    
+
+Exceptions
+RangeError
+
+Thrown if there's only one argument (arrayLength) that is a number, but its value is not an integer or not between 0 and 232 - 1 (inclusive).
+
+ExamplesArray literal notation
+  Arrays can be created using the literal
+  notation:
+
+const fruits = ["Apple", "Banana"];
+
+console.log(fruits.length); // 2
+console.log(fruits[0]); // "Apple"
+Array constructor with a single parameter
+  Arrays can be created using a constructor with a single number parameter. An array is created with
+  its length property set to that number, and the array elements are empty
+  slots.
+
+const arrayEmpty = new Array(2);
+
+console.log(arrayEmpty.length); // 2
+console.log(arrayEmpty[0]); // undefined; actually, it is an empty slot
+console.log(0 in arrayEmpty); // false
+console.log(1 in arrayEmpty); // false
+
+const arrayOfOne = new Array("2"); // Not the number 2 but the string "2"
+
+console.log(arrayOfOne.length); // 1
+console.log(arrayOfOne[0]); // "2"
+Array constructor with multiple parameters
+  If more than one argument is passed to the constructor, a new Array with
+  the given elements is created.
+
+const fruits = new Array("Apple", "Banana");
+
+console.log(fruits.length); // 2
+console.log(fruits[0]); // "Apple"
+SpecificationsSpecificationECMAScript Language Specification # sec-array-constructorBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Indexed collections
+Array
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 17, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

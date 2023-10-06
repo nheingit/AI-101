@@ -1,0 +1,27 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/node/haschildnodes/index.md
+
+# Original Wiki contributors
+sideshowbarker
+mfluehr
+fscholz
+K-Gun
+jszhou
+AshfaqHossain
+basemnassar11
+teoli
+TinhangMa
+kscarfone
+namolmes
+Sheppy
+mattbasta
+ethertank
+ziyunfei
+Matej Lednar
+Mgjbot
+Jabez
+Pmash
+Ptak82
+Raevel
+Dria
+JesseW

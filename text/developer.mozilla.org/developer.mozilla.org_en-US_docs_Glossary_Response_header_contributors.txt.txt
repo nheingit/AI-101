@@ -1,0 +1,11 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/response_header/index.md
+
+# Original Wiki contributors
+hamishwillee
+bershanskiy
+mfuji09
+participator
+discodanser
+teoli
+fscholz

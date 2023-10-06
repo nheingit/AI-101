@@ -1,0 +1,71 @@
+KeyboardEvent: charCode property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsKeyboardEventcharCodeArticle ActionsEnglish (US)In this articleValueExamplesNotesSpecificationsBrowser compatibilityUI EventsKeyboardEventConstructorKeyboardEvent()Instance propertiesaltKeycharCode 
+Deprecated
+codectrlKeyisComposingkeykeyCode
+Deprecated
+keyIdentifier
+Non-standard
+
+Deprecated
+locationmetaKeyrepeatshiftKeyInstance methodsgetModifierState()initKeyboardEvent()
+Deprecated
+initKeyEvent()
+Non-standard
+
+Deprecated
+Inheritance:UIEventEventRelated pages for UI EventsCompositionEventFocusEventInputEventMouseEventMouseScrollEventMutationEventUIEventWheelEventIn this articleValueExamplesNotesSpecificationsBrowser compatibilityKeyboardEvent: charCode propertyDeprecated: This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the compatibility table at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+
+  The charCode read-only property of the
+  KeyboardEvent interface returns the Unicode value of a character key
+  pressed during a keypress event.
+
+
+
+Warning: Do not use this property, as it is deprecated. Instead, get the
+    Unicode value of the character using the key
+    property.
+  
+ValueA number that represents the Unicode value of the character key that was pressed.ExamplesHTML<p>Type anything into the input box below to log a <code>charCode</code>.</p>
+<input type="text" />
+<p id="log"></p>
+JavaScriptconst input = document.querySelector("input");
+const log = document.querySelector("#log");
+
+input.addEventListener("keypress", (e) => {
+  log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${
+    e.charCode
+  }`;
+});
+ResultNotes
+
+    In a keypress event, the Unicode value of the key pressed is stored in
+    either the keyCode or charCode
+    property, but never both. If the key pressed generates a character (e.g., 'a'),
+    charCode is set to the code of that character; charCode
+    respects the letter case (in other words, charCode takes into account
+    whether the
+    shift
+    key is held down). Otherwise, the code of the pressed key
+    is stored in keyCode.
+  
+
+    When one or more modifier keys are pressed, there are some complex rules for
+    charCode. See Gecko Keypress Event
+    for details.
+  
+
+charCode is never set in the keydown and
+    keyup events. In these cases, keyCode is set instead.
+  
+
+    To get the code of the key regardless of whether it was stored in
+    keyCode or charCode, query the which property.
+  
+
+    Characters entered through an IME do not register through keyCode or
+    charCode.
+  
+
+    For a list of the charCode values associated with particular keys, run
+    Example 7: Displaying Event Object Properties and view the resulting HTML table.
+  
+SpecificationsSpecificationUI Events # dom-keyboardevent-charcodeBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

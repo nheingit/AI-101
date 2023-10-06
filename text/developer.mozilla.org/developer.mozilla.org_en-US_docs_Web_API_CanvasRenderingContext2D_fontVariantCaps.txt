@@ -1,0 +1,91 @@
+CanvasRenderingContext2D: fontVariantCaps property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCanvasRenderingContext2DfontVariantCapsIn this articleValueExamplesSpecificationsBrowser compatibilityCanvasRenderingContext2DInstance propertiescanvasdirectionfillStylefilterfontfontKerningfontStretch
+Experimental
+fontVariantCaps 
+Experimental
+globalAlphaglobalCompositeOperationimageSmoothingEnabledimageSmoothingQualityletterSpacing
+Experimental
+lineCaplineDashOffsetlineJoinlineWidthmiterLimitshadowBlurshadowColorshadowOffsetXshadowOffsetYstrokeStyletextAligntextBaselinetextRendering
+Experimental
+wordSpacing
+Experimental
+Instance methodsarc()arcTo()beginPath()bezierCurveTo()clearRect()clip()closePath()createConicGradient()createImageData()createLinearGradient()createPattern()createRadialGradient()drawFocusIfNeeded()drawImage()ellipse()fill()fillRect()fillText()getContextAttributes()getImageData()getLineDash()getTransform()isContextLost()
+Experimental
+isPointInPath()isPointInStroke()lineTo()measureText()moveTo()putImageData()quadraticCurveTo()rect()reset()resetTransform()restore()rotate()roundRect()save()scale()scrollPathIntoView()
+Experimental
+setLineDash()setTransform()stroke()strokeRect()strokeText()transform()translate()In this articleValueExamplesSpecificationsBrowser compatibilityCanvasRenderingContext2D: fontVariantCaps propertyExperimental: This is an experimental technologyCheck the Browser compatibility table carefully before using this in production.
+The CanvasRenderingContext2D.fontVariantCaps property of the Canvas API specifies an alternative capitalization of the rendered text.
+This corresponds to the CSS font-variant-caps property.ValueThe font alternative capitalization value, which is one of:
+
+normal (default)
+
+Deactivates of the use of alternate glyphs.
+
+small-caps
+
+
+      Enables display of small capitals (OpenType feature: smcp).
+      Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
+    
+
+all-small-caps
+
+Enables display of small capitals for both upper and lowercase letters (OpenType features: c2sc, smcp).
+
+petite-caps
+
+Enables display of petite capitals (OpenType feature: pcap).
+
+all-petite-caps
+
+Enables display of petite capitals for both upper and lowercase letters (OpenType features: c2pc, pcap).
+
+unicase
+
+Enables display of mixture of small capitals for uppercase letters with normal lowercase letters (OpenType feature: unic).
+
+titling-caps
+
+
+      Enables display of titling capitals (OpenType feature: titl).
+      Uppercase letter glyphs are often designed for use with lowercase letters.
+      When used in all uppercase titling sequences they can appear too strong.
+      Titling capitals are designed specifically for this situation.
+    
+
+
+The property can be used to get or set the font capitalization value.
+Note that there are accessibility concerns with some of these, which are outlined in the corresponding font-variant-caps topic.Examples
+  In this example we display the text "Hello World" using each of the supported values of the fontVariantCaps property.
+  The value is also displayed for each case by reading the property.
+HTML<canvas id="canvas" width="700" height="220"></canvas>
+JavaScriptconst canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.font = "20px serif";
+
+// Default (normal)
+ctx.fillText(`Hello world (default: ${ctx.fontVariantCaps})`, 5, 20);
+
+// Capitalization: small-caps
+ctx.fontVariantCaps = "small-caps";
+ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 50);
+
+// Capitalization: all-small-caps
+ctx.fontVariantCaps = "all-small-caps";
+ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 80);
+
+// Capitalization: petite-caps
+ctx.fontVariantCaps = "petite-caps";
+ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 110);
+
+// Capitalization: all-petite-caps
+ctx.fontVariantCaps = "all-petite-caps";
+ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 140);
+
+// Capitalization: unicase
+ctx.fontVariantCaps = "unicase";
+ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 170);
+
+// Capitalization: titling-caps
+ctx.fontVariantCaps = "titling-caps";
+ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 200);
+ResultSpecificationsSpecificationHTML Standard # dom-context-2d-fontvariantcapsBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

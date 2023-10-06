@@ -1,0 +1,86 @@
+XMLHttpRequest: send() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsXMLHttpRequestsend()Article ActionsEnglish (US)In this articleSyntaxExample: GETExample: POSTSpecificationsBrowser compatibilitySee alsoXMLHttpRequestXMLHttpRequestConstructorXMLHttpRequest()Instance propertieschannel
+Non-standard
+mozAnon
+Non-standard
+mozBackgroundRequest
+Non-standard
+mozSystem
+Non-standard
+readyStateresponseresponseTextresponseTyperesponseURLresponseXMLstatusstatusTexttimeoutuploadwithCredentialsInstance methodsabort()getAllResponseHeaders()getResponseHeader()open()overrideMimeType()send() setRequestHeader()EventsaborterrorloadloadendloadstartprogressreadystatechangetimeoutInheritance:XMLHttpRequestEventTargetEventTargetRelated pages for XMLHttpRequestFormDataProgressEventXMLHttpRequestEventTargetXMLHttpRequestUploadIn this articleSyntaxExample: GETExample: POSTSpecificationsBrowser compatibilitySee alsoXMLHttpRequest: send() method
+  The XMLHttpRequest method
+  send() sends the request to the server.
+
+
+  If the
+  request is asynchronous (which is the default), this method returns as soon as the
+  request is sent and the result is delivered using events. If the request is synchronous,
+  this method doesn't return until the response has arrived.
+
+
+send() accepts an optional parameter which lets you specify the request's
+  body; this is primarily used for requests such as PUT. If the request
+  method is GET or HEAD, the body
+  parameter is ignored and the request body is set to null.
+
+
+  If no Accept header has been set using the
+  setRequestHeader(), an
+  Accept header with the type "*/*" (any type) is sent.
+Syntaxsend()
+send(body)
+Parameters
+body Optional
+
+A body of data to be sent in the XHR request. This can be:
+
+A Document, in which case it is serialized before being sent.
+An XMLHttpRequestBodyInit, which per the Fetch spec can be a Blob, an ArrayBuffer, a TypedArray, a DataView, a FormData, a URLSearchParams, or a string literal or object.
+null
+
+If no value is specified for the body, a default value of null is used.
+
+
+
+  The best way to send binary content (e.g. in file uploads) is by using
+  a TypedArray, a DataView or a Blob object
+  in conjunction with the send() method.
+Return valueNone (undefined).Exceptions
+InvalidStateError DOMException
+
+Thrown if send() has already been invoked for the request, and/or the request is complete.
+
+NetworkError DOMException
+
+Thrown if the resource type to be fetched is a Blob, and the method is not GET.
+
+Example: GETconst xhr = new XMLHttpRequest();
+xhr.open("GET", "/server", true);
+
+xhr.onload = () => {
+  // Request finished. Do processing here.
+};
+
+xhr.send(null);
+// xhr.send('string');
+// xhr.send(new Blob());
+// xhr.send(new Int8Array());
+// xhr.send(document);
+Example: POSTconst xhr = new XMLHttpRequest();
+xhr.open("POST", "/server", true);
+
+// Send the proper header information along with the request
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+xhr.onreadystatechange = () => {
+  // Call a function when the state changes.
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    // Request finished. Do processing here.
+  }
+};
+xhr.send("foo=bar&lorem=ipsum");
+// xhr.send(new Int8Array());
+// xhr.send(document);
+SpecificationsSpecificationXMLHttpRequest Standard # the-send()-methodBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Using XMLHttpRequest
+HTML in XMLHttpRequest
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on May 10, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

@@ -1,0 +1,30 @@
+Attribute - MDN Web Docs Glossary: Definitions of Web-related terms | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusMDN Web Docs Glossary: Definitions of Web-related termsAttributeArticle ActionsEnglish (US)In this articleReflection of an attributeSee alsoIn this articleReflection of an attributeSee alsoAttributeAn attribute extends an HTML or XML element, changing its behavior or providing metadata.
+An attribute always has the form name="value" (the attribute's identifier followed by its associated value).
+You may see attributes without the equals sign or a value. That is a shorthand for providing the empty string in HTML, or the attribute's name in XML.
+<input required />
+<!-- is the same asâ¦ -->
+<input required="" />
+<!-- or -->
+<input required="required" />
+Reflection of an attribute
+  Attributes may be reflected into a particular property of the specific interface.
+  It means that the value of the attribute can be read by accessing the property,
+  and can be modified by setting the property to a different value.
+
+For example, the placeholder below is reflected into HTMLInputElement.placeholder.
+Considering the following HTML:
+<input placeholder="Original placeholder" />
+
+We can check the reflection between HTMLInputElement.placeholder and the attribute using:
+const input = document.querySelector("input");
+const attr = input.getAttributeNode("placeholder");
+console.log(attr.value);
+console.log(input.placeholder); // Prints the same value as `attr.value`
+
+// Changing placeholder value will also change the value of the reflected attribute.
+input.placeholder = "Modified placeholder";
+console.log(attr.value); // Prints `Modified placeholder`
+See also
+HTML attribute reference
+Information about HTML's global attributes
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

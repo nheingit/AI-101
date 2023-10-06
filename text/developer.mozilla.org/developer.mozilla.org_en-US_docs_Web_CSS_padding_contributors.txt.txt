@@ -1,0 +1,42 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/css/padding/index.md
+
+# Original Wiki contributors
+mfuji09
+chrisdavidmills
+wbamberg
+fscholz
+Malvoz
+sideshowbarker
+PatrickDGarvey
+alattalatta
+ddbeck
+connorshea
+jedbt
+mfluehr
+Jeremie
+xfq
+AlexanderJohn
+erikadoyle
+david_ross
+Sheppy
+jwhitlock
+Prinz_Rana
+Sebastianz
+quat1024
+Jargnik
+kscarfone
+teoli
+parthiv
+ethertank
+Dholbert
+ThePrisoner
+Doris52
+grendel
+jojomojo
+Yuichiro
+regjo
+gf3
+JÃ¼rgen Jeka
+BijuGC
+Waldo

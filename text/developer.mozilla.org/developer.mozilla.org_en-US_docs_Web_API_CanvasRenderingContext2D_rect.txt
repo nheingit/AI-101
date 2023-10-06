@@ -1,0 +1,78 @@
+CanvasRenderingContext2D: rect() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCanvasRenderingContext2Drect()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2DInstance propertiescanvasdirectionfillStylefilterfontfontKerningfontStretch
+Experimental
+fontVariantCaps
+Experimental
+globalAlphaglobalCompositeOperationimageSmoothingEnabledimageSmoothingQualityletterSpacing
+Experimental
+lineCaplineDashOffsetlineJoinlineWidthmiterLimitshadowBlurshadowColorshadowOffsetXshadowOffsetYstrokeStyletextAligntextBaselinetextRendering
+Experimental
+wordSpacing
+Experimental
+Instance methodsarc()arcTo()beginPath()bezierCurveTo()clearRect()clip()closePath()createConicGradient()createImageData()createLinearGradient()createPattern()createRadialGradient()drawFocusIfNeeded()drawImage()ellipse()fill()fillRect()fillText()getContextAttributes()getImageData()getLineDash()getTransform()isContextLost()
+Experimental
+isPointInPath()isPointInStroke()lineTo()measureText()moveTo()putImageData()quadraticCurveTo()rect() reset()resetTransform()restore()rotate()roundRect()save()scale()scrollPathIntoView()
+Experimental
+setLineDash()setTransform()stroke()strokeRect()strokeText()transform()translate()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2D: rect() method
+  The
+  CanvasRenderingContext2D.rect()
+  method of the Canvas 2D API adds a rectangle to the current path.
+
+
+  Like other methods that modify the current path, this method does not directly render
+  anything. To draw the rectangle onto a canvas, you can use the
+  fill() or
+  stroke() methods.
+
+
+
+Note: To both create and render a rectangle in one step, use the
+    fillRect() or
+    strokeRect() methods.
+  
+Syntaxrect(x, y, width, height)
+
+
+  The rect() method creates a rectangular path whose starting point is at
+  (x, y) and whose size is specified by width and
+  height.
+Parameters
+x
+
+The x-axis coordinate of the rectangle's starting point.
+
+y
+
+The y-axis coordinate of the rectangle's starting point.
+
+width
+
+The rectangle's width. Positive values are to the right, and negative to the left.
+
+height
+
+The rectangle's height. Positive values are down, and negative are up.
+
+Return valueNone (undefined).ExamplesDrawing a rectangle
+  This example creates a rectangular path using the rect() method. The path
+  is then rendered using the fill() method.
+
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+
+  The rectangle's corner is located at (10, 20). It has a width of 150 and a height of
+  100.
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.rect(10, 20, 150, 100);
+ctx.fill();
+
+ResultSpecificationsSpecificationHTML Standard # dom-context-2d-rect-devBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The interface defining this method: CanvasRenderingContext2D
+CanvasRenderingContext2D.fillRect
+CanvasRenderingContext2D.strokeRect()
+CanvasRenderingContext2D.fill()
+CanvasRenderingContext2D.stroke()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

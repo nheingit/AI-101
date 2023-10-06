@@ -1,0 +1,32 @@
+ProcessingInstruction: target property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsProcessingInstructiontargetArticle ActionsEnglish (US)In this articleValueExampleSpecificationsBrowser compatibilitySee alsoDocument Object ModelProcessingInstructionInstance propertiessheettarget Inheritance:CharacterDataNodeEventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleValueExampleSpecificationsBrowser compatibilitySee alsoProcessingInstruction: target property
+  The read-only target property of the ProcessingInstruction interface
+  represent the application to which the ProcessingInstruction is targeted.
+
+For example:
+<?xml version="1.0"?>
+
+is a processing instruction whose target is xml.ValueA string containing the name of the application.ExampleIn an XML document<output></output>
+
+let parser = new DOMParser();
+const doc = parser.parseFromString(
+  '<?xml version="1.0"?><test/>',
+  "application/xml"
+);
+const pi = doc.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css" type="text/css"'
+);
+doc.insertBefore(pi, doc.firstChild);
+
+const output = document.querySelector("output");
+output.textContent = `This processing instruction's target is: ${doc.firstChild.target}`;
+In an HTML documentThe processing instruction line will be considered, and represented, as a Comment object.
+<?xml version="1.0"?>
+<pre></pre>
+
+const node = document.querySelector("pre").previousSibling.previousSibling;
+const result = `Node with the processing instruction: ${node.nodeName}: ${node.nodeValue}\n`;
+document.querySelector("pre").textContent = result;
+SpecificationsSpecificationDOM Standard # dom-processinginstruction-targetBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The DOM API
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

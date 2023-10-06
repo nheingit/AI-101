@@ -1,0 +1,11 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/documentfragment/queryselector/index.md
+
+# Original Wiki contributors
+ExE-Boss
+Sebastianz
+fscholz
+jsx
+LouisLazaris
+nairakhil13
+teoli

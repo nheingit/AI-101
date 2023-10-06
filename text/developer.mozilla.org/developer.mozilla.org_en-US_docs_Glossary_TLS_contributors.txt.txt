@@ -1,0 +1,21 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/tls/index.md
+
+# Original Wiki contributors
+chrisdavidmills
+mfuji09
+marumari
+SphinxKnight
+diayan
+ToJen
+estelle
+Grampz
+russnicoletti
+hbloomer
+kscarfone
+jsn1004
+klez
+Andrew_Pfeiffer
+alispivak
+MargotW
+xfq

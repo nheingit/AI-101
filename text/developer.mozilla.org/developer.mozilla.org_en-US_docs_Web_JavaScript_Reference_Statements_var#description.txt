@@ -1,0 +1,359 @@
+var - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStatements and declarationsvarArticle ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee also
+
+JavaScript
+Tutorials
+
+
+Complete beginners
+
+JavaScript basics
+JavaScript first steps
+JavaScript building blocks
+Introducing JavaScript objects
+
+
+
+
+
+JavaScript Guide
+
+Introduction
+Grammar and types
+Control flow and error handling
+Loops and iteration
+Functions
+Expressions and operators
+Numbers and dates
+Text formatting
+Regular expressions
+Indexed collections
+Keyed collections
+Working with objects
+Using classes
+Using promises
+JavaScript typed arrays
+Iterators and generators
+Meta programming
+JavaScript modules
+
+
+
+
+
+Intermediate
+
+Client-side JavaScript frameworks
+Client-side web APIs
+Language overview
+JavaScript data structures
+Equality comparisons and sameness
+Enumerability and ownership of properties
+Closures
+
+
+
+
+
+Advanced
+
+Inheritance and the prototype chain
+Memory Management
+Concurrency model and Event Loop
+
+
+
+References
+
+
+Built-in objects
+OverviewAggregateErrorArrayArrayBufferAsyncFunctionAsyncGeneratorAsyncGeneratorFunctionAsyncIteratorAtomicsBigIntBigInt64ArrayBigUint64ArrayBooleanDataViewDatedecodeURI()decodeURIComponent()encodeURI()encodeURIComponent()Errorescape()
+Deprecated
+eval()EvalErrorFinalizationRegistryFloat32ArrayFloat64ArrayFunctionGeneratorGeneratorFunctionglobalThisInfinityInt16ArrayInt32ArrayInt8ArrayInternalError
+Non-standard
+IntlisFinite()isNaN()IteratorJSONMapMathNaNNumberObjectparseFloat()parseInt()PromiseProxyRangeErrorReferenceErrorReflectRegExpSetSharedArrayBufferStringSymbolSyntaxErrorTypedArrayTypeErrorUint16ArrayUint32ArrayUint8ArrayUint8ClampedArrayundefinedunescape()
+Deprecated
+URIErrorWeakMapWeakRefWeakSet
+
+
+
+
+Expressions & operators
+OverviewAddition (+)Addition assignment (+=)Assignment (=)async function expressionasync function* expressionawaitBitwise AND (&)Bitwise AND assignment (&=)Bitwise NOT (~)Bitwise OR (|)Bitwise OR assignment (|=)Bitwise XOR (^)Bitwise XOR assignment (^=)class expressionComma operator (,)Conditional (ternary) operatorDecrement (--)delete operatorDestructuring assignmentDivision (/)Division assignment (/=)Equality (==)Exponentiation (**)Exponentiation assignment (**=)Function expressionfunction* expressionGreater than (>)Greater than or equal (>=)Grouping operator ( )import.metaimport()in operatorIncrement (++)Inequality (!=)instanceofLeft shift (<<)Left shift assignment (<<=)Less than (<)Less than or equal (<=)Logical AND (&&)Logical AND assignment (&&=)Logical NOT (!)Logical OR (||)Logical OR assignment (||=)Multiplication (*)Multiplication assignment (*=)new operatornew.targetnullNullish coalescing assignment (??=)Nullish coalescing operator (??)Object initializerOperator precedenceOptional chaining (?.)Property accessorsRemainder (%)Remainder assignment (%=)Right shift (>>)Right shift assignment (>>=)Spread syntax (...)Strict equality (===)Strict inequality (!==)Subtraction (-)Subtraction assignment (-=)superthistypeofUnary negation (-)Unary plus (+)Unsigned right shift (>>>)Unsigned right shift assignment (>>>=)void operatoryieldyield*
+
+
+
+
+Statements & declarations
+Overviewasync functionasync function*blockbreakclassconstcontinuedebuggerdo...whileemptyexportExpression statementforfor await...offor...infor...offunction declarationfunction*if...elseimportlabelletreturnswitchthrowtry...catchvarwhilewith
+Deprecated
+
+
+
+
+
+Functions
+OverviewArrow function expressionsDefault parametersgetMethod definitionsRest parameterssetThe arguments object
+
+
+
+
+Classes
+OverviewconstructorextendsPrivate class featuresPublic class fieldsstaticStatic initialization blocks
+
+
+
+
+Regular expressions
+OverviewBackreference: \1, \2Capturing group: (...)Character class escape: \d, \D, \w, \W, \s, \SCharacter class: [...], [^...]Character escape: \n, \u{...}Disjunction: |Input boundary assertion: ^, $Literal character: a, bLookahead assertion: (?=...), (?!...)Lookbehind assertion: (?<=...), (?<!...)Named backreference: \k<name>Named capturing group: (?<name>...)Non-capturing group: (?:...)Quantifier: *, +, ?, {n}, {n,}, {n,m}Unicode character class escape: \p{...}, \P{...}Wildcard: .Word boundary assertion: \b, \B
+
+
+
+
+Errors
+OverviewError: Permission denied to access property "x"InternalError: too much recursionRangeError: argument is not a valid code pointRangeError: BigInt division by zeroRangeError: BigInt negative exponentRangeError: invalid array lengthRangeError: invalid dateRangeError: precision is out of rangeRangeError: radix must be an integerRangeError: repeat count must be less than infinityRangeError: repeat count must be non-negativeRangeError: x can't be converted to BigInt because it isn't an integerReferenceError: "x" is not definedReferenceError: assignment to undeclared variable "x"ReferenceError: can't access lexical declaration 'X' before initializationReferenceError: deprecated caller or arguments usageReferenceError: reference to undefined property "x"SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecatedSyntaxError: "use strict" not allowed in function with non-simple parametersSyntaxError: "x" is a reserved identifierSyntaxError: a declaration in the head of a for-of loop can't have an initializerSyntaxError: applying the 'delete' operator to an unqualified name is deprecatedSyntaxError: await is only valid in async functions, async generators and modulesSyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressionsSyntaxError: continue must be inside loopSyntaxError: for-in loop head declarations may not have initializersSyntaxError: function statement requires a nameSyntaxError: identifier starts immediately after numeric literalSyntaxError: illegal characterSyntaxError: invalid assignment left-hand sideSyntaxError: invalid BigInt syntaxSyntaxError: invalid regular expression flag "x"SyntaxError: JSON.parse: bad parsingSyntaxError: label not foundSyntaxError: missing ; before statementSyntaxError: missing : after property idSyntaxError: missing ) after argument listSyntaxError: missing ) after conditionSyntaxError: missing ] after element listSyntaxError: missing } after function bodySyntaxError: missing } after property listSyntaxError: missing = in const declarationSyntaxError: missing formal parameterSyntaxError: missing name after . operatorSyntaxError: missing variable nameSyntaxError: redeclaration of formal parameter "x"SyntaxError: return not in functionSyntaxError: test for equality (==) mistyped as assignment (=)?SyntaxError: Unexpected '#' used outside of class bodySyntaxError: Unexpected tokenSyntaxError: unlabeled break must be inside loop or switchSyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'SyntaxError: unterminated string literalSyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# insteadTypeError: 'x' is not iterableTypeError: "x" has no propertiesTypeError: "x" is (not) "y"TypeError: "x" is not a constructorTypeError: "x" is not a functionTypeError: "x" is not a non-null objectTypeError: "x" is read-onlyTypeError: can't assign to property "x" on "y": not an objectTypeError: can't convert BigInt to numberTypeError: can't convert x to BigIntTypeError: can't define property "x": "obj" is not extensibleTypeError: can't delete non-configurable array elementTypeError: can't redefine non-configurable property "x"TypeError: cannot use 'in' operator to search for 'x' in 'y'TypeError: cyclic object valueTypeError: invalid 'instanceof' operand 'x'TypeError: invalid Array.prototype.sort argumentTypeError: invalid assignment to const "x"TypeError: More arguments neededTypeError: property "x" is non-configurable and can't be deletedTypeError: Reduce of empty array with no initial valueTypeError: setting getter-only property "x"TypeError: X.prototype.y called on incompatible typeURIError: malformed URI sequenceWarning: -file- is being assigned a //# sourceMappingURL, but already has oneWarning: unreachable code after return statement
+
+
+
+
+Misc
+
+JavaScript technologies overview
+Lexical grammar
+Iteration protocols
+Strict mode
+Template literals
+Trailing commas
+Deprecated features
+
+
+
+
+In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsovar
+  The var statement declares a function-scoped or
+  globally-scoped variable, optionally initializing it to a value.
+Try itSyntaxvar name1;
+var name1 = value1;
+var name1 = value1, name2 = value2;
+var name1, name2 = value2;
+var name1 = value1, name2, /* â¦, */ nameN = valueN;
+
+
+nameN
+
+Variable name. It can be any legal identifier.
+
+valueN Optional
+
+
+      Initial value of the variable. It can be any legal expression. Default value is
+      undefined.
+    
+
+
+
+  Alternatively, the Destructuring Assignment
+  syntax can also be used to declare variables.
+
+var { bar } = foo; // where foo = { bar:10, baz:12 };
+/* This creates a variable with the name 'bar', which has a value of 10 */
+Description
+var declarations, wherever they occur, are processed before any code is
+  executed. This is called hoisting and is
+  discussed further below.
+
+
+  The scope of a variable declared with var is its current execution
+context and closures thereof, which is either the enclosing function and
+  functions declared within it, or, for variables declared outside any function, global.
+  Duplicate variable declarations using var will not trigger an error, even
+  in strict mode, and the variable will not lose its value, unless another assignment is
+  performed.
+
+function foo() {
+  var x = 1;
+  function bar() {
+    var y = 2;
+    console.log(x); // 1 (function `bar` closes over `x`)
+    console.log(y); // 2 (`y` is in scope)
+  }
+  bar();
+  console.log(x); // 1 (`x` is in scope)
+  console.log(y); // ReferenceError, `y` is scoped to `bar`
+}
+
+foo();
+
+
+  Variables declared using var are created before any code is executed in a
+  process known as hoisting. Their initial value is undefined.
+
+console.log(x); // undefined (note: not ReferenceError)
+console.log("still going..."); // still going...
+var x = 1;
+console.log(x); // 1
+console.log("still going..."); // still going...
+
+
+  In the global context, a variable declared using var is added as a
+  non-configurable property of the global object. This means its property descriptor
+  cannot be changed and it cannot be deleted using delete. The corresponding
+  name is also added to a list on the internal [[VarNames]] slot on the
+  global environment record
+  (which forms part of the global lexical environment). The list
+  of names in [[VarNames]] enables the runtime to distinguish between global
+  variables and straightforward properties on the global object.
+
+
+  The property created on the global object for global variables, is set to be
+  non-configurable because the identifier is to be treated as a variable, rather than a
+  straightforward property of the global object. JavaScript has automatic memory
+  management, and it would make no sense to be able to use the delete
+  operator on a global variable.
+
+"use strict";
+var x = 1;
+Object.hasOwn(globalThis, "x"); // true
+delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
+delete x; // SyntaxError in strict mode. Fails silently otherwise.
+
+
+  Note that in both NodeJS CommonJS modules and
+  native ECMAScript modules,
+  top-level variable declarations are scoped to the module, and are not, therefore added
+  as properties to the global object.
+Unqualified identifier assignments
+  The global object sits at the top of the scope chain. When attempting to resolve a name
+  to a value, the scope chain is searched. This means that properties on the global object
+  are conveniently visible from every scope, without having to qualify the names with
+  globalThis. or window. or global..
+
+Because the global object has a String property (Object.hasOwn(globalThis, 'String')), you can use the following code:
+function foo() {
+  String("s"); // Note the function `String` is implicitly visible
+}
+
+
+  So the global object will ultimately be searched for unqualified identifiers. You don't
+  have to type globalThis.String, you can just type the unqualified
+  String. The corollary, in non-strict mode, is that assignment to
+  unqualified identifiers will, if there is no variable of the same name declared in the
+  scope chain, assume you want to create a property with that name on the global object.
+
+foo = "f"; // In non-strict mode, assumes you want to create a property named `foo` on the global object
+Object.hasOwn(globalThis, "foo"); // true
+
+In strict mode, assignment to an unqualified identifier in strict mode will result in a ReferenceError, to avoid the accidental creation of properties on the global object.
+
+  Note that the implication of the above, is that, contrary to popular misinformation,
+  JavaScript does not have implicit or undeclared variables, it merely has a syntax that
+  looks like it does.
+var hoisting
+  Because var declarations are processed before any
+  code is executed, declaring a variable anywhere in the code is equivalent to declaring
+  it at the top. This also means that a variable can appear to be used before it's
+  declared. This behavior is called hoisting, as it appears that the variable
+  declaration is moved to the top of the function or global code.
+
+bla = 2;
+var bla;
+
+This is implicitly understood as:
+var bla;
+bla = 2;
+
+
+  For that reason, it is recommended to always declare variables at the top of their
+  scope (the top of global code and the top of function code) so it's clear which
+  variables are function scoped (local) and which are resolved on the scope chain.
+
+
+  It's important to point out that only a variable's declaration is hoisted,
+  not its initialization. The initialization happens only when the assignment
+  statement is reached. Until then the variable remains undefined (but declared):
+
+function do_something() {
+  console.log(bar); // undefined
+  var bar = 111;
+  console.log(bar); // 111
+}
+
+This is implicitly understood as:
+function do_something() {
+  var bar;
+  console.log(bar); // undefined
+  bar = 111;
+  console.log(bar); // 111
+}
+ExamplesDeclaring and initializing two variablesvar a = 0,
+  b = 0;
+Assigning two variables with single string valuevar a = "A";
+var b = a;
+
+This is equivalent to:
+var a, b = a = 'A';
+
+Be mindful of the order:
+var x = y,
+  y = "A";
+console.log(x + y); // undefinedA
+
+
+  Here, x and y are declared before any code is executed, but
+  the assignments occur later. At the time x = y is evaluated,
+  y exists so no ReferenceError is thrown and its value is
+  undefined. So, x is assigned the undefined value. Then,
+  y is assigned the value 'A'. Consequently, after the first
+  line, x === undefined && y === 'A', hence the result.
+Initialization of several variablesvar x = 0;
+function f() {
+  var x = y = 1; // Declares x locally; declares y globally.
+}
+f();
+
+console.log(x, y); // 0 1
+
+// In non-strict mode:
+// x is the global one as expected;
+// y is leaked outside of the function, though!
+
+The same example as above but with a strict mode:
+"use strict";
+
+var x = 0;
+function f() {
+  var x = y = 1; // Throws a ReferenceError in strict mode.
+}
+f();
+
+console.log(x, y);
+Implicit globals and outer function scope
+  Variables that appear to be implicit globals may be references to variables in an outer
+  function scope:
+
+var x = 0; // Declares x within file scope, then assigns it a value of 0.
+
+console.log(typeof z); // "undefined", since z doesn't exist yet
+
+function a() {
+  var y = 2; // Declares y within scope of function a, then assigns it a value of 2.
+
+  console.log(x, y); // 0 2
+
+  function b() {
+    x = 3; // Assigns 3 to existing file scoped x.
+    y = 4; // Assigns 4 to existing outer y.
+    z = 5; // Creates a new global variable z, and assigns it a value of 5.
+    // (Throws a ReferenceError in strict mode.)
+  }
+
+  b(); // Creates z as a global variable.
+  console.log(x, y, z); // 3 4 5
+}
+
+a(); // Also calls b.
+console.log(x, z); // 3 5
+console.log(typeof y); // "undefined", as y is local to function a
+SpecificationsSpecificationECMAScript Language Specification # sec-variable-statementBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+let
+const
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Mar 14, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

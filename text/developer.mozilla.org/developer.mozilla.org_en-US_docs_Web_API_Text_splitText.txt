@@ -1,0 +1,65 @@
+Text: splitText() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsTextsplitText()Article ActionsEnglish (US)In this articleSyntaxExampleSpecificationsBrowser compatibilitySee alsoDocument Object ModelTextConstructorText()Instance propertiesassignedSlotwholeTextInstance methodssplitText() Inheritance:CharacterDataNodeEventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExampleSpecificationsBrowser compatibilitySee alsoText: splitText() method
+  The splitText() method of the Text interface
+  breaks the Text node into two nodes at the specified offset,
+  keeping both nodes in the tree as siblings.
+
+
+  After the split, the current node contains all the content
+  up to the specified offset point,
+  and a newly created node of the same type contains the remaining text.
+  The newly created node is returned to the caller.
+  If the original node had a parent, the new node is inserted as the next sibling of the original node.
+  If the offset is equal to the length of the original node,
+  the newly created node has no data.
+
+
+  Separated text nodes can be concatenated using the Node.normalize()
+  method.
+SyntaxnewNode = textNode.splitText(offset)
+Parameters
+offset
+
+The index immediately before which to break the text node.
+
+Return value
+  Returns the newly created Text node that contains the text after the
+  specified offset point.
+Exceptions
+IndexSizeError DOMException
+
+
+      Thrown if the specified offset is negative or is greater
+      than the number of 16-bit units in the node's text.
+    
+
+NoModificationAllowedError DOMException
+
+Thrown if the node is read-only.
+
+Example
+  In this example, the text of a <p> is split into two text nodes, and a
+  <u> is inserted between them.
+
+<p>foobar</p>
+
+const p = document.querySelector("p");
+
+// Get contents of <p> as a text node
+const foobar = p.firstChild;
+
+// Split 'foobar' into two text nodes, 'foo' and 'bar',
+// and save 'bar' as a const
+const bar = foobar.splitText(3);
+
+// Create a <u> element containing ' new content '
+const u = document.createElement("u");
+u.appendChild(document.createTextNode(" new content "));
+
+// Add <u> before 'bar'
+p.insertBefore(u, bar);
+
+// The result is: <p>foo<u> new content </u>bar</p>
+SpecificationsSpecificationDOM Standard # ref-for-dom-text-splittextâ Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The Text interface it belongs to.
+The opposite method: Node.normalize.
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 8, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

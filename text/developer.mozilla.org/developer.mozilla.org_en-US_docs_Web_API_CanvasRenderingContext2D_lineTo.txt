@@ -1,0 +1,74 @@
+CanvasRenderingContext2D: lineTo() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsCanvasRenderingContext2DlineTo()Article ActionsEnglish (US)In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2DInstance propertiescanvasdirectionfillStylefilterfontfontKerningfontStretch
+Experimental
+fontVariantCaps
+Experimental
+globalAlphaglobalCompositeOperationimageSmoothingEnabledimageSmoothingQualityletterSpacing
+Experimental
+lineCaplineDashOffsetlineJoinlineWidthmiterLimitshadowBlurshadowColorshadowOffsetXshadowOffsetYstrokeStyletextAligntextBaselinetextRendering
+Experimental
+wordSpacing
+Experimental
+Instance methodsarc()arcTo()beginPath()bezierCurveTo()clearRect()clip()closePath()createConicGradient()createImageData()createLinearGradient()createPattern()createRadialGradient()drawFocusIfNeeded()drawImage()ellipse()fill()fillRect()fillText()getContextAttributes()getImageData()getLineDash()getTransform()isContextLost()
+Experimental
+isPointInPath()isPointInStroke()lineTo() measureText()moveTo()putImageData()quadraticCurveTo()rect()reset()resetTransform()restore()rotate()roundRect()save()scale()scrollPathIntoView()
+Experimental
+setLineDash()setTransform()stroke()strokeRect()strokeText()transform()translate()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoCanvasRenderingContext2D: lineTo() method
+  The CanvasRenderingContext2D method
+  lineTo(), part of the Canvas 2D API, adds a straight line
+  to the current sub-path by connecting the sub-path's last point to the specified
+  (x, y) coordinates.
+
+
+  Like other methods that modify the current path, this method does not directly render
+  anything. To draw the path onto a canvas, you can use the
+  fill() or
+  stroke() methods.
+SyntaxlineTo(x, y)
+Parameters
+x
+
+The x-axis coordinate of the line's end point.
+
+y
+
+The y-axis coordinate of the line's end point.
+
+Return valueNone (undefined).ExamplesDrawing a straight lineThis example draws a straight line using the lineTo() method.
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+The line begins at (30, 50) and ends at (150, 100).
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath(); // Start a new path
+ctx.moveTo(30, 50); // Move the pen to (30, 50)
+ctx.lineTo(150, 100); // Draw a line to (150, 100)
+ctx.stroke(); // Render the path
+
+ResultDrawing connected lines
+  Each call of lineTo() (and similar methods) automatically adds to the
+  current sub-path, which means that all the lines will all be stroked or filled together.
+  This example draws a letter 'M' with a single contiguous line.
+
+HTML
+<canvas id="canvas"></canvas>
+
+JavaScript
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.moveTo(90, 130);
+ctx.lineTo(95, 25);
+ctx.lineTo(150, 80);
+ctx.lineTo(205, 25);
+ctx.lineTo(210, 130);
+ctx.lineWidth = 15;
+ctx.stroke();
+
+ResultSpecificationsSpecificationHTML Standard # dom-context-2d-lineto-devBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+The interface defining this method: CanvasRenderingContext2D
+CanvasRenderingContext2D.moveTo()
+CanvasRenderingContext2D.stroke()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

@@ -1,0 +1,227 @@
+SVG Tutorial - SVG: Scalable Vector Graphics | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesSVG: Scalable Vector GraphicsSVG TutorialArticle ActionsEnglish (US)In this articleIntroducing SVG from ScratchScripting SVG with JavaScriptSVG filters tutorialAnimations with SMIL in SVGCreating fonts in SVG
+
+SVG
+Tutorials
+
+
+Introducing SVG from scratch
+
+Introduction
+Getting started
+Positions
+Basic shapes
+Paths
+Fills and Strokes
+Gradients in SVG
+Patterns
+Texts
+Basic transformations
+Clipping and masking
+Other content in SVG
+Filter effects
+SVG fonts
+SVG image element
+Tools for SVG
+SVG and CSS
+
+
+
+Reference
+
+
+Elements
+<a><animate><animateMotion><animateTransform><circle><clipPath><cursor>
+Deprecated
+<defs><desc><ellipse><feBlend><feColorMatrix><feComponentTransfer><feComposite><feConvolveMatrix><feDiffuseLighting><feDisplacementMap><feDistantLight><feDropShadow><feFlood><feFuncA><feFuncB><feFuncG><feFuncR><feGaussianBlur><feImage><feMerge><feMergeNode><feMorphology><feOffset><fePointLight><feSpecularLighting><feSpotLight><feTile><feTurbulence><filter><font-face-format>
+Deprecated
+<font-face-name>
+Deprecated
+<font-face-src>
+Deprecated
+<font-face-uri>
+Deprecated
+<font-face>
+Deprecated
+<font>
+Deprecated
+<foreignObject><g><glyph>
+Deprecated
+<glyphRef>
+Deprecated
+<hkern>
+Deprecated
+<image><line><linearGradient><marker><mask><metadata><missing-glyph>
+Deprecated
+<mpath><path><pattern><polygon><polyline><radialGradient><rect><script><set><stop><style><svg><switch><symbol><text><textPath><title> â the SVG accessible name element<tref>
+Deprecated
+<tspan><use><view><vkern>
+Deprecated
+
+
+
+
+
+Attributes
+accent-height
+Deprecated
+accumulateadditivealignment-baselinealphabetic
+Deprecated
+amplitudearabic-form
+Deprecated
+ascent
+Deprecated
+attributeNameattributeType
+Deprecated
+azimuthbaseFrequencybaseline-shiftbaseProfile
+Deprecated
+bbox
+Deprecated
+beginbiasbycalcModecap-height
+Deprecated
+classclip
+Deprecated
+clip-pathclip-ruleclipPathUnitscolorcolor-interpolationcolor-interpolation-filterscolor-profile
+Deprecated
+contentScriptType
+Deprecated
+contentStyleType
+Deprecated
+cursorcxcyddata-*descent
+Deprecated
+diffuseConstantdirectiondisplaydivisordominant-baselinedurdxdyedgeModeelevationenable-background
+Deprecated
+endexponentfillfill-opacityfill-rulefilterfilterRes
+Deprecated
+filterUnitsflood-colorflood-opacityfont-familyfont-sizefont-size-adjustfont-stretchfont-stylefont-variantfont-weightfrfromfxfyg1
+Deprecated
+g2
+Deprecated
+glyph-name
+Deprecated
+glyph-orientation-horizontal
+Deprecated
+glyph-orientation-vertical
+Deprecated
+gradientTransformgradientUnitshanging
+Deprecated
+heighthoriz-adv-x
+Deprecated
+horiz-origin-x
+Deprecated
+horiz-origin-y
+Deprecated
+hrefidideographic
+Deprecated
+image-renderinginin2interceptk
+Deprecated
+k1k2k3k4kernelMatrixkernelUnitLengthkerning
+Deprecated
+keyPointskeySplineskeyTimeslanglengthAdjustletter-spacinglighting-colorlimitingConeAnglemarker-endmarker-midmarker-startmarkerHeightmarkerUnitsmarkerWidthmaskmaskContentUnitsmaskUnitsmathematical
+Deprecated
+maxmediamethod
+Experimental
+minmodename
+Deprecated
+numOctavesonclickopacityoperatororderorientorientation
+Deprecated
+originoverflowoverline-positionoverline-thicknesspaint-orderpanose-1
+Deprecated
+pathpathLengthpatternContentUnitspatternTransformpatternUnitspointer-eventspointspointsAtXpointsAtYpointsAtZpreserveAlphapreserveAspectRatioprimitiveUnitsrradiusrefXrefYrepeatCountrepeatDurrequiredFeatures
+Deprecated
+restartresultrotate
+Experimental
+rxryscaleseedshape-renderingside
+Experimental
+slope
+Deprecated
+spacingspecularConstantspecularExponentspreadMethodstartOffsetstdDeviationstemh
+Deprecated
+stemv
+Deprecated
+stitchTilesstop-colorstop-opacitystrikethrough-positionstrikethrough-thicknessstring
+Deprecated
+strokestroke-dasharraystroke-dashoffsetstroke-linecapstroke-linejoinstroke-miterlimitstroke-opacitystroke-widthstylesurfaceScaleSVG attribute: crossoriginSVG Conditional Processing AttributesSVG Core AttributesSVG Event AttributesSVG Presentation AttributesSVG Styling AttributessystemLanguagetabindextableValuestargettargetXtargetYtext-anchortext-decorationtext-renderingtextLengthtotransformtransform-origintypeu1
+Deprecated
+u2
+Deprecated
+underline-positionunderline-thicknessunicode
+Deprecated
+unicode-bidiunicode-range
+Deprecated
+units-per-em
+Deprecated
+v-alphabetic
+Deprecated
+v-hanging
+Deprecated
+v-ideographic
+Deprecated
+v-mathematical
+Deprecated
+valuesvector-effectversion
+Deprecated
+vert-adv-y
+Deprecated
+vert-origin-x
+Deprecated
+vert-origin-y
+Deprecated
+viewBoxviewTarget
+Deprecated
+visibilitywidthwidths
+Deprecated
+word-spacingwriting-modexx-height
+Deprecated
+x1x2xChannelSelectorxlink:arcrole
+Deprecated
+xlink:href
+Deprecated
+xlink:show
+Deprecated
+xlink:title
+Deprecated
+xlink:type
+Deprecated
+xml:base
+Deprecated
+xml:lang
+Deprecated
+xml:space
+Deprecated
+yy1y2yChannelSelectorzzoomAndPan
+Deprecated
+
+
+
+Guides
+
+
+Applying SVG effects to HTML content
+Content type
+Namespaces crash course
+SVG animation with SMIL
+SVG as an Image
+
+
+
+In this articleIntroducing SVG from ScratchScripting SVG with JavaScriptSVG filters tutorialAnimations with SMIL in SVGCreating fonts in SVGSVG TutorialScalable Vector Graphics, SVG, is a W3C XML dialect to mark up graphics.
+This tutorial aims to explain the internals of SVG and is packed with technical details. If you just want to draw beautiful images, you might find more useful resources at Inkscape's documentation page. Another good introduction to SVG is provided by the W3C's SVG Primer.Introducing SVG from Scratch
+Introduction
+Getting Started
+Positions
+Basic Shapes
+Paths
+Fills and Strokes
+Gradients
+Patterns
+Texts
+Basic Transformations
+Clipping and masking
+Other content in SVG
+Filter effects
+SVG fonts
+SVG Image tag
+Tools for SVG
+SVG and CSS
+
+The following topics are more advanced and hence should get their own tutorials.Scripting SVG with JavaScriptTBDSVG filters tutorialTBDAnimations with SMIL in SVGTBDCreating fonts in SVGTBDFound a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Mar 6, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

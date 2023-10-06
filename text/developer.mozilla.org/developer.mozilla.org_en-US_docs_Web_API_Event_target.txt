@@ -1,0 +1,40 @@
+Event: target property - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsEventtargetArticle ActionsEnglish (US)In this articleValueExampleSpecificationsBrowser compatibilitySee alsoDocument Object ModelEventConstructorEvent()Instance propertiesbubblescancelablecancelBubble
+Deprecated
+composedcurrentTargetdefaultPreventedeventPhaseexplicitOriginalTarget
+Non-standard
+isTrustedoriginalTarget
+Non-standard
+returnValue
+Deprecated
+srcElement
+Deprecated
+target timeStamptypeInstance methodscomposedPath()initEvent()
+Deprecated
+preventDefault()stopImmediatePropagation()stopPropagation()Related pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentFragmentDocumentTypeElementEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleValueExampleSpecificationsBrowser compatibilitySee alsoEvent: target property
+  The read-only target property of the
+  Event interface is a reference to the object onto which the event was
+  dispatched. It is different from Event.currentTarget when the event
+  handler is called during the bubbling or capturing phase of the event.
+ValueThe associated EventTarget.ExampleThe event.target property can be used in order to implement event
+delegation.
+// Make a list
+const ul = document.createElement("ul");
+document.body.appendChild(ul);
+
+const li1 = document.createElement("li");
+const li2 = document.createElement("li");
+ul.appendChild(li1);
+ul.appendChild(li2);
+
+function hide(evt) {
+  // evt.target refers to the clicked <li> element
+  // This is different than evt.currentTarget, which would refer to the parent <ul> in this context
+  evt.target.style.visibility = "hidden";
+}
+
+// Attach the listener to the list
+// It will fire when each <li> is clicked
+ul.addEventListener("click", hide, false);
+SpecificationsSpecificationDOM Standard # ref-for-dom-event-targetâ¢Browser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Comparison of Event Targets
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

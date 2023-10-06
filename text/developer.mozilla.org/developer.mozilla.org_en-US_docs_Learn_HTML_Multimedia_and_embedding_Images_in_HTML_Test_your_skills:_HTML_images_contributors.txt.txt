@@ -1,0 +1,6 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/learn/html/multimedia_and_embedding/images_in_html/test_your_skills_colon__html_images/index.md
+
+# Original Wiki contributors
+gdsimoes
+chrisdavidmills

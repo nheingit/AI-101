@@ -1,0 +1,15 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/glossary/css_selector/index.md
+
+# Original Wiki contributors
+ramiy
+mfuji09
+Sheppy
+mfluehr
+SnoopyRules
+ktajpuri
+Andrew_Pfeiffer
+hbloomer
+klez
+teoli
+ChrisL

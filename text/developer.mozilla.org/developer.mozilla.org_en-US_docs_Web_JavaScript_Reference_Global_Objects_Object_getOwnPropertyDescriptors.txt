@@ -1,0 +1,99 @@
+Object.getOwnPropertyDescriptors() - JavaScript | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesJavaScriptReferenceStandard built-in objectsObjectObject.getOwnPropertyDescriptors()Article ActionsEnglish (US)In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoStandard built-in objectsObjectConstructorObject() constructorPropertiesObject.prototype.constructorObject.prototype.__proto__
+Deprecated
+MethodsObject.prototype.__defineGetter__()
+Deprecated
+Object.prototype.__defineSetter__()
+Deprecated
+Object.prototype.__lookupGetter__()
+Deprecated
+Object.prototype.__lookupSetter__()
+Deprecated
+Object.assign()Object.create()Object.defineProperties()Object.defineProperty()Object.entries()Object.freeze()Object.fromEntries()Object.getOwnPropertyDescriptor()Object.getOwnPropertyDescriptors()Object.getOwnPropertyNames()Object.getOwnPropertySymbols()Object.getPrototypeOf()Object.hasOwn()Object.prototype.hasOwnProperty()Object.is()Object.isExtensible()Object.isFrozen()Object.prototype.isPrototypeOf()Object.isSealed()Object.keys()Object.preventExtensions()Object.prototype.propertyIsEnumerable()Object.seal()Object.setPrototypeOf()Object.prototype.toLocaleString()Object.prototype.toString()Object.prototype.valueOf()Object.values()In this articleTry itSyntaxDescriptionExamplesSpecificationsBrowser compatibilitySee alsoObject.getOwnPropertyDescriptors()
+  The Object.getOwnPropertyDescriptors() static method returns all
+  own property descriptors of a given object.
+Try itSyntaxObject.getOwnPropertyDescriptors(obj)
+Parameters
+obj
+
+The object for which to get all own property descriptors.
+
+Return value
+  An object containing all own property descriptors of an object. Might be an empty
+  object, if there are no properties.
+Description
+  This method permits examination of the precise description of all own properties of an
+  object. A property in JavaScript consists of either a string-valued name or a
+  Symbol and a property descriptor. Further information about property
+  descriptor types and their attributes can be found in
+  Object.defineProperty().
+
+A property descriptor is a record with some of the following attributes:
+
+value
+
+The value associated with the property (data descriptors only).
+
+writable
+
+
+true if and only if the value associated with the property may be
+      changed (data descriptors only).
+    
+
+get
+
+
+      A function which serves as a getter for the property, or undefined if
+      there is no getter (accessor descriptors only).
+    
+
+set
+
+
+      A function which serves as a setter for the property, or undefined if
+      there is no setter (accessor descriptors only).
+    
+
+configurable
+
+
+true if and only if the type of this property descriptor may be changed
+      and if the property may be deleted from the corresponding object.
+    
+
+enumerable
+
+
+true if and only if this property shows up during enumeration of the
+      properties on the corresponding object.
+    
+
+ExamplesCreating a shallow copy
+  Whereas the Object.assign() method will only copy enumerable and own
+  properties from a source object to a target object, you are able to use this method and
+  Object.create() for a shallow copy between two unknown objects:
+
+Object.create(
+  Object.getPrototypeOf(obj),
+  Object.getOwnPropertyDescriptors(obj),
+);
+Creating a subclass
+  A typical way of creating a subclass is to define the subclass, set its prototype to an
+  instance of the superclass, and then define properties on that instance. This can get
+  awkward especially for getters and setters. Instead, you can use this code to set the
+  prototype:
+
+function superclass() {}
+superclass.prototype = {
+  // Define the superclass constructor, methods, and properties here
+};
+function subclass() {}
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define the subclass constructor, methods, and properties here
+});
+SpecificationsSpecificationECMAScript Language Specification # sec-object.getownpropertydescriptorsBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Polyfill of Object.getOwnPropertyDescriptors in core-js
+Object.getOwnPropertyDescriptor()
+Object.defineProperty()
+Polyfill
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 21, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

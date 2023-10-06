@@ -1,0 +1,126 @@
+HTMLElement: dragleave event - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsHTMLElementdragleaveArticle ActionsEnglish (US)In this articleSyntaxEvent typeEvent propertiesExamplesSpecificationsBrowser compatibilitySee alsoHTMLElementInstance propertiesaccessKeyaccessKeyLabelcontentEditabledatasetdirenterKeyHinthiddeninertinnerTextinputModeisContentEditablelangnonceoffsetHeightoffsetLeftoffsetParentoffsetTopoffsetWidthouterTextpopover
+Experimental
+styletabIndextitleInstance methodsattachInternals()blur()click()focus()hidePopover()
+Experimental
+showPopover()
+Experimental
+togglePopover()
+Experimental
+Eventsbeforeinputbeforetoggle
+Experimental
+changecopycutdragdragenddragenterdragleave dragoverdragstartdroperrorinputloadmscandidatewindowhide
+Non-standard
+mscandidatewindowshow
+Non-standard
+mscandidatewindowupdate
+Non-standard
+pastetoggle
+Experimental
+Inheritance:ElementNodeEventTargetIn this articleSyntaxEvent typeEvent propertiesExamplesSpecificationsBrowser compatibilitySee alsoHTMLElement: dragleave eventThe dragleave event is fired when a dragged element or text selection leaves a valid drop target.
+This event is not cancelable.SyntaxUse the event name in methods like addEventListener(), or set an event handler property.
+addEventListener("dragleave", (event) => {});
+
+ondragleave = (event) => {};
+Event typeA DragEvent. Inherits from Event.
+
+
+
+      Event
+    
+
+
+
+
+
+
+      UIEvent
+    
+
+
+
+
+
+
+      MouseEvent
+    
+
+
+
+
+
+
+      DragEvent
+    
+Event propertiesIn addition to the properties listed below, properties from the parent interface, Event, are available.
+
+DragEvent.dataTransfer Read only 
+
+The data that is transferred during a drag and drop interaction.
+
+ExamplesResetting drop zone styles on dragleaveIn this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
+We give the other container a purple background while the draggable element is over it, to signal that the draggable element could be dropped on to the container. We listen for the dragleave event to reset the container background when the draggable element is dragged off the container.
+Note though that in this partial example we haven't implemented dropping: for a complete example of drag and drop, see the page for the drag event.
+HTML
+<div class="dropzone">
+  <div id="draggable" draggable="true">This div is draggable</div>
+</div>
+<div class="dropzone" id="droptarget"></div>
+
+CSS
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+.dropzone {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  margin: 10px;
+  padding: 10px;
+}
+
+.dropzone.dragover {
+  background-color: purple;
+}
+
+JavaScript
+const target = document.getElementById("droptarget");
+target.addEventListener("dragenter", (event) => {
+  // highlight potential drop target when the draggable element enters it
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.add("dragover");
+  }
+});
+
+target.addEventListener("dragleave", (event) => {
+  // reset background of potential drop target when the draggable element leaves it
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+  }
+});
+
+ResultSpecificationsSpecificationHTML Standard # ix-handler-ondragleaveHTML Standard # event-dnd-dragleaveBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Other drag and drop events:
+    
+drag
+dragstart
+dragend
+dragover
+dragenter
+drop
+
+
+This event on other targets:
+    
+Window: dragleave event
+Document: dragleave event
+SVGElement: dragleave event
+
+
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

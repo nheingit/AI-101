@@ -1,0 +1,15 @@
+# Contributors by commit history
+https://github.com/mdn/content/commits/main/files/en-us/web/api/htmltableelement/createthead/index.md
+
+# Original Wiki contributors
+sideshowbarker
+mfluehr
+fscholz
+Akiq2016
+teoli
+kscarfone
+Sheppy
+ethertank
+RobG
+Dria
+JesseW

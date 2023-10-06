@@ -1,0 +1,83 @@
+DocumentFragment: getElementById() method - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsDocumentFragmentgetElementById()In this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocument Object ModelDocumentFragmentConstructorDocumentFragment()Instance propertieschildElementCountchildrenfirstElementChildlastElementChildInstance methodsappend()getElementById() prepend()querySelector()querySelectorAll()replaceChildren()Inheritance:NodeEventTargetRelated pages for DOMAbortControllerAbortSignalAbstractRangeAttrCDATASectionCharacterDataCommentCustomEventDOMErrorDOMExceptionDOMImplementationDOMParserDOMPointDOMPointReadOnlyDOMRectDOMTokenListDocumentDocumentTypeElementEventEventTargetHTMLCollectionMutationObserverMutationRecordNamedNodeMapNodeNodeIteratorNodeListProcessingInstructionRangeStaticRangeTextTextDecoderTextEncoderTimeRangesTreeWalkerXMLDocumentIn this articleSyntaxExamplesSpecificationsBrowser compatibilitySee alsoDocumentFragment: getElementById() methodThe getElementById() method of the DocumentFragment returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
+If you need to get access to an element which doesn't have an ID, you can use querySelector() to find the element using any selector.
+
+Note: IDs should be unique inside a document fragment. If two or more elements in a document fragment have the same ID, this method returns the first element found.
+SyntaxgetElementById(id)
+
+
+Note: The capitalization of "Id" in the name of this method must be correct for the code to function; getElementByID() is not valid and will not work, however natural it may seem.
+Parameters
+id
+
+The ID of the element to locate. The ID is a case-sensitive string which is unique within the document fragment: only one element should have any given ID.
+
+Return valueAn Element object describing the DOM element object matching the specified ID, or null if no matching element was found in the document fragment.ExamplesExtend a list of elementsIn this example, the document contains a list with a single item Cherry. We also create a document fragment containing four more items, Apple, Orange, Banana, and Melon.
+We then log the result of using getElementById() to look for Apple and Cherry in the document and in the fragment. At this point, Cherry appears only in the document while Apple appears only in the fragment.
+If you click "Add fragment to document", we append the fragment to the list inside the document, and again log the result of looking for both Apple and Cherry in the document and in the fragment. This time, both Apple and Cherry appear in the document, and neither appear in the fragment.
+This is because appending a fragment to a document moves the fragment's nodes into the DOM, leaving behind an empty DocumentFragment.
+HTML
+<button id="add">Add fragment to document</button>
+<button id="reset">Reset example</button> <br />
+List content:
+<ul>
+  <li id="Cherry">Cherry</li>
+</ul>
+Fragment content:
+<ul id="fragment"></ul>
+Current status:
+<pre id="log" />
+
+button {
+  margin-bottom: 10px;
+}
+
+JavaScript
+// Create the document fragment with its initial content
+const fragment = new DocumentFragment();
+["Apple", "Orange", "Banana", "Melon"].forEach((fruit) => {
+  const li = document.createElement("li");
+  li.textContent = fruit;
+  li.id = fruit;
+  fragment.append(li);
+});
+
+// When the button is clicked, add the fragment to the list
+document.getElementById("add").addEventListener("click", () => {
+  document.querySelector("ul").append(fragment);
+  displayStatus();
+});
+
+// Log the results of both getElementById()
+function displayStatus() {
+  const log = document.getElementById("log");
+  log.textContent = "";
+  ["Apple", "Cherry"].forEach((id) => {
+    log.textContent += `document.getElementById("${id}") ${
+      document.getElementById(id) ? "Yes" : "No"
+    }\n`;
+    log.textContent += `fragment.getElementById("${id}") ${
+      fragment.getElementById(id) ? "Yes" : "No"
+    }\n`;
+  });
+
+  // Empty the fragment viewer and fill it with the current content
+  const fragmentViewer = document.getElementById("fragment");
+  while (fragmentViewer.hasChildNodes()) {
+    fragmentViewer.removeChild(fragmentViewer.lastChild);
+  }
+  for (entry of fragment.children) {
+    fragmentViewer.appendChild(entry.cloneNode(true));
+  }
+}
+
+// Log the initial state
+displayStatus();
+
+// Hook the reset button
+document.getElementById("reset").addEventListener("click", () => {
+  document.location.reload();
+});
+
+ResultSpecificationsSpecificationDOM Standard # dom-nonelementparentnode-getelementbyidBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Document.getElementById()
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 7, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

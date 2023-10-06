@@ -1,0 +1,204 @@
+Web performance | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb performanceArticle ActionsEnglish (US)In this articleKey performance guidesBeginner's tutorialsUsing Performance APIsOther documentationGlossary TermsSee also
+Animation performance and frame rateCSS and JavaScript animation performanceCritical rendering pathLazy loadingNavigation and resource timingsOptimizing startup performancePerformance Monitoring: RUM vs. synthetic monitoringPerformance budgetsPerformance fundamentalsPopulating the page: how browsers workRecommended Web Performance Timings: How long is too long?Understanding latencyUsing dns-prefetch
+In this articleKey performance guidesBeginner's tutorialsUsing Performance APIsOther documentationGlossary TermsSee alsoWeb performanceWeb performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
+The longer it takes for a site to respond, the more users will abandon the site. It is important to minimize the loading and response times and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
+There are tools, APIs, and best practices that help us measure and improve web performance. We cover them in this section:Key performance guidesAnimation performance and frame rateAnimation on the web can be done via SVGAnimationElement, window.requestAnimationFrame, including canvas and WebGL_API, CSS animation, video, animated gifs and even animated PNGs and other image types. The performance cost of animating a CSS property can vary from one property to another, and animating expensive CSS properties can result in jank as the browser struggles to hit a smooth FPS.Critical rendering pathThe Critical Rendering Path is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen. Optimizing the critical render path improves render performance.
+  The critical rendering path includes the Document Object Model (DOM), CSS Object Model (CSSOM), render tree and layout.CSS and JavaScript animation performanceAnimations are critical for a pleasurable user experience on many applications. There are many ways to implement web animations, such as CSS transition/animation or JavaScript-based animations (using Window.requestAnimationFrame). In this article, we analyze the performance differences between CSS-based and JavaScript-based animation.Lazy loadingLazy loading is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the critical rendering path, which translates into reduced page load times.Navigation and resource timingsNavigation timings are metrics measuring a browser's document navigation events. Resource timings are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.Optimizing startup performanceImproving your startup performance is often one of the highest value performance optimizations that can be made. How long does your app take to start up? Does it seem to lock up the device or the user's browser while the app loads? That makes users worry that your application has crashed, or that something else is wrong. Good user experience includes ensuring your app loads quickly. This article provides performance tips and suggestions for both writing new applications and porting applications to the web from other platforms.Performance budgetsA performance budget is a limit to prevent regressions. It can apply to a file, a file type, all files loaded on a page, a specific metric (e.g. Time to Interactive), a custom metric (e.g. Time to Hero Element), or a threshold over a period of time.Performance fundamentalsPerformance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.Performance Monitoring: RUM vs. synthetic monitoringSynthetic monitoring and real user monitoring (RUM) are two approaches for monitoring and providing insight into web performance. RUM and synthetic monitoring provide for different views of performance and have benefits, good use cases and shortfalls. RUM is generally best suited for understanding long-term trends whereas synthetic monitoring is very well suited to regression testing and mitigating shorter-term performance issues during development. In this article we define and compare these two performance monitoring approaches.Populating the page: how browsers workUsers want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.Recommended Web Performance Timings: How long is too long?There are no clear set rules as to what constitutes a slow pace when loading pages, but there are specific guidelines for indicating content will load (1 second), idling (50ms), animating (16.7ms) and responding to user input (50 to 200ms).Understanding latencyLatency is the time it takes for a packet of data to travel from source to a destination. In terms of performance optimization, it's important to optimize to reduce causes of latency and to test site performance emulating high latency to optimize for users with lousy connections. This article explains what latency is, how it impacts performance, how to measure latency, and how to reduce it.Using dns-prefetchDNS-prefetch is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.Beginner's tutorialsThe MDN Web Performance Learning Area contains modern, up-to-date tutorials covering Performance essentials. Start here if you are a newcomer to performance:
+
+Web performance: brief overview
+
+Overview of the web performance learning path. Start your journey here.
+
+What is web performance?
+
+This article starts the module off with a good look at what performance actually is â this includes the tools, metrics, APIs, networks, and groups of people we need to consider when thinking about performance, and how we can make performance part of our web development workflow.
+
+How do users perceive performance?
+
+More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.
+
+Web performance basics
+
+In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.
+
+HTML performance features
+
+Some attributes and the source order of your markup can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
+
+Multimedia: images and video
+
+The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. Additional tips like removing audio tracks from background videos can improve performance even further. In this article we discuss the impact video, audio, and image content has on performance, and the methods to ensure that impact is as minimal as possible.
+
+CSS performance features
+
+CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
+
+JavaScript performance best practices
+
+JavaScript, when used properly, can allow for interactive and immersive web experiences â or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
+
+Mobile performance
+
+With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
+
+Using Performance APIs
+Performance API
+
+This guide describes how to use the Performance interfaces that are defined in the High-Resolution Time standard.
+
+Resource Timing API
+
+Resource loading and timing the loading of those resources, including managing the resource buffer and coping with CORS
+
+The performance timeline
+
+The Performance Timeline standard defines extensions to the Performance interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
+
+User Timing API
+
+Create application specific timestamps using the user timing API's "mark" and "measure" entry types - that are part of the browser's performance timeline.
+
+Beacon API
+
+The Beacon interface schedules an asynchronous and non-blocking request to a web server.
+
+Intersection Observer API
+
+Learn to time element visibility with the Intersection Observer API and be asynchronously notified when elements of interest becomes visible.
+
+Other documentation
+Firefox Profiler Performance Features
+
+This website provides information on how to use and understand the performance features in your developer tools, including Call Tree, Flame Graph, Stack Chart, Marker Chart and Network Chart.
+
+Profiling with the built-in profiler
+
+Learn how to profile app performance with Firefox's built-in profiler.
+
+Glossary Terms
+Beacon
+Brotli compression
+Client hints
+Code splitting
+CSSOM
+Domain sharding
+Effective connection type
+First contentful paint
+First CPU idle
+First input delay
+First interactive
+First meaningful paint
+First paint
+HTTP
+HTTP/2
+Jank
+Latency
+Lazy load
+Long task
+Lossless compression
+Lossy compression
+Main thread
+Minification
+Network throttling
+Packet
+Page load time
+Page prediction
+Parse
+Perceived performance
+Prefetch
+Prerender
+QUIC
+RAIL
+Real User Monitoring
+Resource Timing
+Round Trip Time (RTT)
+Server Timing
+Speculative parsing
+Speed index
+SSL
+Synthetic monitoring
+TCP handshake
+TCP slow start
+Time to first byte
+Time to interactive
+TLS
+Transmission Control Protocol (TCP)
+Tree shaking
+Web performance
+See alsoHTML
+
+The <picture> Element
+The <video> Element
+The <source> Element
+The <img> srcset attribute
+
+Responsive images
+
+
+Preloading content with rel="preload"
+https://w3c.github.io/preload/
+
+CSS
+
+will-change
+GPU v CPU
+Measuring layout
+Font-loading best practices
+
+JavaScript
+
+DOMContentLoaded
+Garbage collection
+requestAnimationFrame
+
+APIs
+
+Performance API
+Navigation Timing API
+Media Capabilities API
+Network Information API
+PerformanceNavigationTiming
+Battery Status API
+Navigator.deviceMemory
+Intersection Observer
+Using the User Timing API
+High Resolution Timing API (https://w3c.github.io/hr-time/)
+Resource Timing API
+Page Visibility
+Cooperative Scheduling of Background Tasks API
+
+requestIdleCallback()
+
+
+Beacon API
+Resource Hints - dns-prefetch, preconnect, prefetch, and prerender
+FetchEvent.preloadResponse
+Performance Server Timing API
+
+Headers
+
+Content-encoding
+HTTP/2
+gZip
+Client Hints
+
+Tools
+
+Performance in Firefox Developer Tools
+
+Additional Metrics
+
+Speed Index and Perceptual Speed Index
+
+Best Practices
+
+Using Service Workers
+Using Web Workers
+
+Web Workers API
+
+
+PWA
+Caching
+Content Delivery Networks (CDN)
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Apr 15, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.

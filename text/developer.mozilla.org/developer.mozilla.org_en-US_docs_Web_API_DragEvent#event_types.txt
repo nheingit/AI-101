@@ -1,0 +1,77 @@
+DragEvent - Web APIs | MDNSkip to main contentSkip to searchSkip to select languageMDN Web DocsOpen main menuReferencesReferencesOverview / Web TechnologyWeb technology reference for developersHTMLStructure of content on the webCSSCode used to describe document styleJavaScriptGeneral-purpose scripting languageHTTPProtocol for transmitting web resourcesWeb APIsInterfaces for building web applicationsWeb ExtensionsDeveloping extensions for web browsersWeb TechnologyWeb technology reference for developersGuidesGuidesOverview / MDN Learning AreaLearn web developmentMDN Learning AreaLearn web developmentHTMLLearn to structure web content with HTMLCSSLearn to style content using CSSJavaScriptLearn to run scripts in the browserAccessibilityLearn to make the web accessible to allPlusPlusOverviewA customized MDN experienceUpdatesAll browser compatibility updates at a glanceDocumentationLearn how to use MDN PlusFAQFrequently asked questions about MDN PlusBlog NewSearch MDNClear search inputSearchThemeLog inGet MDN PlusReferencesWeb APIsDragEventArticle ActionsEnglish (US)In this articleInstance propertiesConstructorsEvent typesExampleSpecificationsBrowser compatibilitySee alsoHTML Drag and Drop APIDragEventConstructorDragEvent()Instance propertiesdataTransferInheritance:MouseEventUIEventEventRelated pages for HTML Drag and Drop APIDataTransferDataTransferItemDataTransferItemListIn this articleInstance propertiesConstructorsEvent typesExampleSpecificationsBrowser compatibilitySee alsoDragEventThe DragEvent interface is a DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.
+This interface inherits properties from MouseEvent and Event.
+
+
+
+      Event
+    
+
+
+
+
+
+
+      UIEvent
+    
+
+
+
+
+
+
+      MouseEvent
+    
+
+
+
+
+
+
+      DragEvent
+    
+Instance properties
+DragEvent.dataTransfer Read only 
+
+The data that is transferred during a drag and drop interaction.
+
+ConstructorsAlthough this interface has a constructor, it is not possible to create a useful DataTransfer object from script, since DataTransfer objects have a processing and security model that is coordinated by the browser during drag-and-drops.
+
+DragEvent()
+
+Creates a synthetic and untrusted DragEvent.
+
+Event types
+drag
+
+This event is fired when an element or text selection is being dragged.
+
+dragend
+
+This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
+
+dragenter
+
+This event is fired when a dragged element or text selection enters a valid drop target.
+
+dragleave
+
+This event is fired when a dragged element or text selection leaves a valid drop target.
+
+dragover
+
+This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than mouseover ).
+
+dragstart
+
+This event is fired when the user starts dragging an element or text selection.
+
+drop
+
+This event is fired when an element or text selection is dropped on a valid drop target.
+
+ExampleAn Example of each property, constructor, event type and global event handlers is included in their respective reference page.SpecificationsSpecificationHTML Standard # the-dragevent-interfaceBrowser compatibilityBCD tables only load in the browser with JavaScript enabled. Enable JavaScript to view data.See also
+Drag and drop
+Drag Operations
+Recommended Drag Types
+DataTransfer test - Paste or Drag
+Found a content problem with this page?Edit the page on GitHub.Report the content issue.View the source on GitHub.Want to get more involved? Learn how to contribute.This page was last modified on Feb 20, 2023 by MDN contributors.MDN logoYour blueprint for a better internet.MDN on TwitterMDN on GitHubMDNAboutBlogCareersAdvertise with usSupportProduct helpReport an issueOur communitiesMDN CommunityMDN ForumMDN ChatDevelopersWeb TechnologiesLearn Web DevelopmentMDN PlusHacks BlogMozilla logoWebsite Privacy NoticeCookiesLegalCommunity Participation GuidelinesVisit Mozilla Corporationâs not-for-profit parent, the Mozilla Foundation.Portions of this content are Â©1998â2023 by individual mozilla.org contributors. Content available under a Creative Commons license.
