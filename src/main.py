@@ -7,6 +7,7 @@ import numpy as np
 from questions import answer_question
 from dotenv import load_dotenv
 import openai
+import requests
 
 load_dotenv()
 openai.api_key = os.environ['OPENAI_API_KEY']
@@ -106,6 +107,16 @@ async def code_generation(update: Update, context: ContextTypes.DEFAULT_TYPE):
   await context.bot.send_message(chat_id=update.effective_chat.id,
                                  text=completion_answer)
 
+async def image(update: Update, context: ContextTypes.DEFAULT_TYPE):
+  response = openai.Image.create(prompt=update.message.text,
+                                 n=1,
+                                 size="1024x1024")
+  image_url = response['data'][0]['url']
+  image_response = requests.get(image_url)
+  await context.bot.send_photo(chat_id=update.effective_chat.id,
+                           photo=image_response.content)
+
+
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
   await context.bot.send_message(chat_id=update.effective_chat.id,
@@ -116,11 +127,13 @@ if __name__ == '__main__':
   application = ApplicationBuilder().token(tg_bot_token).build()
 
   start_handler = CommandHandler('start', start)
+  image_handler = CommandHandler('image', image)
   code_generation_handler = CommandHandler('code', code_generation)
   question_handler = CommandHandler('question', question)
   chat_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), chat)
   
   application.add_handler(question_handler)
+  application.add_handler(image_handler)
   application.add_handler(code_generation_handler)
   application.add_handler(chat_handler)
   application.add_handler(start_handler)
